@@ -126,9 +126,9 @@ Route::get('/index-2', function () {
     return view('index-2');
 });
 
-// Route::get('/', function () {
-//     return view('index');
-// });
+Route::get('/index', function () {
+    return view('index');
+});
 
 // Route::get('/', function () {
 //     return view('FrontEnd.index');

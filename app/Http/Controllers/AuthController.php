@@ -54,7 +54,7 @@ class AuthController extends Controller
             $camp->time =  $request->time;
             $camp->save();
             //return view('index-2');
-            return redirect()->intended('index-2');
+            return redirect()->intended('camp_registration');
         //}
     }
  
@@ -76,7 +76,7 @@ class AuthController extends Controller
             return redirect()->intended('index-2');
             //return Redirect::to("index-2");
         }
-        return Redirect::to("registration");
+        return Redirect::to("camp_registration");
     }
  
     public function postRegistration(Request $request)
