@@ -118,9 +118,9 @@ Route::get('/index-2', function () {
 //     return view('index');
 // });
 
-Route::get('/', function () {
-    return view('FrontEnd.index');
-});
+// Route::get('/', function () {
+//     return view('FrontEnd.index');
+// });
 
 Route::get('/inline_editor', function () {
     return view('inline_editor');
@@ -142,10 +142,13 @@ Route::get('/lock_screen', function () {
     return view('lock_screen');
 });
 
-Route::get('/login', function () {
+Route::get('/', function () {
     return view('login');
 });
 
+// Route::get('/login', function () {
+//     return view('login');
+// });
 Route::get('/mail_compose', function () {
     return view('mail_compose');
 });
@@ -209,3 +212,12 @@ Route::get('/welcome', function () {
 Route::get('/widget', function () {
     return view('widget');
 });
+
+
+//code for routing or linking to web methods
+Route::get('login', 'AuthController@index');
+Route::post('post-login', 'AuthController@postLogin'); 
+Route::get('registration', 'AuthController@registration');
+Route::post('post-registration', 'AuthController@postRegistration'); 
+Route::get('dashboard', 'AuthController@dashboard'); 
+Route::get('logout', 'AuthController@logout');

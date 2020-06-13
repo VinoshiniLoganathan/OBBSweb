@@ -35,42 +35,63 @@
 
     <div class="container">
 
-      <form class="form-signin" action="http://bucketadmin.lab.themebucket.net/index.html">
+      {{-- <form class="form-signin" action="{{url('post-registration')}}">
+        {{ csrf_field() }}
         <h2 class="form-signin-heading">registration now</h2>
         <div class="login-wrap">
-            <p>Enter your personal details below</p>
-            <input type="text" class="form-control" placeholder="Full Name" autofocus>
-            <input type="text" class="form-control" placeholder="Address" autofocus>
-            <input type="text" class="form-control" placeholder="Email" autofocus>
-            <input type="text" class="form-control" placeholder="City/Town" autofocus>
-            <div class="radios">
-                <label class="label_radio col-lg-6 col-sm-6" for="radio-01">
-                    <input name="sample-radio" id="radio-01" value="1" type="radio" checked /> Male
-                </label>
-                <label class="label_radio col-lg-6 col-sm-6" for="radio-02">
-                    <input name="sample-radio" id="radio-02" value="1" type="radio" /> Female
-                </label>
-            </div>
 
             <p> Enter your account details below</p>
-            <input type="text" class="form-control" placeholder="User Name" autofocus>
-            <input type="password" class="form-control" placeholder="Password">
-            <input type="password" class="form-control" placeholder="Re-type Password">
-            <label class="checkbox">
-                <input type="checkbox" value="agree this condition"> I agree to the Terms of Service and Privacy Policy
-            </label>
+            <input type="text" name="name"class="form-control" placeholder="User Name" autofocus>
+            <input type="email" name="email" class="form-control" placeholder="User ID" autofocus>
+            <input type="password" name="password" class="form-control" placeholder="Password">
             <button class="btn btn-lg btn-login btn-block" type="submit">Submit</button>
 
             <div class="registration">
                 Already Registered.
-                <a class="" href="login.html">
+                <a class="" href="{{url('login')}}">
                     Login
                 </a>
             </div>
 
         </div>
 
-      </form>
+      </form> --}}
+
+
+
+      <form action="{{url('post-registration')}}" method="POST" id="regForm">
+        {{ csrf_field() }}
+       <div class="form-label-group">
+         <input type="text" id="inputName" name="name" class="form-control" placeholder="Full name" autofocus>
+         <label for="inputName">Name</label>
+
+         @if ($errors->has('name'))
+         <span class="error">{{ $errors->first('name') }}</span>
+         @endif       
+
+       </div> 
+       <div class="form-label-group">
+         <input type="email" name="email" id="inputEmail" class="form-control" placeholder="Email address" >
+         <label for="inputEmail">Email address</label>
+
+         @if ($errors->has('email'))
+         <span class="error">{{ $errors->first('email') }}</span>
+         @endif    
+       </div> 
+
+       <div class="form-label-group">
+         <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password">
+         <label for="inputPassword">Password</label>
+          
+         @if ($errors->has('password'))
+         <span class="error">{{ $errors->first('password') }}</span>
+         @endif  
+       </div>
+
+       <button class="btn btn-lg btn-primary btn-block btn-login text-uppercase font-weight-bold mb-2" type="submit">Sign Up</button>
+       <div class="text-center">If you have an account?
+         <a class="small" href="{{url('login')}}">Sign In</a></div>
+     </form>
 
     </div>
 
