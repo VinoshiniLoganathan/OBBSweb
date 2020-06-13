@@ -49,9 +49,6 @@ Route::get('/calendar', function () {
     return view('calendar');
 });
 
-/*Route::get('/', function () {
-    return view('chartjs');
-});*/
 
 Route::get('/draggable_portlet', function () {
     return view('draggable_portlet');
@@ -117,8 +114,12 @@ Route::get('/index-2', function () {
     return view('index-2');
 });
 
+// Route::get('/', function () {
+//     return view('index');
+// });
+
 Route::get('/', function () {
-    return view('index');
+    return view('FrontEnd.index');
 });
 
 Route::get('/inline_editor', function () {
