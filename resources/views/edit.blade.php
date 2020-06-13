@@ -416,15 +416,19 @@
                     {{-- here is the test code for table start --}}
                     <table border = "1">
                         <tr>
-                        <td>Id</td>
-                        <td>Email</td>
-                        <td>Password</td>
+                        <td>ID</td>
+                        <td>Place</td>
+                        <td>Date</td>
+                        <td>Time</td>
+                        
                         </tr>
                         @foreach ($campaigns as $camp)
                         <tr>
                         <td>{{ $camp->id }}</td>
-                        <td>{{ $camp->email }}</td>
-                        <td>{{ $camp->password }}</td>
+                        <td>{{ $camp->place }}</td>
+                        <td>{{ $camp->date }}</td>
+                        <td>{{ $camp->time }}</td>
+                        <td><a href ='camp_update/{{ $camp->id }}'>Edit</a></td>
                         </tr>
                         @endforeach
                         </table>

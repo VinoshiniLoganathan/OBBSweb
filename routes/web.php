@@ -33,6 +33,14 @@ Route::get('/blank', function () {
     return view('blank');
 });
 
+Route::get('/edit', function () {
+    return view('edit');
+});
+
+Route::get('/camp_update', function () {
+    return view('camp_update');
+});
+
 Route::get('/boxed_page', function () {
     return view('boxed_page');
 });
@@ -84,6 +92,10 @@ Route::get('/form_component', function () {
 
 Route::get('/form_validation', function () {
     return view('form_validation');
+});
+
+Route::get('/camp_registration', function () {
+    return view('camp_registration');
 });
 
 Route::get('/form_wizard', function () {
@@ -215,9 +227,23 @@ Route::get('/widget', function () {
 
 
 //code for routing or linking to web methods
-Route::get('login', 'AuthController@index');
+//Route::get('login', 'AuthController@index');
 Route::post('post-login', 'AuthController@postLogin'); 
 Route::get('registration', 'AuthController@registration');
 Route::post('post-registration', 'AuthController@postRegistration'); 
 Route::get('dashboard', 'AuthController@dashboard'); 
 Route::get('logout', 'AuthController@logout');
+
+//code for view data
+//Route::get('index','AuthController@index');
+Route::get('view-records','AuthController@index');
+//code adding campaign
+Route::post('post-camp-registration', 'AuthController@postCampRegistration');
+//code to edit records
+Route::put('edit-camp-registration', 'AuthController@editCampRegistration');
+Route::get('camp_update/{id}','AuthController@show');
+Route::post('edit_camp/{id}','AuthController@edit_camp');
+//Route::post('/{id}','AuthController@edit_camp');
+
+//get record by id
+//Route::get('view-records-id','AuthController@getRecordById');

@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<!-- Mirrored from bucketadmin.lab.themebucket.net/blank.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 03 Apr 2020 13:24:51 GMT -->
+<!-- Mirrored from bucketadmin.lab.themebucket.net/form_validation.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 03 Apr 2020 13:24:25 GMT -->
 <head>
     <meta charset="utf-8">
 
@@ -10,7 +9,7 @@
     <meta name="author" content="ThemeBucket">
     <link rel="shortcut icon" href="images/favicon.html">
 
-    <title>Blank page</title>
+    <title>Form Validation</title>
 
     <!--Core CSS -->
     <link href="bs3/css/bootstrap.min.css" rel="stylesheet">
@@ -235,9 +234,8 @@
         </li>
         <!-- user login dropdown start-->
         <li class="dropdown">
-            <a data-toggle="dropdown" class="dropdown-toggle icon-user" href="#">
-                <!--<img alt="" src="images/avatar1_small.jpg">-->
-                <i class="fa fa-user"></i>
+            <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                <img alt="" src="images/avatar1_small.jpg">
                 <span class="username">John Doe</span>
                 <b class="caret"></b>
             </a>
@@ -316,7 +314,7 @@
                 </ul>
             </li>
             <li class="sub-menu">
-                <a href="javascript:;">
+                <a href="javascript:;" class="active">
                     <i class="fa fa-tasks"></i>
                     <span>Form Components</span>
                 </a>
@@ -324,7 +322,7 @@
                     <li><a href="form_component.html">Form Elements</a></li>
                     <li><a href="advanced_form.html">Advanced Components</a></li>
                     <li><a href="form_wizard.html">Form Wizard</a></li>
-                    <li><a href="form_validation.html">Form Validation</a></li>
+                    <li class="active"><a href="form_validation.html">Form Validation</a></li>
                     <li><a href="file_upload.html">Muliple File Upload</a></li>
                     
                     <li><a href="dropzone.html">Dropzone</a></li>
@@ -332,7 +330,7 @@
 
                 </ul>
             </li>
-                <li class="sub-menu">
+            <li class="sub-menu">
                 <a href="javascript:;">
                     <i class="fa fa-envelope"></i>
                     <span>Mail </span>
@@ -366,12 +364,12 @@
                 </ul>
             </li>
             <li class="sub-menu">
-                <a href="javascript:;" class="active">
+                <a href="javascript:;">
                     <i class="fa fa-glass"></i>
                     <span>Extra</span>
                 </a>
                 <ul class="sub">
-                    <li class="active"><a href="blank.html">Blank Page</a></li>
+                    <li><a href="blank.html">Blank Page</a></li>
                     <li><a href="lock_screen.html">Lock Screen</a></li>
                     <li><a href="profile.html">Profile</a></li>
                     <li><a href="invoice.html">Invoice</a></li>
@@ -396,45 +394,149 @@
     <!--main content start-->
     <section id="main-content">
         <section class="wrapper">
-        <!-- page start-->
+            <!-- page start-->
+            <div class="row">
+                <div class="col-lg-12">
+                    <section class="panel">
+                        <header class="panel-heading">
+                            Basic validations
+                            <span class="tools pull-right">
+                                <a class="fa fa-chevron-down" href="javascript:;"></a>
+                                <a class="fa fa-cog" href="javascript:;"></a>
+                                <a class="fa fa-times" href="javascript:;"></a>
+                             </span>
+                        </header>
+                        <div class="panel-body">
+                            <form role="form" class="form-horizontal" action="/edit_camp/<?php echo $camp[0]->id; ?>" method="POST">
+                                {{ csrf_field() }}
+                                <div class="form-group">
+                                    <label class="col-lg-3 control-label">Place</label>
+                                    <div class="col-lg-6">
+                                        <input type="text" placeholder="" id="place" name="place" value = '<?php echo$camp[0]->place?>' class="form-control"/>
+                                        
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-lg-3 control-label">Date</label>
+                                    <div class="col-lg-6">
+                                        <input type="text" placeholder="" id="date" name="date" value = '<?php echo$camp[0]->date?>' class="form-control"/>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-lg-3 control-label">Time</label>
+                                    <div class="col-lg-6">
+                                        <input type="text" placeholder="" id="tim" name="time" value = '<?php echo$camp[0]->time?>' class="form-control"/>
+                                        
+                                    </div>
+                                </div>
 
-        <div class="row">
-            <div class="col-sm-12">
-                <section class="panel">
-                    {{-- <header class="panel-heading">
-                        Heading goes here..
-                        <span class="tools pull-right">
-                            <a href="javascript:;" class="fa fa-chevron-down"></a>
-                            <a href="javascript:;" class="fa fa-cog"></a>
-                            <a href="javascript:;" class="fa fa-times"></a>
-                         </span>
-                    </header>
-                    <div class="panel-body">
-                        This is a sample page
-                    </div> --}}
-                    
-                    {{-- here is the test code for table start --}}
-                    <table border = "1">
-                        <tr>
-                        <td>Id</td>
-                        <td>Email</td>
-                        <td>Password</td>
-                        </tr>
-                        @foreach ($campaigns as $camp)
-                        <tr>
-                        <td>{{ $camp->id }}</td>
-                        <td>{{ $camp->email }}</td>
-                        <td>{{ $camp->password }}</td>
-                        </tr>
-                        @endforeach
-                        </table>
-
-                    {{-- here is the test code for table ends --}}
-
-                </section>
+                                <div class="form-group">
+                                    <div class="col-lg-offset-3 col-lg-6">
+                                        <button class="btn btn-primary" type="submit">Submit</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </section>
+                </div>
             </div>
-        </div>
-        <!-- page end-->
+            <div class="row">
+                <div class="col-lg-12">
+                    <section class="panel">
+                       
+                        <div class="panel-body">
+                            <div class=" form">
+                                <form class="cmxform form-horizontal "  method="GET"action="{{url('view-records')}}">
+                                   
+                                    <div class="form-group">
+                                        <div class="col-lg-offset-3 col-lg-6">
+                                            <button class="btn btn-primary" type="submit">Save</button>
+                                            <button class="btn btn-default" type="button">Cancel</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+
+                        </div>
+                    </section>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <section class="panel">
+                        <header class="panel-heading">
+                            Advanced Form validations
+                            <span class="tools pull-right">
+                                <a class="fa fa-chevron-down" href="javascript:;"></a>
+                                <a class="fa fa-cog" href="javascript:;"></a>
+                                <a class="fa fa-times" href="javascript:;"></a>
+                             </span>
+                        </header>
+                        <div class="panel-body">
+                            <div class="form">
+                                <form class="cmxform form-horizontal " id="signupForm" method="get" action="#">
+                                    <div class="form-group ">
+                                        <label for="firstname" class="control-label col-lg-3">Firstname</label>
+                                        <div class="col-lg-6">
+                                            <input class=" form-control" id="firstname" name="firstname" type="text" />
+                                        </div>
+                                    </div>
+                                    <div class="form-group ">
+                                        <label for="lastname" class="control-label col-lg-3">Lastname</label>
+                                        <div class="col-lg-6">
+                                            <input class=" form-control" id="lastname" name="lastname" type="text" />
+                                        </div>
+                                    </div>
+                                    <div class="form-group ">
+                                        <label for="username" class="control-label col-lg-3">Username</label>
+                                        <div class="col-lg-6">
+                                            <input class="form-control " id="username" name="username" type="text" />
+                                        </div>
+                                    </div>
+                                    <div class="form-group ">
+                                        <label for="password" class="control-label col-lg-3">Password</label>
+                                        <div class="col-lg-6">
+                                            <input class="form-control " id="password" name="password" type="password" />
+                                        </div>
+                                    </div>
+                                    <div class="form-group ">
+                                        <label for="confirm_password" class="control-label col-lg-3">Confirm Password</label>
+                                        <div class="col-lg-6">
+                                            <input class="form-control " id="confirm_password" name="confirm_password" type="password" />
+                                        </div>
+                                    </div>
+                                    <div class="form-group ">
+                                        <label for="email" class="control-label col-lg-3">Email</label>
+                                        <div class="col-lg-6">
+                                            <input class="form-control " id="email" name="email" type="email" />
+                                        </div>
+                                    </div>
+                                    <div class="form-group ">
+                                        <label for="agree" class="control-label col-lg-3 col-sm-3">Agree to Our Policy</label>
+                                        <div class="col-lg-6 col-sm-9">
+                                            <input  type="checkbox" style="width: 20px" class="checkbox form-control" id="agree" name="agree" />
+                                        </div>
+                                    </div>
+                                    <div class="form-group ">
+                                        <label for="newsletter" class="control-label col-lg-3 col-sm-3">Receive the Newsletter</label>
+                                        <div class="col-lg-6 col-sm-9">
+                                            <input  type="checkbox" style="width: 20px" class="checkbox form-control" id="newsletter" name="newsletter" />
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <div class="col-lg-offset-3 col-lg-6">
+                                            <button class="btn btn-primary" type="submit">Save</button>
+                                            <button class="btn btn-default" type="button">Cancel</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+            <!-- page end-->
         </section>
     </section>
     <!--main content end-->
@@ -712,10 +814,14 @@
 <script src="js/flot-chart/jquery.flot.pie.resize.js"></script>
 
 
+<script type="text/javascript" src="js/jquery.validate.min.js"></script>
+
 <!--common script init for all pages-->
 <script src="js/scripts.js"></script>
+<!--this page script-->
+<script src="js/validation-init.js"></script>
 
 </body>
 
-<!-- Mirrored from bucketadmin.lab.themebucket.net/blank.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 03 Apr 2020 13:24:51 GMT -->
+<!-- Mirrored from bucketadmin.lab.themebucket.net/form_validation.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 03 Apr 2020 13:24:26 GMT -->
 </html>

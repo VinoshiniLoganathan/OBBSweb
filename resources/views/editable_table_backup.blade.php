@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<!-- Mirrored from bucketadmin.lab.themebucket.net/blank.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 03 Apr 2020 13:24:51 GMT -->
+<!-- Mirrored from bucketadmin.lab.themebucket.net/editable_table.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 03 Apr 2020 13:23:58 GMT -->
 <head>
     <meta charset="utf-8">
 
@@ -10,12 +10,14 @@
     <meta name="author" content="ThemeBucket">
     <link rel="shortcut icon" href="images/favicon.html">
 
-    <title>Blank page</title>
+    <title>Editable Table</title>
 
     <!--Core CSS -->
     <link href="bs3/css/bootstrap.min.css" rel="stylesheet">
     <link href="css/bootstrap-reset.css" rel="stylesheet">
     <link href="font-awesome/css/font-awesome.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="js/data-tables/DT_bootstrap.css" />
 
     <!-- Custom styles for this template -->
     <link href="css/style.css" rel="stylesheet">
@@ -235,9 +237,8 @@
         </li>
         <!-- user login dropdown start-->
         <li class="dropdown">
-            <a data-toggle="dropdown" class="dropdown-toggle icon-user" href="#">
-                <!--<img alt="" src="images/avatar1_small.jpg">-->
-                <i class="fa fa-user"></i>
+            <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                <img alt="" src="images/avatar1_small.jpg">
                 <span class="username">John Doe</span>
                 <b class="caret"></b>
             </a>
@@ -304,7 +305,7 @@
                 </a>
             </li>
             <li class="sub-menu">
-                <a href="javascript:;">
+                <a href="javascript:;" class="active">
                     <i class="fa fa-th"></i>
                     <span>Data Tables</span>
                 </a>
@@ -312,7 +313,7 @@
                     <li><a href="basic_table.html">Basic Table</a></li>
                     <li><a href="responsive_table.html">Responsive Table</a></li>
                     <li><a href="dynamic_table.html">Dynamic Table</a></li>
-                    <li><a href="editable_table.html">Editable Table</a></li>
+                    <li class="active"><a href="editable_table.html">Editable Table</a></li>
                 </ul>
             </li>
             <li class="sub-menu">
@@ -332,7 +333,7 @@
 
                 </ul>
             </li>
-                <li class="sub-menu">
+            <li class="sub-menu">
                 <a href="javascript:;">
                     <i class="fa fa-envelope"></i>
                     <span>Mail </span>
@@ -366,12 +367,12 @@
                 </ul>
             </li>
             <li class="sub-menu">
-                <a href="javascript:;" class="active">
+                <a href="javascript:;">
                     <i class="fa fa-glass"></i>
                     <span>Extra</span>
                 </a>
                 <ul class="sub">
-                    <li class="active"><a href="blank.html">Blank Page</a></li>
+                    <li><a href="blank.html">Blank Page</a></li>
                     <li><a href="lock_screen.html">Lock Screen</a></li>
                     <li><a href="profile.html">Profile</a></li>
                     <li><a href="invoice.html">Invoice</a></li>
@@ -401,8 +402,8 @@
         <div class="row">
             <div class="col-sm-12">
                 <section class="panel">
-                    {{-- <header class="panel-heading">
-                        Heading goes here..
+                    <header class="panel-heading">
+                        Editable Table
                         <span class="tools pull-right">
                             <a href="javascript:;" class="fa fa-chevron-down"></a>
                             <a href="javascript:;" class="fa fa-cog"></a>
@@ -410,27 +411,264 @@
                          </span>
                     </header>
                     <div class="panel-body">
-                        This is a sample page
-                    </div> --}}
-                    
-                    {{-- here is the test code for table start --}}
-                    <table border = "1">
-                        <tr>
-                        <td>Id</td>
-                        <td>Email</td>
-                        <td>Password</td>
-                        </tr>
-                        @foreach ($campaigns as $camp)
-                        <tr>
-                        <td>{{ $camp->id }}</td>
-                        <td>{{ $camp->email }}</td>
-                        <td>{{ $camp->password }}</td>
-                        </tr>
-                        @endforeach
-                        </table>
-
-                    {{-- here is the test code for table ends --}}
-
+                        <div class="adv-table editable-table ">
+                            <div class="clearfix">
+                                <div class="btn-group">
+                                    <button id="editable-sample_new" class="btn btn-primary">
+                                        Add New <i class="fa fa-plus"></i>
+                                    </button>
+                                </div>
+                                <div class="btn-group pull-right">
+                                    <button class="btn btn-default dropdown-toggle" data-toggle="dropdown">Tools <i class="fa fa-angle-down"></i>
+                                    </button>
+                                    <ul class="dropdown-menu pull-right">
+                                        <li><a href="#">Print</a></li>
+                                        <li><a href="#">Save as PDF</a></li>
+                                        <li><a href="#">Export to Excel</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="space15"></div>
+                            <table class="table table-striped table-hover table-bordered" id="editable-sample">
+                                <thead>
+                                <tr>
+                                    <th>First Name</th>
+                                    <th>Last Name</th>
+                                    <th>Points</th>
+                                    <th>Status</th>
+                                    <th>Edit</th>
+                                    <th>Delete</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr class="">
+                                    <td>Jonathan</td>
+                                    <td>Smith</td>
+                                    <td>3455</td>
+                                    <td class="center">Lorem ipsume</td>
+                                    <td><a class="edit" href="javascript:;">Edit</a></td>
+                                    <td><a class="delete" href="javascript:;">Delete</a></td>
+                                </tr>
+                                <tr class="">
+                                    <td>Mojela</td>
+                                    <td>Firebox</td>
+                                    <td>567</td>
+                                    <td class="center">new user</td>
+                                    <td><a class="edit" href="javascript:;">Edit</a></td>
+                                    <td><a class="delete" href="javascript:;">Delete</a></td>
+                                </tr>
+                                <tr class="">
+                                    <td>Akuman </td>
+                                    <td> Dareon</td>
+                                    <td>987</td>
+                                    <td class="center">ipsume dolor</td>
+                                    <td><a class="edit" href="javascript:;">Edit</a></td>
+                                    <td><a class="delete" href="javascript:;">Delete</a></td>
+                                </tr>
+                                <tr class="">
+                                    <td>Theme</td>
+                                    <td>Bucket</td>
+                                    <td>342</td>
+                                    <td class="center">Good Org</td>
+                                    <td><a class="edit" href="javascript:;">Edit</a></td>
+                                    <td><a class="delete" href="javascript:;">Delete</a></td>
+                                </tr>
+                                <tr class="">
+                                    <td>Jhone</td>
+                                    <td> Doe</td>
+                                    <td>345</td>
+                                    <td class="center">super user</td>
+                                    <td><a class="edit" href="javascript:;">Edit</a></td>
+                                    <td><a class="delete" href="javascript:;">Delete</a></td>
+                                </tr>
+                                <tr class="">
+                                    <td>Margarita</td>
+                                    <td>Diar</td>
+                                    <td>456</td>
+                                    <td class="center">goolsd</td>
+                                    <td><a class="edit" href="javascript:;">Edit</a></td>
+                                    <td><a class="delete" href="javascript:;">Delete</a></td>
+                                </tr>
+                                <tr class="">
+                                    <td>Jhon Doe</td>
+                                    <td>Jhon Doe </td>
+                                    <td>1234</td>
+                                    <td class="center"> user</td>
+                                    <td><a class="edit" href="javascript:;">Edit</a></td>
+                                    <td><a class="delete" href="javascript:;">Delete</a></td>
+                                </tr>
+                                <tr class="">
+                                    <td>Helena</td>
+                                    <td>Fox</td>
+                                    <td>456</td>
+                                    <td class="center"> Admin</td>
+                                    <td><a class="edit" href="javascript:;">Edit</a></td>
+                                    <td><a class="delete" href="javascript:;">Delete</a></td>
+                                </tr>
+                                <tr class="">
+                                    <td>Aishmen</td>
+                                    <td> Samuel</td>
+                                    <td>435</td>
+                                    <td class="center">super Admin</td>
+                                    <td><a class="edit" href="javascript:;">Edit</a></td>
+                                    <td><a class="delete" href="javascript:;">Delete</a></td>
+                                </tr>
+                                <tr class="">
+                                    <td>dream</td>
+                                    <td>Land</td>
+                                    <td>562</td>
+                                    <td class="center">normal user</td>
+                                    <td><a class="edit" href="javascript:;">Edit</a></td>
+                                    <td><a class="delete" href="javascript:;">Delete</a></td>
+                                </tr>
+                                <tr class="">
+                                    <td>babson</td>
+                                    <td> milan</td>
+                                    <td>567</td>
+                                    <td class="center">nothing</td>
+                                    <td><a class="edit" href="javascript:;">Edit</a></td>
+                                    <td><a class="delete" href="javascript:;">Delete</a></td>
+                                </tr>
+                                <tr class="">
+                                    <td>Waren</td>
+                                    <td>gufet</td>
+                                    <td>622</td>
+                                    <td class="center">author</td>
+                                    <td><a class="edit" href="javascript:;">Edit</a></td>
+                                    <td><a class="delete" href="javascript:;">Delete</a></td>
+                                </tr>
+                                <tr class="">
+                                    <td>Jhone</td>
+                                    <td> Doe</td>
+                                    <td>345</td>
+                                    <td class="center">super user</td>
+                                    <td><a class="edit" href="javascript:;">Edit</a></td>
+                                    <td><a class="delete" href="javascript:;">Delete</a></td>
+                                </tr>
+                                <tr class="">
+                                    <td>Margarita</td>
+                                    <td>Diar</td>
+                                    <td>456</td>
+                                    <td class="center">goolsd</td>
+                                    <td><a class="edit" href="javascript:;">Edit</a></td>
+                                    <td><a class="delete" href="javascript:;">Delete</a></td>
+                                </tr>
+                                <tr class="">
+                                    <td>Jhon Doe</td>
+                                    <td>Jhon Doe </td>
+                                    <td>1234</td>
+                                    <td class="center"> user</td>
+                                    <td><a class="edit" href="javascript:;">Edit</a></td>
+                                    <td><a class="delete" href="javascript:;">Delete</a></td>
+                                </tr>
+                                <tr class="">
+                                    <td>Helena</td>
+                                    <td>Fox</td>
+                                    <td>456</td>
+                                    <td class="center"> Admin</td>
+                                    <td><a class="edit" href="javascript:;">Edit</a></td>
+                                    <td><a class="delete" href="javascript:;">Delete</a></td>
+                                </tr>
+                                <tr class="">
+                                    <td>Aishmen</td>
+                                    <td> Samuel</td>
+                                    <td>435</td>
+                                    <td class="center">super Admin</td>
+                                    <td><a class="edit" href="javascript:;">Edit</a></td>
+                                    <td><a class="delete" href="javascript:;">Delete</a></td>
+                                </tr>
+                                <tr class="">
+                                    <td>dream</td>
+                                    <td>Land</td>
+                                    <td>562</td>
+                                    <td class="center">normal user</td>
+                                    <td><a class="edit" href="javascript:;">Edit</a></td>
+                                    <td><a class="delete" href="javascript:;">Delete</a></td>
+                                </tr>
+                                <tr class="">
+                                    <td>babson</td>
+                                    <td> milan</td>
+                                    <td>567</td>
+                                    <td class="center">nothing</td>
+                                    <td><a class="edit" href="javascript:;">Edit</a></td>
+                                    <td><a class="delete" href="javascript:;">Delete</a></td>
+                                </tr>
+                                <tr class="">
+                                    <td>Waren</td>
+                                    <td>gufet</td>
+                                    <td>622</td>
+                                    <td class="center">author</td>
+                                    <td><a class="edit" href="javascript:;">Edit</a></td>
+                                    <td><a class="delete" href="javascript:;">Delete</a></td>
+                                </tr>
+                                <tr class="">
+                                    <td>Jhone</td>
+                                    <td> Doe</td>
+                                    <td>345</td>
+                                    <td class="center">super user</td>
+                                    <td><a class="edit" href="javascript:;">Edit</a></td>
+                                    <td><a class="delete" href="javascript:;">Delete</a></td>
+                                </tr>
+                                <tr class="">
+                                    <td>Margarita</td>
+                                    <td>Diar</td>
+                                    <td>456</td>
+                                    <td class="center">goolsd</td>
+                                    <td><a class="edit" href="javascript:;">Edit</a></td>
+                                    <td><a class="delete" href="javascript:;">Delete</a></td>
+                                </tr>
+                                <tr class="">
+                                    <td>Jhon Doe</td>
+                                    <td>Jhon Doe </td>
+                                    <td>1234</td>
+                                    <td class="center"> user</td>
+                                    <td><a class="edit" href="javascript:;">Edit</a></td>
+                                    <td><a class="delete" href="javascript:;">Delete</a></td>
+                                </tr>
+                                <tr class="">
+                                    <td>Helena</td>
+                                    <td>Fox</td>
+                                    <td>456</td>
+                                    <td class="center"> Admin</td>
+                                    <td><a class="edit" href="javascript:;">Edit</a></td>
+                                    <td><a class="delete" href="javascript:;">Delete</a></td>
+                                </tr>
+                                <tr class="">
+                                    <td>Aishmen</td>
+                                    <td> Samuel</td>
+                                    <td>435</td>
+                                    <td class="center">super Admin</td>
+                                    <td><a class="edit" href="javascript:;">Edit</a></td>
+                                    <td><a class="delete" href="javascript:;">Delete</a></td>
+                                </tr>
+                                <tr class="">
+                                    <td>dream</td>
+                                    <td>Land</td>
+                                    <td>562</td>
+                                    <td class="center">normal user</td>
+                                    <td><a class="edit" href="javascript:;">Edit</a></td>
+                                    <td><a class="delete" href="javascript:;">Delete</a></td>
+                                </tr>
+                                <tr class="">
+                                    <td>babson</td>
+                                    <td> milan</td>
+                                    <td>567</td>
+                                    <td class="center">nothing</td>
+                                    <td><a class="edit" href="javascript:;">Edit</a></td>
+                                    <td><a class="delete" href="javascript:;">Delete</a></td>
+                                </tr>
+                                <tr class="">
+                                    <td>Waren</td>
+                                    <td>gufet</td>
+                                    <td>622</td>
+                                    <td class="center">author</td>
+                                    <td><a class="edit" href="javascript:;">Edit</a></td>
+                                    <td><a class="delete" href="javascript:;">Delete</a></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
                 </section>
             </div>
         </div>
@@ -695,7 +933,9 @@
 <!-- Placed js at the end of the document so the pages load faster -->
 
 <!--Core js-->
-<script src="js/jquery.js"></script>
+<script src="js/jquery-1.10.2.min.js"></script>
+<script src="js/jquery-migrate.js"></script>
+
 <script src="bs3/js/bootstrap.min.js"></script>
 <script class="include" type="text/javascript" src="js/jquery.dcjqaccordion.2.7.js"></script>
 <script src="js/jquery.scrollTo.min.js"></script>
@@ -711,11 +951,23 @@
 <script src="js/flot-chart/jquery.flot.resize.js"></script>
 <script src="js/flot-chart/jquery.flot.pie.resize.js"></script>
 
+<script type="text/javascript" src="js/data-tables/jquery.dataTables.js"></script>
+<script type="text/javascript" src="js/data-tables/DT_bootstrap.js"></script>
 
 <!--common script init for all pages-->
 <script src="js/scripts.js"></script>
 
+<!--script for this page only-->
+<script src="js/table-editable.js"></script>
+
+<!-- END JAVASCRIPTS -->
+<script>
+    jQuery(document).ready(function() {
+        EditableTable.init();
+    });
+</script>
+
 </body>
 
-<!-- Mirrored from bucketadmin.lab.themebucket.net/blank.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 03 Apr 2020 13:24:51 GMT -->
+<!-- Mirrored from bucketadmin.lab.themebucket.net/editable_table.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 03 Apr 2020 13:23:59 GMT -->
 </html>

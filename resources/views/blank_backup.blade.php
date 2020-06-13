@@ -401,7 +401,7 @@
         <div class="row">
             <div class="col-sm-12">
                 <section class="panel">
-                    {{-- <header class="panel-heading">
+                    <header class="panel-heading">
                         Heading goes here..
                         <span class="tools pull-right">
                             <a href="javascript:;" class="fa fa-chevron-down"></a>
@@ -411,26 +411,7 @@
                     </header>
                     <div class="panel-body">
                         This is a sample page
-                    </div> --}}
-                    
-                    {{-- here is the test code for table start --}}
-                    <table border = "1">
-                        <tr>
-                        <td>Id</td>
-                        <td>Email</td>
-                        <td>Password</td>
-                        </tr>
-                        @foreach ($campaigns as $camp)
-                        <tr>
-                        <td>{{ $camp->id }}</td>
-                        <td>{{ $camp->email }}</td>
-                        <td>{{ $camp->password }}</td>
-                        </tr>
-                        @endforeach
-                        </table>
-
-                    {{-- here is the test code for table ends --}}
-
+                    </div>
                 </section>
             </div>
         </div>
