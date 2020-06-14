@@ -263,16 +263,15 @@
 <!--sidebar start-->
 <aside>
     <div id="sidebar" class="nav-collapse">
-        <!-- sidebar menu start-->
-        <div class="leftside-navigation">
+        <!-- sidebar menu start-->            <div class="leftside-navigation">
             <ul class="sidebar-menu" id="nav-accordion">
                 <li>
-                    <a class="active" href="index-2.html">
+                    <a href="index-2.html">
                         <i class="fa fa-dashboard"></i>
                         <span>Dashboard</span>
                     </a>
                 </li>
-                <li class="sub-menu">
+                {{-- <li class="sub-menu">
                     <a href="javascript:;">
                         <i class="fa fa-laptop"></i>
                         <span>Layouts</span>
@@ -291,7 +290,7 @@
                     <ul class="sub">
                         <li><a href="general.html">General</a></li>
                         <li><a href="buttons.html">Buttons</a></li>
-<li><a href="typography.html">Typography</a></li>
+    <li><a href="typography.html">Typography</a></li>
                         <li><a href="widget.html">Widget</a></li>
                         <li><a href="slider.html">Slider</a></li>
                         <li><a href="tree_view.html">Tree View</a></li>
@@ -320,23 +319,23 @@
                     </ul>
                 </li>
                 <li class="sub-menu">
-                    <a href="javascript:;">
+                    <a href="javascript:;" class="active">
                         <i class="fa fa-tasks"></i>
                         <span>Form Components</span>
-                    </a>
-                    <ul class="sub">
-                        <li><a href="form_component.html">Form Elements</a></li>
-                        <li><a href="advanced_form.html">Advanced Components</a></li>
-                        <li><a href="form_wizard.html">Form Wizard</a></li>
-                        <li><a href="form_validation.html">Form Validation</a></li>
-                        <li><a href="file_upload.html">Muliple File Upload</a></li>
-
+                    </a> --}}
+                    {{-- <ul class="sub"> --}}
+                        <li><a href="form_component.html">Blood Bag</a></li>
+                        <li><a href="advanced_form.html">Donor List</a></li>
+                        <li><a href="form_wizard.html">Benefits</a></li>
+                        <li class="active"><a href="form_validation.html">Campaign</a></li>
+                        {{-- <li><a href="file_upload.html">Muliple File Upload</a></li>
+                        
                         <li><a href="dropzone.html">Dropzone</a></li>
-                        <li><a href="inline_editor.html">Inline Editor</a></li>
-
-                    </ul>
-                </li>
-                <li class="sub-menu">
+                        <li><a href="inline_editor.html">Inline Editor</a></li> --}}
+    
+                    {{-- </ul> --}}
+                {{-- </li> --}}
+                {{-- <li class="sub-menu">
                     <a href="javascript:;">
                         <i class="fa fa-envelope"></i>
                         <span>Mail </span>
@@ -381,10 +380,10 @@
                         <li><a href="invoice.html">Invoice</a></li>
                         <li><a href="pricing_table.html">Pricing Table</a></li>
                         <li><a href="timeline.html">Timeline</a></li>                    
-<li><a href="gallery.html">Media Gallery</a></li><li><a href="404.html">404 Error</a></li>
+    <li><a href="gallery.html">Media Gallery</a></li><li><a href="404.html">404 Error</a></li>
                         <li><a href="500.html">500 Error</a></li>
                         <li><a href="registration.html">Registration</a></li>
-                    </ul>
+                    </ul> --}}
                 </li>
                 <li>
                     <a href="login.html">
@@ -392,8 +391,8 @@
                         <span>Login Page</span>
                     </a>
                 </li>
-            </ul>            </div>
-        <!-- sidebar menu end-->
+            </ul></div>        
+    <!-- sidebar menu end-->
     </div>
 </aside>
 <!--sidebar end-->

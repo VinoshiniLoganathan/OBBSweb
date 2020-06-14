@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<!-- Mirrored from bucketadmin.lab.themebucket.net/form_validation.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 03 Apr 2020 13:24:25 GMT -->
+
 <head>
     <meta charset="utf-8">
 
@@ -39,9 +39,9 @@
 <!--logo start-->
 <div class="brand">
 
-    <a href="index-2.html" class="logo">
+    {{-- <a href="index-2.html" class="logo">
         <img src="images/logo.png" alt="">
-    </a>
+    </a> --}}
     <div class="sidebar-toggle-box">
         <div class="fa fa-bars"></div>
     </div>
@@ -49,7 +49,7 @@
 <!--logo end-->
 
 <div class="nav notify-row" id="top_menu">
-    <!--  notification start -->
+    {{-- <!--  notification start -->
     <ul class="nav top-menu">
         <!-- settings start -->
         <li class="dropdown">
@@ -120,7 +120,7 @@
             </ul>
         </li>
         <!-- settings end -->
-        <!-- inbox dropdown start-->
+        {{-- <!-- inbox dropdown start-->
         <li id="header_inbox_bar" class="dropdown">
             <a data-toggle="dropdown" class="dropdown-toggle" href="#">
                 <i class="fa fa-envelope-o"></i>
@@ -222,9 +222,9 @@
 
             </ul>
         </li>
-        <!-- notification dropdown end -->
+        <!-- notification dropdown end --> --}}
     </ul>
-    <!--  notification end -->
+    <!--  notification end --> 
 </div>
 <div class="top-nav clearfix">
     <!--search & user info start-->
@@ -234,11 +234,11 @@
         </li>
         <!-- user login dropdown start-->
         <li class="dropdown">
-            <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+            {{-- <a data-toggle="dropdown" class="dropdown-toggle" href="#">
                 <img alt="" src="images/avatar1_small.jpg">
                 <span class="username">John Doe</span>
                 <b class="caret"></b>
-            </a>
+            </a> --}}
             <ul class="dropdown-menu extended logout">
                 <li><a href="#"><i class=" fa fa-suitcase"></i>Profile</a></li>
                 <li><a href="#"><i class="fa fa-cog"></i> Settings</a></li>
@@ -260,7 +260,7 @@
     <div id="sidebar" class="nav-collapse">
         <!-- sidebar menu start-->            <div class="leftside-navigation">
             <ul class="sidebar-menu" id="nav-accordion">
-            <li>
+            {{-- <li>
                 <a href="index-2.html">
                     <i class="fa fa-dashboard"></i>
                     <span>Dashboard</span>
@@ -317,15 +317,15 @@
                 <a href="javascript:;" class="active">
                     <i class="fa fa-tasks"></i>
                     <span>Form Components</span>
-                </a>
-                <ul class="sub">
-                    <li><a href="form_component.html">Form Elements</a></li>
-                    <li><a href="advanced_form.html">Advanced Components</a></li>
-                    <li><a href="form_wizard.html">Form Wizard</a></li>
-                    <li class="active"><a href="form_validation.html">Form Validation</a></li>
-                    <li><a href="file_upload.html">Muliple File Upload</a></li>
+                </a> --}}
+                {{-- <ul class="sub"> --}}
+                    <li><a href="form_component.html">Blood Bag</a></li>
+                    <li><a href="advanced_form.html">Donor List</a></li>
+                    <li><a href="form_wizard.html">Benefits</a></li>
+                    <li class="active"><a href="form_validation.html">Campaign</a></li>
+                    {{-- <li><a href="file_upload.html">Muliple File Upload</a></li> --}}
                     
-                    <li><a href="dropzone.html">Dropzone</a></li>
+                    {{-- <li><a href="dropzone.html">Dropzone</a></li>
                     <li><a href="inline_editor.html">Inline Editor</a></li>
 
                 </ul>
@@ -378,7 +378,7 @@
 <li><a href="gallery.html">Media Gallery</a></li><li><a href="404.html">404 Error</a></li>
                     <li><a href="500.html">500 Error</a></li>
                     <li><a href="registration.html">Registration</a></li>
-                </ul>
+                </ul> --}}
             </li>
             <li>
                 <a href="login.html">
@@ -449,10 +449,10 @@
                                 <form class="cmxform form-horizontal "  method="GET"action="{{url('view-records')}}">
                                    
                                     <div class="form-group">
-                                        <div class="col-lg-offset-3 col-lg-6">
+                                        {{-- <div class="col-lg-offset-3 col-lg-6">
                                             <button class="btn btn-primary" type="submit">Save</button>
                                             <button class="btn btn-default" type="button">Cancel</button>
-                                        </div>
+                                        </div> --}}
                                     </div>
                                 </form>
                             </div>
@@ -461,7 +461,9 @@
                     </section>
                 </div>
             </div>
-            <div class="row">
+
+
+            {{-- <div class="row">
                 <div class="col-lg-12">
                     <section class="panel">
                         <header class="panel-heading">
@@ -535,12 +537,12 @@
                         </div>
                     </section>
                 </div>
-            </div>
+            </div> --}}
             <!-- page end-->
         </section>
     </section>
     <!--main content end-->
-<!--right sidebar start-->
+{{-- <!--right sidebar start-->
 <div class="right-sidebar">
 <div class="search-row">
     <input type="text" placeholder="Search" class="form-control">
@@ -790,7 +792,7 @@
 </ul>
 </div>
 </div>
-<!--right sidebar end-->
+<!--right sidebar end--> --}}
 
 </section>
 
@@ -823,5 +825,5 @@
 
 </body>
 
-<!-- Mirrored from bucketadmin.lab.themebucket.net/form_validation.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 03 Apr 2020 13:24:26 GMT -->
+
 </html>

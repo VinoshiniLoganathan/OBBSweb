@@ -40,9 +40,9 @@
 <!--logo start-->
 <div class="brand">
 
-    <a href="index-2.html" class="logo">
+    {{-- <a href="index-2.html" class="logo">
         <img src="images/logo.png" alt="">
-    </a>
+    </a> --}}
     <div class="sidebar-toggle-box">
         <div class="fa fa-bars"></div>
     </div>
@@ -267,7 +267,7 @@
                     <span>Dashboard</span>
                 </a>
             </li>
-            <li class="sub-menu">
+            {{-- <li class="sub-menu">
                 <a href="javascript:;">
                     <i class="fa fa-laptop"></i>
                     <span>Layouts</span>
@@ -318,20 +318,20 @@
                 <a href="javascript:;" class="active">
                     <i class="fa fa-tasks"></i>
                     <span>Form Components</span>
-                </a>
-                <ul class="sub">
-                    <li><a href="form_component.html">Form Elements</a></li>
-                    <li><a href="advanced_form.html">Advanced Components</a></li>
-                    <li><a href="form_wizard.html">Form Wizard</a></li>
-                    <li class="active"><a href="form_validation.html">Form Validation</a></li>
-                    <li><a href="file_upload.html">Muliple File Upload</a></li>
+                </a> --}}
+                {{-- <ul class="sub"> --}}
+                    <li><a href="form_component.html">Blood Bag</a></li>
+                    <li><a href="advanced_form.html">Donor List</a></li>
+                    <li><a href="form_wizard.html">Benefits</a></li>
+                    <li class="active"><a href="form_validation.html">Campaign</a></li>
+                    {{-- <li><a href="file_upload.html">Muliple File Upload</a></li>
                     
                     <li><a href="dropzone.html">Dropzone</a></li>
-                    <li><a href="inline_editor.html">Inline Editor</a></li>
+                    <li><a href="inline_editor.html">Inline Editor</a></li> --}}
 
-                </ul>
-            </li>
-            <li class="sub-menu">
+                {{-- </ul> --}}
+            {{-- </li> --}}
+            {{-- <li class="sub-menu">
                 <a href="javascript:;">
                     <i class="fa fa-envelope"></i>
                     <span>Mail </span>
@@ -379,7 +379,7 @@
 <li><a href="gallery.html">Media Gallery</a></li><li><a href="404.html">404 Error</a></li>
                     <li><a href="500.html">500 Error</a></li>
                     <li><a href="registration.html">Registration</a></li>
-                </ul>
+                </ul> --}}
             </li>
             <li>
                 <a href="login.html">
@@ -411,20 +411,20 @@
                             <form role="form" class="form-horizontal" action="{{url('post-camp-registration')}}" method="POST">
                                 {{ csrf_field() }}
                                 <div class="form-group">
-                                    <label class="col-lg-3 control-label">sample 1</label>
+                                    <label class="col-lg-3 control-label">Place</label>
                                     <div class="col-lg-6">
                                         <input type="text" placeholder="" id="place" name="place"class="form-control">
                                         
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label class="col-lg-3 control-label">sample 2</label>
+                                    <label class="col-lg-3 control-label">Date</label>
                                     <div class="col-lg-6">
                                         <input type="text" placeholder="" id="date" name="date" class="form-control">
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label class="col-lg-3 control-label">sample</label>
+                                    <label class="col-lg-3 control-label">Time</label>
                                     <div class="col-lg-6">
                                         <input type="text" placeholder="" id="tim" name="time"class="form-control">
                                         
@@ -451,8 +451,8 @@
                                    
                                     <div class="form-group">
                                         <div class="col-lg-offset-3 col-lg-6">
-                                            <button class="btn btn-primary" type="submit">Save</button>
-                                            <button class="btn btn-default" type="button">Cancel</button>
+                                            <button class="btn btn-primary" type="submit">View Records</button>
+                                            {{-- <button class="btn btn-default" type="button">Cancel</button> --}}
                                         </div>
                                     </div>
                                 </form>
@@ -462,7 +462,7 @@
                     </section>
                 </div>
             </div>
-            <div class="row">
+            {{-- <div class="row">
                 <div class="col-lg-12">
                     <section class="panel">
                         <header class="panel-heading">
@@ -534,15 +534,15 @@
                                 </form>
                             </div>
                         </div>
-                    </section>
+                    </section> 
                 </div>
-            </div>
+            </div> --}}
             <!-- page end-->
         </section>
     </section>
     <!--main content end-->
 <!--right sidebar start-->
-<div class="right-sidebar">
+{{-- <div class="right-sidebar">
 <div class="search-row">
     <input type="text" placeholder="Search" class="form-control">
 </div>
@@ -791,7 +791,7 @@
 </ul>
 </div>
 </div>
-<!--right sidebar end-->
+<!--right sidebar end--> --}}
 
 </section>
 

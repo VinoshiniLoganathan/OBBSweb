@@ -97,7 +97,7 @@ class AuthController extends Controller
         $user->password = $request->password;
         $user->save();
 
-        return Redirect::to("index-2");
+        return Redirect::to("camp_registration");
         //return Redirect::to("dashboard")->withSuccess('Great! You have Successfully loggedin');
     }
 
@@ -111,7 +111,7 @@ class AuthController extends Controller
         $campaign->time = $request->time;
         $campaign->save();
 
-        return Redirect::to("index-2");
+        return Redirect::to("camp_registration");
         //return Redirect::to("dashboard")->withSuccess('Great! You have Successfully loggedin');
     }
      
