@@ -236,7 +236,7 @@ Route::get('logout', 'AuthController@logout');
 
 //code for view data
 //Route::get('index','AuthController@index');
-Route::get('view-records','AuthController@index');
+Route::get('view-records','AuthController@index');//rename controller later
 //code adding campaign
 Route::post('post-camp-registration', 'AuthController@postCampRegistration');
 //code to edit records

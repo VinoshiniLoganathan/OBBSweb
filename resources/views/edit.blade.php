@@ -13,9 +13,10 @@
     <title>Blank page</title>
 
     <!--Core CSS -->
-    <link href="bs3/css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/bootstrap-reset.css" rel="stylesheet">
-    <link href="font-awesome/css/font-awesome.css" rel="stylesheet" />
+    {{-- follow the code  below and change the code as followning --}}
+    <link rel="stylesheet" href="{{ URL::asset('bs3/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ URL::asset('css/bootstrap-reset.css') }}">
+    <link rel="stylesheet" href="{{ URL::asset('font-awesome/css/font-awesome.css') }}">
 
     <!-- Custom styles for this template -->
     <link href="css/style.css" rel="stylesheet">
@@ -40,9 +41,9 @@
 <!--logo start-->
 <div class="brand">
 
-    <a href="index-2.html" class="logo">
+    {{-- <a href="index-2.html" class="logo">
         <img src="images/logo.png" alt="">
-    </a>
+    </a> --}}
     <div class="sidebar-toggle-box">
         <div class="fa fa-bars"></div>
     </div>
@@ -50,7 +51,7 @@
 <!--logo end-->
 
 <div class="nav notify-row" id="top_menu">
-    <!--  notification start -->
+    {{-- <!--  notification start -->
     <ul class="nav top-menu">
         <!-- settings start -->
         <li class="dropdown">
@@ -222,7 +223,7 @@
                 </li>
 
             </ul>
-        </li>
+        </li> --}}
         <!-- notification dropdown end -->
     </ul>
     <!--  notification end -->
@@ -260,9 +261,10 @@
 <!--header end-->
 <aside>
     <div id="sidebar" class="nav-collapse">
-        <!-- sidebar menu start-->            <div class="leftside-navigation">
+        <!-- sidebar menu start-->            
+        <div class="leftside-navigation">
             <ul class="sidebar-menu" id="nav-accordion">
-            <li>
+            {{-- <li>
                 <a href="index-2.html">
                     <i class="fa fa-dashboard"></i>
                     <span>Dashboard</span>
@@ -320,12 +322,12 @@
                     <i class="fa fa-tasks"></i>
                     <span>Form Components</span>
                 </a>
-                <ul class="sub">
-                    <li><a href="form_component.html">Form Elements</a></li>
-                    <li><a href="advanced_form.html">Advanced Components</a></li>
-                    <li><a href="form_wizard.html">Form Wizard</a></li>
-                    <li><a href="form_validation.html">Form Validation</a></li>
-                    <li><a href="file_upload.html">Muliple File Upload</a></li>
+                <ul class="sub"> --}}
+                    <li><a href="form_component.html">Blood Bag</a></li>
+                    <li><a href="advanced_form.html">Donor List</a></li>
+                    <li><a href="form_wizard.html">Benefits</a></li>
+                    <li class="active"><a href="form_validation.html">Campaign</a></li>
+                    {{-- <li><a href="file_upload.html">Muliple File Upload</a></li>
                     
                     <li><a href="dropzone.html">Dropzone</a></li>
                     <li><a href="inline_editor.html">Inline Editor</a></li>
@@ -380,7 +382,7 @@
 <li><a href="gallery.html">Media Gallery</a></li><li><a href="404.html">404 Error</a></li>
                     <li><a href="500.html">500 Error</a></li>
                     <li><a href="registration.html">Registration</a></li>
-                </ul>
+                </ul> --}}
             </li>
             <li>
                 <a href="login.html">

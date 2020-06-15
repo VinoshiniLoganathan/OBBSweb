@@ -13,6 +13,7 @@
     <title>Login</title>
 
     <!--Core CSS -->
+    
     <link href="bs3/css/bootstrap.min.css" rel="stylesheet">
     <link href="css/bootstrap-reset.css" rel="stylesheet">
     <link href="font-awesome/css/font-awesome.css" rel="stylesheet" />
@@ -90,7 +91,8 @@
 
        <button class="btn btn-lg btn-primary btn-block btn-login text-uppercase font-weight-bold mb-2" type="submit">Sign Up</button>
        <div class="text-center">If you have an account?
-         <a class="small" href="{{url('login')}}">Sign In</a></div>
+         <a class="" href="{{url('/')}}">Sign In</a></div>
+      </a>
      </form>
 
     </div>

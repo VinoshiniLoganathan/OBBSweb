@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<!-- Mirrored from bucketadmin.lab.themebucket.net/form_validation.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 03 Apr 2020 13:24:25 GMT -->
 <head>
     <meta charset="utf-8">
 
@@ -10,13 +9,14 @@
     <meta name="author" content="ThemeBucket">
     <link rel="shortcut icon" href="images/favicon.html">
 
-    <title>Form Validation</title>
+    <title>Campaign</title>
 
     <!--Core CSS -->
-    <link href="bs3/css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/bootstrap-reset.css" rel="stylesheet">
-    <link href="font-awesome/css/font-awesome.css" rel="stylesheet" />
-
+    {{-- follow the code  below and change the code as followning --}}
+    <link rel="stylesheet" href="{{ URL::asset('bs3/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ URL::asset('css/bootstrap-reset.css') }}">
+    <link rel="stylesheet" href="{{ URL::asset('font-awesome/css/font-awesome.css') }}">
+    
     <!-- Custom styles for this template -->
     <link href="css/style.css" rel="stylesheet">
     <link href="css/style-responsive.css" rel="stylesheet" />
@@ -50,7 +50,7 @@
 <!--logo end-->
 
 <div class="nav notify-row" id="top_menu">
-    <!--  notification start -->
+    {{-- <!--  notification start -->
     <ul class="nav top-menu">
         <!-- settings start -->
         <li class="dropdown">
@@ -225,7 +225,7 @@
         </li>
         <!-- notification dropdown end -->
     </ul>
-    <!--  notification end -->
+    <!--  notification end --> --}}
 </div>
 <div class="top-nav clearfix">
     <!--search & user info start-->
@@ -235,11 +235,11 @@
         </li>
         <!-- user login dropdown start-->
         <li class="dropdown">
-            <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+            {{-- <a data-toggle="dropdown" class="dropdown-toggle" href="#">
                 <img alt="" src="images/avatar1_small.jpg">
                 <span class="username">John Doe</span>
                 <b class="caret"></b>
-            </a>
+            </a> --}}
             <ul class="dropdown-menu extended logout">
                 <li><a href="#"><i class=" fa fa-suitcase"></i>Profile</a></li>
                 <li><a href="#"><i class="fa fa-cog"></i> Settings</a></li>

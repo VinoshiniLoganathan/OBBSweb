@@ -9,12 +9,13 @@
     <meta name="author" content="ThemeBucket">
     <link rel="shortcut icon" href="images/favicon.html">
 
-    <title>Form Validation</title>
+    <title>Campaign Updates</title>
 
     <!--Core CSS -->
-    <link href="bs3/css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/bootstrap-reset.css" rel="stylesheet">
-    <link href="font-awesome/css/font-awesome.css" rel="stylesheet" />
+    {{-- follow the code  below and change the code as followning --}}
+    <link rel="stylesheet" href="{{ URL::asset('bs3/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ URL::asset('css/bootstrap-reset.css') }}">
+    <link rel="stylesheet" href="{{ URL::asset('font-awesome/css/font-awesome.css') }}">
 
     <!-- Custom styles for this template -->
     <link href="css/style.css" rel="stylesheet">
@@ -399,7 +400,7 @@
                 <div class="col-lg-12">
                     <section class="panel">
                         <header class="panel-heading">
-                            Basic validations
+                            {{-- Basic validations --}}
                             <span class="tools pull-right">
                                 <a class="fa fa-chevron-down" href="javascript:;"></a>
                                 <a class="fa fa-cog" href="javascript:;"></a>
@@ -446,7 +447,7 @@
                        
                         <div class="panel-body">
                             <div class=" form">
-                                <form class="cmxform form-horizontal "  method="GET"action="{{url('view-records')}}">
+                                <form class="cmxform form-horizontal "  method="GET" action="{{url('view-records')}}">
                                    
                                     <div class="form-group">
                                         {{-- <div class="col-lg-offset-3 col-lg-6">
