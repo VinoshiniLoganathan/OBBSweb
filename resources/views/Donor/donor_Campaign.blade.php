@@ -13,9 +13,9 @@
     <title>Editable Table</title>
 
     <!--Core CSS -->
-    <link href="bs3/css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/bootstrap-reset.css" rel="stylesheet">
-    <link href="font-awesome/css/font-awesome.css" rel="stylesheet" />
+    <link rel="stylesheet" href="{{ URL::asset('bs3/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ URL::asset('css/bootstrap-reset.css') }}">
+    <link rel="stylesheet" href="{{ URL::asset('font-awesome/css/font-awesome.css') }}">
 
     <link rel="stylesheet" href="js/data-tables/DT_bootstrap.css" />
 
@@ -42,18 +42,18 @@
 <!--logo start-->
 <div class="brand">
 
-    {{-- <a href="index-2.html" class="logo">
+    <a href="index-2.html" class="logo">
         <img src="images/logo.png" alt="">
     </a>
     <div class="sidebar-toggle-box">
         <div class="fa fa-bars"></div>
-    </div> --}}
+    </div>
 </div>
 <!--logo end-->
 
-<div class="nav notify-row" id="top_menu">
+{{-- <div class="nav notify-row" id="top_menu">
     <!--  notification start -->
-    {{-- <ul class="nav top-menu">
+    <ul class="nav top-menu">
         <!-- settings start -->
         <li class="dropdown">
             <a data-toggle="dropdown" class="dropdown-toggle" href="#">
@@ -226,12 +226,12 @@
             </ul>
         </li>
         <!-- notification dropdown end -->
-    </ul> --}}
+    </ul>
     <!--  notification end -->
 </div>
 <div class="top-nav clearfix">
     <!--search & user info start-->
-    {{-- <ul class="nav pull-right top-menu">
+    <ul class="nav pull-right top-menu">
         <li>
             <input type="text" class="form-control search" placeholder=" Search">
         </li>
@@ -255,8 +255,8 @@
             </div>
         </li>
     </ul>
-    <!--search & user info end--> --}}
-</div>
+    <!--search & user info end-->
+</div> --}}
 </header>
 <!--header end-->
 <aside>
@@ -303,20 +303,20 @@
                     <i class="fa fa-bullhorn"></i>
                     <span>Fontawesome </span>
                 </a>
-            </li> --}}
-            {{-- <li class="sub-menu">
+            </li>
+            <li class="sub-menu">
                 <a href="javascript:;" class="active">
                     <i class="fa fa-th"></i>
                     <span>Data Tables</span>
                 </a>
                 <ul class="sub"> --}}
-                    <li><a href="form_component.html">Blood Bag</a></li>
-                    <li><a href="advanced_form.html">Donor List</a></li>
-                    <li><a href="form_wizard.html">Benefits</a></li>
-                    <li class="active"><a href="form_validation.html">Campaign</a></li>
+                    <li><a href="{{url('donor_Donation')}}">Donation Activity</a></li>
+                    <li class="active"><a href="{{url('donor_Campaign')}}">Campaign</a></li>
+                    <li><a href="{{url('donor_Benefits')}}">Benefits</a></li>
+                    <li><a href="editable_table.html">Profile</a></li>
                 {{-- </ul>
-            </li> --}}
-            {{-- <li class="sub-menu">
+            </li>
+            <li class="sub-menu">
                 <a href="javascript:;">
                     <i class="fa fa-tasks"></i>
                     <span>Form Components</span>
@@ -382,14 +382,14 @@
                     <li><a href="500.html">500 Error</a></li>
                     <li><a href="registration.html">Registration</a></li>
                 </ul>
-            </li> --}}
+            </li>
             <li>
                 <a href="login.html">
                     <i class="fa fa-user"></i>
                     <span>Login Page</span>
                 </a>
             </li>
-        </ul></div>        
+        </ul></div>         --}}
 <!-- sidebar menu end-->
     </div>
 </aside>
@@ -432,25 +432,239 @@
                             <table class="table table-striped table-hover table-bordered" id="editable-sample">
                                 <thead>
                                 <tr>
-                                    <th>ID</th>
-                                    <th>Place</th>
-                                    <th>Date</th>
-                                    <th>Time</th>
+                                    <th>First Name</th>
+                                    <th>Last Name</th>
+                                    <th>Points</th>
+                                    <th>Status</th>
                                     <th>Edit</th>
-                                    {{-- <th>Delete</th> --}}
+                                    <th>Delete</th>
                                 </tr>
                                 </thead>
                                 <tbody>
-                                    @foreach ($campaigns as $camp)
                                 <tr class="">
-                                    <td>{{ $camp->id }}</td>
-                                    <td>{{ $camp->place }}</td>
-                                    <td>{{ $camp->date }}</td>
-                                    <td>{{ $camp->time }}</td>                                    
-                                    <td><a href='camp_update/{{ $camp->id }}'>Edit</a></td>
-                                    {{-- <td><a class="delete" href="javascript:;">Delete</a></td> --}}
+                                    <td>Jonathan</td>
+                                    <td>Smith</td>
+                                    <td>3455</td>
+                                    <td class="center">Lorem ipsume</td>
+                                    <td><a class="edit" href="javascript:;">Edit</a></td>
+                                    <td><a class="delete" href="javascript:;">Delete</a></td>
                                 </tr>
-                                @endforeach
+                                <tr class="">
+                                    <td>Mojela</td>
+                                    <td>Firebox</td>
+                                    <td>567</td>
+                                    <td class="center">new user</td>
+                                    <td><a class="edit" href="javascript:;">Edit</a></td>
+                                    <td><a class="delete" href="javascript:;">Delete</a></td>
+                                </tr>
+                                <tr class="">
+                                    <td>Akuman </td>
+                                    <td> Dareon</td>
+                                    <td>987</td>
+                                    <td class="center">ipsume dolor</td>
+                                    <td><a class="edit" href="javascript:;">Edit</a></td>
+                                    <td><a class="delete" href="javascript:;">Delete</a></td>
+                                </tr>
+                                <tr class="">
+                                    <td>Theme</td>
+                                    <td>Bucket</td>
+                                    <td>342</td>
+                                    <td class="center">Good Org</td>
+                                    <td><a class="edit" href="javascript:;">Edit</a></td>
+                                    <td><a class="delete" href="javascript:;">Delete</a></td>
+                                </tr>
+                                <tr class="">
+                                    <td>Jhone</td>
+                                    <td> Doe</td>
+                                    <td>345</td>
+                                    <td class="center">super user</td>
+                                    <td><a class="edit" href="javascript:;">Edit</a></td>
+                                    <td><a class="delete" href="javascript:;">Delete</a></td>
+                                </tr>
+                                <tr class="">
+                                    <td>Margarita</td>
+                                    <td>Diar</td>
+                                    <td>456</td>
+                                    <td class="center">goolsd</td>
+                                    <td><a class="edit" href="javascript:;">Edit</a></td>
+                                    <td><a class="delete" href="javascript:;">Delete</a></td>
+                                </tr>
+                                <tr class="">
+                                    <td>Jhon Doe</td>
+                                    <td>Jhon Doe </td>
+                                    <td>1234</td>
+                                    <td class="center"> user</td>
+                                    <td><a class="edit" href="javascript:;">Edit</a></td>
+                                    <td><a class="delete" href="javascript:;">Delete</a></td>
+                                </tr>
+                                <tr class="">
+                                    <td>Helena</td>
+                                    <td>Fox</td>
+                                    <td>456</td>
+                                    <td class="center"> Admin</td>
+                                    <td><a class="edit" href="javascript:;">Edit</a></td>
+                                    <td><a class="delete" href="javascript:;">Delete</a></td>
+                                </tr>
+                                <tr class="">
+                                    <td>Aishmen</td>
+                                    <td> Samuel</td>
+                                    <td>435</td>
+                                    <td class="center">super Admin</td>
+                                    <td><a class="edit" href="javascript:;">Edit</a></td>
+                                    <td><a class="delete" href="javascript:;">Delete</a></td>
+                                </tr>
+                                <tr class="">
+                                    <td>dream</td>
+                                    <td>Land</td>
+                                    <td>562</td>
+                                    <td class="center">normal user</td>
+                                    <td><a class="edit" href="javascript:;">Edit</a></td>
+                                    <td><a class="delete" href="javascript:;">Delete</a></td>
+                                </tr>
+                                <tr class="">
+                                    <td>babson</td>
+                                    <td> milan</td>
+                                    <td>567</td>
+                                    <td class="center">nothing</td>
+                                    <td><a class="edit" href="javascript:;">Edit</a></td>
+                                    <td><a class="delete" href="javascript:;">Delete</a></td>
+                                </tr>
+                                <tr class="">
+                                    <td>Waren</td>
+                                    <td>gufet</td>
+                                    <td>622</td>
+                                    <td class="center">author</td>
+                                    <td><a class="edit" href="javascript:;">Edit</a></td>
+                                    <td><a class="delete" href="javascript:;">Delete</a></td>
+                                </tr>
+                                <tr class="">
+                                    <td>Jhone</td>
+                                    <td> Doe</td>
+                                    <td>345</td>
+                                    <td class="center">super user</td>
+                                    <td><a class="edit" href="javascript:;">Edit</a></td>
+                                    <td><a class="delete" href="javascript:;">Delete</a></td>
+                                </tr>
+                                <tr class="">
+                                    <td>Margarita</td>
+                                    <td>Diar</td>
+                                    <td>456</td>
+                                    <td class="center">goolsd</td>
+                                    <td><a class="edit" href="javascript:;">Edit</a></td>
+                                    <td><a class="delete" href="javascript:;">Delete</a></td>
+                                </tr>
+                                <tr class="">
+                                    <td>Jhon Doe</td>
+                                    <td>Jhon Doe </td>
+                                    <td>1234</td>
+                                    <td class="center"> user</td>
+                                    <td><a class="edit" href="javascript:;">Edit</a></td>
+                                    <td><a class="delete" href="javascript:;">Delete</a></td>
+                                </tr>
+                                <tr class="">
+                                    <td>Helena</td>
+                                    <td>Fox</td>
+                                    <td>456</td>
+                                    <td class="center"> Admin</td>
+                                    <td><a class="edit" href="javascript:;">Edit</a></td>
+                                    <td><a class="delete" href="javascript:;">Delete</a></td>
+                                </tr>
+                                <tr class="">
+                                    <td>Aishmen</td>
+                                    <td> Samuel</td>
+                                    <td>435</td>
+                                    <td class="center">super Admin</td>
+                                    <td><a class="edit" href="javascript:;">Edit</a></td>
+                                    <td><a class="delete" href="javascript:;">Delete</a></td>
+                                </tr>
+                                <tr class="">
+                                    <td>dream</td>
+                                    <td>Land</td>
+                                    <td>562</td>
+                                    <td class="center">normal user</td>
+                                    <td><a class="edit" href="javascript:;">Edit</a></td>
+                                    <td><a class="delete" href="javascript:;">Delete</a></td>
+                                </tr>
+                                <tr class="">
+                                    <td>babson</td>
+                                    <td> milan</td>
+                                    <td>567</td>
+                                    <td class="center">nothing</td>
+                                    <td><a class="edit" href="javascript:;">Edit</a></td>
+                                    <td><a class="delete" href="javascript:;">Delete</a></td>
+                                </tr>
+                                <tr class="">
+                                    <td>Waren</td>
+                                    <td>gufet</td>
+                                    <td>622</td>
+                                    <td class="center">author</td>
+                                    <td><a class="edit" href="javascript:;">Edit</a></td>
+                                    <td><a class="delete" href="javascript:;">Delete</a></td>
+                                </tr>
+                                <tr class="">
+                                    <td>Jhone</td>
+                                    <td> Doe</td>
+                                    <td>345</td>
+                                    <td class="center">super user</td>
+                                    <td><a class="edit" href="javascript:;">Edit</a></td>
+                                    <td><a class="delete" href="javascript:;">Delete</a></td>
+                                </tr>
+                                <tr class="">
+                                    <td>Margarita</td>
+                                    <td>Diar</td>
+                                    <td>456</td>
+                                    <td class="center">goolsd</td>
+                                    <td><a class="edit" href="javascript:;">Edit</a></td>
+                                    <td><a class="delete" href="javascript:;">Delete</a></td>
+                                </tr>
+                                <tr class="">
+                                    <td>Jhon Doe</td>
+                                    <td>Jhon Doe </td>
+                                    <td>1234</td>
+                                    <td class="center"> user</td>
+                                    <td><a class="edit" href="javascript:;">Edit</a></td>
+                                    <td><a class="delete" href="javascript:;">Delete</a></td>
+                                </tr>
+                                <tr class="">
+                                    <td>Helena</td>
+                                    <td>Fox</td>
+                                    <td>456</td>
+                                    <td class="center"> Admin</td>
+                                    <td><a class="edit" href="javascript:;">Edit</a></td>
+                                    <td><a class="delete" href="javascript:;">Delete</a></td>
+                                </tr>
+                                <tr class="">
+                                    <td>Aishmen</td>
+                                    <td> Samuel</td>
+                                    <td>435</td>
+                                    <td class="center">super Admin</td>
+                                    <td><a class="edit" href="javascript:;">Edit</a></td>
+                                    <td><a class="delete" href="javascript:;">Delete</a></td>
+                                </tr>
+                                <tr class="">
+                                    <td>dream</td>
+                                    <td>Land</td>
+                                    <td>562</td>
+                                    <td class="center">normal user</td>
+                                    <td><a class="edit" href="javascript:;">Edit</a></td>
+                                    <td><a class="delete" href="javascript:;">Delete</a></td>
+                                </tr>
+                                <tr class="">
+                                    <td>babson</td>
+                                    <td> milan</td>
+                                    <td>567</td>
+                                    <td class="center">nothing</td>
+                                    <td><a class="edit" href="javascript:;">Edit</a></td>
+                                    <td><a class="delete" href="javascript:;">Delete</a></td>
+                                </tr>
+                                <tr class="">
+                                    <td>Waren</td>
+                                    <td>gufet</td>
+                                    <td>622</td>
+                                    <td class="center">author</td>
+                                    <td><a class="edit" href="javascript:;">Edit</a></td>
+                                    <td><a class="delete" href="javascript:;">Delete</a></td>
+                                </tr>
                                 </tbody>
                             </table>
                         </div>
@@ -463,7 +677,7 @@
     </section>
     <!--main content end-->
 <!--right sidebar start-->
-<div class="right-sidebar">
+{{-- <div class="right-sidebar">
 <div class="search-row">
     <input type="text" placeholder="Search" class="form-control">
 </div>
@@ -711,7 +925,7 @@
 </li>
 </ul>
 </div>
-</div>
+</div> --}}
 <!--right sidebar end-->
 
 </section>

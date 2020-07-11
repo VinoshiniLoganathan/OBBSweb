@@ -58,7 +58,7 @@ class AuthController extends Controller
         //return Redirect::to("dashboard")->withSuccess('Great! You have Successfully loggedin');
     }
 
-    public function index()
+    public function view_records()
     {
         $campaigns = DB::select('select * from campaigns');
         return view('editable_table',['campaigns'=>$campaigns]);
@@ -66,7 +66,7 @@ class AuthController extends Controller
     }  
 
     //camp edit 
-    public function show($id) {
+    public function camp_update($id) {
         $camp = DB::select('select * from campaigns where id = ?',[$id]);
         //return view('camp_update',['camp'=>$camp]);
         

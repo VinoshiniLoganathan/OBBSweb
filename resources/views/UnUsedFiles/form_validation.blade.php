@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<!-- Mirrored from bucketadmin.lab.themebucket.net/editable_table.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 03 Apr 2020 13:23:58 GMT -->
+<!-- Mirrored from bucketadmin.lab.themebucket.net/form_validation.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 03 Apr 2020 13:24:25 GMT -->
 <head>
     <meta charset="utf-8">
 
@@ -10,14 +10,12 @@
     <meta name="author" content="ThemeBucket">
     <link rel="shortcut icon" href="images/favicon.html">
 
-    <title>Editable Table</title>
+    <title>Form Validation</title>
 
     <!--Core CSS -->
     <link href="bs3/css/bootstrap.min.css" rel="stylesheet">
     <link href="css/bootstrap-reset.css" rel="stylesheet">
     <link href="font-awesome/css/font-awesome.css" rel="stylesheet" />
-
-    <link rel="stylesheet" href="js/data-tables/DT_bootstrap.css" />
 
     <!-- Custom styles for this template -->
     <link href="css/style.css" rel="stylesheet">
@@ -42,18 +40,18 @@
 <!--logo start-->
 <div class="brand">
 
-    {{-- <a href="index-2.html" class="logo">
+    <a href="index-2.html" class="logo">
         <img src="images/logo.png" alt="">
     </a>
     <div class="sidebar-toggle-box">
         <div class="fa fa-bars"></div>
-    </div> --}}
+    </div>
 </div>
 <!--logo end-->
 
 <div class="nav notify-row" id="top_menu">
     <!--  notification start -->
-    {{-- <ul class="nav top-menu">
+    <ul class="nav top-menu">
         <!-- settings start -->
         <li class="dropdown">
             <a data-toggle="dropdown" class="dropdown-toggle" href="#">
@@ -226,12 +224,12 @@
             </ul>
         </li>
         <!-- notification dropdown end -->
-    </ul> --}}
+    </ul>
     <!--  notification end -->
 </div>
 <div class="top-nav clearfix">
     <!--search & user info start-->
-    {{-- <ul class="nav pull-right top-menu">
+    <ul class="nav pull-right top-menu">
         <li>
             <input type="text" class="form-control search" placeholder=" Search">
         </li>
@@ -255,7 +253,7 @@
             </div>
         </li>
     </ul>
-    <!--search & user info end--> --}}
+    <!--search & user info end-->
 </div>
 </header>
 <!--header end-->
@@ -263,7 +261,7 @@
     <div id="sidebar" class="nav-collapse">
         <!-- sidebar menu start-->            <div class="leftside-navigation">
             <ul class="sidebar-menu" id="nav-accordion">
-            {{-- <li>
+            <li>
                 <a href="index-2.html">
                     <i class="fa fa-dashboard"></i>
                     <span>Dashboard</span>
@@ -303,21 +301,21 @@
                     <i class="fa fa-bullhorn"></i>
                     <span>Fontawesome </span>
                 </a>
-            </li> --}}
-            {{-- <li class="sub-menu">
-                <a href="javascript:;" class="active">
+            </li>
+            <li class="sub-menu">
+                <a href="javascript:;">
                     <i class="fa fa-th"></i>
                     <span>Data Tables</span>
                 </a>
-                <ul class="sub"> --}}
-                    <li><a href="form_component.html">Blood Bag</a></li>
-                    <li><a href="advanced_form.html">Donor List</a></li>
-                    <li><a href="form_wizard.html">Benefits</a></li>
-                    <li class="active"><a href="form_validation.html">Campaign</a></li>
-                {{-- </ul>
-            </li> --}}
-            {{-- <li class="sub-menu">
-                <a href="javascript:;">
+                <ul class="sub">
+                    <li><a href="basic_table.html">Basic Table</a></li>
+                    <li><a href="responsive_table.html">Responsive Table</a></li>
+                    <li><a href="dynamic_table.html">Dynamic Table</a></li>
+                    <li><a href="editable_table.html">Editable Table</a></li>
+                </ul>
+            </li>
+            <li class="sub-menu">
+                <a href="javascript:;" class="active">
                     <i class="fa fa-tasks"></i>
                     <span>Form Components</span>
                 </a>
@@ -325,7 +323,7 @@
                     <li><a href="form_component.html">Form Elements</a></li>
                     <li><a href="advanced_form.html">Advanced Components</a></li>
                     <li><a href="form_wizard.html">Form Wizard</a></li>
-                    <li><a href="form_validation.html">Form Validation</a></li>
+                    <li class="active"><a href="form_validation.html">Form Validation</a></li>
                     <li><a href="file_upload.html">Muliple File Upload</a></li>
                     
                     <li><a href="dropzone.html">Dropzone</a></li>
@@ -382,7 +380,7 @@
                     <li><a href="500.html">500 Error</a></li>
                     <li><a href="registration.html">Registration</a></li>
                 </ul>
-            </li> --}}
+            </li>
             <li>
                 <a href="login.html">
                     <i class="fa fa-user"></i>
@@ -397,68 +395,179 @@
     <!--main content start-->
     <section id="main-content">
         <section class="wrapper">
-        <!-- page start-->
+            <!-- page start-->
+            <div class="row">
+                <div class="col-lg-12">
+                    <section class="panel">
+                        <header class="panel-heading">
+                            Basic validations
+                            <span class="tools pull-right">
+                                <a class="fa fa-chevron-down" href="javascript:;"></a>
+                                <a class="fa fa-cog" href="javascript:;"></a>
+                                <a class="fa fa-times" href="javascript:;"></a>
+                             </span>
+                        </header>
+                        <div class="panel-body">
+                            <form role="form" class="form-horizontal ">
+                                <div class="form-group has-success">
+                                    <label class="col-lg-3 control-label">sample 1</label>
+                                    <div class="col-lg-6">
+                                        <input type="text" placeholder="" id="f-name" class="form-control">
+                                        <p class="help-block">Successfully done</p>
+                                    </div>
+                                </div>
+                                <div class="form-group has-error">
+                                    <label class="col-lg-3 control-label">sample 2</label>
+                                    <div class="col-lg-6">
+                                        <input type="text" placeholder="" id="l-name" class="form-control">
+                                        <p class="help-block">You gave a wrong info</p>
+                                    </div>
+                                </div>
+                                <div class="form-group has-warning">
+                                    <label class="col-lg-3 control-label">sample 3</label>
+                                    <div class="col-lg-6">
+                                        <input type="email" placeholder="" id="email2" class="form-control">
+                                        <p class="help-block">Something went wrong</p>
+                                    </div>
+                                </div>
 
-        <div class="row">
-            <div class="col-sm-12">
-                <section class="panel">
-                    <header class="panel-heading">
-                        Editable Table
-                        <span class="tools pull-right">
-                            <a href="javascript:;" class="fa fa-chevron-down"></a>
-                            <a href="javascript:;" class="fa fa-cog"></a>
-                            <a href="javascript:;" class="fa fa-times"></a>
-                         </span>
-                    </header>
-                    <div class="panel-body">
-                        <div class="adv-table editable-table ">
-                            <div class="clearfix">
-                                <div class="btn-group">
-                                    <button id="editable-sample_new" class="btn btn-primary">
-                                        Add New <i class="fa fa-plus"></i>
-                                    </button>
+                                <div class="form-group">
+                                    <div class="col-lg-offset-3 col-lg-6">
+                                        <button class="btn btn-primary" type="submit">Submit</button>
+                                    </div>
                                 </div>
-                                <div class="btn-group pull-right">
-                                    <button class="btn btn-default dropdown-toggle" data-toggle="dropdown">Tools <i class="fa fa-angle-down"></i>
-                                    </button>
-                                    <ul class="dropdown-menu pull-right">
-                                        <li><a href="#">Print</a></li>
-                                        <li><a href="#">Save as PDF</a></li>
-                                        <li><a href="#">Export to Excel</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="space15"></div>
-                            <table class="table table-striped table-hover table-bordered" id="editable-sample">
-                                <thead>
-                                <tr>
-                                    <th>ID</th>
-                                    <th>Place</th>
-                                    <th>Date</th>
-                                    <th>Time</th>
-                                    <th>Edit</th>
-                                    {{-- <th>Delete</th> --}}
-                                </tr>
-                                </thead>
-                                <tbody>
-                                    @foreach ($campaigns as $camp)
-                                <tr class="">
-                                    <td>{{ $camp->id }}</td>
-                                    <td>{{ $camp->place }}</td>
-                                    <td>{{ $camp->date }}</td>
-                                    <td>{{ $camp->time }}</td>                                    
-                                    <td><a href='camp_update/{{ $camp->id }}'>Edit</a></td>
-                                    {{-- <td><a class="delete" href="javascript:;">Delete</a></td> --}}
-                                </tr>
-                                @endforeach
-                                </tbody>
-                            </table>
+                            </form>
                         </div>
-                    </div>
-                </section>
+                    </section>
+                </div>
             </div>
-        </div>
-        <!-- page end-->
+            <div class="row">
+                <div class="col-lg-12">
+                    <section class="panel">
+                        <header class="panel-heading">
+                            Form validations
+                            <span class="tools pull-right">
+                                <a class="fa fa-chevron-down" href="javascript:;"></a>
+                                <a class="fa fa-cog" href="javascript:;"></a>
+                                <a class="fa fa-times" href="javascript:;"></a>
+                             </span>
+                        </header>
+                        <div class="panel-body">
+                            <div class=" form">
+                                <form class="cmxform form-horizontal " id="commentForm" method="get" action="#">
+                                    <div class="form-group ">
+                                        <label for="cname" class="control-label col-lg-3">Name (required)</label>
+                                        <div class="col-lg-6">
+                                            <input class=" form-control" id="cname" name="name" minlength="2" type="text" required />
+                                        </div>
+                                    </div>
+                                    <div class="form-group ">
+                                        <label for="cemail" class="control-label col-lg-3">E-Mail (required)</label>
+                                        <div class="col-lg-6">
+                                            <input class="form-control " id="cemail" type="email" name="email" required />
+                                        </div>
+                                    </div>
+                                    <div class="form-group ">
+                                        <label for="curl" class="control-label col-lg-3">URL (optional)</label>
+                                        <div class="col-lg-6">
+                                            <input class="form-control " id="curl" type="url" name="url" />
+                                        </div>
+                                    </div>
+                                    <div class="form-group ">
+                                        <label for="ccomment" class="control-label col-lg-3">Your Comment (required)</label>
+                                        <div class="col-lg-6">
+                                            <textarea class="form-control " id="ccomment" name="comment" required></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="col-lg-offset-3 col-lg-6">
+                                            <button class="btn btn-primary" type="submit">Save</button>
+                                            <button class="btn btn-default" type="button">Cancel</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+
+                        </div>
+                    </section>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <section class="panel">
+                        <header class="panel-heading">
+                            Advanced Form validations
+                            <span class="tools pull-right">
+                                <a class="fa fa-chevron-down" href="javascript:;"></a>
+                                <a class="fa fa-cog" href="javascript:;"></a>
+                                <a class="fa fa-times" href="javascript:;"></a>
+                             </span>
+                        </header>
+                        <div class="panel-body">
+                            <div class="form">
+                                <form class="cmxform form-horizontal " id="signupForm" method="get" action="#">
+                                    <div class="form-group ">
+                                        <label for="firstname" class="control-label col-lg-3">Firstname</label>
+                                        <div class="col-lg-6">
+                                            <input class=" form-control" id="firstname" name="firstname" type="text" />
+                                        </div>
+                                    </div>
+                                    <div class="form-group ">
+                                        <label for="lastname" class="control-label col-lg-3">Lastname</label>
+                                        <div class="col-lg-6">
+                                            <input class=" form-control" id="lastname" name="lastname" type="text" />
+                                        </div>
+                                    </div>
+                                    <div class="form-group ">
+                                        <label for="username" class="control-label col-lg-3">Username</label>
+                                        <div class="col-lg-6">
+                                            <input class="form-control " id="username" name="username" type="text" />
+                                        </div>
+                                    </div>
+                                    <div class="form-group ">
+                                        <label for="password" class="control-label col-lg-3">Password</label>
+                                        <div class="col-lg-6">
+                                            <input class="form-control " id="password" name="password" type="password" />
+                                        </div>
+                                    </div>
+                                    <div class="form-group ">
+                                        <label for="confirm_password" class="control-label col-lg-3">Confirm Password</label>
+                                        <div class="col-lg-6">
+                                            <input class="form-control " id="confirm_password" name="confirm_password" type="password" />
+                                        </div>
+                                    </div>
+                                    <div class="form-group ">
+                                        <label for="email" class="control-label col-lg-3">Email</label>
+                                        <div class="col-lg-6">
+                                            <input class="form-control " id="email" name="email" type="email" />
+                                        </div>
+                                    </div>
+                                    <div class="form-group ">
+                                        <label for="agree" class="control-label col-lg-3 col-sm-3">Agree to Our Policy</label>
+                                        <div class="col-lg-6 col-sm-9">
+                                            <input  type="checkbox" style="width: 20px" class="checkbox form-control" id="agree" name="agree" />
+                                        </div>
+                                    </div>
+                                    <div class="form-group ">
+                                        <label for="newsletter" class="control-label col-lg-3 col-sm-3">Receive the Newsletter</label>
+                                        <div class="col-lg-6 col-sm-9">
+                                            <input  type="checkbox" style="width: 20px" class="checkbox form-control" id="newsletter" name="newsletter" />
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <div class="col-lg-offset-3 col-lg-6">
+                                            <button class="btn btn-primary" type="submit">Save</button>
+                                            <button class="btn btn-default" type="button">Cancel</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+            <!-- page end-->
         </section>
     </section>
     <!--main content end-->
@@ -719,9 +828,7 @@
 <!-- Placed js at the end of the document so the pages load faster -->
 
 <!--Core js-->
-<script src="js/jquery-1.10.2.min.js"></script>
-<script src="js/jquery-migrate.js"></script>
-
+<script src="js/jquery.js"></script>
 <script src="bs3/js/bootstrap.min.js"></script>
 <script class="include" type="text/javascript" src="js/jquery.dcjqaccordion.2.7.js"></script>
 <script src="js/jquery.scrollTo.min.js"></script>
@@ -737,23 +844,15 @@
 <script src="js/flot-chart/jquery.flot.resize.js"></script>
 <script src="js/flot-chart/jquery.flot.pie.resize.js"></script>
 
-<script type="text/javascript" src="js/data-tables/jquery.dataTables.js"></script>
-<script type="text/javascript" src="js/data-tables/DT_bootstrap.js"></script>
+
+<script type="text/javascript" src="js/jquery.validate.min.js"></script>
 
 <!--common script init for all pages-->
 <script src="js/scripts.js"></script>
-
-<!--script for this page only-->
-<script src="js/table-editable.js"></script>
-
-<!-- END JAVASCRIPTS -->
-<script>
-    jQuery(document).ready(function() {
-        EditableTable.init();
-    });
-</script>
+<!--this page script-->
+<script src="js/validation-init.js"></script>
 
 </body>
 
-<!-- Mirrored from bucketadmin.lab.themebucket.net/editable_table.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 03 Apr 2020 13:23:59 GMT -->
+<!-- Mirrored from bucketadmin.lab.themebucket.net/form_validation.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 03 Apr 2020 13:24:26 GMT -->
 </html>

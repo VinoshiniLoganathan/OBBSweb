@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<!-- Mirrored from bucketadmin.lab.themebucket.net/editable_table.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 03 Apr 2020 13:23:58 GMT -->
+<!-- Mirrored from bucketadmin.lab.themebucket.net/basic_table.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 03 Apr 2020 13:23:54 GMT -->
 <head>
     <meta charset="utf-8">
 
@@ -10,14 +10,12 @@
     <meta name="author" content="ThemeBucket">
     <link rel="shortcut icon" href="images/favicon.html">
 
-    <title>Editable Table</title>
+    <title>Basic Table</title>
 
     <!--Core CSS -->
-    <link href="bs3/css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/bootstrap-reset.css" rel="stylesheet">
-    <link href="font-awesome/css/font-awesome.css" rel="stylesheet" />
-
-    <link rel="stylesheet" href="js/data-tables/DT_bootstrap.css" />
+    <link rel="stylesheet" href="{{ URL::asset('bs3/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ URL::asset('css/bootstrap-reset.css') }}">
+    <link rel="stylesheet" href="{{ URL::asset('font-awesome/css/font-awesome.css') }}">
 
     <!-- Custom styles for this template -->
     <link href="css/style.css" rel="stylesheet">
@@ -229,9 +227,9 @@
     </ul> --}}
     <!--  notification end -->
 </div>
-<div class="top-nav clearfix">
+{{-- <div class="top-nav clearfix">
     <!--search & user info start-->
-    {{-- <ul class="nav pull-right top-menu">
+    <ul class="nav pull-right top-menu">
         <li>
             <input type="text" class="form-control search" placeholder=" Search">
         </li>
@@ -255,13 +253,14 @@
             </div>
         </li>
     </ul>
-    <!--search & user info end--> --}}
-</div>
+    <!--search & user info end-->
+</div> --}}
 </header>
 <!--header end-->
 <aside>
     <div id="sidebar" class="nav-collapse">
-        <!-- sidebar menu start-->            <div class="leftside-navigation">
+        <!-- sidebar menu start-->            
+        <div class="leftside-navigation">
             <ul class="sidebar-menu" id="nav-accordion">
             {{-- <li>
                 <a href="index-2.html">
@@ -303,20 +302,20 @@
                     <i class="fa fa-bullhorn"></i>
                     <span>Fontawesome </span>
                 </a>
-            </li> --}}
-            {{-- <li class="sub-menu">
+            </li>
+            <li class="sub-menu">
                 <a href="javascript:;" class="active">
                     <i class="fa fa-th"></i>
                     <span>Data Tables</span>
                 </a>
                 <ul class="sub"> --}}
-                    <li><a href="form_component.html">Blood Bag</a></li>
-                    <li><a href="advanced_form.html">Donor List</a></li>
-                    <li><a href="form_wizard.html">Benefits</a></li>
-                    <li class="active"><a href="form_validation.html">Campaign</a></li>
+                    <li class="active"><a href="{{url('donor_Donation')}}">Donation Activity</a></li>
+                    <li><a href="{{url('donor_Campaign')}}">Campaign</a></li>
+                    <li><a href="{{url('donor_Benefits')}}">Benefits</a></li>
+                    <li><a href="editable_table.html">Profile</a></li>
                 {{-- </ul>
-            </li> --}}
-            {{-- <li class="sub-menu">
+            </li>
+            <li class="sub-menu">
                 <a href="javascript:;">
                     <i class="fa fa-tasks"></i>
                     <span>Form Components</span>
@@ -336,7 +335,7 @@
             <li class="sub-menu">
                 <a href="javascript:;">
                     <i class="fa fa-envelope"></i>
-                    <span>Mail </span>
+                    <span>Mail</span>
                 </a>
                 <ul class="sub">
                     <li><a href="mail.html">Inbox</a></li>
@@ -382,14 +381,14 @@
                     <li><a href="500.html">500 Error</a></li>
                     <li><a href="registration.html">Registration</a></li>
                 </ul>
-            </li> --}}
+            </li>
             <li>
                 <a href="login.html">
                     <i class="fa fa-user"></i>
                     <span>Login Page</span>
                 </a>
             </li>
-        </ul></div>        
+        </ul></div>         --}}
 <!-- sidebar menu end-->
     </div>
 </aside>
@@ -398,12 +397,11 @@
     <section id="main-content">
         <section class="wrapper">
         <!-- page start-->
-
-        <div class="row">
+            <div class="row">
             <div class="col-sm-12">
                 <section class="panel">
                     <header class="panel-heading">
-                        Editable Table
+                        General Table
                         <span class="tools pull-right">
                             <a href="javascript:;" class="fa fa-chevron-down"></a>
                             <a href="javascript:;" class="fa fa-cog"></a>
@@ -411,59 +409,314 @@
                          </span>
                     </header>
                     <div class="panel-body">
-                        <div class="adv-table editable-table ">
-                            <div class="clearfix">
-                                <div class="btn-group">
-                                    <button id="editable-sample_new" class="btn btn-primary">
-                                        Add New <i class="fa fa-plus"></i>
-                                    </button>
-                                </div>
-                                <div class="btn-group pull-right">
-                                    <button class="btn btn-default dropdown-toggle" data-toggle="dropdown">Tools <i class="fa fa-angle-down"></i>
-                                    </button>
-                                    <ul class="dropdown-menu pull-right">
-                                        <li><a href="#">Print</a></li>
-                                        <li><a href="#">Save as PDF</a></li>
-                                        <li><a href="#">Export to Excel</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="space15"></div>
-                            <table class="table table-striped table-hover table-bordered" id="editable-sample">
-                                <thead>
-                                <tr>
-                                    <th>ID</th>
-                                    <th>Place</th>
-                                    <th>Date</th>
-                                    <th>Time</th>
-                                    <th>Edit</th>
-                                    {{-- <th>Delete</th> --}}
-                                </tr>
-                                </thead>
-                                <tbody>
-                                    @foreach ($campaigns as $camp)
-                                <tr class="">
-                                    <td>{{ $camp->id }}</td>
-                                    <td>{{ $camp->place }}</td>
-                                    <td>{{ $camp->date }}</td>
-                                    <td>{{ $camp->time }}</td>                                    
-                                    <td><a href='camp_update/{{ $camp->id }}'>Edit</a></td>
-                                    {{-- <td><a class="delete" href="javascript:;">Delete</a></td> --}}
-                                </tr>
-                                @endforeach
-                                </tbody>
-                            </table>
-                        </div>
+                        <table class="table  table-hover general-table">
+                            <thead>
+                            <tr>
+                                <th> Company</th>
+                                <th class="hidden-phone">Descrition</th>
+                                <th>Profit</th>
+                                <th>Status</th>
+                                <th>Progress</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td><a href="#">Graphics</a></td>
+                                <td class="hidden-phone">Lorem Ipsum dorolo imit</td>
+                                <td>1320.00$ </td>
+                                <td><span class="label label-info label-mini">Due</span></td>
+                                <td>
+                                    <div class="progress progress-striped progress-xs">
+                                        <div style="width: 40%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="40" role="progressbar" class="progress-bar progress-bar-success">
+                                            <span class="sr-only">40% Complete (success)</span>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href="#">
+                                        ThemeBucket
+                                    </a>
+                                </td>
+                                <td class="hidden-phone">Lorem Ipsum dorolo</td>
+                                <td>556.00$ </td>
+                                <td><span class="label label-warning label-mini">Due</span></td>
+                                <td>
+                                    <div class="progress progress-striped progress-xs">
+                                        <div style="width: 70%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="40" role="progressbar" class="progress-bar progress-bar-danger">
+                                            <span class="sr-only">70% Complete (success)</span>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href="#">
+                                        XYZ
+                                    </a>
+                                </td>
+                                <td class="hidden-phone">Lorem Ipsum dorolo</td>
+                                <td>13240.00$ </td>
+                                <td><span class="label label-success label-mini">Paid</span></td>
+                                <td>
+                                    <div class="progress progress-striped progress-xs">
+                                        <div style="width: 55%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="40" role="progressbar" class="progress-bar progress-bar-warning">
+                                            <span class="sr-only">55% Complete (success)</span>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href="#">
+                                        BCSE
+                                    </a>
+                                </td>
+                                <td class="hidden-phone">Lorem Ipsum dorolo</td>
+                                <td>3455.50$ </td>
+                                <td><span class="label label-danger label-mini">Paid</span></td>
+                                <td>
+                                    <div class="progress progress-striped progress-xs">
+                                        <div style="width: 90%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="40" role="progressbar" class="progress-bar progress-bar-info">
+                                            <span class="sr-only">90% Complete (success)</span>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><a href="#">AVC Ltd</a></td>
+                                <td class="hidden-phone">Lorem Ipsum dorolo imit</td>
+                                <td>110.00$ </td>
+                                <td><span class="label label-primary label-mini">Due</span></td>
+                                <td>
+                                    <div class="progress progress-striped progress-xs">
+                                        <div style="width: 60%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="40" role="progressbar" class="progress-bar progress-bar-success">
+                                            <span class="sr-only">60% Complete (success)</span>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href="#">
+                                        Themeforest
+                                    </a>
+                                </td>
+                                <td class="hidden-phone">Lorem Ipsum dorolo</td>
+                                <td>456.00$ </td>
+                                <td><span class="label label-warning label-mini">Due</span></td>
+                                <td>
+                                    <div class="progress progress-striped progress-xs">
+                                        <div style="width: 40%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="40" role="progressbar" class="progress-bar progress-bar-danger">
+                                            <span class="sr-only">40% Complete (success)</span>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            </tbody>
+                        </table>
                     </div>
                 </section>
             </div>
         </div>
+            <div class="row">
+                <div class="col-sm-6">
+                    <section class="panel">
+                        <header class="panel-heading">
+                            Basic Table
+                            <span class="tools pull-right">
+                                <a href="javascript:;" class="fa fa-chevron-down"></a>
+                                <a href="javascript:;" class="fa fa-cog"></a>
+                                <a href="javascript:;" class="fa fa-times"></a>
+                             </span>
+                        </header>
+                        <div class="panel-body">
+                            <table class="table">
+                                <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>First Name</th>
+                                    <th>Last Name</th>
+                                    <th>Username</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Mark</td>
+                                    <td>Otto</td>
+                                    <td>@mdo</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>Jacob</td>
+                                    <td>Thornton</td>
+                                    <td>@fat</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>Larry</td>
+                                    <td>the Bird</td>
+                                    <td>@twitter</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </section>
+                </div>
+                <div class="col-sm-6">
+                    <section class="panel">
+                        <header class="panel-heading">
+                            Striped Table
+                            <span class="tools pull-right">
+                                <a href="javascript:;" class="fa fa-chevron-down"></a>
+                                <a href="javascript:;" class="fa fa-cog"></a>
+                                <a href="javascript:;" class="fa fa-times"></a>
+                             </span>
+                        </header>
+                        <div class="panel-body">
+                            <table class="table table-striped">
+                                <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>First Name</th>
+                                    <th>Last Name</th>
+                                    <th>Username</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Mark</td>
+                                    <td>Otto</td>
+                                    <td>@mdo</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>Jacob</td>
+                                    <td>Thornton</td>
+                                    <td>@fat</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>Larry</td>
+                                    <td>the Bird</td>
+                                    <td>@twitter</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </section>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6">
+                    <section class="panel">
+                        <header class="panel-heading no-border">
+                            Border Table
+                            <span class="tools pull-right">
+                                <a href="javascript:;" class="fa fa-chevron-down"></a>
+                                <a href="javascript:;" class="fa fa-cog"></a>
+                                <a href="javascript:;" class="fa fa-times"></a>
+                             </span>
+                        </header>
+                        <div class="panel-body">
+                            <table class="table table-bordered">
+                                <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>First Name</th>
+                                    <th>Last Name</th>
+                                    <th>Username</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td rowspan="2">1</td>
+                                    <td>Mark</td>
+                                    <td>Otto</td>
+                                    <td>@mdo</td>
+                                </tr>
+                                <tr>
+                                    <td>Mark</td>
+                                    <td>Otto</td>
+                                    <td>@TwBootstrap</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>Jacob</td>
+                                    <td>Thornton</td>
+                                    <td>@fat</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td colspan="2">Larry the Bird</td>
+                                    <td>@twitter</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </section>
+                </div>
+                <div class="col-sm-6">
+                    <section class="panel">
+                        <header class="panel-heading">
+                            Hover Table
+                            <span class="tools pull-right">
+                                <a href="javascript:;" class="fa fa-chevron-down"></a>
+                                <a href="javascript:;" class="fa fa-cog"></a>
+                                <a href="javascript:;" class="fa fa-times"></a>
+                             </span>
+                        </header>
+                        <div class="panel-body">
+                            <table class="table table-hover">
+                                <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>First Name</th>
+                                    <th>Last Name</th>
+                                    <th>Username</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Mark</td>
+                                    <td>Otto</td>
+                                    <td>@mdo</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>Jacob</td>
+                                    <td>Thornton</td>
+                                    <td>@fat</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td colspan="2">Larry the Bird</td>
+                                    <td>@twitter</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>Jane Doe</td>
+                                    <td>Mosa</td>
+                                    <td>@twitter</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </section>
+                </div>
+            </div>
         <!-- page end-->
         </section>
     </section>
     <!--main content end-->
 <!--right sidebar start-->
-<div class="right-sidebar">
+{{-- <div class="right-sidebar">
 <div class="search-row">
     <input type="text" placeholder="Search" class="form-control">
 </div>
@@ -711,7 +964,7 @@
 </li>
 </ul>
 </div>
-</div>
+</div> --}}
 <!--right sidebar end-->
 
 </section>
@@ -719,9 +972,7 @@
 <!-- Placed js at the end of the document so the pages load faster -->
 
 <!--Core js-->
-<script src="js/jquery-1.10.2.min.js"></script>
-<script src="js/jquery-migrate.js"></script>
-
+<script src="js/jquery.js"></script>
 <script src="bs3/js/bootstrap.min.js"></script>
 <script class="include" type="text/javascript" src="js/jquery.dcjqaccordion.2.7.js"></script>
 <script src="js/jquery.scrollTo.min.js"></script>
@@ -737,23 +988,11 @@
 <script src="js/flot-chart/jquery.flot.resize.js"></script>
 <script src="js/flot-chart/jquery.flot.pie.resize.js"></script>
 
-<script type="text/javascript" src="js/data-tables/jquery.dataTables.js"></script>
-<script type="text/javascript" src="js/data-tables/DT_bootstrap.js"></script>
 
 <!--common script init for all pages-->
 <script src="js/scripts.js"></script>
 
-<!--script for this page only-->
-<script src="js/table-editable.js"></script>
-
-<!-- END JAVASCRIPTS -->
-<script>
-    jQuery(document).ready(function() {
-        EditableTable.init();
-    });
-</script>
-
 </body>
 
-<!-- Mirrored from bucketadmin.lab.themebucket.net/editable_table.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 03 Apr 2020 13:23:59 GMT -->
+<!-- Mirrored from bucketadmin.lab.themebucket.net/basic_table.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 03 Apr 2020 13:23:54 GMT -->
 </html>
