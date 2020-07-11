@@ -218,6 +218,16 @@ Route::get('/widget', function () {
     return view('widget');
 });
 
+Route::get('/about', function () {
+    return view('/FrontEnd/about');
+});
+Route::get('/faq', function () {
+    return view('/FrontEnd/faq');
+});
+Route::get('/frontend', function () {
+    return view('/FrontEnd/frontend');
+});
+
 
 Route::get('/index-2', function () {
     return view('index-2');

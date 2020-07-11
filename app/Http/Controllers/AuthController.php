@@ -61,7 +61,7 @@ class AuthController extends Controller
     public function index()
     {
         $campaigns = DB::select('select * from campaigns');
-        return view('edit',['campaigns'=>$campaigns]);
+        return view('editable_table',['campaigns'=>$campaigns]);
         //return view('login');
     }  
 
