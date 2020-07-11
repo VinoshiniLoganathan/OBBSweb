@@ -12,7 +12,7 @@
     <meta http-equiv=”X-UA-Compatible” content=”IE=9”>
 
     <link rel="shortcut icon" href="images/favicon.html">
-    <title>BucketAdmin</title>
+    <title></title>
     <!--Core CSS -->
     <link href="bs3/css/bootstrap.min.css" rel="stylesheet">
     <link href="js/jquery-ui/jquery-ui-1.10.1.custom.min.css" rel="stylesheet">
@@ -43,9 +43,9 @@
 <!--logo start-->
 <div class="brand">
 
-    <a href="index-2.html" class="logo">
+    {{-- <a href="index-2.html" class="logo">
         <img src="images/logo.png" alt="">
-    </a>
+    </a> --}}
     <div class="sidebar-toggle-box">
         <div class="fa fa-bars"></div>
     </div>
@@ -53,7 +53,7 @@
 <!--logo end-->
 
 <div class="nav notify-row" id="top_menu">
-    <!--  notification start -->
+    {{-- <!--  notification start -->
     <ul class="nav top-menu">
         <!-- settings start -->
         <li class="dropdown">
@@ -228,7 +228,7 @@
         </li>
         <!-- notification dropdown end -->
     </ul>
-    <!--  notification end -->
+    <!--  notification end --> --}}
 </div>
 <div class="top-nav clearfix">
     <!--search & user info start-->
@@ -237,7 +237,7 @@
             <input type="text" class="form-control search" placeholder=" Search">
         </li>
         <!-- user login dropdown start-->
-        <li class="dropdown">
+        {{-- <li class="dropdown">
             <a data-toggle="dropdown" class="dropdown-toggle" href="#">
                 <img alt="" src="images/avatar1_small.jpg">
                 <span class="username">John Doe</span>
@@ -248,7 +248,7 @@
                 <li><a href="#"><i class="fa fa-cog"></i> Settings</a></li>
                 <li><a href="login.html"><i class="fa fa-key"></i> Log Out</a></li>
             </ul>
-        </li>
+        </li> --}}
         <!-- user login dropdown end -->
         <li>
             <div class="toggle-right-box">
@@ -265,12 +265,12 @@
     <div id="sidebar" class="nav-collapse">
         <!-- sidebar menu start-->            <div class="leftside-navigation">
             <ul class="sidebar-menu" id="nav-accordion">
-                <li>
+                {{-- <li>
                     <a href="index-2.html">
                         <i class="fa fa-dashboard"></i>
                         <span>Dashboard</span>
                     </a>
-                </li>
+                </li> --}}
                 {{-- <li class="sub-menu">
                     <a href="javascript:;">
                         <i class="fa fa-laptop"></i>
@@ -324,10 +324,10 @@
                         <span>Form Components</span>
                     </a> --}}
                     {{-- <ul class="sub"> --}}
-                        <li><a href="form_component.html">Blood Bag</a></li>
-                        <li><a href="advanced_form.html">Donor List</a></li>
-                        <li><a href="form_wizard.html">Benefits</a></li>
-                        <li class="active"><a href="form_validation.html">Campaign</a></li>
+                    <li class="active"><a href="{{url('index-2')}}">Home</a></li>
+                        <li><a href="advanced_form.html">About Us</a></li>
+                        <li><a href="form_wizard.html">Contact Us</a></li>
+                        {{-- <li class="active"><a href="form_validation.html">Campaign</a></li> --}}
                         {{-- <li><a href="file_upload.html">Muliple File Upload</a></li>
                         
                         <li><a href="dropzone.html">Dropzone</a></li>
@@ -386,7 +386,7 @@
                     </ul> --}}
                 </li>
                 <li>
-                    <a href="login.html">
+                <a href="{{url('/')}}">
                         <i class="fa fa-user"></i>
                         <span>Login Page</span>
                     </a>
@@ -399,15 +399,60 @@
 <!--main content start-->
 <section id="main-content">
 <section class="wrapper">
+    
 
 <!--mini statistics start-->
 <div class="row">
-    <div class="col-md-3">
+    {{-- <div class="col-md-3"> --}}
         <section class="panel">
             <div class="panel-body">
                 <div class="top-stats-panel">
                     <div class="gauge-canvas">
-                        <h4 class="widget-h">Monthly Expense</h4>
+                        <p>
+                            Blood is a crucial part of life. Blood circulates through our body and supplies the body's cells 
+                            with essential substances, such as oxygen and nutrients. It also eliminates metabolic waste 
+                            products from the same cells.<br>
+                            <img src="Blood.PNG" alt="Blood Type"><br><br>
+                            There is far more than one way to donate your blood. Let your blood type direct the path in 
+                            finding the best way for you to contribute a valuable life-saving gift.<br>
+                            <img src="Donation.PNG" alt="Type of Donation"><br>
+                            <br>
+                            <h4><b>Qualification criteria for donation:</b></h4><br>
+                            <b>Before a person is eligible to donate his or her blood, he or she must meet a few specific 
+                            requirements as set out below: Whole Blood Donor.</b>
+                            <ul>
+                                Age between 18 and 60 years of age (for those under 18 years of age, written consent 
+                                    from parents or legal guardians is needed)<br>
+                                Body weight is at least 45 kg.<br>
+                                Healthy physical and mental health without serious medical disease.<br>
+                                Not on long-term treatment and not influenced by alcohol within 24 hours of the donation.<br>	
+                                Should not be fasting and had adequate sleep (more than 5 hours) the night before the donation.<br>
+                                Has been living in Malaysia for at least 1 year (for non-citizens).<br>
+                            </ul><br>   
+                            <b>For plasma or platelet donors, beside from the criteria above, there are few additional criteria 
+                            they have to fulfil:</b><br>
+                            <ul>
+                                Not more than 55 years of age<br>
+                                Body weight is more than 55 kilograms.<br>
+                                Donated whole blood at least twice previously, and the last donation was no more than six 
+                                    months ago.<br>
+                                Adequate venous access (firm, large and palpable vein)<br>
+                            </ul><br>
+                            <b>The blood donation processes:</b><br>
+                            <ul>
+                                Donor would need to fill in the blood donation registration form / card first.<br>
+                                Have their body weighed down.<br>
+                                Have a blood test to classify the blood group and the level of haemoglobin.<br>
+                                Provides pre-donation consultation to the medical officer / infirmary.<br>
+                                If eligible, have their information registered and the blood donation book released.<br>
+                                This is followed by the blood donation process itself, which would normally last between 
+                                    7 to 15 minutes.>br>
+                                Once the donation has been done and the needle removed, the patient has to rest for at 
+                                   least 10 minutes before getting out of bed.<br>
+                                Donor would be served with light refreshment.<br>
+                            </ul>
+                        </p>
+                        {{-- <h4 class="widget-h">Monthly Expense</h4>
                         <canvas width=160 height=100 id="gauge"></canvas>
                     </div>
                     <ul class="gauge-meta clearfix">
@@ -465,13 +510,13 @@
                         </ul>
                         <div class="daily-sales-info">
                             <span class="sales-count">1200 </span> <span class="sales-label">Products Sold</span>
-                        </div>
+                        </div> --}}
                     </div>
                 </div>
             </div>
         </section>
-    </div>
-</div>
+    {{-- </div> --}}
+{{-- </div>
 <!--mini statistics end-->
 <div class="row">
     <div class="col-md-8">
@@ -1057,13 +1102,13 @@
         </div>
     </section>
     <!--todolist end-->
-</div>
+</div> --}}
 </div>
 </section>
 </section>
 <!--main content end-->
 <!--right sidebar start-->
-<div class="right-sidebar">
+{{-- <div class="right-sidebar">
 <div class="search-row">
     <input type="text" placeholder="Search" class="form-control">
 </div>
@@ -1313,7 +1358,7 @@
 
 </div>
 
-</div>
+</div> --}}
 <!--right sidebar end-->
 </section>
 <!-- Placed js at the end of the document so the pages load faster -->

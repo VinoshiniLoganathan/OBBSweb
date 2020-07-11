@@ -10,7 +10,7 @@
     <meta name="author" content="ThemeBucket">
     <link rel="shortcut icon" href="images/favicon.html">
 
-    <title>Blank page</title>
+    <title>Campaign Edit</title>
 
     <!--Core CSS -->
     {{-- follow the code  below and change the code as followning --}}
@@ -236,12 +236,12 @@
         </li>
         <!-- user login dropdown start-->
         <li class="dropdown">
-            <a data-toggle="dropdown" class="dropdown-toggle icon-user" href="#">
+            {{-- <a data-toggle="dropdown" class="dropdown-toggle icon-user" href="#">
                 <!--<img alt="" src="images/avatar1_small.jpg">-->
                 <i class="fa fa-user"></i>
                 <span class="username">John Doe</span>
                 <b class="caret"></b>
-            </a>
+            </a> --}}
             <ul class="dropdown-menu extended logout">
                 <li><a href="#"><i class=" fa fa-suitcase"></i>Profile</a></li>
                 <li><a href="#"><i class="fa fa-cog"></i> Settings</a></li>
@@ -445,7 +445,7 @@
     </section>
     <!--main content end-->
 <!--right sidebar start-->
-<div class="right-sidebar">
+{{-- <div class="right-sidebar">
 <div class="search-row">
     <input type="text" placeholder="Search" class="form-control">
 </div>
@@ -693,7 +693,7 @@
 </li>
 </ul>
 </div>
-</div>
+</div> --}}
 <!--right sidebar end-->
 
 </section>

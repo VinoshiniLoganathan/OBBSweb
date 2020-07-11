@@ -15,49 +15,6 @@ use Session;
 class AuthController extends Controller
 {
     //
-    public function index()
-    {
-        $campaigns = DB::select('select * from campaigns');
-        return view('edit',['campaigns'=>$campaigns]);
-        //return view('login');
-    }  
-
-    //camp edit 
-    public function show($id) {
-        $camp = DB::select('select * from campaigns where id = ?',[$id]);
-        //return view('camp_update',['camp'=>$camp]);
-        
-        //return redirect()->route('camp_update', ['camp' => $camp]);
-        return response()
-            ->view('camp_update', ['camp'=> $camp]); 
-    }
-
-    public function edit_camp(Request $request,$id) {
-        // $place = $request->input('place');
-        // $date = $request->input('date');
-        // $time = $request->input('time');
-        // //$data=array('first_name'=>$first_name,"last_name"=>$last_name,"city_name"=>$city_name,"email"=>$email);
-        // //DB::table('student')->update($data);
-        // // DB::table('student')->whereIn('id', $id)->update($request->all());
-        // DB::update('update campaigns set place = ?, date=?, time=?, where id = ?',[$place,$date,$time,$id]);
-        // echo "Record updated successfully.
-        // ";
-        // echo 'Click Here to go back.';
-
-        // if (campaigns::where('id', $id)->exists()) {
-            //$camp = campaigns::find($id);
-            $camp = new Campaign;
-            $camp = Campaign::find($id);
-    
-            $camp->place =  $request->place;
-            $camp->date =  $request->date;
-            $camp->time =  $request->time;
-            $camp->save();
-            //return view('index-2');
-            return redirect()->intended('camp_registration');
-        //}
-    }
- 
     public function registration()
     {
         return view('registration');
@@ -101,6 +58,48 @@ class AuthController extends Controller
         //return Redirect::to("dashboard")->withSuccess('Great! You have Successfully loggedin');
     }
 
+    public function index()
+    {
+        $campaigns = DB::select('select * from campaigns');
+        return view('edit',['campaigns'=>$campaigns]);
+        //return view('login');
+    }  
+
+    //camp edit 
+    public function show($id) {
+        $camp = DB::select('select * from campaigns where id = ?',[$id]);
+        //return view('camp_update',['camp'=>$camp]);
+        
+        //return redirect()->route('camp_update', ['camp' => $camp]);
+        return response()
+            ->view('camp_update', ['camp'=> $camp]); 
+    }
+
+    public function edit_camp(Request $request,$id) {
+        // $place = $request->input('place');
+        // $date = $request->input('date');
+        // $time = $request->input('time');
+        // //$data=array('first_name'=>$first_name,"last_name"=>$last_name,"city_name"=>$city_name,"email"=>$email);
+        // //DB::table('student')->update($data);
+        // // DB::table('student')->whereIn('id', $id)->update($request->all());
+        // DB::update('update campaigns set place = ?, date=?, time=?, where id = ?',[$place,$date,$time,$id]);
+        // echo "Record updated successfully.
+        // ";
+        // echo 'Click Here to go back.';
+
+        // if (campaigns::where('id', $id)->exists()) {
+            //$camp = campaigns::find($id);
+            $camp = new Campaign;
+            $camp = Campaign::find($id);
+    
+            $camp->place =  $request->place;
+            $camp->date =  $request->date;
+            $camp->time =  $request->time;
+            $camp->save();
+            //return view('index-2');
+            return redirect()->intended('camp_registration');
+        //}
+    }
 
     public function postCampRegistration(Request $request)
     {  

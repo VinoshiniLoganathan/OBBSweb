@@ -41,7 +41,7 @@
         <h2 class="form-signin-heading">sign in now</h2>
         <div class="login-wrap">
             <div class="user-login-info">
-                <input type="email" name="email" class="form-control" placeholder="User ID" autofocus>
+                <input type="email" name="email" class="form-control" placeholder="User ID">
                 <input type="password" name="password" class="form-control" placeholder="Password">
             </div>
             <button class="btn btn-lg btn-login btn-block" type="submit">Sign in</button>

@@ -122,9 +122,6 @@ Route::get('/horizontal_menu', function () {
     return view('horizontal_menu');
 });
 
-Route::get('/index-2', function () {
-    return view('index-2');
-});
 
 Route::get('/index', function () {
     return view('index');
@@ -152,10 +149,6 @@ Route::get('/language', function () {
 
 Route::get('/lock_screen', function () {
     return view('lock_screen');
-});
-
-Route::get('/', function () {
-    return view('login');
 });
 
 // Route::get('/login', function () {
@@ -225,6 +218,14 @@ Route::get('/widget', function () {
     return view('widget');
 });
 
+
+Route::get('/index-2', function () {
+    return view('index-2');
+});
+
+Route::get('/', function () {
+    return view('login');
+});
 
 //code for routing or linking to web methods
 //Route::get('login', 'AuthController@index');
