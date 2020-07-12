@@ -13,9 +13,9 @@
     <title>Form Validation</title>
 
     <!--Core CSS -->
-    <link href="bs3/css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/bootstrap-reset.css" rel="stylesheet">
-    <link href="font-awesome/css/font-awesome.css" rel="stylesheet" />
+    <link rel="stylesheet" href="{{ URL::asset('bs3/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ URL::asset('css/bootstrap-reset.css') }}">
+    <link rel="stylesheet" href="{{ URL::asset('font-awesome/css/font-awesome.css') }}">
 
     <!-- Custom styles for this template -->
     <link href="css/style.css" rel="stylesheet">
@@ -40,16 +40,16 @@
 <!--logo start-->
 <div class="brand">
 
-    <a href="index-2.html" class="logo">
+    {{-- <a href="index-2.html" class="logo">
         <img src="images/logo.png" alt="">
     </a>
     <div class="sidebar-toggle-box">
         <div class="fa fa-bars"></div>
-    </div>
+    </div> --}}
 </div>
 <!--logo end-->
 
-<div class="nav notify-row" id="top_menu">
+{{-- <div class="nav notify-row" id="top_menu">
     <!--  notification start -->
     <ul class="nav top-menu">
         <!-- settings start -->
@@ -254,14 +254,14 @@
         </li>
     </ul>
     <!--search & user info end-->
-</div>
+</div> --}}
 </header>
 <!--header end-->
 <aside>
     <div id="sidebar" class="nav-collapse">
         <!-- sidebar menu start-->            <div class="leftside-navigation">
             <ul class="sidebar-menu" id="nav-accordion">
-            <li>
+            {{-- <li>
                 <a href="index-2.html">
                     <i class="fa fa-dashboard"></i>
                     <span>Dashboard</span>
@@ -307,12 +307,12 @@
                     <i class="fa fa-th"></i>
                     <span>Data Tables</span>
                 </a>
-                <ul class="sub">
-                    <li><a href="basic_table.html">Basic Table</a></li>
-                    <li><a href="responsive_table.html">Responsive Table</a></li>
-                    <li><a href="dynamic_table.html">Dynamic Table</a></li>
-                    <li><a href="editable_table.html">Editable Table</a></li>
-                </ul>
+                <ul class="sub"> --}}
+                    <li><a href="{{url('donor_Donation')}}">Donation Activity</a></li>
+                    <li class="active"><a href="{{url('donor_Campaign')}}">Campaign</a></li>
+                    <li><a href="{{url('donor_Benefits')}}">Benefits</a></li>
+                    <li><a href="editable_table.html">Profile</a></li>
+                {{-- </ul>
             </li>
             <li class="sub-menu">
                 <a href="javascript:;" class="active">
@@ -387,7 +387,7 @@
                     <span>Login Page</span>
                 </a>
             </li>
-        </ul></div>        
+        </ul></div>         --}}
 <!-- sidebar menu end-->
     </div>
 </aside>
@@ -572,7 +572,7 @@
     </section>
     <!--main content end-->
 <!--right sidebar start-->
-<div class="right-sidebar">
+{{-- <div class="right-sidebar">
 <div class="search-row">
     <input type="text" placeholder="Search" class="form-control">
 </div>
@@ -820,7 +820,7 @@
 </li>
 </ul>
 </div>
-</div>
+</div> --}}
 <!--right sidebar end-->
 
 </section>

@@ -19,7 +19,7 @@ class AuthController extends Controller
     {
         return view('registration');
     }
-     
+
     public function postLogin(Request $request)
     {
         request()->validate([
@@ -30,29 +30,51 @@ class AuthController extends Controller
         $credentials = $request->only('email', 'password');
         if (Auth::attempt($credentials)) {
             // Authentication passed...
+            return redirect()->intended('camp_registration');
+            //return view('index');
+            //return Redirect::to("index")->withSuccess('Great! You have Successfully loggedin');
+        }   
+        
+      return Redirect::to("login")->withSuccess('Oppes! You have entered invalid credentials');
+       
+    }
+     
+    public function postLogin1(Request $request)
+    {
+        request()->validate([
+        'email' => 'required',
+        'password' => 'required',
+        ]);
+ 
+        $credentials = $request->only('email', 'password');
+      
+        if (Auth::attempt($credentials)) {
+            // Authentication passed...
             return redirect()->intended('index-2');
+
             //return Redirect::to("index-2");
         }
-        return Redirect::to("camp_registration");
+        // return Redirect::to("camp_registration");
     }
  
     public function postRegistration(Request $request)
     {  
-        // request()->validate([
-        // 'name' => 'required',
-        // 'email' => 'required|email|unique:users',
-        // 'password' => 'required|min:6',
-        // ]);
-         
-        // $data = $request->all();
- 
-        // $check = $this->create($data);
+            request()->validate([
+            'name' => 'required',
+            'email' => 'required|email|unique:users',
+            'password' => 'required|min:6',
+            ]);
+            
+            $data = $request->all();
+    
+            $check = $this->create($data);
+          
        
-        $user = new User;
-        $user->name = $request->name;
-        $user->email = $request->email;
-        $user->password = $request->password;
-        $user->save();
+        // $user = new User;
+        // $user->name = $request->name;
+        // $user->email = $request->email;
+        // $user->password = $request->password;
+        // $user->save();
 
         return Redirect::to("camp_registration");
         //return Redirect::to("dashboard")->withSuccess('Great! You have Successfully loggedin');
@@ -135,6 +157,6 @@ class AuthController extends Controller
     public function logout() {
         Session::flush();
         Auth::logout();
-        return Redirect('login');
+        return Redirect('');
     }
 }

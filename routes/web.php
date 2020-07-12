@@ -78,11 +78,13 @@ Route::get('/profile', function () {
 
 //code for routing or linking to web methods
 //Route::get('login', 'AuthController@index');
-Route::post('post-login', 'AuthController@postLogin'); 
+//Route::post('post-login1', 'AuthController@postLogin'); 
 Route::get('registration', 'AuthController@registration');
 Route::post('post-registration', 'AuthController@postRegistration'); 
 Route::get('dashboard', 'AuthController@dashboard'); 
 Route::get('logout', 'AuthController@logout');
+
+Route::post('post-login', 'LoginController@postLogin');
 
 //code for view data
 //Route::get('index','AuthController@index');

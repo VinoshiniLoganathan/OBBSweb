@@ -51,6 +51,23 @@
                 <a class="" href="{{url('registration')}}">
                     Create an account
                 </a>
+
+                {{-- <div class="form-wrap">
+                  <form action="{{url('post-login')}}" method="POST" id="logForm">
+                    {{ csrf_field() }}
+                    <div class="form-group">
+                      <label class="control-label mb-10" for="InputEmail">Email address</label>
+                      <input type="email" name="email" class="form-control" required="" id="InputEmail" placeholder="Enter email">
+                    </div>
+                    <div class="form-group">
+                      <label class="pull-left control-label mb-10" for="exampleInputpwd_2">Password</label>
+                      <input type="password" name="password" class="form-control" required="" id="inputPassword" placeholder="Enter pwd">
+                    </div>
+                    <div class="form-group text-center">
+                      <button type="submit" class="btn btn-info btn-success btn-rounded">sign in</button>
+                    </div> --}}
+                  </form>
+                </div>
             </div>
 
         </div>
