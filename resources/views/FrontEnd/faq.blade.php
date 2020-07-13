@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 	
-<!-- Mirrored from demo.artureanec.com/html/helpo/mono/faq.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 13 Jun 2020 15:35:40 GMT -->
-<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
 <head>
 		<meta charset="UTF-8"/>
 		<meta name="description" content="description"/>
@@ -68,21 +67,21 @@
 					</svg></span>
 					<div class="aside-dropdown__item d-lg-none d-block">
 						<ul class="aside-menu">
-							<li class="aside-menu__item aside-menu__item--has-child"><a class="aside-menu__link" href="javascript:void(0);"><span>Home</span></a>
+							<li class="aside-menu__item aside-menu__item--has-child"><a class="aside-menu__link" href="/home"><span>Home</span></a>
 								<!-- sub menu start    -->
-								<ul class="aside-menu__sub-list">
+								{{-- <ul class="aside-menu__sub-list">
 									<li><a href="../index.html"><span>01 Home Color Style</span></a></li>
 									<li><a href="../front_2.html"> <span>02 Home Color Style</span></a></li>
 									<li><a href="../front_3.html"><span>03 Home Color Style</span></a></li>
 									<li><a href="index.html"><span>04 Home Monochrome</span></a></li>
 									<li><a href="front_2.html"><span>05 Home Monochrome</span></a></li>
 									<li><a href="front_3.html"><span>06 Home Monochrome</span></a></li>
-								</ul>
+								</ul> --}}
 								<!-- sub menu end-->
 							</li>
-							<li class="aside-menu__item aside-menu__item--has-child aside-menu__item--active"><a class="aside-menu__link" href="javascript:void(0);"><span>Pages</span></a>
+							<li class="aside-menu__item aside-menu__item--has-child"><a class="aside-menu__link" href="/about"><span>About Us</span></a>
 								<!-- sub menu start    -->
-								<ul class="aside-menu__sub-list">
+								{{-- <ul class="aside-menu__sub-list">
 									<li><a href="about.html"><span>About</span></a></li>
 									<li><a href="typography.html"> <span>Typography</span></a></li>
 									<li><a href="donors.html"><span>Donors & Partners</span></a></li>
@@ -97,20 +96,20 @@
 									<li><a href="pricing.html"><span>Pricing Plans</span></a></li>
 									<li class="item--active"><a href="faq.html"><span>FAQ</span></a></li>
 									<li><a href="404.html"><span>404 Page</span></a></li>
-								</ul>
+								</ul> --}}
 								<!-- sub menu end-->
 							</li>
-							<li class="aside-menu__item aside-menu__item--has-child"><a class="aside-menu__link" href="javascript:void(0);"><span>Causes</span></a>
+							<li class="aside-menu__item aside-menu__item--has-child aside-menu__item--active"><a class="aside-menu__link" href="/faq"><span>FAQ</span></a>
 								<!-- sub menu start-->
-								<ul class="aside-menu__sub-list">
+								{{-- <ul class="aside-menu__sub-list">
 									<li><a href="causes.html"><span>Causes 1</span></a></li>
 									<li><a href="causes_2.html"> <span>Causes 2</span></a></li>
 									<li><a href="causes_3.html"><span>Causes 3</span></a></li>
 									<li><a href="cause-details.html"><span>Cause Details</span></a></li>
-								</ul>
+								</ul> --}}
 								<!-- sub menu end-->
 							</li>
-							<li class="aside-menu__item aside-menu__item--has-child"><a class="aside-menu__link" href="javascript:void(0);"><span>Shop</span></a>
+							{{-- <li class="aside-menu__item aside-menu__item--has-child"><a class="aside-menu__link" href="javascript:void(0);"><span>Shop</span></a>
 								<!-- sub menu start-->
 								<ul class="aside-menu__sub-list">
 									<li><a href="shop.html"><span>Catalog Page</span></a></li>
@@ -122,7 +121,7 @@
 								<!-- sub menu end-->
 							</li>
 							<li class="aside-menu__item"><a class="aside-menu__link" href="contacts.html"><span>Contacts</span></a></li>
-							<li class="aside-menu__item aside-menu__item--has-child"><a class="aside-menu__link" href="javascript:void(0);"><span>Elements</span></a>
+							<li class="aside-menu__item aside-menu__item--has-child"><a class="aside-menu__link" href="javascript:void(0);"><span>Elements</span></a> --}}
 								<!-- sub menu start    -->
 								<ul class="aside-menu__sub-list">
 									<li><a href="alerts.html"><span>Alerts</span></a></li>
@@ -138,7 +137,7 @@
 							</li>
 						</ul>
 					</div>
-					<div class="aside-dropdown__item">
+					{{-- <div class="aside-dropdown__item">
 						<!-- aside menu start-->
 						<ul class="aside-menu">
 							<li class="aside-menu__item"><a class="aside-menu__link" href="#">Documents</a></li>
@@ -156,7 +155,7 @@
 							<li class="aside-socials__item"><a class="aside-socials__link aside-socials__link--active" href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
 							<li class="aside-socials__item"><a class="aside-socials__link" href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
 						</ul>
-					</div>
+					</div> --}}
 					<div class="aside-dropdown__item"><a class="button button--squared" href="#"> <span>Donate</span></a></div>
 				</div>
 			</div>
@@ -166,30 +165,30 @@
 				<div class="container-fluid">
 					<div class="row no-gutters justify-content-between">
 						<div class="col-auto d-flex align-items-center">
-							<div class="dropdown-trigger d-none d-sm-block">
+							{{-- <div class="dropdown-trigger d-none d-sm-block">
 								<div class="dropdown-trigger__item"></div>
 							</div>
 							<div class="header-logo"><a class="header-logo__link" href="index.html"><img class="header-logo__img" src="img/logo_mono.png" alt="logo"/></a></div>
-						</div>
+						</div> --}}
 						<div class="col-auto">
 							<!-- main menu start-->
 							<nav>
 								<ul class="main-menu">
-									<li class="main-menu__item main-menu__item--has-child"><a class="main-menu__link" href="javascript:void(0);"><span>Home</span></a>
+									<li class="main-menu__item main-menu__item--has-child"><a class="main-menu__link" href="/home"><span>Home</span></a>
 										<!-- sub menu start-->
-										<ul class="main-menu__sub-list">
+										{{-- <ul class="main-menu__sub-list">
 											<li><a href="../index.html"><span>01 Home Color Style</span></a></li>
 											<li><a href="../front_2.html"><span>02 Home Color Style</span></a></li>
 											<li><a href="../front_3.html"><span>03 Home Color Style</span></a></li>
 											<li><a href="index.html"><span>04 Home Monochrome</span></a></li>
 											<li><a href="front_2.html"><span>05 Home Monochrome</span></a></li>
 											<li><a href="front_3.html"><span>06 Home Monochrome</span></a></li>
-										</ul>
+										</ul> --}}
 										<!-- sub menu end-->
 									</li>
-									<li class="main-menu__item main-menu__item--has-child main-menu__item--active"><a class="main-menu__link" href="javascript:void(0);"><span>Pages</span></a>
+									<li class="main-menu__item main-menu__item--has-child"><a class="main-menu__link" href="/about"><span>About Us</span></a>
 										<!-- sub menu start-->
-										<ul class="main-menu__sub-list sub-list--style-2">
+										{{-- <ul class="main-menu__sub-list sub-list--style-2">
 											<li><a href="about.html"><span>About</span></a></li>
 											<li><a href="typography.html"> <span>Typography</span></a></li>
 											<li><a href="donors.html"><span>Donors & Partners</span></a></li>
@@ -204,20 +203,20 @@
 											<li><a href="pricing.html"><span>Pricing Plans</span></a></li>
 											<li class="item--active"><a href="faq.html"><span>FAQ</span></a></li>
 											<li><a href="404.html"><span>404 Page</span></a></li>
-										</ul>
+										</ul> --}}
 										<!-- sub menu end-->
 									</li>
-									<li class="main-menu__item main-menu__item--has-child"><a class="main-menu__link" href="javascript:void(0);"><span>Causes</span></a>
+									<li class="main-menu__item main-menu__item--has-child main-menu__item--active"><a class="main-menu__link" href="/faq"><span>FAQ</span></a>
 										<!-- sub menu start-->
-										<ul class="main-menu__sub-list">
+										{{-- <ul class="main-menu__sub-list">
 											<li><a href="causes.html"><span>Causes 1</span></a></li>
 											<li><a href="causes_2.html"> <span>Causes 2</span></a></li>
 											<li><a href="causes_3.html"><span>Causes 3</span></a></li>
 											<li><a href="cause-details.html"><span>Cause Details</span></a></li>
-										</ul>
+										</ul> --}}
 										<!-- sub menu end-->
 									</li>
-									<li class="main-menu__item main-menu__item--has-child"><a class="main-menu__link" href="javascript:void(0);"><span>Shop</span></a>
+									{{-- <li class="main-menu__item main-menu__item--has-child"><a class="main-menu__link" href="javascript:void(0);"><span>Shop</span></a>
 										<!-- sub menu start-->
 										<ul class="main-menu__sub-list">
 											<li><a href="shop.html"><span>Catalog Page</span></a></li>
@@ -229,7 +228,7 @@
 										<!-- sub menu end-->
 									</li>
 									<li class="main-menu__item"><a class="main-menu__link" href="contacts.html"><span>Contacts</span></a></li>
-									<li class="main-menu__item main-menu__item--has-child"><a class="main-menu__link" href="javascript:void(0);"><span>Elements</span></a>
+									<li class="main-menu__item main-menu__item--has-child"><a class="main-menu__link" href="javascript:void(0);"><span>Elements</span></a> --}}
 										<!-- sub menu start-->
 										<ul class="main-menu__sub-list">
 											<li><a href="alerts.html"><span>Alerts</span></a></li>
@@ -249,7 +248,7 @@
 						</div>
 						<div class="col-auto d-flex align-items-center">
 							<!-- lang select start-->
-							<ul class="lang-select lang-select--inner">
+							{{-- <ul class="lang-select lang-select--inner">
 								<li class="lang-select__item lang-select__item--active"><span>En</span>
 									<ul class="lang-select__sub-list">
 										<li><a href="#">French</a></li>
@@ -258,7 +257,7 @@
 										<li><a href="#">Russian</a></li>
 									</ul>
 								</li>
-							</ul>
+							</ul> --}}
 							<!-- lang select end				--><a class="button button--squared" href="#"> <span>Donate</span></a>
 							<div class="dropdown-trigger d-block d-sm-none">
 								<div class="dropdown-trigger__item"></div>

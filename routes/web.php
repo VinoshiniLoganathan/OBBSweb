@@ -21,8 +21,8 @@ Route::get('/about', function () {
 Route::get('/faq', function () {
     return view('/FrontEnd/faq');
 });
-Route::get('/frontend', function () {
-    return view('/FrontEnd/frontend');
+Route::get('/home', function () {
+    return view('/FrontEnd/home');
 });
 
 Route::get('/index-2', function () {
@@ -36,7 +36,6 @@ Route::get('/', function () {
 Route::get('/registration', function () {
     return view('registration');
 });
-
 //code for routing or linking to web methods
 //Route::get('login', 'AuthController@index');
 //Route::post('post-login1', 'AuthController@postLogin'); 
@@ -45,6 +44,15 @@ Route::post('post-registration', 'AuthController@postRegistration');
 Route::get('dashboard', 'AuthController@dashboard'); 
 Route::get('logout', 'AuthController@logout');
 Route::post('post-login', 'AuthController@postLogin');
+
+Route::get('/donor_registration', function () {
+    return view('donor_registration');
+});
+Route::get('donor-registration', 'DonorController@Donorregistration');
+Route::post('post-donor-registration', 'DonorController@postDonorRegistration'); 
+Route::get('donor-dashboard', 'DonorController@Donordashboard'); 
+Route::get('donor-logout', 'DonorController@Donorlogout');
+Route::post('post-donor-login', 'DonorController@postDonorLogin');
 
 
 //donors routes

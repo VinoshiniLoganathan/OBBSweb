@@ -4,12 +4,12 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Validator,Redirect,Response;
-Use App\User;
+Use App\Donor;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Session;
 
-class LoginController extends Controller
+class DonorController extends Controller
 {
 
     public function index()
@@ -17,16 +17,16 @@ class LoginController extends Controller
         return view('login');
     }  
 
-    public function registration()
+    public function Donorregistration()
     {
-        return view('registration');
+        return view('donor_registration');
     }
     
-    public function postLogin(Request $request)
+    public function postDonorLogin(Request $request)
     {
         request()->validate([
-        'email' => 'required',
-        'password' => 'required',
+          'email' => 'required',
+          'password' => 'required',
         ]);
 
         $credentials = $request->only('email', 'password');
@@ -37,22 +37,25 @@ class LoginController extends Controller
         return Redirect::to("login")->withSuccess('Oppes! You have entered invalid credentials');
     }
 
-    public function postRegistration(Request $request)
+    public function postDonorRegistration(Request $request)
     {  
         request()->validate([
         'name' => 'required',
+        'address' => 'required',
+        'phone' => 'required|numeric',
+        'bloodgroup' => 'required',
         'email' => 'required|email|unique:users',
         'password' => 'required|min:6',
         ]);
         
         $data = $request->all();
 
-        $check = $this->create($data);
+        $check = $this->Donorcreate($data);
       
-        return Redirect::to("dashboard")->withSuccess('Great! You have Successfully loggedin');
+        return Redirect::to("/hosp_Campaign")->withSuccess('Great! You have Successfully loggedin');
     }
     
-    public function dashboard()
+    public function Donordashboard()
     {
 
       if(Auth::check()){
@@ -61,16 +64,19 @@ class LoginController extends Controller
        return Redirect::to("login")->withSuccess('Opps! You do not have access');
     }
 
-	public function create(array $data)
+	public function Donorcreate(array $data)
 	{
-	  return User::create([
-	    'name' => $data['name'],
-	    'email' => $data['email'],
-	    'password' => Hash::make($data['password'])
+	  return Donor::create([
+      'name' => $data['name'],
+      'address' => $data['address'],
+      'phone' => $data['phone'],
+      'bloodgroup' => $data['bloodgroup'],
+	  'email' => $data['email'],
+	  'password' => Hash::make($data['password'])
 	  ]);
 	}
 	
-	public function logout() {
+	public function Donorlogout() {
         Session::flush();
         Auth::logout();
         return Redirect('login');
