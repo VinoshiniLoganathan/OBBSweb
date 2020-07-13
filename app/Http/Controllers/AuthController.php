@@ -30,7 +30,7 @@ class AuthController extends Controller
         $credentials = $request->only('email', 'password');
         if (Auth::attempt($credentials)) {
             // Authentication passed...
-            return redirect()->intended('camp_registration');
+            return redirect()->intended('/hosp_Campaign');
             //return view('index');
             //return Redirect::to("index")->withSuccess('Great! You have Successfully loggedin');
         }   
@@ -39,23 +39,23 @@ class AuthController extends Controller
        
     }
      
-    public function postLogin1(Request $request)
-    {
-        request()->validate([
-        'email' => 'required',
-        'password' => 'required',
-        ]);
+    // public function postLogin1(Request $request)
+    // {
+    //     request()->validate([
+    //     'email' => 'required',
+    //     'password' => 'required',
+    //     ]);
  
-        $credentials = $request->only('email', 'password');
+    //     $credentials = $request->only('email', 'password');
       
-        if (Auth::attempt($credentials)) {
-            // Authentication passed...
-            return redirect()->intended('index-2');
+    //     if (Auth::attempt($credentials)) {
+    //         // Authentication passed...
+    //         return redirect()->intended('index-2');
 
-            //return Redirect::to("index-2");
-        }
-        // return Redirect::to("camp_registration");
-    }
+    //         //return Redirect::to("index-2");
+    //     }
+    //     // return Redirect::to("camp_registration");
+    // }
  
     public function postRegistration(Request $request)
     {  
@@ -76,14 +76,14 @@ class AuthController extends Controller
         // $user->password = $request->password;
         // $user->save();
 
-        return Redirect::to("camp_registration");
+        return Redirect::to("/hosp_Campaign");
         //return Redirect::to("dashboard")->withSuccess('Great! You have Successfully loggedin');
     }
 
     public function view_records()
     {
         $campaigns = DB::select('select * from campaigns');
-        return view('editable_table',['campaigns'=>$campaigns]);
+        return view('Hospital/hosp_CampRecords',['campaigns'=>$campaigns]);
         //return view('login');
     }  
 
@@ -94,7 +94,7 @@ class AuthController extends Controller
         
         //return redirect()->route('camp_update', ['camp' => $camp]);
         return response()
-            ->view('camp_update', ['camp'=> $camp]); 
+            ->view('Hospital/hosp_CampEdit', ['camp'=> $camp]); 
     }
 
     public function edit_camp(Request $request,$id) {
@@ -119,7 +119,7 @@ class AuthController extends Controller
             $camp->time =  $request->time;
             $camp->save();
             //return view('index-2');
-            return redirect()->intended('camp_registration');
+            return redirect()->intended('/hosp_Campaign');
         //}
     }
 
@@ -132,7 +132,7 @@ class AuthController extends Controller
         $campaign->time = $request->time;
         $campaign->save();
 
-        return Redirect::to("camp_registration");
+        return Redirect::to("/hosp_Campaign");
         //return Redirect::to("dashboard")->withSuccess('Great! You have Successfully loggedin');
     }
      

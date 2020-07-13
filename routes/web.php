@@ -37,9 +37,14 @@ Route::get('/registration', function () {
     return view('registration');
 });
 
-// Route::get('/', function () {
-//     return view('FrontEnd.index');
-// });
+//code for routing or linking to web methods
+//Route::get('login', 'AuthController@index');
+//Route::post('post-login1', 'AuthController@postLogin'); 
+Route::get('registration', 'AuthController@registration');
+Route::post('post-registration', 'AuthController@postRegistration'); 
+Route::get('dashboard', 'AuthController@dashboard'); 
+Route::get('logout', 'AuthController@logout');
+Route::post('post-login', 'AuthController@postLogin');
 
 
 //donors routes
@@ -59,32 +64,51 @@ Route::get('/donor_Profile', function () {
     return view('/Donor/donor_Profile');
 });
 
+
 //hospital routes
-Route::get('/camp_update', function () {
-    return view('camp_update');
+Route::get('/hosp_Benefit', function () {
+    return view('/Hospital/hosp_Benefit');
 });
 
-Route::get('/editable_table', function () {
-    return view('editable_table');
+Route::get('/hosp_BenefitEdit', function () {
+    return view('/Hospital/hosp_BenefitEdit');
 });
 
-Route::get('/camp_registration', function () {
-    return view('camp_registration');
+Route::get('/hosp_BenefitRecords', function () {
+    return view('/Hospital/hosp_BenefitRecords');
 });
 
-Route::get('/profile', function () {
-    return view('profile');
+Route::get('/hosp_Campaign', function () {
+    return view('/Hospital/hosp_Campaign');
 });
 
-//code for routing or linking to web methods
-//Route::get('login', 'AuthController@index');
-//Route::post('post-login1', 'AuthController@postLogin'); 
-Route::get('registration', 'AuthController@registration');
-Route::post('post-registration', 'AuthController@postRegistration'); 
-Route::get('dashboard', 'AuthController@dashboard'); 
-Route::get('logout', 'AuthController@logout');
+Route::get('/hosp_CampEdit', function () {
+    return view('/Hospital/hosp_CampEdit');
+});
 
-Route::post('post-login', 'LoginController@postLogin');
+Route::get('/hosp_CampRecords', function () {
+    return view('/Hospital/hosp_CampRecords');
+});
+
+Route::get('/hosp_CampRegistration', function () {
+    return view('/Hospital/hosp_CampRegistration');
+});
+
+Route::get('/hosp_Donors', function () {
+    return view('/Hospital/hosp_Donors');
+});
+
+Route::get('/hosp_DonorsEdit', function () {
+    return view('/Hospital/hosp_DonorsEdit');
+});
+
+Route::get('/hosp_DonorsRecords', function () {
+    return view('/Hospital/hosp_DonorsRecords');
+});
+ 
+Route::get('/hosp_Profile', function () {
+    return view('/Hospital/hosp_Profile');
+});
 
 //code for view data
 //Route::get('index','AuthController@index');
