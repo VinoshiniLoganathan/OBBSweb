@@ -35,7 +35,7 @@ class AuthController extends Controller
             //return Redirect::to("index")->withSuccess('Great! You have Successfully loggedin');
         }   
         
-      return Redirect::to("login")->withSuccess('Oppes! You have entered invalid credentials');
+      return Redirect::to("")->withSuccess('Oppes! You have entered invalid credentials');
        
     }
      
@@ -68,7 +68,6 @@ class AuthController extends Controller
             $data = $request->all();
     
             $check = $this->create($data);
-          
        
         // $user = new User;
         // $user->name = $request->name;
@@ -78,6 +77,30 @@ class AuthController extends Controller
 
         return Redirect::to("/hosp_Campaign");
         //return Redirect::to("dashboard")->withSuccess('Great! You have Successfully loggedin');
+    }
+
+    public function dashboard()
+    {
+ 
+      if(Auth::check()){
+        return view('dashboard');
+      }
+       return Redirect::to("login")->withSuccess('Opps! You do not have access');
+    }
+ 
+    public function create(array $data)
+    {
+      return User::create([
+        'name' => $data['name'],
+        'email' => $data['email'],
+        'password' => Hash::make($data['password'])
+      ]);
+    }
+     
+    public function logout() {
+        Session::flush();
+        Auth::logout();
+        return Redirect('');
     }
 
     public function view_records()
@@ -136,27 +159,5 @@ class AuthController extends Controller
         //return Redirect::to("dashboard")->withSuccess('Great! You have Successfully loggedin');
     }
      
-    public function dashboard()
-    {
- 
-      if(Auth::check()){
-        return view('dashboard');
-      }
-       return Redirect::to("login")->withSuccess('Opps! You do not have access');
-    }
- 
-    public function create(array $data)
-    {
-      return User::create([
-        'name' => $data['name'],
-        'email' => $data['email'],
-        'password' => Hash::make($data['password'])
-      ]);
-    }
-     
-    public function logout() {
-        Session::flush();
-        Auth::logout();
-        return Redirect('');
-    }
+   
 }

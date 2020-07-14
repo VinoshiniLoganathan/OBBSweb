@@ -99,7 +99,7 @@
       </div> 
 
        <div class="form-label-group">
-         <input type="email" name="email" id="inputEmail" class="form-control" placeholder="Email address" >
+         <input type="email" name="email" id="inputEmail" class="form-control" placeholder="Email Address" >
          <label for="inputEmail">Email address</label>
 
          @if ($errors->has('email'))
@@ -118,7 +118,7 @@
 
        <button class="btn btn-lg btn-primary btn-block btn-login text-uppercase font-weight-bold mb-2" type="submit">Sign Up</button>
        <div class="text-center">If you have an account?
-         <a class="" href="{{url('/')}}">Sign In</a></div>
+         <a class="" href="{{url('/donor_login')}}">Sign In</a></div>
       </a>
      </form>
 

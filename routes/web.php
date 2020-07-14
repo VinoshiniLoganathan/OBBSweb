@@ -39,6 +39,7 @@ Route::get('/registration', function () {
 //code for routing or linking to web methods
 //Route::get('login', 'AuthController@index');
 //Route::post('post-login1', 'AuthController@postLogin'); 
+
 Route::get('registration', 'AuthController@registration');
 Route::post('post-registration', 'AuthController@postRegistration'); 
 Route::get('dashboard', 'AuthController@dashboard'); 
@@ -47,6 +48,9 @@ Route::post('post-login', 'AuthController@postLogin');
 
 Route::get('/donor_registration', function () {
     return view('donor_registration');
+});
+Route::get('/donor_login', function () {
+    return view('donor_login');
 });
 Route::get('donor-registration', 'DonorController@Donorregistration');
 Route::post('post-donor-registration', 'DonorController@postDonorRegistration'); 

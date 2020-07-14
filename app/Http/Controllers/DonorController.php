@@ -12,11 +12,6 @@ use Session;
 class DonorController extends Controller
 {
 
-    public function index()
-    {
-        return view('login');
-    }  
-
     public function Donorregistration()
     {
         return view('donor_registration');
@@ -32,9 +27,9 @@ class DonorController extends Controller
         $credentials = $request->only('email', 'password');
         if (Auth::attempt($credentials)) {
             // Authentication passed...
-            return redirect()->intended('camp_registration');
+            return redirect()->intended('/hosp_Campaign');
         }
-        return Redirect::to("login")->withSuccess('Oppes! You have entered invalid credentials');
+        return Redirect::to("donor_login")->withSuccess('Oppes! You have entered invalid credentials');
     }
 
     public function postDonorRegistration(Request $request)
@@ -44,7 +39,7 @@ class DonorController extends Controller
         'address' => 'required',
         'phone' => 'required|numeric',
         'bloodgroup' => 'required',
-        'email' => 'required|email|unique:users',
+        'email' => 'required|email|unique:donors',
         'password' => 'required|min:6',
         ]);
         
@@ -71,14 +66,14 @@ class DonorController extends Controller
       'address' => $data['address'],
       'phone' => $data['phone'],
       'bloodgroup' => $data['bloodgroup'],
-	  'email' => $data['email'],
-	  'password' => Hash::make($data['password'])
+	    'email' => $data['email'],
+	    'password' => Hash::make($data['password'])
 	  ]);
 	}
 	
 	public function Donorlogout() {
         Session::flush();
         Auth::logout();
-        return Redirect('login');
+        return Redirect('donor_login');
     }
 }
