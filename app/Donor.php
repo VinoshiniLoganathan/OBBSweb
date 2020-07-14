@@ -2,13 +2,18 @@
 
 namespace App;
 
-// use Illuminate\Database\Eloquent\Model;
-use Illuminate\Contracts\Donor\MustVerifyEmail;
-use Illuminate\Foundation\Donor\Donor as Authenticatable;
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Contracts\Auth\MustVerifyEmail;
+// use Illuminate\Foundation\Auth\Donor as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 
-class Donor extends Model
-{
+use Illuminate\Auth\Authenticatable;
+use Illuminate\Contracts\Auth\Authenticatable as AuthenticatableContract;
+
+
+
+class Donor extends Model implements AuthenticatableContract
+{use Authenticatable;
 
     use Notifiable;
 

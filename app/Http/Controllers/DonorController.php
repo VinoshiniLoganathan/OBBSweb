@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Validator,Redirect,Response;
-Use App\Donor;
+Use App\Model\Donor;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Session;
@@ -25,9 +25,9 @@ class DonorController extends Controller
         ]);
 
         $credentials = $request->only('email', 'password');
-        if (Auth::attempt($credentials)) {
+        if (auth('donor')->attempt($credentials)) {
             // Authentication passed...
-            return redirect()->intended('/hosp_Campaign');
+            return redirect()->intended('/donor_Donation');
         }
         return Redirect::to("donor_login")->withSuccess('Oppes! You have entered invalid credentials');
     }
