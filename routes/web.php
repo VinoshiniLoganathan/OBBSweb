@@ -63,7 +63,7 @@ Route::post('post-donor-login', 'DonorController@postDonorLogin');
 Route::get('/donor_Benefits', function () {
     return view('/Donor/donor_Benefits');
 });
-Route::get('/donor_Campaign', function () {
+Route::get('/donor_Campaign','DonorController@donor_camp_records', function () {
     return view('/Donor/donor_Campaign');
 });
 Route::get('/donor_CampRegistration', function () {
@@ -75,6 +75,9 @@ Route::get('/donor_Donation', function () {
 Route::get('/donor_Profile', function () {
     return view('/Donor/donor_Profile');
 });
+// Route::get('view-donor-records','DonorController@view_donor_records');
+Route::get('donor_camp_register/{id}','DonorController@donor_camp_register');
+Route::post('register_camp/{id}','DonorController@register_camp');
 
 
 //hospital routes

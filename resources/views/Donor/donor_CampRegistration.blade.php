@@ -10,7 +10,7 @@
     <meta name="author" content="ThemeBucket">
     <link rel="shortcut icon" href="images/favicon.html">
 
-    <title>Form Validation</title>
+    <title>Registration Form</title>
 
     <!--Core CSS -->
     <link rel="stylesheet" href="{{ URL::asset('bs3/css/bootstrap.min.css') }}">
@@ -396,7 +396,7 @@
     <section id="main-content">
         <section class="wrapper">
             <!-- page start-->
-            <div class="row">
+            {{-- <div class="row">
                 <div class="col-lg-12">
                     <section class="panel">
                         <header class="panel-heading">
@@ -440,7 +440,7 @@
                         </div>
                     </section>
                 </div>
-            </div>
+            </div> --}}
             <div class="row">
                 <div class="col-lg-12">
                     <section class="panel">
@@ -452,9 +452,32 @@
                                 <a class="fa fa-times" href="javascript:;"></a>
                              </span>
                         </header>
+                        <form role="form" class="form-horizontal" action="/register_camp/<?php echo $camp[0]->id; ?>" method="POST">
+                            {{ csrf_field() }}
+                            <div class="form-group">
+                                <label class="col-lg-3 control-label">Place</label>
+                                <div class="col-lg-6">
+                                    <input type="text" readonly="readonly" placeholder="" id="place" name="place" value = '<?php echo$camp[0]->place?>' class="form-control"/>
+                                    
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-lg-3 control-label">Date</label>
+                                <div class="col-lg-6">
+                                    <input type="text" readonly="readonly" placeholder="" id="date" name="date" value = '<?php echo$camp[0]->date?>' class="form-control"/>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-lg-3 control-label">Time</label>
+                                <div class="col-lg-6">
+                                    <input type="text" readonly="readonly" placeholder="" id="tim" name="time" value = '<?php echo$camp[0]->time?>' class="form-control"/>
+                                    
+                                </div>
+                            </div>
+                        </form>
                         <div class="panel-body">
                             <div class=" form">
-                                <form class="cmxform form-horizontal " id="commentForm" method="get" action="#">
+                                <form class="cmxform form-horizontal " id="commentForm" method="get" action="/register_camp/<?php echo $camp[0]->id; ?>">
                                     <div class="form-group ">
                                         <label for="cname" class="control-label col-lg-3">Name (required)</label>
                                         <div class="col-lg-6">
@@ -468,15 +491,15 @@
                                         </div>
                                     </div>
                                     <div class="form-group ">
-                                        <label for="curl" class="control-label col-lg-3">URL (optional)</label>
+                                        <label for="curl" class="control-label col-lg-3">Phone</label>
                                         <div class="col-lg-6">
-                                            <input class="form-control " id="curl" type="url" name="url" />
+                                            <input class="form-control " id="cphone" type="text" name="phone" />
                                         </div>
                                     </div>
                                     <div class="form-group ">
-                                        <label for="ccomment" class="control-label col-lg-3">Your Comment (required)</label>
+                                        <label for="ccomment" class="control-label col-lg-3">Address</label>
                                         <div class="col-lg-6">
-                                            <textarea class="form-control " id="ccomment" name="comment" required></textarea>
+                                            <textarea class="form-control " id="caddress" type= "text" name="address" required></textarea>
                                         </div>
                                     </div>
                                     <div class="form-group">
@@ -492,7 +515,7 @@
                     </section>
                 </div>
             </div>
-            <div class="row">
+            {{-- <div class="row">
                 <div class="col-lg-12">
                     <section class="panel">
                         <header class="panel-heading">
@@ -566,7 +589,7 @@
                         </div>
                     </section>
                 </div>
-            </div>
+            </div> --}}
             <!-- page end-->
         </section>
     </section>
