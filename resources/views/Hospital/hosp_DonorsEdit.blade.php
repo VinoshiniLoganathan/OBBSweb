@@ -9,7 +9,7 @@
     <meta name="author" content="ThemeBucket">
     <link rel="shortcut icon" href="images/favicon.html">
 
-    <title>Campaign Updates</title>
+    <title>Donor Updates</title>
 
     <!--Core CSS -->
     {{-- follow the code  below and change the code as followning --}}
@@ -320,10 +320,10 @@
                     <span>Form Components</span>
                 </a> --}}
                 {{-- <ul class="sub"> --}}
-                    <li><a href="form_component.html">Blood Bag</a></li>
-                    <li><a href="advanced_form.html">Donor List</a></li>
-                    <li><a href="form_wizard.html">Benefits</a></li>
-                    <li class="active"><a href="form_validation.html">Campaign</a></li>
+                    <li><a href="/hosp_BloodBag">Blood Bag</a></li>
+                    <li class="active"><a href="/hosp_Donors">Donor List</a></li>
+                    <li><a href="/hosp_Benefits">Benefits</a></li>
+                    <li><a href="/hosp_Campaign">Campaign</a></li>
                     {{-- <li><a href="file_upload.html">Muliple File Upload</a></li> --}}
                     
                     {{-- <li><a href="dropzone.html">Dropzone</a></li>
@@ -384,7 +384,7 @@
             <li>
                 <a href="login.html">
                     <i class="fa fa-user"></i>
-                    <span>Login Page</span>
+                    <span>Profile</span>
                 </a>
             </li>
         </ul></div>        
@@ -408,25 +408,32 @@
                              </span>
                         </header>
                         <div class="panel-body">
-                            <form role="form" class="form-horizontal" action="/edit_camp/<?php echo $camp[0]->id; ?>" method="POST">
+                            <form role="form" class="form-horizontal" action="/edit_donor/<?php echo $donor[0]->id; ?>" method="POST">
                                 {{ csrf_field() }}
                                 <div class="form-group">
-                                    <label class="col-lg-3 control-label">Place</label>
+                                    <label class="col-lg-3 control-label">Name</label>
                                     <div class="col-lg-6">
-                                        <input type="text" placeholder="" id="place" name="place" value = '<?php echo$camp[0]->place?>' class="form-control"/>
+                                        <input type="text" id="inputName" name="name" value = '<?php echo$donor[0]->name?>' class="form-control"/>
                                         
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label class="col-lg-3 control-label">Date</label>
+                                    <label class="col-lg-3 control-label">Address</label>
                                     <div class="col-lg-6">
-                                        <input type="text" placeholder="" id="date" name="date" value = '<?php echo$camp[0]->date?>' class="form-control"/>
+                                        <input type="text" id="inputAddress" name="address" value = '<?php echo$donor[0]->address?>' class="form-control"/>
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label class="col-lg-3 control-label">Time</label>
+                                    <label class="col-lg-3 control-label">Phone</label>
                                     <div class="col-lg-6">
-                                        <input type="text" placeholder="" id="tim" name="time" value = '<?php echo$camp[0]->time?>' class="form-control"/>
+                                        <input type="text" id="inputPhone" name="phone" value = '<?php echo$donor[0]->phone?>' class="form-control"/>
+                                        
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-lg-3 control-label">Blood Group</label>
+                                    <div class="col-lg-6">
+                                        <input type="text" id="inputBlood" name="bloodgroup" value = '<?php echo$donor[0]->bloodgroup?>' class="form-control"/>
                                         
                                     </div>
                                 </div>
@@ -447,7 +454,7 @@
                        
                         <div class="panel-body">
                             <div class=" form">
-                                <form class="cmxform form-horizontal "  method="GET" action="{{url('view-records')}}">
+                                <form class="cmxform form-horizontal "  method="GET" action="{{url('view-donor-records')}}">
                                    
                                     <div class="form-group">
                                         {{-- <div class="col-lg-offset-3 col-lg-6">

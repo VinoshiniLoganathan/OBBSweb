@@ -93,8 +93,8 @@
         <input type="text" id="inputBlood" name="bloodgroup" class="form-control" placeholder="Blood Group" autofocus>
         <label for="inputBlood">Blood Group</label>
 
-        @if ($errors->has('name'))
-        <span class="error">{{ $errors->first('name') }}</span>
+        @if ($errors->has('bloodgroup'))
+        <span class="error">{{ $errors->first('bloodgroup') }}</span>
         @endif       
       </div> 
 

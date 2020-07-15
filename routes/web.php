@@ -122,7 +122,7 @@ Route::get('/hosp_Profile', function () {
     return view('/Hospital/hosp_Profile');
 });
 
-//code for view data
+//code for view campaign data
 //Route::get('index','AuthController@index');
 Route::get('view-records','AuthController@view_records');//rename controller later
 //code adding campaign
@@ -132,6 +132,14 @@ Route::put('edit-camp-registration', 'AuthController@editCampRegistration');
 Route::get('camp_update/{id}','AuthController@camp_update');
 Route::post('edit_camp/{id}','AuthController@edit_camp');
 //Route::post('/{id}','AuthController@edit_camp');
-
 //get record by id
 //Route::get('view-records-id','AuthController@getRecordById');
+
+//code for view donor data
+Route::get('view-donor-records','AuthController@view_donor_records');//rename controller later
+//code adding campaign
+Route::post('post-donor-registration', 'AuthController@postDonorRegistration');
+//code to edit records
+Route::put('edit-donor-registration', 'AuthController@editDonorRegistration');
+Route::get('donor_update/{id}','AuthController@donor_update');
+Route::post('edit_donor/{id}','AuthController@edit_donor');

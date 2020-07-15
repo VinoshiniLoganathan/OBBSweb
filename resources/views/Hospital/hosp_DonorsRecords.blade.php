@@ -10,7 +10,7 @@
     <meta name="author" content="ThemeBucket">
     <link rel="shortcut icon" href="images/favicon.html">
 
-    <title>Editable Table</title>
+    <title>Donor Table</title>
 
     <!--Core CSS -->
     <link href="bs3/css/bootstrap.min.css" rel="stylesheet">
@@ -310,10 +310,10 @@
                     <span>Data Tables</span>
                 </a>
                 <ul class="sub"> --}}
-                    <li><a href="form_component.html">Blood Bag</a></li>
-                    <li><a href="advanced_form.html">Donor List</a></li>
-                    <li><a href="form_wizard.html">Benefits</a></li>
-                    <li class="active"><a href="form_validation.html">Campaign</a></li>
+                    <li><a href="/hosp_BloodBag">Blood Bag</a></li>
+                    <li class="active"><a href="/hosp_Donors">Donor List</a></li>
+                    <li><a href="/hosp_Benefits">Benefits</a></li>
+                    <li><a href="/hosp_Campaign">Campaign</a></li>
                 {{-- </ul>
             </li> --}}
             {{-- <li class="sub-menu">
@@ -386,7 +386,7 @@
             <li>
                 <a href="login.html">
                     <i class="fa fa-user"></i>
-                    <span>Login Page</span>
+                    <span>Profile</span>
                 </a>
             </li>
         </ul></div>        
@@ -403,7 +403,7 @@
             <div class="col-sm-12">
                 <section class="panel">
                     <header class="panel-heading">
-                        Editable Table
+                        Donor Table
                         <span class="tools pull-right">
                             <a href="javascript:;" class="fa fa-chevron-down"></a>
                             <a href="javascript:;" class="fa fa-cog"></a>
@@ -433,21 +433,24 @@
                                 <thead>
                                 <tr>
                                     <th>ID</th>
-                                    <th>Place</th>
-                                    <th>Date</th>
-                                    <th>Time</th>
-                                    <th>Edit</th>
+                                    <th>Name</th>
+                                    <th>Address</th>
+                                    <th>Phone</th>
+                                    <th>Blood Group</th>
+                                    <th>Email</th>
                                     {{-- <th>Delete</th> --}}
                                 </tr>
                                 </thead>
                                 <tbody>
-                                    @foreach ($campaigns as $camp)
+                                    @foreach ($donors as $donor)
                                 <tr class="">
-                                    <td>{{ $camp->id }}</td>
-                                    <td>{{ $camp->place }}</td>
-                                    <td>{{ $camp->date }}</td>
-                                    <td>{{ $camp->time }}</td>                                    
-                                    <td><a href='camp_update/{{ $camp->id }}'>Edit</a></td>
+                                    <td>{{ $donor->id }}</td>
+                                    <td>{{ $donor->name }}</td>
+                                    <td>{{ $donor->address }}</td>
+                                    <td>{{ $donor->phone }}</td>
+                                    <td>{{ $donor->bloodgroup }}</td>
+                                    <td>{{ $donor->email }}</td>                                    
+                                    <td><a href='donor_update/{{ $donor->id }}'>Edit</a></td>
                                     {{-- <td><a class="delete" href="javascript:;">Delete</a></td> --}}
                                 </tr>
                                 @endforeach

@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use Validator,Redirect,Response;
 Use App\User;
 Use App\Campaign;
+Use App\Donor;
 use DB;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
@@ -14,7 +15,7 @@ use Session;
 
 class AuthController extends Controller
 {
-    //
+    //login and registration process
     public function registration()
     {
         return view('registration');
@@ -38,24 +39,6 @@ class AuthController extends Controller
       return Redirect::to("")->withSuccess('Oppes! You have entered invalid credentials');
        
     }
-     
-    // public function postLogin1(Request $request)
-    // {
-    //     request()->validate([
-    //     'email' => 'required',
-    //     'password' => 'required',
-    //     ]);
- 
-    //     $credentials = $request->only('email', 'password');
-      
-    //     if (Auth::attempt($credentials)) {
-    //         // Authentication passed...
-    //         return redirect()->intended('index-2');
-
-    //         //return Redirect::to("index-2");
-    //     }
-    //     // return Redirect::to("camp_registration");
-    // }
  
     public function postRegistration(Request $request)
     {  
@@ -103,6 +86,7 @@ class AuthController extends Controller
         return Redirect('');
     }
 
+    //campaign process
     public function view_records()
     {
         $campaigns = DB::select('select * from campaigns');
@@ -156,6 +140,66 @@ class AuthController extends Controller
         $campaign->save();
 
         return Redirect::to("/hosp_Campaign");
+        //return Redirect::to("dashboard")->withSuccess('Great! You have Successfully loggedin');
+    }
+
+    //donor list process
+    public function view_donor_records()
+    {
+        $donors = DB::select('select * from donors');
+        return view('Hospital/hosp_DonorsRecords',['donors'=>$donors]);
+        //return view('login');
+    } 
+
+    public function donor_update($id) {
+        $donor = DB::select('select * from donors where id = ?',[$id]);
+        //return view('camp_update',['camp'=>$camp]);
+        
+        //return redirect()->route('camp_update', ['camp' => $camp]);
+        return response()
+            ->view('Hospital/hosp_DonorsEdit', ['donor'=> $donor]); 
+    }
+
+    public function edit_donor(Request $request,$id) {
+        // $place = $request->input('place');
+        // $date = $request->input('date');
+        // $time = $request->input('time');
+        // //$data=array('first_name'=>$first_name,"last_name"=>$last_name,"city_name"=>$city_name,"email"=>$email);
+        // //DB::table('student')->update($data);
+        // // DB::table('student')->whereIn('id', $id)->update($request->all());
+        // DB::update('update campaigns set place = ?, date=?, time=?, where id = ?',[$place,$date,$time,$id]);
+        // echo "Record updated successfully.
+        // ";
+        // echo 'Click Here to go back.';
+
+        // if (campaigns::where('id', $id)->exists()) {
+            //$camp = campaigns::find($id);
+            $donor = new Donor;
+            $donor = Donor::find($id);
+    
+            $donor->name =  $request->name;
+            $donor->address =  $request->address;
+            $donor->phone =  $request->phone;
+            $donor->bloodgroup =  $request->bloodgroup;
+            $donor->save();
+            //return view('index-2');
+            return redirect()->intended('/hosp_Donors');
+        //}
+    }
+
+    public function postDonorRegistration(Request $request)
+    {  
+       
+        $donors = new Donor;
+        $donors->name =  $request->name;
+        $donors->address =  $request->address;
+        $donors->phone =  $request->phone;
+        $donors->bloodgroup =  $request->bloodgroup;
+        $donors->email =  $request->email;
+        $donors->password = Hash::make($request->password);
+        $donors->save();
+
+        return Redirect::to("/hosp_Donors");
         //return Redirect::to("dashboard")->withSuccess('Great! You have Successfully loggedin');
     }
      
