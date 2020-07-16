@@ -9,7 +9,7 @@
     <meta name="author" content="ThemeBucket">
     <link rel="shortcut icon" href="images/favicon.html">
 
-    <title>Campaign</title>
+    <title>Benefits</title>
 
     <!--Core CSS -->
     {{-- follow the code  below and change the code as followning --}}
@@ -321,10 +321,10 @@
                     <span>Form Components</span>
                 </a> --}}
                 {{-- <ul class="sub"> --}}
-                    <li><a href="form_component.html">Blood Bag</a></li>
-                    <li><a href="advanced_form.html">Donor List</a></li>
-                    <li><a href="form_wizard.html">Benefits</a></li>
-                    <li class="active"><a href="form_validation.html">Campaign</a></li>
+                    <li><a href="/hosp_BloodBag">Blood Bag</a></li>
+                    <li><a href="/hosp_Donors">Donor List</a></li>
+                    <li class="active"><a href="/hosp_Benefits">Benefits</a></li>
+                    <li><a href="/hosp_Campaign">Campaign</a></li>
                     {{-- <li><a href="file_upload.html">Muliple File Upload</a></li>
                     
                     <li><a href="dropzone.html">Dropzone</a></li>
@@ -409,29 +409,21 @@
                              </span>
                         </header>
                         <div class="panel-body">
-                            <form role="form" class="form-horizontal" action="{{url('post-camp-registration')}}" method="POST">
+                            <form role="form" class="form-horizontal" action="{{url('post-benefit-registration')}}" method="POST">
                                 {{ csrf_field() }}
                                 <div class="form-group">
-                                    <label class="col-lg-3 control-label">Place</label>
+                                    <label class="col-lg-3 control-label">Frequency</label>
                                     <div class="col-lg-6">
-                                        <input type="text" placeholder="" id="place" name="place"class="form-control">
+                                        <input type="text" placeholder="" id="frequency" name="frequency" class="form-control">
                                         
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label class="col-lg-3 control-label">Date</label>
+                                    <label class="col-lg-3 control-label">Description</label>
                                     <div class="col-lg-6">
-                                        <input type="text" placeholder="" id="date" name="date" class="form-control">
+                                        <input type="text" placeholder="" id="description" name="description" class="form-control">
                                     </div>
                                 </div>
-                                <div class="form-group">
-                                    <label class="col-lg-3 control-label">Time</label>
-                                    <div class="col-lg-6">
-                                        <input type="text" placeholder="" id="tim" name="time"class="form-control">
-                                        
-                                    </div>
-                                </div>
-
                                 <div class="form-group">
                                     <div class="col-lg-offset-3 col-lg-6">
                                         <button class="btn btn-primary" type="submit">Submit</button>
@@ -448,7 +440,7 @@
                        
                         <div class="panel-body">
                             <div class=" form">
-                                <form class="cmxform form-horizontal "  method="GET"action="{{url('view-records')}}">
+                                <form class="cmxform form-horizontal "  method="GET"action="{{url('view-benefit-records')}}">
                                    
                                     <div class="form-group">
                                         <div class="col-lg-offset-3 col-lg-6">

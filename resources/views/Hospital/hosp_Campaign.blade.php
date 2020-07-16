@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="{{ URL::asset('css/bootstrap-reset.css') }}">
     <link rel="stylesheet" href="{{ URL::asset('font-awesome/css/font-awesome.css') }}">
     
+    
     <!-- Custom styles for this template -->
     <link href="css/style.css" rel="stylesheet">
     <link href="css/style-responsive.css" rel="stylesheet" />
@@ -321,10 +322,10 @@
                     <span>Form Components</span>
                 </a> --}}
                 {{-- <ul class="sub"> --}}
-                    <li><a href="form_component.html">Blood Bag</a></li>
-                    <li><a href="advanced_form.html">Donor List</a></li>
-                    <li><a href="form_wizard.html">Benefits</a></li>
-                    <li class="active"><a href="form_validation.html">Campaign</a></li>
+                    <li><a href="/hosp_BloodBag">Blood Bag</a></li>
+                    <li><a href="/hosp_Donors">Donor List</a></li>
+                    <li><a href="/hosp_Benefits">Benefits</a></li>
+                    <li class="active"><a href="/hosp_Campaign">Campaign</a></li>
                     {{-- <li><a href="file_upload.html">Muliple File Upload</a></li>
                     
                     <li><a href="dropzone.html">Dropzone</a></li>

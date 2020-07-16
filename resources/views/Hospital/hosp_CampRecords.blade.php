@@ -310,10 +310,10 @@
                     <span>Data Tables</span>
                 </a>
                 <ul class="sub"> --}}
-                    <li><a href="form_component.html">Blood Bag</a></li>
-                    <li><a href="advanced_form.html">Donor List</a></li>
-                    <li><a href="form_wizard.html">Benefits</a></li>
-                    <li class="active"><a href="form_validation.html">Campaign</a></li>
+                    <li><a href="/hosp_BloodBag">Blood Bag</a></li>
+                    <li><a href="/hosp_Donors">Donor List</a></li>
+                    <li><a href="/hosp_Benefits">Benefits</a></li>
+                    <li class="active"><a href="/hosp_Campaign">Campaign</a></li>
                 {{-- </ul>
             </li> --}}
             {{-- <li class="sub-menu">

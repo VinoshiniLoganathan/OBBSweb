@@ -10,7 +10,7 @@
     <meta name="author" content="ThemeBucket">
     <link rel="shortcut icon" href="images/favicon.html">
 
-    <title>Editable Table</title>
+    <title>Benefits Table</title>
 
     <!--Core CSS -->
     <link href="bs3/css/bootstrap.min.css" rel="stylesheet">
@@ -310,10 +310,10 @@
                     <span>Data Tables</span>
                 </a>
                 <ul class="sub"> --}}
-                    <li><a href="form_component.html">Blood Bag</a></li>
-                    <li><a href="advanced_form.html">Donor List</a></li>
-                    <li><a href="form_wizard.html">Benefits</a></li>
-                    <li class="active"><a href="form_validation.html">Campaign</a></li>
+                    <li><a href="/hosp_BloodBag">Blood Bag</a></li>
+                    <li><a href="/hosp_Donors">Donor List</a></li>
+                    <li class="active"><a href="/hosp_Benefits">Benefits</a></li>
+                    <li><a href="/hosp_Campaign">Campaign</a></li>
                 {{-- </ul>
             </li> --}}
             {{-- <li class="sub-menu">
@@ -433,21 +433,19 @@
                                 <thead>
                                 <tr>
                                     <th>ID</th>
-                                    <th>Place</th>
-                                    <th>Date</th>
-                                    <th>Time</th>
+                                    <th>Frequency</th>
+                                    <th>Description</th>
                                     <th>Edit</th>
                                     {{-- <th>Delete</th> --}}
                                 </tr>
                                 </thead>
                                 <tbody>
-                                    @foreach ($campaigns as $camp)
+                                    @foreach ($benefits as $benefit)
                                 <tr class="">
-                                    <td>{{ $camp->id }}</td>
-                                    <td>{{ $camp->place }}</td>
-                                    <td>{{ $camp->date }}</td>
-                                    <td>{{ $camp->time }}</td>                                    
-                                    <td><a href='camp_update/{{ $camp->id }}'>Edit</a></td>
+                                    <td>{{ $benefit->id }}</td>
+                                    <td>{{ $benefit->frequency }}</td>
+                                    <td>{{ $benefit->description }}</td>                                   
+                                    <td><a href='benefit_update/{{ $benefit->id }}'>Edit</a></td>
                                     {{-- <td><a class="delete" href="javascript:;">Delete</a></td> --}}
                                 </tr>
                                 @endforeach

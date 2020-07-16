@@ -146,3 +146,12 @@ Route::post('post-donor-registration', 'AuthController@postDonorRegistration');
 Route::put('edit-donor-registration', 'AuthController@editDonorRegistration');
 Route::get('donor_update/{id}','AuthController@donor_update');
 Route::post('edit_donor/{id}','AuthController@edit_donor');
+
+//code for view benefit data
+Route::get('view-benefit-records','AuthController@view_benefit_records');//rename controller later
+//code adding campaign
+Route::post('post-benefit-registration', 'AuthController@postBenefitRegistration');
+//code to edit records
+Route::put('edit-benefit-registration', 'AuthController@editBenefitRegistration');
+Route::get('benefit_update/{id}','AuthController@benefit_update');
+Route::post('edit_benefit/{id}','AuthController@edit_benefit');

@@ -8,6 +8,7 @@ use Validator,Redirect,Response;
 Use App\User;
 Use App\Campaign;
 Use App\Donor;
+Use App\Benefits;
 use DB;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
@@ -161,19 +162,6 @@ class AuthController extends Controller
     }
 
     public function edit_donor(Request $request,$id) {
-        // $place = $request->input('place');
-        // $date = $request->input('date');
-        // $time = $request->input('time');
-        // //$data=array('first_name'=>$first_name,"last_name"=>$last_name,"city_name"=>$city_name,"email"=>$email);
-        // //DB::table('student')->update($data);
-        // // DB::table('student')->whereIn('id', $id)->update($request->all());
-        // DB::update('update campaigns set place = ?, date=?, time=?, where id = ?',[$place,$date,$time,$id]);
-        // echo "Record updated successfully.
-        // ";
-        // echo 'Click Here to go back.';
-
-        // if (campaigns::where('id', $id)->exists()) {
-            //$camp = campaigns::find($id);
             $donor = new Donor;
             $donor = Donor::find($id);
     
@@ -202,6 +190,41 @@ class AuthController extends Controller
         return Redirect::to("/hosp_Donors");
         //return Redirect::to("dashboard")->withSuccess('Great! You have Successfully loggedin');
     }
+
+    //benefits process
+    public function view_benefit_records()
+    {
+        $benefits = DB::select('select * from benefits');
+        return view('Hospital/hosp_BenefitRecords',['benefits'=>$benefits]);
+    }  
+
+    //camp edit 
+    public function benefit_update($id) {
+        $benefit = DB::select('select * from benefits where id = ?',[$id]);
+        return response()
+            ->view('Hospital/hosp_BenefitEdit', ['benefit'=> $benefit]); 
+    }
+
+    public function edit_benefit(Request $request,$id) {
+            $benefit = new Benefits;
+            $benefit = Benefits::find($id);
+    
+            $benefit->frequency =  $request->frequency;
+            $benefit->description =  $request->description;
+            $benefit->save();
+            return redirect()->intended('/hosp_Benefit');
+    }
+
+    public function postBenefitRegistration(Request $request)
+    {  
+        $benefits = new Benefits;
+        $benefits->frequency = $request->frequency;
+        $benefits->description = $request->description;
+        $benefits->save();
+
+        return Redirect::to("/hosp_Benefit");
+    }
+
      
    
 }
