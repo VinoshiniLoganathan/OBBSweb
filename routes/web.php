@@ -93,6 +93,10 @@ Route::get('/hosp_BenefitRecords', function () {
     return view('/Hospital/hosp_BenefitRecords');
 });
 
+Route::get('/hosp_BloodBag', function () {
+    return view('/Hospital/hosp_BloodBag');
+});
+
 Route::get('/hosp_Campaign', function () {
     return view('/Hospital/hosp_Campaign');
 });

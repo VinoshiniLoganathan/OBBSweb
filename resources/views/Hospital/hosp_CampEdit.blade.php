@@ -18,8 +18,8 @@
     <link rel="stylesheet" href="{{ URL::asset('font-awesome/css/font-awesome.css') }}">
 
     <!-- Custom styles for this template -->
-    <link href="css/style.css" rel="stylesheet">
-    <link href="css/style-responsive.css" rel="stylesheet" />
+    <link href="{{ URL::asset('css/style.css') }}" rel="stylesheet">
+    <link href="{{ URL::asset('css/style-responsive.css') }}" rel="stylesheet" />
 
     <!-- Just for debugging purposes. Don't actually copy this line! -->
     <!--[if lt IE 9]>
@@ -43,9 +43,9 @@
     {{-- <a href="index-2.html" class="logo">
         <img src="images/logo.png" alt="">
     </a> --}}
-    <div class="sidebar-toggle-box">
+    {{-- <div class="sidebar-toggle-box">
         <div class="fa fa-bars"></div>
-    </div>
+    </div> --}}
 </div>
 <!--logo end-->
 

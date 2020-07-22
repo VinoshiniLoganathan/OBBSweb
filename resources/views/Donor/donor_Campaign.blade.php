@@ -17,11 +17,9 @@
     <link rel="stylesheet" href="{{ URL::asset('css/bootstrap-reset.css') }}">
     <link rel="stylesheet" href="{{ URL::asset('font-awesome/css/font-awesome.css') }}">
 
-    <link rel="stylesheet" href="js/data-tables/DT_bootstrap.css" />
-
     <!-- Custom styles for this template -->
-    <link href="css/style.css" rel="stylesheet">
-    <link href="css/style-responsive.css" rel="stylesheet" />
+    <link href="{{ URL::asset('css/style.css') }}" rel="stylesheet">
+    <link href="{{ URL::asset('css/style-responsive.css') }}" rel="stylesheet" />
 
     <!-- Just for debugging purposes. Don't actually copy this line! -->
     <!--[if lt IE 9]>
