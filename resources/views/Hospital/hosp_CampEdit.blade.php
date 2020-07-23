@@ -411,10 +411,15 @@
                             <form role="form" class="form-horizontal" action="/edit_camp/<?php echo $camp[0]->id; ?>" method="POST">
                                 {{ csrf_field() }}
                                 <div class="form-group">
+                                    <label class="col-lg-3 control-label">Campaign Name</label>
+                                    <div class="col-lg-6">
+                                        <input type="text" placeholder="" id="camp_name" name="camp_name" value = '<?php echo$camp[0]->camp_name?>' class="form-control"/>
+                                    </div>
+                                </div>
+                                <div class="form-group">
                                     <label class="col-lg-3 control-label">Place</label>
                                     <div class="col-lg-6">
                                         <input type="text" placeholder="" id="place" name="place" value = '<?php echo$camp[0]->place?>' class="form-control"/>
-                                        
                                     </div>
                                 </div>
                                 <div class="form-group">

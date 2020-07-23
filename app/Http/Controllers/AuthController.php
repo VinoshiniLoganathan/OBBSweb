@@ -122,6 +122,7 @@ class AuthController extends Controller
             $camp = new Campaign;
             $camp = Campaign::find($id);
     
+            $camp->camp_name = $request->camp_name;
             $camp->place =  $request->place;
             $camp->date =  $request->date;
             $camp->time =  $request->time;
@@ -135,6 +136,7 @@ class AuthController extends Controller
     {  
        
         $campaign = new Campaign;
+        $campaign->camp_name = $request->camp_name;
         $campaign->place = $request->place;
         $campaign->date = $request->date;
         $campaign->time = $request->time;
@@ -198,7 +200,6 @@ class AuthController extends Controller
         return view('Hospital/hosp_BenefitRecords',['benefits'=>$benefits]);
     }  
 
-    //camp edit 
     public function benefit_update($id) {
         $benefit = DB::select('select * from benefits where id = ?',[$id]);
         return response()

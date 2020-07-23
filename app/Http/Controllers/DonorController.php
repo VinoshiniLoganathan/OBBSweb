@@ -7,6 +7,7 @@ use Validator,Redirect,Response;
 Use App\Model\Donor;
 Use DB;
 Use App\Campaign;
+Use App\CampDonorRegister;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Session;
@@ -88,9 +89,32 @@ class DonorController extends Controller
     }  
 
     public function donor_camp_register($id) {
-      $camp = DB::select('select * from campaigns where id = ?',[$id]);
-      return response()
-          ->view('Donor/donor_CampRegistration', ['camp'=> $camp]); 
+      $camp = Campaign::find($id);
+      $camp_id = $camp->id;
+      $camp_name = $camp->camp_name;
+      $camp_place = $camp->place;
+      $camp_date =  $camp->date;
+      $camp_time =  $camp->time;
+          
+      $donor_id = Auth::guard('donor')->user()->id;
+      $donor_name = Auth::guard('donor')->user()->name;
+      $donor_phone = Auth::guard('donor')->user()->phone;
+      $donor_bloodgroup = Auth::guard('donor')->user()->bloodgroup;
+      
+      $cdr = new CampDonorRegister();
+      $cdr->camp_id = $camp_id;
+      $cdr->camp_name = $camp_name;
+      $cdr->camp_place = $camp_place;
+      $cdr->camp_date =  $camp_date;
+      $cdr->camp_time =  $camp_time;
+      $cdr->donor_id = $donor_id;
+      $cdr->donor_name = $donor_name;
+      $cdr->donor_phone = $donor_phone;
+      $cdr->donor_bloodgroup = $donor_bloodgroup;
+      if(!$donor_id){
+      $cdr->save();
+      }
+      return redirect()->intended('/donor_Campaign');
   }
 
   public function register_camp(Request $request,$id) {

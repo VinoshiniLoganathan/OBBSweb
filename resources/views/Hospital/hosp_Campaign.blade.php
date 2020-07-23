@@ -17,6 +17,11 @@
     <link rel="stylesheet" href="{{ URL::asset('css/bootstrap-reset.css') }}">
     <link rel="stylesheet" href="{{ URL::asset('font-awesome/css/font-awesome.css') }}">
 
+    {{-- <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"> --}}
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/css/bootstrap-datepicker.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/js/bootstrap-datepicker.js"></script>
+
     <!-- Custom styles for this template -->
     <link href="{{ URL::asset('css/style.css') }}" rel="stylesheet">
     <link href="{{ URL::asset('css/style-responsive.css') }}" rel="stylesheet" />
@@ -412,16 +417,23 @@
                             <form role="form" class="form-horizontal" action="{{url('post-camp-registration')}}" method="POST">
                                 {{ csrf_field() }}
                                 <div class="form-group">
+                                    <label class="col-lg-3 control-label">Campaign Name</label>
+                                    <div class="col-lg-6">
+                                        <input type="text" placeholder="" id="camp_name" name="camp_name" class="form-control">
+                                        
+                                    </div>
+                                </div>
+                                <div class="form-group">
                                     <label class="col-lg-3 control-label">Place</label>
                                     <div class="col-lg-6">
-                                        <input type="text" placeholder="" id="place" name="place"class="form-control">
+                                        <input type="text" placeholder="" id="place" name="place" class="form-control">
                                         
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label class="col-lg-3 control-label">Date</label>
                                     <div class="col-lg-6">
-                                        <input type="text" placeholder="" id="date" name="date" class="form-control">
+                                        <input type="text" placeholder="" id="date" name="date" class="date form-control">
                                     </div>
                                 </div>
                                 <div class="form-group">
@@ -439,6 +451,12 @@
                                 </div>
                             </form>
                         </div>
+                        <script type="text/javascript">
+                            $('.date').datepicker({
+                                autoclose: true,
+                                format: 'yyyy-mm-dd'
+                             });
+                        </script>
                     </section>
                 </div>
             </div>

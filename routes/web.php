@@ -77,7 +77,7 @@ Route::get('/donor_Profile', function () {
 });
 // Route::get('view-donor-records','DonorController@view_donor_records');
 Route::get('donor_camp_register/{id}','DonorController@donor_camp_register');
-Route::post('register_camp/{id}','DonorController@register_camp');
+// Route::post('register_camp/{id}','DonorController@register_camp');
 
 
 //hospital routes

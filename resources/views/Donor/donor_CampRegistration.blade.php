@@ -477,34 +477,34 @@
                         </form>
                         <div class="panel-body">
                             <div class=" form">
-                                <form class="cmxform form-horizontal " id="commentForm" method="get" action="/register_camp/<?php echo $camp[0]->id; ?>">
+                                <form class="cmxform form-horizontal " id="commentForm" method="get" action="/register_camp2/<?php echo $camp[0]->id; ?>">
                                     <div class="form-group ">
                                         <label for="cname" class="control-label col-lg-3">Name (required)</label>
                                         <div class="col-lg-6">
-                                            <input class=" form-control" id="cname" name="name" minlength="2" type="text" required />
+                                            <input class=" form-control" id="cname" name="name" type="text" value = {{ auth('donor')->user()->name }} required />
                                         </div>
                                     </div>
                                     <div class="form-group ">
-                                        <label for="cemail" class="control-label col-lg-3">E-Mail (required)</label>
+                                        <label for="curl" class="control-label col-lg-3">Phone (required)</label>
                                         <div class="col-lg-6">
-                                            <input class="form-control " id="cemail" type="email" name="email" required />
+                                            <input class="form-control " id="cphone" type="text" name="phone" value = {{ auth('donor')->user()->phone }} required />
                                         </div>
                                     </div>
                                     <div class="form-group ">
-                                        <label for="curl" class="control-label col-lg-3">Phone</label>
+                                        <label for="curl" class="control-label col-lg-3">Blood Group (required)</label>
                                         <div class="col-lg-6">
-                                            <input class="form-control " id="cphone" type="text" name="phone" />
+                                            <input class="form-control " readonly="readonly" id="cblood" type="text" name="bloodgroup" value = {{ auth('donor')->user()->bloodgroup }} required />
                                         </div>
                                     </div>
                                     <div class="form-group ">
                                         <label for="ccomment" class="control-label col-lg-3">Address</label>
                                         <div class="col-lg-6">
-                                            <textarea class="form-control " id="caddress" type= "text" name="address" required></textarea>
+                                            <input class="form-control " id="caddress" type="text" name="address" value = {{ auth('donor')->user()->address }}>
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <div class="col-lg-offset-3 col-lg-6">
-                                            <button class="btn btn-primary" type="submit">Save</button>
+                                            <button class="btn btn-primary" type="submit">Register</button>
                                             <button class="btn btn-default" type="button">Cancel</button>
                                         </div>
                                     </div>

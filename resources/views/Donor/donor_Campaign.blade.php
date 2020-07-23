@@ -410,7 +410,7 @@
                     </header>
                     <div class="panel-body">
                         <div class="adv-table editable-table ">
-                            <div class="clearfix">
+                            {{-- <div class="clearfix">
                                 <div class="btn-group">
                                     <button id="editable-sample_new" class="btn btn-primary">
                                         Add New <i class="fa fa-plus"></i>
@@ -425,7 +425,7 @@
                                         <li><a href="#">Export to Excel</a></li>
                                     </ul>
                                 </div>
-                            </div>
+                            </div> --}}
                             <div class="space15"></div>
                             <table class="table table-striped table-hover table-bordered" id="editable-sample">
                                 <thead>
