@@ -433,7 +433,7 @@
                                 <div class="form-group">
                                     <label class="col-lg-3 control-label">Date</label>
                                     <div class="col-lg-6">
-                                        <input type="text" placeholder="" id="date" name="date" class="date form-control">
+                                        <input type="text" placeholder="" id="date" name="date" class="date form-control" >
                                     </div>
                                 </div>
                                 <div class="form-group">
@@ -456,6 +456,7 @@
                                 autoclose: true,
                                 format: 'yyyy-mm-dd'
                              });
+                             $('.datepicker').style.top = "150px";
                         </script>
                     </section>
                 </div>
