@@ -103,7 +103,7 @@ a,a:hover,a:focus {
     font-size:12px;
 }
 .form-signin .btn-login {
-    background:#1fb5ac;
+    background:#aec785;
     color:#fff;
     text-transform:uppercase;
     font-weight:300;
@@ -117,7 +117,7 @@ a,a:hover,a:focus {
     font-weight:300;
 }
 .form-signin a,.form-signin a:hover {
-    color:#1fb5ac;
+    color:#aec785;
 }
 .form-signin a:hover {
     text-decoration:underline;

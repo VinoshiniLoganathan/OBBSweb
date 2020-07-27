@@ -19,8 +19,8 @@
     <link rel="stylesheet" href="{{ URL::asset('font-awesome/css/font-awesome.css') }}">
 
     <!-- Custom styles for this template -->
-    <link href="css/style.css" rel="stylesheet">
-    <link href="css/style-responsive.css" rel="stylesheet" />
+    <link href="{{ URL::asset('css/style.css') }}" rel="stylesheet">
+    <link href="{{ URL::asset('css/style-responsive.css') }}" rel="stylesheet" />
 
     <!-- Just for debugging purposes. Don't actually copy this line! -->
     <!--[if lt IE 9]>
@@ -36,10 +36,10 @@
 
     <div class="container">
 
-      {{-- <form class="form-signin" action="{{url('post-registration')}}">
-        {{ csrf_field() }}
-        <h2 class="form-signin-heading">registration now</h2>
-        <div class="login-wrap">
+      {{-- {{-- <form class="form-signin" action="{{url('post-registration')}}">
+        {{ csrf_field() }} --}}
+        {{-- <h2 class="form-signin-heading">Donor Registration</h2> --}}
+        {{-- <div class="login-wrap">
 
             <p> Enter your account details below</p>
             <input type="text" name="name"class="form-control" placeholder="User Name" autofocus>
@@ -60,63 +60,66 @@
 
 
 
-      <form action="{{url('post-donor-registration')}}" method="POST" id="regForm">
+      <form class="form-signin" action="{{url('post-donor-registration')}}" method="POST" id="regForm">
         {{ csrf_field() }}
-       <div class="form-label-group">
-         <input type="text" id="inputName" name="name" class="form-control" placeholder="Full name" autofocus>
-         <label for="inputName">Name</label>
-
+       <h2 class="form-signin-heading">Donor Registration</h2>
+       <div class="login-wrap">
+        <label for="inputName">Name</label> 
+        <input type="text" id="inputName" name="name" class="form-control" placeholder="Full name" autofocus>
+         
          @if ($errors->has('name'))
          <span class="error">{{ $errors->first('name') }}</span>
          @endif       
        </div> 
 
-       <div class="form-label-group">
-        <input type="text" id="inputAddress" name="address" class="form-control" placeholder="Address" autofocus>
+       <div class="login-wrap">
         <label for="inputAddress">Address</label>
-
+        <input type="text" id="inputAddress" name="address" class="form-control" placeholder="Address" autofocus>
+        
         @if ($errors->has('address'))
         <span class="error">{{ $errors->first('address') }}</span>
         @endif       
       </div> 
 
-      <div class="form-label-group">
-        <input type="text" id="inputPhone" name="phone" class="form-control" placeholder="Phone" autofocus>
+      <div class="login-wrap">
         <label for="inputPhone">Phone Number</label>
-
+        <input type="text" id="inputPhone" name="phone" class="form-control" placeholder="Phone" autofocus>
+        
         @if ($errors->has('phone'))
         <span class="error">{{ $errors->first('phone') }}</span>
         @endif       
       </div> 
 
-      <div class="form-label-group">
-        <input type="text" id="inputBlood" name="bloodgroup" class="form-control" placeholder="Blood Group" autofocus>
+      <div class="login-wrap">
         <label for="inputBlood">Blood Group</label>
-
+        <input type="text" id="inputBlood" name="bloodgroup" class="form-control" placeholder="Blood Group" autofocus>
+        
         @if ($errors->has('bloodgroup'))
         <span class="error">{{ $errors->first('bloodgroup') }}</span>
         @endif       
       </div> 
 
-       <div class="form-label-group">
-         <input type="email" name="email" id="inputEmail" class="form-control" placeholder="Email Address" >
-         <label for="inputEmail">Email address</label>
-
+       <div class="login-wrap">
+        <label for="inputEmail">Email address</label> 
+        <input type="email" name="email" id="inputEmail" class="form-control" placeholder="Email Address" >
+         
          @if ($errors->has('email'))
          <span class="error">{{ $errors->first('email') }}</span>
          @endif    
        </div> 
 
-       <div class="form-label-group">
-         <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password">
-         <label for="inputPassword">Password</label>
-          
+       <div class="login-wrap">
+        <label for="inputPassword">Password</label> 
+        <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password">
+                   
          @if ($errors->has('password'))
          <span class="error">{{ $errors->first('password') }}</span>
          @endif  
        </div>
 
-       <button class="btn btn-lg btn-primary btn-block btn-login text-uppercase font-weight-bold mb-2" type="submit">Sign Up</button>
+       <div class="login-wrap">
+       <button class="btn btn-lg btn-login btn-block" type="submit">Sign Up</button>
+       </div>
        <div class="text-center">If you have an account?
          <a class="" href="{{url('/donor_login')}}">Sign In</a></div>
       </a>

@@ -117,8 +117,10 @@
          @endif  
        </div>
 
+       <div class="login-wrap">
        <button class="btn btn-lg btn-login btn-block" type="submit">Sign Up</button>
-
+       </div>
+       
        <div class="text-center">If you have an account?
          <a class="" href="{{url('/hosp_login')}}">Sign In</a></div>
       </a>

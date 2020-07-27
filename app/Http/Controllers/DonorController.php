@@ -144,16 +144,4 @@ class DonorController extends Controller
      
   }
 
-  public function register_camp(Request $request,$id) {
-          // $camp = new Campaign;
-          // $camp = Campaign::find($id);
-          // $camp->place =  $request->place;
-          // $camp->date =  $request->date;
-          // $camp->time =  $request->time;
-          
-          $camp->save();
-          //return view('index-2');
-          return redirect()->intended('/hosp_Campaign');
-      //}
-  }
 }
