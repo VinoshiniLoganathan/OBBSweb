@@ -401,7 +401,7 @@
             <div class="col-sm-12">
                 <section class="panel">
                     <header class="panel-heading">
-                        Editable Table
+                        Registered Donor List
                         <span class="tools pull-right">
                             <a href="javascript:;" class="fa fa-chevron-down"></a>
                             <a href="javascript:;" class="fa fa-cog"></a>
@@ -411,7 +411,7 @@
                     <div class="panel-body">
                         <div class="adv-table editable-table ">
                             <div class="clearfix">
-                                <div class="btn-group">
+                                {{-- <div class="btn-group">
                                     <button id="editable-sample_new" class="btn btn-primary">
                                         Add New <i class="fa fa-plus"></i>
                                     </button>
@@ -424,31 +424,51 @@
                                         <li><a href="#">Save as PDF</a></li>
                                         <li><a href="#">Export to Excel</a></li>
                                     </ul>
-                                </div>
+                                </div> --}}
                             </div>
+                            <form role="form" class="form-horizontal" action="/camp_register_detail/<?php echo $camp_detail[0]->id; ?>" method="POST">
+                                {{ csrf_field() }}
+                                <div class="form-group">
+                                    <label class="col-lg-3 control-label">Place</label>
+                                    <div class="col-lg-6">
+                                        <b><input type="text" readonly="readonly" placeholder="" id="place" name="camp_place" value = '<?php echo$camp_detail[0]->camp_place?>' class="form-control"/></b>
+                                        
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-lg-3 control-label">Date</label>
+                                    <div class="col-lg-6">
+                                        <b><input type="text" readonly="readonly" placeholder="" id="date" name="camp_date" value = '<?php echo$camp_detail[0]->camp_date?>' class="form-control"/></b>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-lg-3 control-label">Time</label>
+                                    <div class="col-lg-6">
+                                        <b><input type="text" readonly="readonly" placeholder="" id="tim" name="camp_time" value = '<?php echo$camp_detail[0]->camp_time?>' class="form-control"/></b>
+                                        
+                                    </div>
+                                </div>
+                            </form><br>
                             <div class="space15"></div>
                             <table class="table table-striped table-hover table-bordered" id="editable-sample">
                                 <thead>
                                 <tr>
-                                    <th>ID</th>
-                                    <th>Campaign Name</th>
-                                    <th>Place</th>
-                                    <th>Date</th>
-                                    <th>Time</th>
-                                    <th>Edit</th>
-                                    <th>Registered List</th>
+                                    <th>Donor ID</th>
+                                    <th>Donor Name</th>
+                                    <th>Donor Phone</th>
+                                    <th>Donor Blood Group</th>
+                                    {{-- <th>Delete</th> --}}
                                 </tr>
                                 </thead>
                                 <tbody>
-                                    @foreach ($campaigns as $camp)
+                                    @foreach ($camp_detail as $camp)
                                 <tr class="">
-                                    <td>{{ $camp->id }}</td>
-                                    <td>{{ $camp->camp_name }}</td>
-                                    <td>{{ $camp->place }}</td>
-                                    <td>{{ $camp->date }}</td>
-                                    <td>{{ $camp->time }}</td>                                    
-                                    <td><a href='camp_update/{{ $camp->id }}'>Edit</a></td>
-                                    <td><a href="camp_register_detail/{{ $camp->id }}">View</a></td>
+                                    <td>{{ $camp->donor_id }}</td>
+                                    <td>{{ $camp->donor_name }}</td>
+                                    <td>{{ $camp->donor_phone }}</td>
+                                    <td>{{ $camp->donor_bloodgroup }}</td>                             
+                                    {{-- <td><a href='camp_update/{{ $camp->id }}'>Edit</a></td> --}}
+                                    {{-- <td><a class="delete" href="javascript:;">Delete</a></td> --}}
                                 </tr>
                                 @endforeach
                                 </tbody>

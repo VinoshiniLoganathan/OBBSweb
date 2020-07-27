@@ -149,6 +149,8 @@ Route::post('post-camp-registration', 'AuthController@postCampRegistration');
 //code to edit records
 Route::put('edit-camp-registration', 'AuthController@editCampRegistration');
 Route::get('camp_update/{id}','AuthController@camp_update');
+Route::get('camp_register_detail/{id}','AuthController@camp_register_detail');
+Route::get('camp_detail/{id}','AuthController@camp_detail');
 Route::post('edit_camp/{id}','AuthController@edit_camp');
 //Route::post('/{id}','AuthController@edit_camp');
 //get record by id

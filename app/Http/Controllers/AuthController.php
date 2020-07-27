@@ -9,6 +9,7 @@ Use App\User;
 Use App\Campaign;
 Use App\Donor;
 Use App\Benefits;
+Use App\CampDonorRegister;
 use DB;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
@@ -103,6 +104,21 @@ class AuthController extends Controller
         //return redirect()->route('camp_update', ['camp' => $camp]);
         return response()
             ->view('Hospital/hosp_CampEdit', ['camp'=> $camp]); 
+    }
+
+    public function camp_register_detail($id) {
+        // $camp = DB::select('select id from campaigns where id = ?',[$id]);
+        $camp = Campaign::find($id);
+        $camp_id = $camp->id;
+        $camp_register = CampDonorRegister::select('*');
+
+        $camp_detail = $camp_register->where([
+            'camp_id' => $camp_id
+        ])->get();
+        
+        //return redirect()->route('camp_update', ['camp' => $camp]);
+        return response()
+            ->view('Hospital/hosp_CampRegisteredRecords', ['camp_detail'=> $camp_detail]); 
     }
 
     public function edit_camp(Request $request,$id) {
