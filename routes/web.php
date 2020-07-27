@@ -58,6 +58,18 @@ Route::get('donor-dashboard', 'DonorController@Donordashboard');
 Route::get('donor-logout', 'DonorController@Donorlogout');
 Route::post('post-donor-login', 'DonorController@postDonorLogin');
 
+Route::get('/hosp_registration', function () {
+    return view('hosp_registration');
+});
+Route::get('/hosp_login', function () {
+    return view('hosp_login');
+});
+Route::get('hosp-registration', 'HospitalController@Hospregistration');
+Route::post('post-hosp-registration', 'HospitalController@postHospRegistration'); 
+Route::get('hosp-dashboard', 'HospitalController@Hospdashboard'); 
+Route::get('hosp-logout', 'HospitalController@Hosplogout');
+Route::post('post-hosp-login', 'HospitalController@postHospLogin');
+
 
 //donors routes
 Route::get('/donor_Benefits', function () {

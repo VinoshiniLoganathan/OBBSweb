@@ -50,7 +50,7 @@ class DonorController extends Controller
 
         $check = $this->Donorcreate($data);
       
-        return Redirect::to("/hosp_Campaign")->withSuccess('Great! You have Successfully loggedin');
+        return Redirect::to("/donor_Donation")->withSuccess('Great! You have Successfully loggedin');
     }
     
     public function Donordashboard()

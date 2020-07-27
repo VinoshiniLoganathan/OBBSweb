@@ -51,6 +51,11 @@ return [
             'driver' => 'session',
             'provider' => 'donors',
         ],
+
+        'hospital' => [
+            'driver' => 'session',
+            'provider' => 'hospitals',
+        ],
     ],
 
     /*
@@ -79,6 +84,11 @@ return [
         'donors' => [
             'driver' => 'eloquent',
             'model' => App\Donor::class,
+        ],
+
+        'hospitals' => [
+            'driver' => 'eloquent',
+            'model' => App\Hospital::class,
         ],
 
         // 'users' => [
@@ -112,6 +122,13 @@ return [
 
         'donors' => [
             'provider' => 'donors',
+            'table' => 'password_resets',
+            'expire' => 60,
+            'throttle' => 60,
+        ],
+
+        'hospitals' => [
+            'provider' => 'hospitals',
             'table' => 'password_resets',
             'expire' => 60,
             'throttle' => 60,

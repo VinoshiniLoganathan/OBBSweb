@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class EditCampaignsTable extends Migration
+class RenameHospitalTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,7 @@ class EditCampaignsTable extends Migration
      */
     public function up()
     {
-        Schema::table('campaigns', function (Blueprint $table) {
-            $table->string('camp_name');
-            $table->date('date')->change();
-        });
+        Schema::rename('hospital', 'hospitals');
     }
 
     /**

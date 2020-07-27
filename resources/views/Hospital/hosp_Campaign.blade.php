@@ -16,7 +16,8 @@
     <link rel="stylesheet" href="{{ URL::asset('bs3/css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ URL::asset('css/bootstrap-reset.css') }}">
     <link rel="stylesheet" href="{{ URL::asset('font-awesome/css/font-awesome.css') }}">
-
+    <link rel="stylesheet" type="text/css" href="{{ URL::asset('js/bootstrap-datepicker/css/datepicker.css') }}" />
+    
     {{-- <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"> --}}
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/css/bootstrap-datepicker.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
@@ -437,10 +438,16 @@
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label class="col-lg-3 control-label">Time</label>
+                                    <label class="col-lg-3 control-label">Default Datepicker</label>
+                                    <div class="col-lg-6">
+                                        <input class="form-control form-control-inline input-medium default-date-picker"  size="16" type="text" value="" />
+                                        <span class="help-block">Select date</span>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-lg-3 control-label">Time(24Hrs Format)</label>
                                     <div class="col-lg-6">
                                         <input type="text" placeholder="" id="tim" name="time"class="form-control">
-                                        
                                     </div>
                                 </div>
 
@@ -824,6 +831,8 @@
 <script src="js/jquery.scrollTo.min.js"></script>
 <script src="js/jQuery-slimScroll-1.3.0/jquery.slimscroll.js"></script>
 <script src="js/jquery.nicescroll.js"></script>
+<script type="text/javascript" src="js/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
+
 <!--Easy Pie Chart-->
 <script src="js/easypiechart/jquery.easypiechart.js"></script>
 <!--Sparkline Chart-->

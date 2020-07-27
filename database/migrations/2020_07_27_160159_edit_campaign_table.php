@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class EditCamp extends Migration
+class EditCampaignTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,8 @@ class EditCamp extends Migration
      */
     public function up()
     {
-        //
-        Schema::create('campaigns', function (Blueprint $table) {
-            $table->increments('id');
-            $table->string('place');
-            $table->string('date');
-            $table->string('time');
-            $table->timestamps();
+        Schema::table('campaigns', function (Blueprint $table) {
+            $table->string('camp_name');
         });
     }
 

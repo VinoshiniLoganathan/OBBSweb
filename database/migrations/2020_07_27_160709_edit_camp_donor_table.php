@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class EditDonor extends Migration
+class EditCampDonorTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,8 @@ class EditDonor extends Migration
      */
     public function up()
     {
-        Schema::table('donors', function (Blueprint $table) {
-            $table->string('email')->unique()->change();
+        Schema::table('camp_donor_register', function (Blueprint $table) {
+            $table->string('camp_name');
         });
     }
 
