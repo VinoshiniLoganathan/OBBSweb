@@ -9,9 +9,14 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 		<meta http-equiv="X-UA-Compatible" content="ie=edge"/>
 		<link rel="shortcut icon" href="img/favicon.ico"/>
-		<title>Helpo HTML Template</title>
+		<link rel="stylesheet" href="{{ URL::asset('FrontEnd/css/styles.min.css') }}">
+		<link rel="stylesheet" href="{{ URL::asset('FrontEnd/fonts/font-awesome') }}">
+		<link rel="stylesheet" href="{{ URL::asset('FrontEnd/img') }}">
+		<link rel="stylesheet" href="{{ URL::asset('FrontEnd/js/common.min') }}">
+		<link rel="stylesheet" href="{{ URL::asset('FrontEnd/js/libs.min') }}">
+		<title>OBBS</title>
 		<!-- styles-->
-		<link rel="stylesheet" href="css/styles.min.css"/>
+		{{-- <link rel="stylesheet" href="css/styles.min.css"/> --}}
 		<!-- web-font loader-->
 		<script>
 			WebFontConfig = {
@@ -165,10 +170,10 @@
 				<div class="container-fluid">
 					<div class="row no-gutters justify-content-between">
 						<div class="col-auto d-flex align-items-center">
-							<div class="dropdown-trigger d-none d-sm-block">
+							{{-- <div class="dropdown-trigger d-none d-sm-block">
 								<div class="dropdown-trigger__item"></div>
-							</div>
-							<div class="header-logo"><a class="header-logo__link" href="index.html"><img class="header-logo__img" src="img/logo_mono.png" alt="logo"/></a></div>
+							</div> --}}
+							<div class="header-logo"><a class="header-logo__link" href="/home"><img class="header-logo__img" src="img/blogo.jpg" alt="logo"/></a></div>
 						</div>
 						<div class="col-auto">
 							<!-- main menu start-->
@@ -277,6 +282,9 @@
 							<picture>
 								<source srcset="img/aboutt.jpg" media="(min-width: 992px)"/><img class="img--bg" src="img/aboutt.jpg" alt="img"/>
 							</picture>
+							<div class="align-container__item"><span class="promo-primary__pre-title"></span>
+								<h1 class="promo-primary__title"><br><span>Home</span>
+							</div>
 							<div class="container">
 								<div class="row">
 									<div class="col-12">
@@ -971,7 +979,7 @@
 				<div class="container">
 					<div class="row">
 						<div class="col-sm-6 col-lg-3">
-							<div class="footer-logo"><a class="footer-logo__link" href="index.html"><img class="footer-logo__img" src="img/logo_white.png" alt="logo"/></a></div>
+							<div class="footer-logo"><a class="footer-logo__link" href="/home"><img class="footer-logo__img" src="img/blogo.jpg" alt="logo"/></a></div>
 							<!-- footer socials start-->
 							<ul class="footer-socials">
 								<li class="footer-socials__item"><a class="footer-socials__link" href=><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
@@ -994,9 +1002,9 @@
 							<!-- footer nav start-->
 							<nav>
 								<ul class="footer-menu">
-									<li class="footer-menu__item footer-menu__item--active"><a class="footer-menu__link" href="index.html">Home</a></li>
-									<li class="footer-menu__item"><a class="footer-menu__link" href="about.html">About</a></li>
-									<li class="footer-menu__item"><a class="footer-menu__link" href="#">Contacts</a></li>
+									<li class="footer-menu__item footer-menu__item--active"><a class="footer-menu__link" href="/home">Home</a></li>
+									<li class="footer-menu__item"><a class="footer-menu__link" href="/about">About Us</a></li>
+									<li class="footer-menu__item"><a class="footer-menu__link" href="/faq">Contact Us</a></li>
 								</ul>
 							</nav>
 							<!-- footer nav end-->
@@ -1008,7 +1016,7 @@
 					</div>
 					<div class="row align-items-baseline">
 						<div class="col-md-6">
-							<p class="footer-copyright">© 2020 Helpo Charity Template by Artureanec</p>
+							<p class="footer-copyright">© 2020 Online Blood Bank System</p>
 						</div>
 						{{-- <div class="col-md-6">
 							<div class="footer-privacy"><a class="footer-privacy__link" href="#">Privacy Policy</a><span class="footer-privacy__divider">|</span><a class="footer-privacy__link" href="#">Term and Condision</a></div>

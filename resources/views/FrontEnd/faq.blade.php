@@ -9,9 +9,14 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 		<meta http-equiv="X-UA-Compatible" content="ie=edge"/>
 		<link rel="shortcut icon" href="img/favicon.ico"/>
-		<title>Helpo HTML Template</title>
+		<link rel="stylesheet" href="{{ URL::asset('FrontEnd/css/styles.min.css') }}">
+		<link rel="stylesheet" href="{{ URL::asset('FrontEnd/fonts/font-awesome') }}">
+		<link rel="stylesheet" href="{{ URL::asset('FrontEnd/img') }}">
+		<link rel="stylesheet" href="{{ URL::asset('FrontEnd/js/common.min') }}">
+		<link rel="stylesheet" href="{{ URL::asset('FrontEnd/js/libs.min') }}">
+		<title>OBBS</title>
 		<!-- styles-->
-		<link rel="stylesheet" href="css/styles.min.css"/>
+		{{-- <link rel="stylesheet" href="css/styles.min.css"/> --}}
 		<!-- web-font loader-->
 		<script>
 			WebFontConfig = {
@@ -161,15 +166,15 @@
 			</div>
 			<!-- aside dropdown end-->
 			<!-- header start-->
-			<header class="header header--inner">
+			<header class="header header--front">
 				<div class="container-fluid">
 					<div class="row no-gutters justify-content-between">
 						<div class="col-auto d-flex align-items-center">
 							{{-- <div class="dropdown-trigger d-none d-sm-block">
 								<div class="dropdown-trigger__item"></div>
-							</div>
-							<div class="header-logo"><a class="header-logo__link" href="index.html"><img class="header-logo__img" src="img/logo_mono.png" alt="logo"/></a></div>
-						</div> --}}
+							</div> --}}
+							<div class="header-logo"><a class="header-logo__link" href="/home"><img class="header-logo__img" src="img/blogo.jpg" alt="logo"/></a></div>
+						</div>
 						<div class="col-auto">
 							<!-- main menu start-->
 							<nav>
@@ -206,7 +211,7 @@
 										</ul> --}}
 										<!-- sub menu end-->
 									</li>
-									<li class="main-menu__item main-menu__item--has-child main-menu__item--active"><a class="main-menu__link" href="/faq"><span>FAQ</span></a>
+									<li class="main-menu__item main-menu__item--has-child main-menu__item--active"><a class="main-menu__link" href="/faq"><span>Contact Us</span></a>
 										<!-- sub menu start-->
 										{{-- <ul class="main-menu__sub-list">
 											<li><a href="causes.html"><span>Causes 1</span></a></li>
@@ -258,18 +263,20 @@
 									</ul>
 								</li>
 							</ul> --}}
-							<!-- lang select end				--><a class="button button--squared" href="#"> <span>Donate</span></a>
-							<div class="dropdown-trigger d-block d-sm-none">
+							<!-- lang select end				-->
+							<a class="button button--squared" href="/donor_login"><span>Donor</span></a>
+							<a class="button button--squared" href="/hosp_login"><span>Hospital</span></a>
+							{{-- <div class="dropdown-trigger d-block d-sm-none">
 								<div class="dropdown-trigger__item"></div>
-							</div>
+							</div> --}}
 						</div>
 					</div>
 				</div>
 			</header>
 			<!-- header end-->
 			<main class="main">
-				<section class="promo-primary">
-					<picture>
+				<section class="promo">
+					{{-- <picture>
 						<source srcset="img/faq.jpg" media="(min-width: 992px)"/><img class="img--bg" src="img/faq.jpg" alt="img"/>
 					</picture>
 					<div class="promo-primary__description"> <span>Compassion</span></div>
@@ -279,6 +286,33 @@
 								<div class="align-container">
 									<div class="align-container__item"><span class="promo-primary__pre-title">Helpo</span>
 										<h1 class="promo-primary__title"><span>FAQ</span></h1>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div> --}}
+					<div class="promo-slider">
+						<div class="promo-slider__item promo-slider__item--style-1">
+							<picture>
+								<source srcset="img/aboutt.jpg" media="(min-width: 992px)"/><img class="img--bg" src="img/aboutt.jpg" alt="img"/>
+							</picture>
+							<div class="align-container__item"><span class="promo-primary__pre-title"></span>
+								<h1 class="promo-primary__title"><br><span>Contact Us</span>
+							</div>
+							<div class="container">
+								<div class="row">
+									<div class="col-12">
+										<div class="align-container">
+											<div class="align-container__item">
+												<div class="promo-slider__wrapper-1">
+													<h2 class="promo-slider__title"><span>Some people need help and we give it!</span></h2>
+												</div>
+												<div class="promo-slider__wrapper-2">
+													<p class="promo-slider__subtitle">Gray eel-catfish longnose whiptail catfish smalleye squaretail queen danio unicorn fish shortnose greeneye fusilier fish silver carp nibbler sharksucker tench lookdown catfish</p>
+												</div>
+												<div class="promo-slider__wrapper-3"><a class="button promo-slider__button button--primary" href="#">Discover</a></div>
+											</div>
+										</div>
 									</div>
 								</div>
 							</div>
@@ -370,20 +404,20 @@
 				<div class="container">
 					<div class="row">
 						<div class="col-sm-6 col-lg-3">
-							<div class="footer-logo"><a class="footer-logo__link" href="index.html"><img class="footer-logo__img" src="img/logo_white.png" alt="logo"/></a></div>
+							<div class="footer-logo"><a class="footer-logo__link" href="/home"><img class="footer-logo__img" src="img/blogo.jpg" alt="logo"/></a></div>
 							<!-- footer socials start-->
 							<ul class="footer-socials">
-								<li class="footer-socials__item"><a class="footer-socials__link" href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-								<li class="footer-socials__item"><a class="footer-socials__link" href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-								<li class="footer-socials__item"><a class="footer-socials__link" href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
-								<li class="footer-socials__item"><a class="footer-socials__link" href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+								<li class="footer-socials__item"><a class="footer-socials__link" href=><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+								<li class="footer-socials__item"><a class="footer-socials__link" href=><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+								<li class="footer-socials__item"><a class="footer-socials__link" href=><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+								<li class="footer-socials__item"><a class="footer-socials__link" href=><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
 							</ul>
 							<!-- footer socials end-->
 						</div>
 						<div class="col-sm-6 col-lg-3">
 							<h4 class="footer__title">Contacts</h4>
 							<div class="footer-contacts">
-								<p class="footer-contacts__address">Elliott Ave, Parkville VIC 3052, Melbourne Canada</p>
+								{{-- <p class="footer-contacts__address">Elliott Ave, Parkville VIC 3052, Melbourne Canada</p> --}}
 								<p class="footer-contacts__phone">Phone: <a href="tel:+31859644725">+31 85 964 47 25</a></p>
 								<p class="footer-contacts__mail">Email: <a href="mailto:support@helpo.org">support@helpo.org</a></p>
 							</div>
@@ -393,29 +427,25 @@
 							<!-- footer nav start-->
 							<nav>
 								<ul class="footer-menu">
-									<li class="footer-menu__item"><a class="footer-menu__link" href="index.html">Home</a></li>
-									<li class="footer-menu__item"><a class="footer-menu__link" href="#">Blog</a></li>
-									<li class="footer-menu__item"><a class="footer-menu__link" href="about.html">About</a></li>
-									<li class="footer-menu__item"><a class="footer-menu__link" href="#">Contacts</a></li>
-									<li class="footer-menu__item"><a class="footer-menu__link" href="#">Pages</a></li>
-									<li class="footer-menu__item"><a class="footer-menu__link" href="#">Elements</a></li>
-									<li class="footer-menu__item"><a class="footer-menu__link" href="causes.html">Causes</a></li>
+									<li class="footer-menu__item"><a class="footer-menu__link" href="/home">Home</a></li>
+									<li class="footer-menu__item footer-menu__item--active"><a class="footer-menu__link" href="/about">About Us</a></li>
+									<li class="footer-menu__item"><a class="footer-menu__link" href="/faq">Contact Us</a></li>
 								</ul>
 							</nav>
 							<!-- footer nav end-->
 						</div>
-						<div class="col-sm-6 col-lg-3">
+						{{-- <div class="col-sm-6 col-lg-3">
 							<h4 class="footer__title">Donate</h4>
 							<p>Help Us Change the Lives of Children in World</p><a class="button footer__button button--filled" href="#">Donate</a>
-						</div>
+						</div> --}}
 					</div>
 					<div class="row align-items-baseline">
 						<div class="col-md-6">
-							<p class="footer-copyright">© 2020 Helpo Charity Template by Artureanec</p>
+							<p class="footer-copyright">© 2020 Online Blood Bank System</p>
 						</div>
-						<div class="col-md-6">
+						{{-- <div class="col-md-6">
 							<div class="footer-privacy"><a class="footer-privacy__link" href="#">Privacy Policy</a><span class="footer-privacy__divider">|</span><a class="footer-privacy__link" href="#">Term and Condision</a></div>
-						</div>
+						</div> --}}
 					</div>
 				</div>
 			</footer>
