@@ -411,10 +411,20 @@
                     <div class="panel-body">
                         <div class="adv-table editable-table ">
                             <div class="clearfix">
-                                <div class="btn-group">
+                                {{-- <div class="btn-group">
                                     <button id="editable-sample_new" class="btn btn-primary">
                                         Add New <i class="fa fa-plus"></i>
                                     </button>
+                                </div> --}}
+                                <div class="form">
+                                    <form class="cmxform form-horizontal "  method="GET" action="{{url('hosp_Campaign')}}">
+                                        <div class="form-group">
+                                            <div class="col-lg-offset-3 col-lg-6">
+                                                <button class="btn btn-primary" type="submit">Add</button>
+                                                {{-- <button class="btn btn-default" type="button">Cancel</button> --}}
+                                            </div>
+                                        </div>
+                                    </form>
                                 </div>
                                 <div class="btn-group pull-right">
                                     <button class="btn btn-default dropdown-toggle" data-toggle="dropdown">Tools <i class="fa fa-angle-down"></i>

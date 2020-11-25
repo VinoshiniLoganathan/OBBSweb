@@ -259,9 +259,11 @@
 								</li>
 							</ul> --}}
 							<!-- lang select end-->
-							<div class="dropdown-trigger d-block d-sm-none">
+							{{-- <div class="dropdown-trigger d-block d-sm-none">
 								<div class="dropdown-trigger__item"></div>
-							</div><a class="button button--squared" href="#"><span>Donate</span></a>
+							</div> --}}
+							<a class="button button--squared" href="/donor_login"><span>Donor</span></a>
+							<a class="button button--squared" href="/hosp_login"><span>Hospital</span></a>
 						</div>
 					</div>
 				</div>
@@ -273,7 +275,7 @@
 					<div class="promo-slider">
 						<div class="promo-slider__item promo-slider__item--style-1">
 							<picture>
-								<source srcset="img/promo_1.jpg" media="(min-width: 992px)"/><img class="img--bg" src="img/promo_1.jpg" alt="img"/>
+								<source srcset="img/aboutt.jpg" media="(min-width: 992px)"/><img class="img--bg" src="img/aboutt.jpg" alt="img"/>
 							</picture>
 							<div class="container">
 								<div class="row">
@@ -293,7 +295,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="promo-slider__item promo-slider__item--style-2">
+						{{-- <div class="promo-slider__item promo-slider__item--style-2">
 							<picture>
 								<source srcset="img/promo_2.jpg" media="(min-width: 992px)"/><img class="img--bg" src="img/promo_2.jpg" alt="img"/>
 							</picture>
@@ -336,9 +338,9 @@
 									</div>
 								</div>
 							</div>
-						</div>
+						</div> --}}
 					</div>
-					<div class="promo-pannel__video"><img class="img--bg" src="img/video_block.jpg" alt="image"/><a class="video-trigger" href="https://www.youtube.com/watch?v=_sI_Ps7JSEk"><span>Watch our video</span><i class="fa fa-play" aria-hidden="true"></i></a></div><a class="anchor promo-pannel__anchor" href="#about"> <span>Scroll Down</span></a>
+					{{-- <div class="promo-pannel__video"><img class="img--bg" src="img/video_block.jpg" alt="image"/><a class="video-trigger" href="https://www.youtube.com/watch?v=_sI_Ps7JSEk"><span>Watch our video</span><i class="fa fa-play" aria-hidden="true"></i></a></div><a class="anchor promo-pannel__anchor" href="#about"> <span>Scroll Down</span></a>
 					<!-- promo pannel start-->
 					<div class="promo-pannel">
 						<div class="promo-pannel__phones">
@@ -356,10 +358,10 @@
 								<li class="promo-socials__item"><a class="promo-socials__link" href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
 							</ul>
 						</div>
-					</div>
+					</div> --}}
 					<!-- promo pannel end-->
 					<!-- slider nav start-->
-					<div class="slider__nav slider__nav--promo">
+					{{-- <div class="slider__nav slider__nav--promo">
 						<div class="promo-slider__count"></div>
 						<div class="slider__arrows">
 							<div class="slider__prev"><i class="fa fa-chevron-left" aria-hidden="true"></i>
@@ -367,12 +369,12 @@
 							<div class="slider__next"><i class="fa fa-chevron-right" aria-hidden="true"></i>
 							</div>
 						</div>
-					</div>
+					</div> --}}
 					<!-- slider nav end-->
 				</section>
 				<!-- promo end-->
 				<!-- about us start-->
-				<section class="section about-us about-us--blue" id="about">
+				{{-- <section class="section about-us about-us--blue" id="about">
 					<div class="container">
 						<div class="row">
 							<div class="col-lg-4">
@@ -387,10 +389,10 @@
 							</div>
 						</div>
 					</div>
-				</section>
+				</section> --}}
 				<!-- about us end-->
 				<!-- icons section start-->
-				<section class="section icons-section no-padding-top">
+				{{-- <section class="section icons-section no-padding-top">
 					<div class="container">
 						<div class="row offset-margin">
 							<div class="col-6 col-lg-3">
@@ -443,12 +445,12 @@
 							</div>
 						</div>
 					</div>
-				</section>
+				</section> --}}
 				<!-- icons section end-->
 				<!-- section start-->
 				<section class="section">
 					<!-- counter style-3 start-->
-					<div class="container">
+					{{-- <div class="container">
 						<div class="row offset-margin">
 							<div class="col-md-4 text-center">
 								<div class="counter-item counter-item--style-3">
@@ -475,13 +477,13 @@
 								</div>
 							</div>
 						</div>
-					</div>
+					</div> --}}
 					<!-- counter style-3 end-->
 				</section>
 				<!-- section end-->
 				<!-- causes start-->
 				<section class="section causes">
-					<div class="container">
+					{{-- <div class="container">
 						<div class="row margin-bottom">
 							<div class="col-xl-5">
 								<div class="heading heading--primary"><span class="heading__pre-title color--green">What we Do</span>
@@ -492,7 +494,7 @@
 								<p class="no-margin-bottom">Sharksucker sea toad candiru rocket danio tilefish stingray deepwater stingray Sacramento splittail, Canthigaster rostrata. Midshipman dartfish Modoc sucker, yellowtail kingfish</p><a class="button button--blue margin-top-30" href="causes.html">More Causes</a>
 							</div>
 						</div>
-					</div>
+					</div> --}}
 					<div class="causes-holder">
 						<div class="causes-holder__wrapper">
 							<div class="causes-slider causes-slider--dots offset-margin">
@@ -500,62 +502,64 @@
 									<div class="causes-item causes-item--primary">
 										<div class="causes-item__body">
 											<div class="causes-item__top">
-												<h6 class="causes-item__title"> <a href="cause-details.html">Water Delivery in Africa</a></h6>
-												<p>Sharksucker sea toad candiru rocket danio tilefish stingray deepwater stingray Sacramento splittail</p>
+												<h6 class="causes-item__title"> <a href="cause-details.html">The Story of Every Drop</a></h6>
+												{{-- <p>Sharksucker sea toad candiru rocket danio tilefish stingray deepwater stingray Sacramento splittail</p> --}}
 											</div>
 											<div class="causes-item__img">
-												<div class="causes-item__badge">Water Delivery</div><img class="img--bg" src="img/causes_1.jpg" alt="img"/>
+												<div class="causes-item__badge"></div><img class="img--bg" src="img/blood1.jpg" alt="img"/>
 											</div>
 											<div class="causes-item__lower">
-												<div class="progress-bar">
+												{{-- <div class="progress-bar">
 													<div class="progress-bar__inner" style="width: 78%;">
 														<div class="progress-bar__value">78%</div>
 													</div>
-												</div>
-												<div class="causes-item__details-holder">
+												</div> --}}
+												{{-- <div class="causes-item__details-holder">
 													<div class="causes-item__details-item"><span>Goal: </span><span>25 000$</span></div>
 													<div class="causes-item__details-item text-right"><span>Pledged: </span><span>20 350$</span></div>
-												</div>
+												</div> --}}
 											</div>
-										</div><a class="button causes-item__button button--primary" href="#">+ Donate</a>
+										</div>
+										{{-- <a class="button causes-item__button button--primary" href="#">+ Donate</a> --}}
 									</div>
 								</div>
 								<div class="causes-slider__item">
 									<div class="causes-item causes-item--primary">
 										<div class="causes-item__body">
 											<div class="causes-item__top">
-												<h6 class="causes-item__title"> <a href="cause-details.html">Health in other Countries</a></h6>
-												<p>Sharksucker sea toad candiru rocket danio tilefish stingray deepwater stingray Sacramento splittail</p>
+												<h6 class="causes-item__title"> <a href="cause-details.html">A Guide by PDN</a></h6>
+												{{-- <p>Sharksucker sea toad candiru rocket danio tilefish stingray deepwater stingray Sacramento splittail</p> --}}
 											</div>
 											<div class="causes-item__img">
-												<div class="causes-item__badge">Medicine</div><img class="img--bg" src="img/causes_2.jpg" alt="img"/>
+												<div class="causes-item__badge"></div><img class="img--bg" src="img/blood2.jpg" alt="img"/>
 											</div>
 											<div class="causes-item__lower">
-												<div class="progress-bar">
+												{{-- <div class="progress-bar">
 													<div class="progress-bar__inner" style="width: 23%;">
 														<div class="progress-bar__value">23%</div>
 													</div>
-												</div>
-												<div class="causes-item__details-holder">
+												</div> --}}
+												{{-- <div class="causes-item__details-holder">
 													<div class="causes-item__details-item"><span>Goal: </span><span>14 000$</span></div>
 													<div class="causes-item__details-item text-right"><span>Pledged: </span><span>6 098$</span></div>
-												</div>
+												</div> --}}
 											</div>
-										</div><a class="button causes-item__button button--primary" href="#">+ Donate</a>
+										</div>
+										{{-- <a class="button causes-item__button button--primary" href="#">+ Donate</a> --}}
 									</div>
 								</div>
 								<div class="causes-slider__item">
 									<div class="causes-item causes-item--primary">
 										<div class="causes-item__body">
 											<div class="causes-item__top">
-												<h6 class="causes-item__title"> <a href="cause-details.html">We Build and Create</a></h6>
-												<p>Sharksucker sea toad candiru rocket danio tilefish stingray deepwater stingray Sacramento splittail</p>
+												<h6 class="causes-item__title"> <a href="cause-details.html">Types of Blood Donation</a></h6>
+												{{-- <p>Sharksucker sea toad candiru rocket danio tilefish stingray deepwater stingray Sacramento splittail</p> --}}
 											</div>
 											<div class="causes-item__img">
-												<div class="causes-item__badge">Education</div><img class="img--bg" src="img/causes_3.jpg" alt="img"/>
+												<div class="causes-item__badge"></div><img class="img--bg" src="img/blood3.jpg" alt="img"/>
 											</div>
 											<div class="causes-item__lower">
-												<div class="progress-bar">
+												{{-- <div class="progress-bar">
 													<div class="progress-bar__inner" style="width: 51%;">
 														<div class="progress-bar__value">51%</div>
 													</div>
@@ -563,23 +567,24 @@
 												<div class="causes-item__details-holder">
 													<div class="causes-item__details-item"><span>Goal: </span><span>150 000$</span></div>
 													<div class="causes-item__details-item text-right"><span>Pledged: </span><span>76 500$</span></div>
-												</div>
+												</div> --}}
 											</div>
-										</div><a class="button causes-item__button button--primary" href="#">+ Donate</a>
+										</div>
+										{{-- <a class="button causes-item__button button--primary" href="#">+ Donate</a> --}}
 									</div>
 								</div>
 								<div class="causes-slider__item">
 									<div class="causes-item causes-item--primary">
 										<div class="causes-item__body">
 											<div class="causes-item__top">
-												<h6 class="causes-item__title"> <a href="cause-details.html">Healthy Food</a></h6>
-												<p>Sharksucker sea toad candiru rocket danio tilefish stingray deepwater stingray Sacramento splittail</p>
+												<h6 class="causes-item__title"> <a href="cause-details.html">Compatability of Blood Types</a></h6>
+												<p>Blood group is determined by the genes inherited from parents. Each group can be either RhD positive or RhD negative.</p>
 											</div>
 											<div class="causes-item__img">
-												<div class="causes-item__badge">Food</div><img class="img--bg" src="img/causes_2.jpg" alt="img"/>
+												<div class="causes-item__badge"></div><img class="img--bg" src="img/blood4.jpg" alt="img"/>
 											</div>
 											<div class="causes-item__lower">
-												<div class="progress-bar">
+												{{-- <div class="progress-bar">
 													<div class="progress-bar__inner" style="width: 50%;">
 														<div class="progress-bar__value">50%</div>
 													</div>
@@ -587,9 +592,10 @@
 												<div class="causes-item__details-holder">
 													<div class="causes-item__details-item"><span>Goal: </span><span>50 000$</span></div>
 													<div class="causes-item__details-item text-right"><span>Pledged: </span><span>25 000$</span></div>
-												</div>
+												</div> --}}
 											</div>
-										</div><a class="button causes-item__button button--primary" href="#">+ Donate</a>
+										</div>
+										{{-- <a class="button causes-item__button button--primary" href="#">+ Donate</a> --}}
 									</div>
 								</div>
 							</div>
@@ -599,7 +605,7 @@
 				</section>
 				<!-- causes end-->
 				<!-- section start-->
-				<section class="section no-padding-top no-padding-bottom">
+				{{-- <section class="section no-padding-top no-padding-bottom">
 					<div class="row no-gutters">
 						<div class="col-lg-6 col-xl-8 projects-masonry__item projects-masonry__item--height-2 projects-masonry__item--primary projects-masonry__item--heading">
 							<div class="projects-masonry__img">
@@ -692,10 +698,10 @@
 							</div>
 						</div>
 					</div>
-				</section>
+				</section> --}}
 				<!-- section end-->
 				<!-- events start-->
-				<section class="section events">
+				{{-- <section class="section events">
 					<div class="container">
 						<div class="row margin-bottom">
 							<div class="col-12">
@@ -744,10 +750,10 @@
 							<div class="col-12 text-center"><a class="button button--blue" href="#">View all events</a></div>
 						</div>
 					</div>
-				</section>
+				</section> --}}
 				<!-- events end-->
 				<!-- section start-->
-				<section class="section">
+				{{-- <section class="section">
 					<div class="jarallax">
 						<picture>
 							<source srcset="img/pricing_bg.jpg" media="(min-width: 992px)"/><img class="jarallax-img" src="img/pricing_bg.jpg" alt="img"/>
@@ -787,10 +793,10 @@
 							</div>
 						</div>
 					</div>
-				</section>
+				</section> --}}
 				<!-- section end-->
 				<!-- testimonials style-1 start-->
-				<section class="section testimonials testimonials--style-1">
+				{{-- <section class="section testimonials testimonials--style-1">
 					<div class="container">
 						<div class="row align-items-end margin-bottom">
 							<div class="col-lg-8 col-xl-7 offset-xl-1">
@@ -840,10 +846,10 @@
 							</div>
 						</div>
 					</div>
-				</section>
+				</section> --}}
 				<!-- testimonials style-1 end-->
 				<!-- blog start-->
-				<section class="section blog">
+				{{-- <section class="section blog">
 					<div class="container">
 						<div class="row margin-bottom">
 							<div class="col-12">
@@ -905,10 +911,10 @@
 							</div>
 						</div>
 					</div>
-				</section>
+				</section> --}}
 				<!-- blog end-->
 				<!-- donors start-->
-				<section class="section donors no-padding-top">
+				{{-- <section class="section donors no-padding-top">
 					<div class="container">
 						<div class="row margin-bottom">
 							<div class="col-12">
@@ -940,10 +946,10 @@
 							</div>
 						</div>
 					</div>
-				</section>
+				</section> --}}
 				<!-- donors end-->
 				<!-- subscribe start-->
-				<section class="subscribe">
+				{{-- <section class="subscribe">
 					<div class="container">
 						<div class="row align-items-end">
 							<div class="col-lg-4">
@@ -957,7 +963,7 @@
 							</div>
 						</div>
 					</div>
-				</section>
+				</section> --}}
 				<!-- subscribe end-->
 			</main>
 			<!-- footer start-->
@@ -968,17 +974,17 @@
 							<div class="footer-logo"><a class="footer-logo__link" href="index.html"><img class="footer-logo__img" src="img/logo_white.png" alt="logo"/></a></div>
 							<!-- footer socials start-->
 							<ul class="footer-socials">
-								<li class="footer-socials__item"><a class="footer-socials__link" href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-								<li class="footer-socials__item"><a class="footer-socials__link" href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-								<li class="footer-socials__item"><a class="footer-socials__link" href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
-								<li class="footer-socials__item"><a class="footer-socials__link" href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+								<li class="footer-socials__item"><a class="footer-socials__link" href=><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+								<li class="footer-socials__item"><a class="footer-socials__link" href=><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+								<li class="footer-socials__item"><a class="footer-socials__link" href=><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+								<li class="footer-socials__item"><a class="footer-socials__link" href=><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
 							</ul>
 							<!-- footer socials end-->
 						</div>
 						<div class="col-sm-6 col-lg-3">
 							<h4 class="footer__title">Contacts</h4>
 							<div class="footer-contacts">
-								<p class="footer-contacts__address">Elliott Ave, Parkville VIC 3052, Melbourne Canada</p>
+								{{-- <p class="footer-contacts__address">Elliott Ave, Parkville VIC 3052, Melbourne Canada</p> --}}
 								<p class="footer-contacts__phone">Phone: <a href="tel:+31859644725">+31 85 964 47 25</a></p>
 								<p class="footer-contacts__mail">Email: <a href="mailto:support@helpo.org">support@helpo.org</a></p>
 							</div>
@@ -989,28 +995,24 @@
 							<nav>
 								<ul class="footer-menu">
 									<li class="footer-menu__item footer-menu__item--active"><a class="footer-menu__link" href="index.html">Home</a></li>
-									<li class="footer-menu__item"><a class="footer-menu__link" href="#">Blog</a></li>
 									<li class="footer-menu__item"><a class="footer-menu__link" href="about.html">About</a></li>
 									<li class="footer-menu__item"><a class="footer-menu__link" href="#">Contacts</a></li>
-									<li class="footer-menu__item"><a class="footer-menu__link" href="#">Pages</a></li>
-									<li class="footer-menu__item"><a class="footer-menu__link" href="#">Elements</a></li>
-									<li class="footer-menu__item"><a class="footer-menu__link" href="causes.html">Causes</a></li>
 								</ul>
 							</nav>
 							<!-- footer nav end-->
 						</div>
-						<div class="col-sm-6 col-lg-3">
+						{{-- <div class="col-sm-6 col-lg-3">
 							<h4 class="footer__title">Donate</h4>
 							<p>Help Us Change the Lives of Children in World</p><a class="button footer__button button--filled" href="#">Donate</a>
-						</div>
+						</div> --}}
 					</div>
 					<div class="row align-items-baseline">
 						<div class="col-md-6">
 							<p class="footer-copyright">© 2020 Helpo Charity Template by Artureanec</p>
 						</div>
-						<div class="col-md-6">
+						{{-- <div class="col-md-6">
 							<div class="footer-privacy"><a class="footer-privacy__link" href="#">Privacy Policy</a><span class="footer-privacy__divider">|</span><a class="footer-privacy__link" href="#">Term and Condision</a></div>
-						</div>
+						</div> --}}
 					</div>
 				</div>
 			</footer>

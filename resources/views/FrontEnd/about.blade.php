@@ -277,15 +277,16 @@
 			<main class="main">
 				<section class="promo-primary">
 					<picture>
-						<source srcset="img/about.jpg" media="(min-width: 992px)"/><img class="img--bg" src="img/about.jpg" alt="img"/>
+						<source srcset="img/aboutt.jpg" media="(min-width: 992px)"/><img class="img--bg" src="img/aboutt.jpg" alt="img"/>
 					</picture>
-					<div class="promo-primary__description"> <span>Donation</span></div>
+					<div class="promo-primary__description"> <span>About</span></div>
 					<div class="container">
 						<div class="row">
 							<div class="col-auto">
 								<div class="align-container">
 									<div class="align-container__item"><span class="promo-primary__pre-title">Helpo</span>
-										<h1 class="promo-primary__title"><span>About</span><br/><span>Organization</span></h1>
+										{{-- <h1 class="promo-primary__title"><span>About</span><br/><span>Organization</span>
+										</h1> --}}
 									</div>
 								</div>
 							</div>
@@ -297,9 +298,12 @@
 					<div class="container">
 						<div class="row align-items-center">
 							<div class="col-lg-6 col-xl-5">
-								<div class="img-box">
+								<picture>
+									<source srcset="img/know.jpg" media="(min-width: 2000px)"/><img class="img--bg1" src="img/know.jpg" alt="img"/>
+								</picture>
+								{{-- <div class="img-box">
 									<div class="img-box__img"><img class="img--bg" src="img/about_2.png" alt="img"/></div>
-								</div>
+								</div> --}}
 							</div>
 							<div class="col-lg-6 col-xl-6 offset-xl-1">
 								<div class="heading heading--primary"><span class="heading__pre-title">About Us</span>
@@ -334,9 +338,12 @@
 				<section class="section video-block no-padding-top">
 					<div class="container">
 						<div class="row">
-							<div class="col-12">
+							<picture>
+								<source srcset="img/blood.jpg"/><img class="img--bg1" src="img/blood.jpg" alt="img" position="static"/>
+							</picture>
+							{{-- <div class="col-12">
 								<div class="video-frame"><img class="img--bg" src="img/video_frame.png" alt="frame"/><a class="video-trigger video-frame__trigger" href="https://www.youtube.com/watch?v=_sI_Ps7JSEk"><span class="video-frame__icon"><i class="fa fa-play" aria-hidden="true"></i></span><span class="video-frame__text">Watch our video</span></a></div>
-							</div>
+							</div> --}}
 						</div>
 					</div>
 				</section>
@@ -393,15 +400,19 @@
 					<div class="container">
 						<div class="row">
 							<div class="col-12">
-								<div class="heading heading--primary"><span class="heading__pre-title">Team</span>
-									<h2 class="heading__title no-margin-bottom"><span>Meet</span> <span>our Team</span></h2>
+								<div class="heading heading--primary"><span class="heading__pre-title"></span>
+									<h2 class="heading__title no-margin-bottom"><span>The Story of Every Drop</span> <span></span></h2>
 								</div>
 							</div>
 						</div>
+						<picture>
+							<source srcset="img/bloods.jpg" media="(min-width: 992px)" /><img class="img--bg1" src="img/bloods.jpg" alt="img" position="static"/>
+						</picture>
 						<div class="row margin-bottom">
 							<div class="col-sm-6 col-lg-4 col-xl-3">
+								
 								<!-- iteam start-->
-								<div class="team-item team-item--rounded">
+								{{-- <div class="team-item team-item--rounded">
 									<ul class="team-item__socials">
 										<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
 										<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
@@ -414,10 +425,10 @@
 										<div class="team-item__name">Chris Patt</div>
 										<div class="team-item__position">Ceo/Founder</div>
 									</div>
-								</div>
+								</div> --}}
 								<!-- iteam end-->
 							</div>
-							<div class="col-sm-6 col-lg-4 col-xl-3">
+							{{-- <div class="col-sm-6 col-lg-4 col-xl-3">
 								<!-- iteam start-->
 								<div class="team-item team-item--rounded">
 									<ul class="team-item__socials">
@@ -542,7 +553,7 @@
 									</div>
 								</div>
 								<!-- iteam end-->
-							</div>
+							</div> --}}
 						</div>
 						<div class="row">
 							<div class="col-12 text-center"><a class="button button--blue" href="volunteer.html">Become our volunteer</a></div>
