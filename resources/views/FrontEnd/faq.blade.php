@@ -211,7 +211,7 @@
 										</ul> --}}
 										<!-- sub menu end-->
 									</li>
-									<li class="main-menu__item main-menu__item--has-child main-menu__item--active"><a class="main-menu__link" href="/faq"><span>Contact Us</span></a>
+									<li class="main-menu__item main-menu__item--has-child main-menu__item--active"><a class="main-menu__link" href="/faq"><span>FAQ</span></a>
 										<!-- sub menu start-->
 										{{-- <ul class="main-menu__sub-list">
 											<li><a href="causes.html"><span>Causes 1</span></a></li>
@@ -297,7 +297,7 @@
 								<source srcset="img/aboutt.jpg" media="(min-width: 992px)"/><img class="img--bg" src="img/aboutt.jpg" alt="img"/>
 							</picture>
 							<div class="align-container__item"><span class="promo-primary__pre-title"></span>
-								<h1 class="promo-primary__title"><br><span>Contact Us</span>
+								<h1 class="promo-primary__title"><br><span>FAQ</span>
 							</div>
 							<div class="container">
 								<div class="row">
@@ -324,8 +324,8 @@
 					<div class="container">
 						<div class="row margin-bottom">
 							<div class="col-12">
-								<div class="heading heading--primary"><span class="heading__pre-title">Faq</span>
-									<h2 class="heading__title no-margin-bottom"><span>General</span> <span>Questions</span></h2>
+								<div class="heading heading--primary"><span class="heading__pre-title">FAQ</span>
+									<h2 class="heading__title no-margin-bottom"><span>General Questions</span></h2>
 								</div>
 							</div>
 						</div>
@@ -333,67 +333,67 @@
 							<div class="col-lg-8 col-xl-9">
 								<div class="accordion accordion--primary">
 									<div class="accordion__title-block">
-										<h6 class="accordion__title">Health in other Countries?</h6><span class="accordion__close"></span>
+										<h6 class="accordion__title">Why do we need to donate blood? </h6><span class="accordion__close"></span>
 									</div>
 									<div class="accordion__text-block">
-										<p>Burma danio black bass straptail southern Dolly Varden orbicular velvetfish trumpetfish; bluntnose minnow. Hatchetfish pricklefish sixgill ray sawfish scaly dragonfish! Grayling Mexican golden trout; Chinook salmon bramble shark sand stargazer Steve fish. Scat zebra pleco graveldiver river shark tripod fish; flagtail bala shark warbonnet.</p>
+										<p>Eight out of 10 people need blood or blood products. One in ten patients in the hospital requires a blood transfusion. The amount of blood donations that patients receive relies on their health condition. Although an average of three donations is transferred to a patient, several more are needed by some patients. Blood is in constant demand for the care of patients involved in surgery, injuries, anemia, malaria, cancer or bleeding conditions such as hemophilia. The need for blood is never stopped. Every donation of blood offers a new chance of life to the person who is receiving it.</p>
 									</div>
 								</div>
 								<div class="accordion accordion--primary">
 									<div class="accordion__title-block">
-										<h6 class="accordion__title">Water Delivery in Africa?</h6><span class="accordion__close"></span>
+										<h6 class="accordion__title">Blood donation safe?</h6><span class="accordion__close"></span>
 									</div>
 									<div class="accordion__text-block">
-										<p>Burma danio black bass straptail southern Dolly Varden orbicular velvetfish trumpetfish; bluntnose minnow. Hatchetfish pricklefish sixgill ray sawfish scaly dragonfish! Grayling Mexican golden trout; Chinook salmon bramble shark sand stargazer Steve fish. Scat zebra pleco graveldiver river shark tripod fish; flagtail bala shark warbonnet.</p>
+										<p>Yes, blood donation is known to be very healthy. For each donor, sterile disposable medical equipment that negates the risk of bloodborne infection is used. According to the Mayo Clinic, "If you are a healthy adult, you can usually donate a pint of blood without risking your life. Your body absorbs the missing fluids within 24 hours of a blood donation. After a few weeks, the body replaces the missing red blood cells." </p>
 									</div>
 								</div>
 								<div class="accordion accordion--primary">
 									<div class="accordion__title-block">
-										<h6 class="accordion__title">We Build and Create?</h6><span class="accordion__close"></span>
+										<h6 class="accordion__title">Receiving blood safe?</h6><span class="accordion__close"></span>
 									</div>
 									<div class="accordion__text-block">
-										<p>Burma danio black bass straptail southern Dolly Varden orbicular velvetfish trumpetfish; bluntnose minnow. Hatchetfish pricklefish sixgill ray sawfish scaly dragonfish! Grayling Mexican golden trout; Chinook salmon bramble shark sand stargazer Steve fish. Scat zebra pleco graveldiver river shark tripod fish; flagtail bala shark warbonnet.</p>
+										<p>Multi-layer screening is used to ensure that blood transfusion patients are protected to the fullest extent possible. Strategies used to ensure a healthy supply of blood include screening of the social and medical records of prospective donors, physical inspection of the donor, diligent donation using sterile materials and a regimen of laboratory tests to monitor for contamination of the blood and infectious diseases.</p>
 									</div>
 								</div>
 								<div class="accordion accordion--primary">
 									<div class="accordion__title-block">
-										<h6 class="accordion__title">How to became a volounteer?</h6><span class="accordion__close"></span>
+										<h6 class="accordion__title">How long will my body take to replenish donated blood?</h6><span class="accordion__close"></span>
 									</div>
 									<div class="accordion__text-block">
-										<p>Burma danio black bass straptail southern Dolly Varden orbicular velvetfish trumpetfish; bluntnose minnow. Hatchetfish pricklefish sixgill ray sawfish scaly dragonfish! Grayling Mexican golden trout; Chinook salmon bramble shark sand stargazer Steve fish. Scat zebra pleco graveldiver river shark tripod fish; flagtail bala shark warbonnet.</p>
+										<p>Your body will replace the blood volume (plasma) within 24 hours. The red blood cells are replaced by the bone marrow in the circulatory system in approximately three to four weeks, while the missing iron is replaced in approximately six to eight weeks.</p>
 									</div>
 								</div>
 								<div class="accordion accordion--primary">
 									<div class="accordion__title-block">
-										<h6 class="accordion__title">Health in other Countries?</h6><span class="accordion__close"></span>
+										<h6 class="accordion__title">Why are personal questions asked during the donor selection process? </h6><span class="accordion__close"></span>
 									</div>
 									<div class="accordion__text-block">
-										<p>Burma danio black bass straptail southern Dolly Varden orbicular velvetfish trumpetfish; bluntnose minnow. Hatchetfish pricklefish sixgill ray sawfish scaly dragonfish! Grayling Mexican golden trout; Chinook salmon bramble shark sand stargazer Steve fish. Scat zebra pleco graveldiver river shark tripod fish; flagtail bala shark warbonnet.</p>
+										<p>A key component of the screening process is designed to classify certain individuals who are at higher risk of transmitting blood-borne infections. It is imperative that these people do not give blood to preserve the blood supply. All donor selection initiatives must comply with strict regulatory requirements. Although the procedure is long and can seem invasive, it is absolutely important to protect the blood supply. </p>
 									</div>
 								</div>
 								<div class="accordion accordion--primary">
 									<div class="accordion__title-block">
-										<h6 class="accordion__title">We Build and Create?</h6><span class="accordion__close"></span>
+										<h6 class="accordion__title">Could senior citizens donate blood? </h6><span class="accordion__close"></span>
 									</div>
 									<div class="accordion__text-block">
-										<p>Burma danio black bass straptail southern Dolly Varden orbicular velvetfish trumpetfish; bluntnose minnow. Hatchetfish pricklefish sixgill ray sawfish scaly dragonfish! Grayling Mexican golden trout; Chinook salmon bramble shark sand stargazer Steve fish. Scat zebra pleco graveldiver river shark tripod fish; flagtail bala shark warbonnet.</p>
+										<p>Yeah, the seniors could donate blood, but when they are above 71 (or maybe 76) they must have a doctor's note saying they are well enough to donate. </p>
 									</div>
 								</div>
 								<div class="accordion accordion--primary">
 									<div class="accordion__title-block">
-										<h6 class="accordion__title">How to became a volounteer?</h6><span class="accordion__close"></span>
+										<h6 class="accordion__title">What does feel like to be donating blood? </h6><span class="accordion__close"></span>
 									</div>
 									<div class="accordion__text-block">
-										<p>Burma danio black bass straptail southern Dolly Varden orbicular velvetfish trumpetfish; bluntnose minnow. Hatchetfish pricklefish sixgill ray sawfish scaly dragonfish! Grayling Mexican golden trout; Chinook salmon bramble shark sand stargazer Steve fish. Scat zebra pleco graveldiver river shark tripod fish; flagtail bala shark warbonnet.</p>
+										<p>Donating blood can sting slightly when the skin is pricked by a needle, and some donors report starting to feel faint during or after giving blood. However donors say that realizing they've made an impact in someone 's life makes any pain worth a while.</p>
 									</div>
 								</div>
 							</div>
-							<div class="col-lg-4 col-xl-3">
+							{{-- <div class="col-lg-4 col-xl-3">
 								<div class="faq-aside"><img class="img--bg" src="img/faq_aside.jpg" alt="img"/>
 									<h5 class="faq-aside__title">Any Question?</h5>
 									<p>Gray eel-catfish longnose whiptail catfish smalleye squaretail queen danio unicorn</p><a class="faq-aside__link" href="#">ASk Question</a>
 								</div>
-							</div>
+							</div> --}}
 						</div>
 					</div>
 				</section>
@@ -418,8 +418,8 @@
 							<h4 class="footer__title">Contacts</h4>
 							<div class="footer-contacts">
 								{{-- <p class="footer-contacts__address">Elliott Ave, Parkville VIC 3052, Melbourne Canada</p> --}}
-								<p class="footer-contacts__phone">Phone: <a href="tel:+31859644725">+31 85 964 47 25</a></p>
-								<p class="footer-contacts__mail">Email: <a href="mailto:support@helpo.org">support@helpo.org</a></p>
+								<p class="footer-contacts__phone">Phone: <a href="tel:+60327778901">+603 2777 8901</a></p>
+								<p class="footer-contacts__mail">Email: <a href="mailto:admin@OBBS.org">admin@OBBS.org</a></p>
 							</div>
 						</div>
 						<div class="col-sm-6 col-lg-3">

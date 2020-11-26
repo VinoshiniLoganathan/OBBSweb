@@ -213,7 +213,7 @@
 										</ul> --}}
 										<!-- sub menu end-->
 									</li>
-									<li class="main-menu__item main-menu__item--has-child"><a class="main-menu__link" href="/faq"><span>Contact Us</span></a>
+									<li class="main-menu__item main-menu__item--has-child"><a class="main-menu__link" href="/faq"><span>FAQ</span></a>
 										<!-- sub menu start-->
 										{{-- <ul class="main-menu__sub-list">
 											<li><a href="causes.html"><span>Causes 1</span></a></li>
@@ -346,23 +346,29 @@
 					</div>
 				</section>
 				<!-- about-us end-->
-				<!-- text section start-->
-				<section class="section text-section text-section--style-2 no-padding-top">
+				<!-- obj section start-->
+				<section class="section about-us">
 					<div class="container">
-						<div class="row">
-							<div class="col-12 text-center">
-								<h2 class="text-section__heading">Our Mission</h2>
+						<div class="row align-items-center">
+							<div class="col-lg-6 col-xl-5">
+								<picture>
+									<source srcset="img/know2.jpg"/><img class="img--bg1" src="img/know2.jpg" alt="img"/>
+								</picture>
 							</div>
-						</div>
-						<div class="row">
-							<div class="col-lg-8 offset-lg-4 col-xl-7 offset-xl-4">
-								<h3 class="text-section__title">We work around the globe to save lives and defeat poverty</h3>
-								<p>Sharksucker sea toad candiru rocket danio tilefish stingray deepwater stingray Sacramento splittail, Canthigaster rostrata. Midshipman dartfish Modoc sucker, yellowtail kingfish</p>
+							<div class="col-lg-6 col-xl-6 offset-xl-1">
+								<div class="heading heading--primary"><span class="heading__pre-title"></span>
+									<h2 class="heading__title"><span>Our Objective</span> </h2>
+								</div>
+								<p>To analysis the availability of blood bags and the donor list.
+								To calculate that the hospital has a sufficient stock or inventory of blood bags.
+								To develop a website for hospitals’ bloodstock and donors management.
+								To test the system with stakeholder/user.</p>
+								
 							</div>
 						</div>
 					</div>
 				</section>
-				<!-- text section end-->
+				<!-- obj section end-->
 				<!-- video block start-->
 				{{-- <section class="section video-block no-padding-top">
 					<div class="container">
@@ -645,8 +651,8 @@
 							<h4 class="footer__title">Contacts</h4>
 							<div class="footer-contacts">
 								{{-- <p class="footer-contacts__address">Elliott Ave, Parkville VIC 3052, Melbourne Canada</p> --}}
-								<p class="footer-contacts__phone">Phone: <a href="tel:+31859644725">+31 85 964 47 25</a></p>
-								<p class="footer-contacts__mail">Email: <a href="mailto:support@helpo.org">support@helpo.org</a></p>
+								<p class="footer-contacts__phone">Phone: <a href="tel:+60327778901">+603 2777 8901</a></p>
+								<p class="footer-contacts__mail">Email: <a href="mailto:admin@OBBS.org">admin@OBBS.org</a></p>
 							</div>
 						</div>
 						<div class="col-sm-6 col-lg-3">
@@ -656,7 +662,7 @@
 								<ul class="footer-menu">
 									<li class="footer-menu__item"><a class="footer-menu__link" href="/home">Home</a></li>
 									<li class="footer-menu__item footer-menu__item--active"><a class="footer-menu__link" href="/about">About Us</a></li>
-									<li class="footer-menu__item"><a class="footer-menu__link" href="/faq">Contact Us</a></li>
+									<li class="footer-menu__item"><a class="footer-menu__link" href="/faq">FAQ</a></li>
 								</ul>
 							</nav>
 							<!-- footer nav end-->

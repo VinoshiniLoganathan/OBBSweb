@@ -211,7 +211,7 @@
 										</ul> --}}
 										<!-- sub menu end-->
 									</li>
-									<li class="main-menu__item main-menu__item--has-child"><a class="main-menu__link" href="/faq"><span>Contact Us</span></a>
+									<li class="main-menu__item main-menu__item--has-child"><a class="main-menu__link" href="/faq"><span>FAQ</span></a>
 										<!-- sub menu start-->
 										{{-- <ul class="main-menu__sub-list">
 											<li><a href="causes.html"><span>Causes 1</span></a></li>
@@ -564,7 +564,7 @@
 												{{-- <p>Sharksucker sea toad candiru rocket danio tilefish stingray deepwater stingray Sacramento splittail</p> --}}
 											</div>
 											<div class="causes-item__img">
-												<div class="causes-item__badge"></div><img class="img--bg" src="img/blood3.jpg" alt="img"/>
+												<div class="causes-item__badge"></div><img class="img--bg" src="img/blood5.jpg" alt="img"/>
 											</div>
 											<div class="causes-item__lower">
 												{{-- <div class="progress-bar">
@@ -993,8 +993,8 @@
 							<h4 class="footer__title">Contacts</h4>
 							<div class="footer-contacts">
 								{{-- <p class="footer-contacts__address">Elliott Ave, Parkville VIC 3052, Melbourne Canada</p> --}}
-								<p class="footer-contacts__phone">Phone: <a href="tel:+31859644725">+31 85 964 47 25</a></p>
-								<p class="footer-contacts__mail">Email: <a href="mailto:support@helpo.org">support@helpo.org</a></p>
+								<p class="footer-contacts__phone">Phone: <a href="tel:+60327778901">+603 2777 8901</a></p>
+								<p class="footer-contacts__mail">Email: <a href="mailto:admin@OBBS.org">admin@OBBS.org</a></p>
 							</div>
 						</div>
 						<div class="col-sm-6 col-lg-3">
@@ -1004,7 +1004,7 @@
 								<ul class="footer-menu">
 									<li class="footer-menu__item footer-menu__item--active"><a class="footer-menu__link" href="/home">Home</a></li>
 									<li class="footer-menu__item"><a class="footer-menu__link" href="/about">About Us</a></li>
-									<li class="footer-menu__item"><a class="footer-menu__link" href="/faq">Contact Us</a></li>
+									<li class="footer-menu__item"><a class="footer-menu__link" href="/faq">FAQ</a></li>
 								</ul>
 							</nav>
 							<!-- footer nav end-->
