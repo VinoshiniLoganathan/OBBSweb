@@ -40,12 +40,12 @@
 <!--logo start-->
 <div class="brand">
 
-    {{-- <a href="index-2.html" class="logo">
-        <img src="images/logo.png" alt="">
-    </a> --}}
-    <div class="sidebar-toggle-box">
+    <a href="index-2.html" class="logo">
+        <img src="images/blogo.jpg" width= 170px height = 50px alt="">
+    </a>
+    {{-- <div class="sidebar-toggle-box">
         <div class="fa fa-bars"></div>
-    </div>
+    </div> --}}
 </div>
 <!--logo end-->
 
@@ -287,7 +287,7 @@
                 <ul class="sub">
                     <li><a href="general.html">General</a></li>
                     <li><a href="buttons.html">Buttons</a></li>
-<li><a href="typography.html">Typography</a></li>
+                    <li><a href="typography.html">Typography</a></li>
                     <li><a href="widget.html">Widget</a></li>
                     <li><a href="slider.html">Slider</a></li>
                     <li><a href="tree_view.html">Tree View</a></li>
@@ -376,8 +376,8 @@
                     <li><a href="profile.html">Profile</a></li>
                     <li><a href="invoice.html">Invoice</a></li>
                     <li><a href="pricing_table.html">Pricing Table</a></li>
-                    <li><a href="timeline.html">Timeline</a></li>                    
-<li><a href="gallery.html">Media Gallery</a></li><li><a href="404.html">404 Error</a></li>
+                    <li><a href="timeline.html">Timeline</a></li>
+                    <li><a href="gallery.html">Media Gallery</a></li><li><a href="404.html">404 Error</a></li>
                     <li><a href="500.html">500 Error</a></li>
                     <li><a href="registration.html">Registration</a></li>
                 </ul> --}}
@@ -409,7 +409,7 @@
                              </span>
                         </header>
                         <div class="panel-body">
-                            <form role="form" class="form-horizontal" action="{{url('post-donor-registration')}}" method="POST">
+                            <form role="form" class="form-horizontal" action="{{url('donors-registration')}}" method="POST">
                                 {{ csrf_field() }}
                                 <div class="form-group">
                                     <label class="col-lg-3 control-label">Name</label>

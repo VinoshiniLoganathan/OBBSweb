@@ -10,7 +10,7 @@
     <meta name="author" content="ThemeBucket">
     <link rel="shortcut icon" href="images/favicon.html">
 
-    <title>Login</title>
+    <title>Donor Registration</title>
 
     <!--Core CSS -->
     

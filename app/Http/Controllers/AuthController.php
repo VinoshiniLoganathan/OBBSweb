@@ -144,7 +144,7 @@ class AuthController extends Controller
             $camp->time =  $request->time;
             $camp->save();
             //return view('index-2');
-            return redirect()->intended('/hosp_Campaign');
+            return redirect()->intended('view-records');
         //}
     }
 
@@ -193,7 +193,7 @@ class AuthController extends Controller
         //}
     }
 
-    public function postDonorRegistration(Request $request)
+    public function postDonorsRegistration(Request $request)
     {  
        
         $donors = new Donor;

@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Validator,Redirect,Response;
-Use App\Model\Donor;
+Use App\Donor;
 Use DB;
 Use App\Campaign;
 Use App\CampDonorRegister;
@@ -50,7 +50,7 @@ class DonorController extends Controller
 
         $check = $this->Donorcreate($data);
       
-        return Redirect::to("/donor_Donation")->withSuccess('Great! You have Successfully loggedin');
+        return Redirect::to("/donor_Donation")->withSuccess('Great! You have Successfully logged in');
     }
     
     public function Donordashboard()
@@ -139,7 +139,8 @@ class DonorController extends Controller
       $test='dnt enter data';
     }  
          
-      return Response::json(array($result_camp_data, $test));
+      // return Response::json(array($result_camp_data, $test));
+      return redirect()->intended('/donor_Campaign');
      
      
   }

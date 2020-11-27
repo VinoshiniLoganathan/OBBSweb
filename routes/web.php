@@ -162,7 +162,7 @@ Route::post('edit_camp/{id}','AuthController@edit_camp');
 //code for view donor data
 Route::get('view-donor-records','AuthController@view_donor_records');//rename controller later
 //code adding campaign
-Route::post('post-donor-registration', 'AuthController@postDonorRegistration');
+Route::post('donors-registration', 'AuthController@postDonorsRegistration');
 //code to edit records
 Route::put('edit-donor-registration', 'AuthController@editDonorRegistration');
 Route::get('donor_update/{id}','AuthController@donor_update');

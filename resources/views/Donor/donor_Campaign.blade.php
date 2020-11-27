@@ -41,7 +41,7 @@
 <div class="brand">
 
     <a href="index-2.html" class="logo">
-        <img src="images/logo.png" alt="">
+        {{-- <img src="images/logo.png" alt=""> --}}
     </a>
     <div class="sidebar-toggle-box">
         <div class="fa fa-bars"></div>

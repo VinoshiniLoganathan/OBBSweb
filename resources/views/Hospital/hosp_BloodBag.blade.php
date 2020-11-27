@@ -41,17 +41,17 @@
 <div class="brand">
 
     <a href="index-2.html" class="logo">
-        <img src="images/logo.png" alt="">
+        <img src="images/blogo.jpg" width= 170px height = 50px alt="">
     </a>
-    <div class="sidebar-toggle-box">
+    {{-- <div class="sidebar-toggle-box">
         <div class="fa fa-bars"></div>
-    </div>
+    </div> --}}
 </div>
 <!--logo end-->
 
 <div class="nav notify-row" id="top_menu">
     <!--  notification start -->
-    <ul class="nav top-menu">
+    {{-- <ul class="nav top-menu">
         <!-- settings start -->
         <li class="dropdown">
             <a data-toggle="dropdown" class="dropdown-toggle" href="#">
@@ -224,7 +224,7 @@
             </ul>
         </li>
         <!-- notification dropdown end -->
-    </ul>
+    </ul> --}}
     <!--  notification end -->
 </div>
 <div class="top-nav clearfix">
@@ -235,11 +235,11 @@
         </li>
         <!-- user login dropdown start-->
         <li class="dropdown">
-            <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+            {{-- <a data-toggle="dropdown" class="dropdown-toggle" href="#">
                 <img alt="" src="images/avatar1_small.jpg">
                 <span class="username">John Doe</span>
                 <b class="caret"></b>
-            </a>
+            </a> --}}
             <ul class="dropdown-menu extended logout">
                 <li><a href="#"><i class=" fa fa-suitcase"></i>Profile</a></li>
                 <li><a href="#"><i class="fa fa-cog"></i> Settings</a></li>
@@ -262,12 +262,12 @@
         <!-- sidebar menu start-->            <div class="leftside-navigation">
             <ul class="sidebar-menu" id="nav-accordion">
             <li>
-                <a href="index-2.html">
+                {{-- <a href="index-2.html">
                     <i class="fa fa-dashboard"></i>
                     <span>Dashboard</span>
-                </a>
+                </a> --}}
             </li>
-            <li class="sub-menu">
+            {{-- <li class="sub-menu">
                 <a href="javascript:;">
                     <i class="fa fa-laptop"></i>
                     <span>Layouts</span>
@@ -286,7 +286,7 @@
                 <ul class="sub">
                     <li><a href="general.html">General</a></li>
                     <li><a href="buttons.html">Buttons</a></li>
-<li><a href="typography.html">Typography</a></li>
+                    <li><a href="typography.html">Typography</a></li>
                     <li><a href="widget.html">Widget</a></li>
                     <li><a href="slider.html">Slider</a></li>
                     <li><a href="tree_view.html">Tree View</a></li>
@@ -319,17 +319,17 @@
                     <i class="fa fa-tasks"></i>
                     <span>Form Components</span>
                 </a>
-                <ul class="sub">
-                    <li><a href="form_component.html">Form Elements</a></li>
-                    <li><a href="advanced_form.html">Advanced Components</a></li>
-                    <li><a href="form_wizard.html">Form Wizard</a></li>
-                    <li><a href="form_validation.html">Form Validation</a></li>
-                    <li><a href="file_upload.html">Muliple File Upload</a></li>
+                <ul class="sub"> --}}
+                    <li class="active"><a href="/hosp_BloodBag">Blood Bag</a></li>
+                    <li><a href="/hosp_Donors">Donor List</a></li>
+                    <li><a href="/hosp_Benefit">Benefits</a></li>
+                    <li><a href="/hosp_Campaign">Campaign</a></li>
+                    {{-- <li><a href="file_upload.html">Muliple File Upload</a></li>
                     
                     <li><a href="dropzone.html">Dropzone</a></li>
-                    <li><a href="inline_editor.html">Inline Editor</a></li>
+                    <li><a href="inline_editor.html">Inline Editor</a></li> --}}
 
-                </ul>
+                {{-- </ul>
             </li>
             <li class="sub-menu">
                 <a href="javascript:;">
@@ -375,11 +375,11 @@
                     <li><a href="profile.html">Profile</a></li>
                     <li><a href="invoice.html">Invoice</a></li>
                     <li><a href="pricing_table.html">Pricing Table</a></li>
-                    <li><a href="timeline.html">Timeline</a></li>                    
-<li><a href="gallery.html">Media Gallery</a></li><li><a href="404.html">404 Error</a></li>
+                    <li><a href="timeline.html">Timeline</a></li>
+                    <li><a href="gallery.html">Media Gallery</a></li><li><a href="404.html">404 Error</a></li>
                     <li><a href="500.html">500 Error</a></li>
                     <li><a href="registration.html">Registration</a></li>
-                </ul>
+                </ul> --}}
             </li>
             <li>
                 <a href="login.html">

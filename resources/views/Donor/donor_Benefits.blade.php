@@ -520,7 +520,8 @@
                 </section>
             </div>
         </div>
-            <div class="row">
+        basic and stripped table
+            {{-- <div class="row">
                 <div class="col-sm-6">
                     <section class="panel">
                         <header class="panel-heading">
@@ -610,8 +611,9 @@
                         </div>
                     </section>
                 </div>
-            </div>
-            <div class="row">
+            </div> --}}
+            border and hover table
+            {{-- <div class="row">
                 <div class="col-sm-6">
                     <section class="panel">
                         <header class="panel-heading no-border">
@@ -709,7 +711,7 @@
                         </div>
                     </section>
                 </div>
-            </div>
+            </div> --}}
         <!-- page end-->
         </section>
     </section>

@@ -26,7 +26,7 @@ class HospitalController extends Controller
         $credentials = $request->only('email', 'password');
         if (auth('hospital')->attempt($credentials)) {
             // Authentication passed...
-            return redirect()->intended('/hosp_BloodBag');
+            return redirect()->intended('/hosp_Donors');
         }
         return Redirect::to("hosp_login")->withSuccess('Oppes! You have entered invalid credentials');
     }
