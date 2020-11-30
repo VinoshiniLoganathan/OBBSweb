@@ -22,8 +22,10 @@ var EditableTable = function () {
                 jqTds[1].innerHTML = '<input type="text" class="form-control small" value="' + aData[1] + '">';
                 jqTds[2].innerHTML = '<input type="text" class="form-control small" value="' + aData[2] + '">';
                 jqTds[3].innerHTML = '<input type="text" class="form-control small" value="' + aData[3] + '">';
-                jqTds[4].innerHTML = '<a class="edit" href="">Save</a>';
-                jqTds[5].innerHTML = '<a class="cancel" href="">Cancel</a>';
+                jqTds[4].innerHTML = '<input type="text" class="form-control small" value="' + aData[4] + '">';
+                jqTds[5].innerHTML = '<input type="text" class="form-control small" value="' + aData[5] + '">';
+                jqTds[6].innerHTML = '<a class="edit" href="">Save</a>';
+                jqTds[7].innerHTML = '<a class="cancel" href="">Cancel</a>';
             }
 
             function saveRow(oTable, nRow) {
@@ -32,8 +34,10 @@ var EditableTable = function () {
                 oTable.fnUpdate(jqInputs[1].value, nRow, 1, false);
                 oTable.fnUpdate(jqInputs[2].value, nRow, 2, false);
                 oTable.fnUpdate(jqInputs[3].value, nRow, 3, false);
-                oTable.fnUpdate('<a class="edit" href="">Edit</a>', nRow, 4, false);
-                oTable.fnUpdate('<a class="delete" href="">Delete</a>', nRow, 5, false);
+                oTable.fnUpdate(jqInputs[4].value, nRow, 4, false);
+                oTable.fnUpdate(jqInputs[5].value, nRow, 5, false);
+                oTable.fnUpdate('<a class="edit" href="">Edit</a>', nRow, 6, false);
+                oTable.fnUpdate('<a class="delete" href="">Delete</a>', nRow, 7, false);
                 oTable.fnDraw();
             }
 
@@ -43,7 +47,9 @@ var EditableTable = function () {
                 oTable.fnUpdate(jqInputs[1].value, nRow, 1, false);
                 oTable.fnUpdate(jqInputs[2].value, nRow, 2, false);
                 oTable.fnUpdate(jqInputs[3].value, nRow, 3, false);
-                oTable.fnUpdate('<a class="edit" href="">Edit</a>', nRow, 4, false);
+                oTable.fnUpdate(jqInputs[4].value, nRow, 4, false);
+                oTable.fnUpdate(jqInputs[5].value, nRow, 5, false);
+                oTable.fnUpdate('<a class="edit" href="">Edit</a>', nRow, 6, false);
                 oTable.fnDraw();
             }
 
@@ -77,7 +83,7 @@ var EditableTable = function () {
 
             $('#editable-sample_new').click(function (e) {
                 e.preventDefault();
-                var aiNew = oTable.fnAddData(['', '', '', '',
+                var aiNew = oTable.fnAddData(['', '', '', '', '', '',
                         '<a class="edit" href="">Edit</a>', '<a class="cancel" data-mode="new" href="">Cancel</a>'
                 ]);
                 var nRow = oTable.fnGetNodes(aiNew[0]);

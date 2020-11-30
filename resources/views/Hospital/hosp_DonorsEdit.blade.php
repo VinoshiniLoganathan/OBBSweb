@@ -321,7 +321,7 @@
                 </a> --}}
                 {{-- <ul class="sub"> --}}
                     <li><a href="/hosp_BloodBag">Blood Bag</a></li>
-                    <li class="active"><a href="/hosp_Donors">Donor List</a></li>
+                    <li class="active"><b href="/hosp_Donors">Donor List</a></li>
                     <li><a href="/hosp_Benefit">Benefits</a></li>
                     <li><a href="/hosp_Campaign">Campaign</a></li>
                     {{-- <li><a href="file_upload.html">Muliple File Upload</a></li> --}}

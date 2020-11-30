@@ -309,7 +309,7 @@
                     <span>Data Tables</span>
                 </a>
                 <ul class="sub"> --}}
-                    <li class="active"><a href="{{url('donor_Donation')}}">Donation Activity</a></li>
+                    <li class="active"><b href="{{url('donor_Donation')}}">Donation Activity</a></li>
                     <li><a href="{{url('donor_Campaign')}}">Campaign</a></li>
                     <li><a href="{{url('donor_Benefits')}}">Benefits</a></li>
                     <li><a href="editable_table.html">Profile</a></li>

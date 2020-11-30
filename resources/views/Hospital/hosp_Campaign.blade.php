@@ -330,7 +330,7 @@
                     <li><a href="/hosp_BloodBag">Blood Bag</a></li>
                     <li><a href="/hosp_Donors">Donor List</a></li>
                     <li><a href="/hosp_Benefit">Benefits</a></li>
-                    <li class="active"><a href="/hosp_Campaign">Campaign</a></li>
+                    <li class="active"><b href="/hosp_Campaign">Campaign</a></li>
                     {{-- <li><a href="file_upload.html">Muliple File Upload</a></li>
                     
                     <li><a href="dropzone.html">Dropzone</a></li>
@@ -432,20 +432,20 @@
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label class="col-lg-3 control-label">Date</label>
+                                    <label class="col-lg-3 control-label">Date (YYYY-MM-DD)</label>
                                     <div class="col-lg-6">
                                         <input type="text" placeholder="" id="date" name="date" class="date form-control" >
                                     </div>
                                 </div>
-                                <div class="form-group">
+                                {{-- <div class="form-group">
                                     <label class="col-lg-3 control-label">Default Datepicker</label>
                                     <div class="col-lg-6">
                                         <input class="form-control form-control-inline input-medium default-date-picker"  size="16" type="text" value="" />
                                         <span class="help-block">Select date</span>
                                     </div>
-                                </div>
+                                </div> --}}
                                 <div class="form-group">
-                                    <label class="col-lg-3 control-label">Time(24Hrs Format)</label>
+                                    <label class="col-lg-3 control-label">Time (24Hrs Format)</label>
                                     <div class="col-lg-6">
                                         <input type="text" placeholder="" id="tim" name="time"class="form-control">
                                     </div>
@@ -460,8 +460,10 @@
                         </div>
                         <script type="text/javascript">
                             $('.date').datepicker({
-                                autoclose: true,
-                                format: 'yyyy-mm-dd'
+                                startDate: new Date(),
+                                format: 'yyyy-mm-dd',
+                                todayHighlight:'TRUE',
+                                autoclose: true
                              });
                              $('.datepicker').style.top = "150px";
                         </script>

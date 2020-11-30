@@ -77,7 +77,7 @@ class DonorController extends Controller
 	public function Donorlogout() {
         Session::flush();
         Auth::logout();
-        return Redirect('donor_login');
+        return Redirect('/home');
     }
 
     //campaign process

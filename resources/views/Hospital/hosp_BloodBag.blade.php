@@ -320,7 +320,7 @@
                     <span>Form Components</span>
                 </a>
                 <ul class="sub"> --}}
-                    <li class="active"><a href="/hosp_BloodBag">Blood Bag</a></li>
+                    <li class="active"><b href="/hosp_BloodBag">Blood Bag</a></li>
                     <li><a href="/hosp_Donors">Donor List</a></li>
                     <li><a href="/hosp_Benefit">Benefits</a></li>
                     <li><a href="/hosp_Campaign">Campaign</a></li>

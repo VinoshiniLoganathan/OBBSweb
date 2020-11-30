@@ -49,9 +49,9 @@
 </div>
 <!--logo end-->
 
-{{-- <div class="nav notify-row" id="top_menu">
+<div class="nav notify-row" id="top_menu">
     <!--  notification start -->
-    <ul class="nav top-menu">
+    {{-- <ul class="nav top-menu">
         <!-- settings start -->
         <li class="dropdown">
             <a data-toggle="dropdown" class="dropdown-toggle" href="#">
@@ -224,7 +224,7 @@
             </ul>
         </li>
         <!-- notification dropdown end -->
-    </ul>
+    </ul> --}}
     <!--  notification end -->
 </div>
 <div class="top-nav clearfix">
@@ -234,17 +234,18 @@
             <input type="text" class="form-control search" placeholder=" Search">
         </li>
         <!-- user login dropdown start-->
+        <li><a href="{{url('logout')}}"><i class="fa fa-key"></i> Log Out</a></li>
         <li class="dropdown">
-            <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+            {{-- <a data-toggle="dropdown" class="dropdown-toggle" href="#">
                 <img alt="" src="images/avatar1_small.jpg">
                 <span class="username">John Doe</span>
                 <b class="caret"></b>
-            </a>
-            <ul class="dropdown-menu extended logout">
+            </a> --}}
+            {{-- <ul class="dropdown-menu extended logout">
                 <li><a href="#"><i class=" fa fa-suitcase"></i>Profile</a></li>
                 <li><a href="#"><i class="fa fa-cog"></i> Settings</a></li>
-                <li><a href="login.html"><i class="fa fa-key"></i> Log Out</a></li>
-            </ul>
+                <li><a href="{{url('logout')}}"><i class="fa fa-key"></i> Log Out</a></li>
+            </ul> --}}
         </li>
         <!-- user login dropdown end -->
         <li>
@@ -254,7 +255,7 @@
         </li>
     </ul>
     <!--search & user info end-->
-</div> --}}
+</div>
 </header>
 <!--header end-->
 <aside>
@@ -309,7 +310,7 @@
                 </a>
                 <ul class="sub"> --}}
                     <li><a href="{{url('donor_Donation')}}">Donation Activity</a></li>
-                    <li class="active"><a href="{{url('donor_Campaign')}}">Campaign</a></li>
+                    <li class="active"><b href="{{url('donor_Campaign')}}">Campaign</a></li>
                     <li><a href="{{url('donor_Benefits')}}">Benefits</a></li>
                     <li><a href="editable_table.html">Profile</a></li>
                 {{-- </ul>

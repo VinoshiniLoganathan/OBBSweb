@@ -310,7 +310,7 @@
                 <ul class="sub"> --}}
                     <li><a href="/hosp_BloodBag">Blood Bag</a></li>
                     <li><a href="/hosp_Donors">Donor List</a></li>
-                    <li class="active"><a href="/hosp_Benefit">Benefits</a></li>
+                    <li class="active"><b href="/hosp_Benefit">Benefits</a></li>
                     <li><a href="/hosp_Campaign">Campaign</a></li>
                 {{-- </ul>
             </li> --}}
@@ -413,12 +413,12 @@
                             <div class="clearfix">
                                 <div class="btn-group">
                                     <button id="editable-sample_new" class="btn btn-primary">
-                                        Add New <i class="fa fa-plus"></i>
+                                        Add
                                     </button>
                                 </div>
                                 <div class="btn-group pull-right">
                                     <button class="btn btn-default dropdown-toggle" data-toggle="dropdown">Tools <i class="fa fa-angle-down"></i>
-                                    </button>
+                                    </button><br>
                                     <ul class="dropdown-menu pull-right">
                                         <li><a href="#">Print</a></li>
                                         <li><a href="#">Save as PDF</a></li>

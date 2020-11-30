@@ -73,6 +73,6 @@ class HospitalController extends Controller
 	public function Hosplogout() {
         Session::flush();
         Auth::logout();
-        return Redirect('hosp_login');
+        return Redirect('/home');
     }
 }

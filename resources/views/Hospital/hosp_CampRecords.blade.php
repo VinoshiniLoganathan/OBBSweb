@@ -310,7 +310,7 @@
                     <li><a href="/hosp_BloodBag">Blood Bag</a></li>
                     <li><a href="/hosp_Donors">Donor List</a></li>
                     <li><a href="/hosp_Benefit">Benefits</a></li>
-                    <li class="active"><a href="/hosp_Campaign">Campaign</a></li>
+                    <li class="active"><b href="/hosp_Campaign">Campaign</a></li>
                 {{-- </ul>
             </li> --}}
             {{-- <li class="sub-menu">
@@ -417,17 +417,17 @@
                                 </div> --}}
                                 <div class="form">
                                     <form class="cmxform form-horizontal "  method="GET" action="{{url('hosp_Campaign')}}">
-                                        <div class="form-group">
-                                            <div class="col-lg-offset-3 col-lg-6">
+                                        <div class="clearfix">
+                                            {{-- <div class="col-lg-offset-3 col-lg-6"> --}}
                                                 <button class="btn btn-primary" type="submit">Add</button>
                                                 {{-- <button class="btn btn-default" type="button">Cancel</button> --}}
-                                            </div>
+                                            {{-- </div> --}}
                                         </div>
                                     </form>
                                 </div>
                                 <div class="btn-group pull-right">
                                     <button class="btn btn-default dropdown-toggle" data-toggle="dropdown">Tools <i class="fa fa-angle-down"></i>
-                                    </button>
+                                    </button><br>
                                     <ul class="dropdown-menu pull-right">
                                         <li><a href="#">Print</a></li>
                                         <li><a href="#">Save as PDF</a></li>

@@ -309,10 +309,10 @@
                     <span>Data Tables</span>
                 </a>
                 <ul class="sub"> --}}
-                    <li><a href="{{url('donor_Donation')}}">Donation Activity</a></li>
-                    <li><a href="{{url('donor_Campaign')}}">Campaign</a></li>
-                    <li><a href="{{url('donor_Benefits')}}">Benefits</a></li>
-                    <li class="active"><a href="editable_table.html">Profile</a></li>
+                    <li><a href="/hosp_BloodBag">Blood Bag</a></li>
+                    <li><a href="/hosp_Donors">Donor List</a></li>
+                    <li><a href="/hosp_Benefit">Benefits</a></li>
+                    <li><a href="/hosp_Campaign">Campaign</a></li>
                 {{-- </ul>
             </li>
             <li class="sub-menu">
