@@ -33,6 +33,7 @@
 </head>
 
   <body class="login-body">
+    @include('flash::message')
 
     <div class="container">
 

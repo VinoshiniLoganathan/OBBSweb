@@ -28,7 +28,8 @@ class HospitalController extends Controller
             // Authentication passed...
             return redirect()->intended('/hosp_Donors');
         }
-        return Redirect::to("hosp_login")->withSuccess('Oppes! You have entered invalid credentials');
+        flash('Oppes! You have entered invalid credentials');
+        return Redirect::to("hosp_login");
     }
 
     public function postHospRegistration(Request $request)
@@ -46,7 +47,8 @@ class HospitalController extends Controller
 
         $check = $this->Hospcreate($data);
       
-        return Redirect::to("/hosp_Campaign")->withSuccess('Great! You have Successfully loggedin');
+        flash('Great! You have Successfully loggedin');
+        return Redirect::to("/hosp_Campaign");
     }
     
     public function Hospdashboard()

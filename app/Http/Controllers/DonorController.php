@@ -30,9 +30,10 @@ class DonorController extends Controller
         $credentials = $request->only('email', 'password');
         if (auth('donor')->attempt($credentials)) {
             // Authentication passed...
-            return redirect()->intended('/donor_Donation');
+            return redirect()->intended('/donor_Campaign');
         }
-        return Redirect::to("donor_login")->withSuccess('Oppes! You have entered invalid credentials');
+        flash('Oppes! You have entered invalid credentials');
+        return Redirect::to("donor_login");
     }
 
     public function postDonorRegistration(Request $request)
@@ -49,8 +50,9 @@ class DonorController extends Controller
         $data = $request->all();
 
         $check = $this->Donorcreate($data);
-      
-        return Redirect::to("/donor_Donation")->withSuccess('Great! You have Successfully logged in');
+          
+        flash('Great! You have Successfully logged in');
+        return Redirect::to("/donor_Donation");
     }
     
     public function Donordashboard()
@@ -140,6 +142,7 @@ class DonorController extends Controller
     }  
          
       // return Response::json(array($result_camp_data, $test));
+      flash('Successfully Registered');
       return redirect()->intended('/donor_Campaign');
      
      

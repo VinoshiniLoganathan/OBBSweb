@@ -428,6 +428,7 @@
                                 </div>
                             </div> --}}
                             <div class="space15"></div>
+                            @include('flash::message')
                             <table class="table table-striped table-hover table-bordered" id="editable-sample">
                                 <thead>
                                     <tr>
