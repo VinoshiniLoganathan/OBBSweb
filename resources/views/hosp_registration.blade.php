@@ -90,9 +90,18 @@
         @endif       
       </div> 
 
+      <?php
+        $filename = 'hosp.txt';
+        $eachlines = file($filename, FILE_IGNORE_NEW_LINES);
+      ?>
       <div class="login-wrap">
         <label for="inputHosp">Hospital Name</label>
-        <input type="text" id="inputHosp" name="hospName" class="form-control" placeholder="Hospital Name" autofocus>
+        <select id="inputHosp" name="hospName" class="form-control" placeholder="Hospital Name" autofocus>
+          <option selected value="base">Please Select</option>
+           <?php foreach($eachlines as $lines){ 
+                echo "<option value='".$lines."'>$lines</option>";
+            }?>
+        </select>
         
         @if ($errors->has('hospName'))
         <span class="error">{{ $errors->first('hospName') }}</span>
