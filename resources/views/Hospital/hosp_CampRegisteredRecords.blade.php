@@ -457,6 +457,7 @@
                                     <th>Donor Name</th>
                                     <th>Donor Phone</th>
                                     <th>Donor Blood Group</th>
+                                    <th>Register Blood Bag</th>
                                     {{-- <th>Delete</th> --}}
                                 </tr>
                                 </thead>
@@ -466,7 +467,12 @@
                                     <td>{{ $camp->donor_id }}</td>
                                     <td>{{ $camp->donor_name }}</td>
                                     <td>{{ $camp->donor_phone }}</td>
-                                    <td>{{ $camp->donor_bloodgroup }}</td>                             
+                                    <td>{{ $camp->donor_bloodgroup }}</td>
+                                    @if($camp->date == date('Y-m-d'))
+                                    <td><a href='/hosp_Campaign'>Completed</a></td> 
+                                    @else
+                                    <td>Completed</td>
+                                    @endif
                                     {{-- <td><a href='camp_update/{{ $camp->id }}'>Edit</a></td> --}}
                                     {{-- <td><a class="delete" href="javascript:;">Delete</a></td> --}}
                                 </tr>

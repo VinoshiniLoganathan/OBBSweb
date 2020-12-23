@@ -116,9 +116,13 @@ class AuthController extends Controller
             'camp_id' => $camp_id
         ])->get();
         
+        if(isset($camp_detail[0])){
         //return redirect()->route('camp_update', ['camp' => $camp]);
-        return response()
-            ->view('Hospital/hosp_CampRegisteredRecords', ['camp_detail'=> $camp_detail]); 
+            return response()
+                ->view('Hospital/hosp_CampRegisteredRecords', ['camp_detail'=> $camp_detail]); 
+        }
+        flash("No Records!");
+        return redirect()->intended('view-records');
     }
 
     public function edit_camp(Request $request,$id) {

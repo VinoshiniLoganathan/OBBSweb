@@ -426,17 +426,19 @@
                                     </form>
                                 </div>
                                 <div class="btn-group pull-right">
-                                    <button class="btn btn-default dropdown-toggle" data-toggle="dropdown">Tools <i class="fa fa-angle-down"></i>
-                                    </button><br>
+                                    {{-- <button class="btn btn-default dropdown-toggle" data-toggle="dropdown">Tools <i class="fa fa-angle-down"></i>
+                                    </button> --}}
+                                    <br>
                                     <ul class="dropdown-menu pull-right">
-                                        <li><a href="#">Print</a></li>
+                                        {{-- <li><a href="#">Print</a></li>
                                         <li><a href="#">Save as PDF</a></li>
-                                        <li><a href="#">Export to Excel</a></li>
+                                        <li><a href="#">Export to Excel</a></li> --}}
                                     </ul>
                                 </div>
                             </div>
                             <div class="space15"></div>
                             <table class="table table-striped table-hover table-bordered" id="editable-sample">
+                                @include('flash::message')
                                 <thead>
                                 <tr>
                                     <th>ID</th>
