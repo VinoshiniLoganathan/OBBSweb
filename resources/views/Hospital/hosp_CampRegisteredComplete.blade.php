@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<!-- Mirrored from bucketadmin.lab.themebucket.net/editable_table.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 03 Apr 2020 13:23:58 GMT -->
 <head>
     <meta charset="utf-8">
 
@@ -10,9 +9,10 @@
     <meta name="author" content="ThemeBucket">
     <link rel="shortcut icon" href="images/favicon.html">
 
-    <title>Editable Table</title>
+    <title>Campaign Updates</title>
 
     <!--Core CSS -->
+    {{-- follow the code  below and change the code as followning --}}
     <link rel="stylesheet" href="{{ URL::asset('bs3/css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ URL::asset('css/bootstrap-reset.css') }}">
     <link rel="stylesheet" href="{{ URL::asset('font-awesome/css/font-awesome.css') }}">
@@ -45,13 +45,13 @@
     </a>
     {{-- <div class="sidebar-toggle-box">
         <div class="fa fa-bars"></div>
-    </div> --}} 
+    </div> --}}
 </div>
 <!--logo end-->
 
 <div class="nav notify-row" id="top_menu">
-    <!--  notification start -->
-    {{-- <ul class="nav top-menu">
+    {{-- <!--  notification start -->
+    <ul class="nav top-menu">
         <!-- settings start -->
         <li class="dropdown">
             <a data-toggle="dropdown" class="dropdown-toggle" href="#">
@@ -121,7 +121,7 @@
             </ul>
         </li>
         <!-- settings end -->
-        <!-- inbox dropdown start-->
+        {{-- <!-- inbox dropdown start-->
         <li id="header_inbox_bar" class="dropdown">
             <a data-toggle="dropdown" class="dropdown-toggle" href="#">
                 <i class="fa fa-envelope-o"></i>
@@ -223,9 +223,9 @@
 
             </ul>
         </li>
-        <!-- notification dropdown end -->
-    </ul> --}}
-    <!--  notification end -->
+        <!-- notification dropdown end --> --}}
+    </ul>
+    <!--  notification end --> 
 </div>
 <div class="top-nav clearfix">
     <!--search & user info start-->
@@ -301,32 +301,32 @@
                     <i class="fa fa-bullhorn"></i>
                     <span>Fontawesome </span>
                 </a>
-            </li> --}}
-            {{-- <li class="sub-menu">
-                <a href="javascript:;" class="active">
+            </li>
+            <li class="sub-menu">
+                <a href="javascript:;">
                     <i class="fa fa-th"></i>
                     <span>Data Tables</span>
                 </a>
-                <ul class="sub"> --}}
+                <ul class="sub">
+                    <li><a href="basic_table.html">Basic Table</a></li>
+                    <li><a href="responsive_table.html">Responsive Table</a></li>
+                    <li><a href="dynamic_table.html">Dynamic Table</a></li>
+                    <li><a href="editable_table.html">Editable Table</a></li>
+                </ul>
+            </li>
+            <li class="sub-menu">
+                <a href="javascript:;" class="active">
+                    <i class="fa fa-tasks"></i>
+                    <span>Form Components</span>
+                </a> --}}
+                {{-- <ul class="sub"> --}}
                     <li><a href="/hosp_BloodBag">Blood Bag</a></li>
                     <li><a href="/hosp_Donors">Donor List</a></li>
                     <li><a href="/hosp_Benefit">Benefits</a></li>
                     <li class="active"><b href="/hosp_Campaign">Campaign</a></li>
-                {{-- </ul>
-            </li> --}}
-            {{-- <li class="sub-menu">
-                <a href="javascript:;">
-                    <i class="fa fa-tasks"></i>
-                    <span>Form Components</span>
-                </a>
-                <ul class="sub">
-                    <li><a href="form_component.html">Form Elements</a></li>
-                    <li><a href="advanced_form.html">Advanced Components</a></li>
-                    <li><a href="form_wizard.html">Form Wizard</a></li>
-                    <li><a href="form_validation.html">Form Validation</a></li>
-                    <li><a href="file_upload.html">Muliple File Upload</a></li>
+                    {{-- <li><a href="file_upload.html">Muliple File Upload</a></li> --}}
                     
-                    <li><a href="dropzone.html">Dropzone</a></li>
+                    {{-- <li><a href="dropzone.html">Dropzone</a></li>
                     <li><a href="inline_editor.html">Inline Editor</a></li>
 
                 </ul>
@@ -379,12 +379,12 @@
                     <li><a href="gallery.html">Media Gallery</a></li><li><a href="404.html">404 Error</a></li>
                     <li><a href="500.html">500 Error</a></li>
                     <li><a href="registration.html">Registration</a></li>
-                </ul>
-            </li> --}}
+                </ul> --}}
+            </li>
             <li>
                 <a href="login.html">
                     <i class="fa fa-user"></i>
-                    <span>Login Page</span>
+                    <span></span>
                 </a>
             </li>
         </ul></div>        
@@ -395,103 +395,195 @@
     <!--main content start-->
     <section id="main-content">
         <section class="wrapper">
-        <!-- page start-->
-
-        <div class="row">
-            <div class="col-sm-12">
-                <section class="panel">
-                    <header class="panel-heading">
-                        Registered Donor List
-                        <span class="tools pull-right">
-                            <a href="javascript:;" class="fa fa-chevron-down"></a>
-                            <a href="javascript:;" class="fa fa-cog"></a>
-                            <a href="javascript:;" class="fa fa-times"></a>
-                         </span>
-                    </header>
-                    <div class="panel-body">
-                        <div class="adv-table editable-table ">
-                            <div class="clearfix">
-                                {{-- <div class="btn-group">
-                                    <button id="editable-sample_new" class="btn btn-primary">
-                                        Add New <i class="fa fa-plus"></i>
-                                    </button>
-                                </div>
-                                <div class="btn-group pull-right">
-                                    <button class="btn btn-default dropdown-toggle" data-toggle="dropdown">Tools <i class="fa fa-angle-down"></i>
-                                    </button>
-                                    <ul class="dropdown-menu pull-right">
-                                        <li><a href="#">Print</a></li>
-                                        <li><a href="#">Save as PDF</a></li>
-                                        <li><a href="#">Export to Excel</a></li>
-                                    </ul>
-                                </div> --}}
-                            </div>
-                            <form role="form" class="form-horizontal" action="/camp_register_detail/<?php echo $camp_detail[0]->id; ?>" method="POST">
+            <!-- page start-->
+            <div class="row">
+                <div class="col-lg-12">
+                    <section class="panel">
+                        <header class="panel-heading">
+                            Campaign
+                            <span class="tools pull-right">
+                                <a class="fa fa-chevron-down" href="javascript:;"></a>
+                                <a class="fa fa-cog" href="javascript:;"></a>
+                                <a class="fa fa-times" href="javascript:;"></a>
+                             </span>
+                        </header>
+                        <div class="panel-body">
+                            <form role="form" class="form-horizontal" action="/camp_register_complete_detail/<?php echo $cdr[0]->donor_id; ?>" method="POST">
                                 {{ csrf_field() }}
                                 <div class="form-group">
-                                    <label class="col-lg-3 control-label">Place</label>
+                                    <label class="col-lg-3 control-label">Blood Bag ID</label>
                                     <div class="col-lg-6">
-                                        <b><input type="text" readonly="readonly" placeholder="" id="place" name="camp_place" value = '<?php echo$camp_detail[0]->camp_place?>' class="form-control"/></b>
-                                        
+                                        <input type="text" placeholder="" id="bbag_id" name="bbag_id" class="form-control"/>
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label class="col-lg-3 control-label">Date</label>
+                                    <label class="col-lg-3 control-label">Donor ID</label>
                                     <div class="col-lg-6">
-                                        <b><input type="text" readonly="readonly" placeholder="" id="date" name="camp_date" value = '<?php echo$camp_detail[0]->camp_date?>' class="form-control"/></b>
+                                        <input type="text" placeholder="" id="donor_id" name="donor_id" value = '<?php echo$cdr[0]->donor_id?>' class="form-control"/>
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label class="col-lg-3 control-label">Time</label>
+                                    <label class="col-lg-3 control-label">Donor Blood Group</label>
                                     <div class="col-lg-6">
-                                        <b><input type="text" readonly="readonly" placeholder="" id="tim" name="camp_time" value = '<?php echo$camp_detail[0]->camp_time?>' class="form-control"/></b>
-                                        
+                                        <input type="text" placeholder="" id="donor_bloodgroup" name="donor_bloodgroup" value = '<?php echo$cdr[0]->donor_bloodgroup?>' class="form-control"/>
                                     </div>
                                 </div>
-                            </form><br>
-                            <div class="space15"></div>
-                            <table class="table table-striped table-hover table-bordered" id="editable-sample">
-                                <thead>
-                                <tr>
-                                    <th>Donor ID</th>
-                                    <th>Donor Name</th>
-                                    <th>Donor Phone</th>
-                                    <th>Donor Blood Group</th>
-                                    <th>Donor Blood Rh</th>
-                                    <th>Register Blood Bag</th>
-                                    {{-- <th>Delete</th> --}}
-                                </tr>
-                                </thead>
-                                <tbody>
-                                    @foreach ($camp_detail as $camp)
-                                <tr class="">
-                                    <td>{{ $camp->donor_id }}</td>
-                                    <td>{{ $camp->donor_name }}</td>
-                                    <td>{{ $camp->donor_phone }}</td>
-                                    <td>{{ $camp->donor_bloodgroup }}</td>
-                                    <td>{{ $camp->donor_bloodRh }}</td>
-                                    <td><a href='camp_register_complete/{{ $camp->donor_id }}'>Completed</a></td>
-                                    {{-- @if($camp->date == date('Y-m-d'))
-                                    <td><a href='camp_register_complete/{{ $cdr->id }}'>Completed</a></td> 
-                                    @else
-                                    <td>Completed</td>
-                                    @endif --}}
-                                    {{-- <td><a href='camp_update/{{ $camp->id }}'>Edit</a></td> --}}
-                                    {{-- <td><a class="delete" href="javascript:;">Delete</a></td> --}}
-                                </tr>
-                                @endforeach
-                                </tbody>
-                            </table>
+                                <div class="form-group">
+                                    <label class="col-lg-3 control-label">Donor Blood Rh</label>
+                                    <div class="col-lg-6">
+                                        <input type="text" placeholder="" id="donor_bloodRh" name="donor_bloodRh" value = '<?php echo$cdr[0]->donor_bloodRh?>' class="form-control"/>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-lg-3 control-label">Blood Volume</label>
+                                    <div class="col-lg-6">
+                                        <input type="text" placeholder="" id="bbag_vol" name="bbag_vol" class="form-control"/>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-lg-3 control-label">Blood Component</label>
+                                    <div class="col-lg-6">
+                                        <input type="text" placeholder="" id="bbag_comp" name="bbag_comp" class="form-control"/>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-lg-3 control-label">Received Date</label>
+                                    <div class="col-lg-6">
+                                        <input type="text" placeholder="" id="camp_date" name="camp_date" value = '<?php echo$cdr[0]->camp_date?>' class="form-control"/>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-lg-3 control-label">Expiry Date</label>
+                                    <div class="col-lg-6">
+                                        <input type="text" placeholder="" id="expiry_date" name="expiry_date" class="form-control"/>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-lg-3 control-label">Campaign ID</label>
+                                    <div class="col-lg-6">
+                                        <input type="text" placeholder="" id="camp_id" name="camp_id" value = '<?php echo$cdr[0]->camp_id?>' class="form-control"/>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-lg-3 control-label">Hospital Name</label>
+                                    <div class="col-lg-6">
+                                        <input type="text" placeholder="" id="camp_place" name="camp_place" value = '<?php echo$cdr[0]->camp_place?>' class="form-control"/>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="col-lg-offset-3 col-lg-6">
+                                        <button class="btn btn-primary" type="submit">Submit</button>
+                                    </div>
+                                </div>
+                            </form>
                         </div>
-                    </div>
-                </section>
+                    </section>
+                </div>
             </div>
-        </div>
-        <!-- page end-->
+            <div class="row">
+                <div class="col-lg-12">
+                    <section class="panel">
+                       
+                        <div class="panel-body">
+                            <div class=" form">
+                                <form class="cmxform form-horizontal "  method="GET" action="{{url('view-records')}}">
+                                   
+                                    <div class="form-group">
+                                        {{-- <div class="col-lg-offset-3 col-lg-6">
+                                            <button class="btn btn-primary" type="submit">Save</button>
+                                            <button class="btn btn-default" type="button">Cancel</button>
+                                        </div> --}}
+                                    </div>
+                                </form>
+                            </div>
+
+                        </div>
+                    </section>
+                </div>
+            </div>
+
+
+            {{-- <div class="row">
+                <div class="col-lg-12">
+                    <section class="panel">
+                        <header class="panel-heading">
+                            Advanced Form validations
+                            <span class="tools pull-right">
+                                <a class="fa fa-chevron-down" href="javascript:;"></a>
+                                <a class="fa fa-cog" href="javascript:;"></a>
+                                <a class="fa fa-times" href="javascript:;"></a>
+                             </span>
+                        </header>
+                        <div class="panel-body">
+                            <div class="form">
+                                <form class="cmxform form-horizontal " id="signupForm" method="get" action="#">
+                                    <div class="form-group ">
+                                        <label for="firstname" class="control-label col-lg-3">Firstname</label>
+                                        <div class="col-lg-6">
+                                            <input class=" form-control" id="firstname" name="firstname" type="text" />
+                                        </div>
+                                    </div>
+                                    <div class="form-group ">
+                                        <label for="lastname" class="control-label col-lg-3">Lastname</label>
+                                        <div class="col-lg-6">
+                                            <input class=" form-control" id="lastname" name="lastname" type="text" />
+                                        </div>
+                                    </div>
+                                    <div class="form-group ">
+                                        <label for="username" class="control-label col-lg-3">Username</label>
+                                        <div class="col-lg-6">
+                                            <input class="form-control " id="username" name="username" type="text" />
+                                        </div>
+                                    </div>
+                                    <div class="form-group ">
+                                        <label for="password" class="control-label col-lg-3">Password</label>
+                                        <div class="col-lg-6">
+                                            <input class="form-control " id="password" name="password" type="password" />
+                                        </div>
+                                    </div>
+                                    <div class="form-group ">
+                                        <label for="confirm_password" class="control-label col-lg-3">Confirm Password</label>
+                                        <div class="col-lg-6">
+                                            <input class="form-control " id="confirm_password" name="confirm_password" type="password" />
+                                        </div>
+                                    </div>
+                                    <div class="form-group ">
+                                        <label for="email" class="control-label col-lg-3">Email</label>
+                                        <div class="col-lg-6">
+                                            <input class="form-control " id="email" name="email" type="email" />
+                                        </div>
+                                    </div>
+                                    <div class="form-group ">
+                                        <label for="agree" class="control-label col-lg-3 col-sm-3">Agree to Our Policy</label>
+                                        <div class="col-lg-6 col-sm-9">
+                                            <input  type="checkbox" style="width: 20px" class="checkbox form-control" id="agree" name="agree" />
+                                        </div>
+                                    </div>
+                                    <div class="form-group ">
+                                        <label for="newsletter" class="control-label col-lg-3 col-sm-3">Receive the Newsletter</label>
+                                        <div class="col-lg-6 col-sm-9">
+                                            <input  type="checkbox" style="width: 20px" class="checkbox form-control" id="newsletter" name="newsletter" />
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <div class="col-lg-offset-3 col-lg-6">
+                                            <button class="btn btn-primary" type="submit">Save</button>
+                                            <button class="btn btn-default" type="button">Cancel</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div> --}}
+            <!-- page end-->
         </section>
     </section>
     <!--main content end-->
-<!--right sidebar start-->
+{{-- <!--right sidebar start-->
 <div class="right-sidebar">
 <div class="search-row">
     <input type="text" placeholder="Search" class="form-control">
@@ -741,16 +833,14 @@
 </ul>
 </div>
 </div>
-<!--right sidebar end-->
+<!--right sidebar end--> --}}
 
 </section>
 
 <!-- Placed js at the end of the document so the pages load faster -->
 
 <!--Core js-->
-<script src="js/jquery-1.10.2.min.js"></script>
-<script src="js/jquery-migrate.js"></script>
-
+<script src="js/jquery.js"></script>
 <script src="bs3/js/bootstrap.min.js"></script>
 <script class="include" type="text/javascript" src="js/jquery.dcjqaccordion.2.7.js"></script>
 <script src="js/jquery.scrollTo.min.js"></script>
@@ -766,23 +856,15 @@
 <script src="js/flot-chart/jquery.flot.resize.js"></script>
 <script src="js/flot-chart/jquery.flot.pie.resize.js"></script>
 
-<script type="text/javascript" src="js/data-tables/jquery.dataTables.js"></script>
-<script type="text/javascript" src="js/data-tables/DT_bootstrap.js"></script>
+
+<script type="text/javascript" src="js/jquery.validate.min.js"></script>
 
 <!--common script init for all pages-->
 <script src="js/scripts.js"></script>
-
-<!--script for this page only-->
-<script src="js/table-editable.js"></script>
-
-<!-- END JAVASCRIPTS -->
-<script>
-    jQuery(document).ready(function() {
-        EditableTable.init();
-    });
-</script>
+<!--this page script-->
+<script src="js/validation-init.js"></script>
 
 </body>
 
-<!-- Mirrored from bucketadmin.lab.themebucket.net/editable_table.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 03 Apr 2020 13:23:59 GMT -->
+
 </html>

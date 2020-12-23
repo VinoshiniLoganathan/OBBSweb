@@ -103,6 +103,7 @@ class DonorController extends Controller
       $donor_name = Auth::guard('donor')->user()->name;
       $donor_phone = Auth::guard('donor')->user()->phone;
       $donor_bloodgroup = Auth::guard('donor')->user()->bloodgroup;
+      $donor_bloodRh = Auth::guard('donor')->user()->bloodRh;
       
       // && ($camp_query->camp_id === $camp_id)
       //$camp_querys = DB::select('select * from camp_donor_register');
@@ -137,6 +138,7 @@ class DonorController extends Controller
           $cdr->donor_name = $donor_name;
           $cdr->donor_phone = $donor_phone;
           $cdr->donor_bloodgroup = $donor_bloodgroup;
+          $cdr->donor_bloodRh = $donor_bloodRh;
           $cdr->save();
     }elseif(!is_null($result_camp_data)){
       $test='dnt enter data';

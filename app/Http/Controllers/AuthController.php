@@ -106,25 +106,6 @@ class AuthController extends Controller
             ->view('Hospital/hosp_CampEdit', ['camp'=> $camp]); 
     }
 
-    public function camp_register_detail($id) {
-        // $camp = DB::select('select id from campaigns where id = ?',[$id]);
-        $camp = Campaign::find($id);
-        $camp_id = $camp->id;
-        $camp_register = CampDonorRegister::select('*');
-
-        $camp_detail = $camp_register->where([
-            'camp_id' => $camp_id
-        ])->get();
-        
-        if(isset($camp_detail[0])){
-        //return redirect()->route('camp_update', ['camp' => $camp]);
-            return response()
-                ->view('Hospital/hosp_CampRegisteredRecords', ['camp_detail'=> $camp_detail]); 
-        }
-        flash("No Records!");
-        return redirect()->intended('view-records');
-    }
-
     public function edit_camp(Request $request,$id) {
         // $place = $request->input('place');
         // $date = $request->input('date');
@@ -166,6 +147,61 @@ class AuthController extends Controller
         //return Redirect::to("dashboard")->withSuccess('Great! You have Successfully loggedin');
     }
 
+    public function camp_register_detail($id) {
+        // $camp = DB::select('select id from campaigns where id = ?',[$id]);
+        $camp = Campaign::find($id);
+        $camp_id = $camp->id;
+        $camp_register = CampDonorRegister::select('*');
+
+        $camp_detail = $camp_register->where([
+            'camp_id' => $camp_id
+        ])->get();
+        
+        if(isset($camp_detail[0])){
+        //return redirect()->route('camp_update', ['camp' => $camp]);
+            return response()
+                ->view('Hospital/hosp_CampRegisteredRecords', ['camp_detail'=> $camp_detail]); 
+        }
+        flash("No Records!");
+        return redirect()->intended('view-records');
+    }
+
+
+    public function camp_register_complete($donor_id) {
+        $cdr = DB::select('select * from camp_donor_register where donor_id = ?',[$donor_id]);
+        //return view('camp_update',['camp'=>$camp]);
+        // return Response::json($cdr);
+        //return redirect()->route('camp_update', ['camp' => $camp]);
+        return response()
+            ->view('Hospital/hosp_CampRegisteredComplete', ['cdr'=> $cdr]); 
+    }
+
+    public function camp_register_complete_detail(Request $request, $id) {
+        // $camp = DB::select('select id from campaigns where id = ?',[$id]);
+        $cdr = CampDonorRegister::find($id);
+        $cdr->camp_id = $request->camp_id;
+        $cdr->camp_place = $request->camp_place;
+        $cdr->camp_date =  $request->camp_date;
+        $cdr->donor_id = $request->donor_id;
+        $cdr->donor_bloodgroup = $request->donor_bloodgroup;
+        $cdr->donor_bloodRh = $request->donor_bloodRh;
+
+        // $bb = new BloodBag();
+        // $bb->bbag_id = $request->bbag_id;
+        // $bb->donor_id = $donor_id;
+        // $bb->donor_bloodgroup = $donor_bloodgroup;
+        // $bb->donor_bloodRh = $donor_bloodRh;
+        // $bb->bbag_volume = $request->bbag_vol;
+        // $bb->bbag_component = $request->bbag_comp;
+        // $bb->received_date = $camp_date;
+        // $bb->expiry_date = $request->expiry_date;
+        // $bb->camp_id = $camp_id;
+        // $bb->hosp_name = $camp_place;
+        // $bb->save();
+        
+    }
+
+
     //donor list process
     public function view_donor_records()
     {
@@ -206,7 +242,7 @@ class AuthController extends Controller
         $donors->address =  $request->address;
         $donors->phone =  $request->phone;
         $donors->bloodgroup =  $request->bloodgroup;
-        $donor->bloodRh =  $request->bloodRh;
+        $donors->bloodRh =  $request->bloodRh;
         $donors->email =  $request->email;
         $donors->password = Hash::make($request->password);
         $donors->save();
