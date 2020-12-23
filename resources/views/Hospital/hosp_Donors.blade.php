@@ -439,6 +439,16 @@
                                     </div>
                                 </div>
                                 <div class="form-group">
+                                    <label class="col-lg-3 control-label">Blood Rh</label>
+                                    <div class="col-lg-6">
+                                        <select id="inputBloodR" name="bloodRh" class="form-control" placeholder="Blood Rh" autofocus>
+                                            <option value="Positive">Positive</option>
+                                            <option value="Negative">Negative</option>
+                                        </select>
+                                    </div>     
+                                </div> 
+
+                                <div class="form-group">
                                     <label class="col-lg-3 control-label">Email Address</label>
                                     <div class="col-lg-6">
                                         <input type="email" name="email" id="inputEmail" class="form-control">

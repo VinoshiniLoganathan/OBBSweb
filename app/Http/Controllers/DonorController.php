@@ -43,6 +43,7 @@ class DonorController extends Controller
         'address' => 'required',
         'phone' => 'required|numeric',
         'bloodgroup' => 'required',
+        'bloodRh' => 'required',
         'email' => 'required|email|unique:donors',
         'password' => 'required|min:6',
         ]);

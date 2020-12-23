@@ -23,7 +23,7 @@ class Donor extends Model implements AuthenticatableContract
      * @var array
      */
     protected $fillable = [
-        'name', 'address', 'phone', 'bloodgroup','email', 'password',
+        'name', 'address', 'phone', 'bloodgroup', 'bloodRh', 'email', 'password',
     ];
 
     /**

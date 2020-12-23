@@ -99,6 +99,17 @@
         @endif       
       </div> 
 
+      <div class="login-wrap">
+        <label for="inputBloodR">Blood Rh</label>
+        <select id="inputBloodR" name="bloodRh" class="form-control" placeholder="Blood Rh" autofocus>
+          <option value="Positive">Positive</option>
+          <option value="Negative">Negative</option>
+        </select>
+        @if ($errors->has('bloodRh'))
+        <span class="error">{{ $errors->first('bloodRh') }}</span>
+        @endif       
+      </div> 
+
        <div class="login-wrap">
         <label for="inputEmail">Email address</label> 
         <input type="email" name="email" id="inputEmail" class="form-control" placeholder="Email Address" >

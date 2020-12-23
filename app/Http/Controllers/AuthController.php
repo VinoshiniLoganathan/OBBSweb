@@ -191,9 +191,10 @@ class AuthController extends Controller
             $donor->address =  $request->address;
             $donor->phone =  $request->phone;
             $donor->bloodgroup =  $request->bloodgroup;
+            $donor->bloodRh =  $request->bloodRh;
             $donor->save();
             //return view('index-2');
-            return redirect()->intended('/hosp_Donors');
+            return redirect()->intended('view-donor-records');
         //}
     }
 
@@ -205,6 +206,7 @@ class AuthController extends Controller
         $donors->address =  $request->address;
         $donors->phone =  $request->phone;
         $donors->bloodgroup =  $request->bloodgroup;
+        $donor->bloodRh =  $request->bloodRh;
         $donors->email =  $request->email;
         $donors->password = Hash::make($request->password);
         $donors->save();
@@ -233,7 +235,7 @@ class AuthController extends Controller
             $benefit->frequency =  $request->frequency;
             $benefit->description =  $request->description;
             $benefit->save();
-            return redirect()->intended('/hosp_Benefit');
+            return redirect()->intended('view-benefit-records');
     }
 
     public function postBenefitRegistration(Request $request)

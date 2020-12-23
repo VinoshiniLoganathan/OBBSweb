@@ -384,7 +384,7 @@
             <li>
                 <a href="login.html">
                     <i class="fa fa-user"></i>
-                    <span>Login Page</span>
+                    <span></span>
                 </a>
             </li>
         </ul></div>        

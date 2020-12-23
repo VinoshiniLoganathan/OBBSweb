@@ -430,13 +430,14 @@
                                     </form>
                                 </div>
                                 <div class="btn-group pull-right">
-                                    <button class="btn btn-default dropdown-toggle" data-toggle="dropdown">Tools <i class="fa fa-angle-down"></i>
-                                    </button><br>
-                                    <ul class="dropdown-menu pull-right">
+                                    {{-- <button class="btn btn-default dropdown-toggle" data-toggle="dropdown">Tools <i class="fa fa-angle-down"></i>
+                                    </button> --}}
+                                    <br>
+                                    {{-- <ul class="dropdown-menu pull-right">
                                         <li><a href="#">Print</a></li>
                                         <li><a href="#">Save as PDF</a></li>
                                         <li><a href="#">Export to Excel</a></li>
-                                    </ul>
+                                    </ul> --}}
                                 </div>
                             </div>
                             <div class="space15"></div>
@@ -448,6 +449,7 @@
                                     <th>Address</th>
                                     <th>Phone</th>
                                     <th>Blood Group</th>
+                                    <th>Blood Rh</th>
                                     <th>Email</th>
                                     <th>Edit</th>
                                 </tr>
@@ -460,6 +462,7 @@
                                     <td>{{ $donor->address }}</td>
                                     <td>{{ $donor->phone }}</td>
                                     <td>{{ $donor->bloodgroup }}</td>
+                                    <td>{{ $donor->bloodRh }}</td>
                                     <td>{{ $donor->email }}</td>                                    
                                     <td><a href='donor_update/{{ $donor->id }}'>Edit</a></td>
                                     {{-- <td><a class="delete" href="javascript:;">Delete</a></td> --}}

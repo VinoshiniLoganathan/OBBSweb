@@ -411,19 +411,30 @@
                     <div class="panel-body">
                         <div class="adv-table editable-table ">
                             <div class="clearfix">
-                                <div class="btn-group">
+                                {{-- <div class="btn-group">
                                     <button id="editable-sample_new" class="btn btn-primary">
                                         Add
                                     </button>
+                                </div> --}}
+                                <div class="form">
+                                    <form class="cmxform form-horizontal "  method="GET" action="{{url('hosp_Campaign')}}">
+                                        <div class="clearfix">
+                                            {{-- <div class="col-lg-offset-3 col-lg-6"> --}}
+                                                <button class="btn btn-primary" type="submit">Add</button>
+                                                {{-- <button class="btn btn-default" type="button">Cancel</button> --}}
+                                            {{-- </div> --}}
+                                        </div>
+                                    </form>
                                 </div>
                                 <div class="btn-group pull-right">
-                                    <button class="btn btn-default dropdown-toggle" data-toggle="dropdown">Tools <i class="fa fa-angle-down"></i>
-                                    </button><br>
-                                    <ul class="dropdown-menu pull-right">
+                                    {{-- <button class="btn btn-default dropdown-toggle" data-toggle="dropdown">Tools <i class="fa fa-angle-down"></i>
+                                    </button> --}}
+                                    <br>
+                                    {{-- <ul class="dropdown-menu pull-right">
                                         <li><a href="#">Print</a></li>
                                         <li><a href="#">Save as PDF</a></li>
                                         <li><a href="#">Export to Excel</a></li>
-                                    </ul>
+                                    </ul> --}}
                                 </div>
                             </div>
                             <div class="space15"></div>
