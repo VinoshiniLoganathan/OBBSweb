@@ -470,7 +470,7 @@
                                     <td>{{ $camp->donor_phone }}</td>
                                     <td>{{ $camp->donor_bloodgroup }}</td>
                                     <td>{{ $camp->donor_bloodRh }}</td>
-                                    <td><a href='camp_register_complete/{{ $camp->donor_id }}'>Completed</a></td>
+                                    <td><a href='camp-register-complete/{{ $camp->donor_id }}'>Completed</a></td>
                                     {{-- @if($camp->date == date('Y-m-d'))
                                     <td><a href='camp_register_complete/{{ $cdr->id }}'>Completed</a></td> 
                                     @else

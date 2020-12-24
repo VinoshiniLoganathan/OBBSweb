@@ -167,10 +167,10 @@ class AuthController extends Controller
     }
 
 
-    public function camp_register_complete($donor_id) {
-        $cdr = DB::select('select * from camp_donor_register where donor_id = ?',[$donor_id]);
+    public function camp_register_complete($id) {
+        $cdr = DB::select('select * from camp_donor_register where donor_id = ?',[$id]);
         //return view('camp_update',['camp'=>$camp]);
-        // return Response::json($cdr);
+        // return Response::json($test);
         //return redirect()->route('camp_update', ['camp' => $camp]);
         return response()
             ->view('Hospital/hosp_CampRegisteredComplete', ['cdr'=> $cdr]); 

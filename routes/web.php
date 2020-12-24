@@ -161,7 +161,7 @@ Route::post('edit_camp/{id}','AuthController@edit_camp');
 Route::get('camp_detail/{id}','AuthController@camp_detail');
 Route::get('camp_register_detail/{id}','AuthController@camp_register_detail');
 
-Route::get('camp_register_complete/{id}','AuthController@camp_register_complete');
+Route::get('camp_register_detail/camp-register-complete/{id}','AuthController@camp_register_complete');
 Route::get('camp_register_complete_detail/{id}','AuthController@camp_register_complete_detail');
 //Route::post('/{id}','AuthController@edit_camp');
 //get record by id

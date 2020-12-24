@@ -16,6 +16,12 @@
     <link rel="stylesheet" href="{{ URL::asset('bs3/css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ URL::asset('css/bootstrap-reset.css') }}">
     <link rel="stylesheet" href="{{ URL::asset('font-awesome/css/font-awesome.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ URL::asset('js/bootstrap-datepicker/css/datepicker.css') }}" />
+
+    {{-- <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"> --}}
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/css/bootstrap-datepicker.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/js/bootstrap-datepicker.js"></script>
 
     <!-- Custom styles for this template -->
     <link href="{{ URL::asset('css/style.css') }}" rel="stylesheet">
@@ -231,7 +237,7 @@
     <!--search & user info start-->
     <ul class="nav pull-right top-menu">
         <li>
-            <input type="text" class="form-control search" placeholder=" Search">
+            {{-- <input type="text" class="form-control search" placeholder=" Search"> --}}
         </li>
         <!-- user login dropdown start-->
         <li class="dropdown">
@@ -243,7 +249,8 @@
             <ul class="dropdown-menu extended logout">
                 <li><a href="#"><i class=" fa fa-suitcase"></i>Profile</a></li>
                 <li><a href="#"><i class="fa fa-cog"></i> Settings</a></li>
-                <li><a href="login.html"><i class="fa fa-key"></i> Log Out</a></li>
+                {{-- <li><a href="login.html"><i class="fa fa-key"></i> Log Out</a></li> --}}
+                <li><a href="{{url('logout')}}"><i class="fa fa-key"></i> Log Out</a></li>
             </ul>
         </li>
         <!-- user login dropdown end -->
@@ -400,7 +407,7 @@
                 <div class="col-lg-12">
                     <section class="panel">
                         <header class="panel-heading">
-                            Campaign
+                            Blood Bag Detail
                             <span class="tools pull-right">
                                 <a class="fa fa-chevron-down" href="javascript:;"></a>
                                 <a class="fa fa-cog" href="javascript:;"></a>
@@ -449,13 +456,13 @@
                                 <div class="form-group">
                                     <label class="col-lg-3 control-label">Received Date</label>
                                     <div class="col-lg-6">
-                                        <input type="text" placeholder="" id="camp_date" name="camp_date" value = '<?php echo$cdr[0]->camp_date?>' class="form-control"/>
+                                        <input type="text" placeholder="" id="camp_date" name="camp_date" value = '<?php echo$cdr[0]->camp_date?>' class="date form-control"/>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label class="col-lg-3 control-label">Expiry Date</label>
                                     <div class="col-lg-6">
-                                        <input type="text" placeholder="" id="expiry_date" name="expiry_date" class="form-control"/>
+                                        <input type="text" placeholder="" id="expiry_date" name="expiry_date" class="date form-control"/>
                                     </div>
                                 </div>
                                 <div class="form-group">
@@ -478,6 +485,15 @@
                                 </div>
                             </form>
                         </div>
+                        <script type="text/javascript">
+                            $('.date').datepicker({
+                                startDate: new Date(),
+                                format: 'yyyy-mm-dd',
+                                todayHighlight:'TRUE',
+                                autoclose: true
+                             });
+                             $('.datepicker').style.top = "150px";
+                        </script>
                     </section>
                 </div>
             </div>
