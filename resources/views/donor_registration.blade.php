@@ -92,8 +92,13 @@
 
       <div class="login-wrap">
         <label for="inputBlood">Blood Group</label>
-        <input type="text" id="inputBlood" name="bloodgroup" class="form-control" placeholder="Blood Group" autofocus>
-        
+        <select id="inputBlood" name="bloodgroup" class="form-control" placeholder="Blood Group" autofocus>
+          <option selected value="base">Please Select</option>
+          <option value="A">A</option>
+          <option value="B">B</option>
+          <option value="AB">AB</option>
+          <option value="O">O</option> 
+        </select>       
         @if ($errors->has('bloodgroup'))
         <span class="error">{{ $errors->first('bloodgroup') }}</span>
         @endif       

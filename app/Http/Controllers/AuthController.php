@@ -10,6 +10,7 @@ Use App\Campaign;
 Use App\Donor;
 Use App\Benefits;
 Use App\CampDonorRegister;
+use App\BloodBag;
 use DB;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
@@ -176,28 +177,35 @@ class AuthController extends Controller
             ->view('Hospital/hosp_CampRegisteredComplete', ['cdr'=> $cdr]); 
     }
 
-    public function camp_register_complete_detail(Request $request, $id) {
-        // $camp = DB::select('select id from campaigns where id = ?',[$id]);
-        $cdr = CampDonorRegister::find($id);
-        $cdr->camp_id = $request->camp_id;
-        $cdr->camp_place = $request->camp_place;
-        $cdr->camp_date =  $request->camp_date;
-        $cdr->donor_id = $request->donor_id;
-        $cdr->donor_bloodgroup = $request->donor_bloodgroup;
-        $cdr->donor_bloodRh = $request->donor_bloodRh;
+    public function camp_register_complete_detail(Request $request) {
+        
+        request()->validate([
+            'bbag_id' => 'required|unique:blood_bag',
+        ]);
 
-        // $bb = new BloodBag();
-        // $bb->bbag_id = $request->bbag_id;
-        // $bb->donor_id = $donor_id;
-        // $bb->donor_bloodgroup = $donor_bloodgroup;
-        // $bb->donor_bloodRh = $donor_bloodRh;
-        // $bb->bbag_volume = $request->bbag_vol;
-        // $bb->bbag_component = $request->bbag_comp;
-        // $bb->received_date = $camp_date;
-        // $bb->expiry_date = $request->expiry_date;
-        // $bb->camp_id = $camp_id;
-        // $bb->hosp_name = $camp_place;
-        // $bb->save();
+        $camp_id = $request->camp_id;
+        $camp_register = CampDonorRegister::select('*');
+
+        $camp_detail = $camp_register->where([
+            'camp_id' => $camp_id
+        ])->get();
+
+        $bb = new BloodBag();
+        $bb->bbag_id = $request->bbag_id;
+        $bb->donor_id = $request->donor_id;
+        $bb->donor_name = $request->donor_name;
+        $bb->donor_bloodgroup = $request->donor_bloodgroup;
+        $bb->donor_bloodRh = $request->donor_bloodRh;
+        $bb->bbag_vol = $request->bbag_vol;
+        $bb->bbag_comp = $request->bbag_comp;
+        $bb->received_date = $request->camp_date;
+        $bb->expiry_date = $request->expiry_date;
+        $bb->camp_id = $camp_id;
+        $bb->hosp_name = $request->camp_place;
+        $bb->save();
+
+        return response()
+                ->view('Hospital/hosp_CampRegisteredRecords', ['camp_detail'=> $camp_detail]);       
         
     }
 

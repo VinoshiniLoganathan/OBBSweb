@@ -445,7 +445,7 @@
                                     </div>
                                 </div> --}}
                                 <div class="form-group">
-                                    <label class="col-lg-3 control-label">Time (24Hrs Format)</label>
+                                    <label class="col-lg-3 control-label">Time (HH:MM:SS)</label>
                                     <div class="col-lg-6">
                                         <input type="text" placeholder="" id="tim" name="time"class="form-control">
                                     </div>

@@ -471,8 +471,8 @@
                                     <td>{{ $camp->donor_bloodgroup }}</td>
                                     <td>{{ $camp->donor_bloodRh }}</td>
                                     <td><a href='camp-register-complete/{{ $camp->donor_id }}'>Completed</a></td>
-                                    {{-- @if($camp->date == date('Y-m-d'))
-                                    <td><a href='camp_register_complete/{{ $cdr->id }}'>Completed</a></td> 
+                                    {{-- @if($camp->camp_date == date('Y-m-d'))
+                                    <td><a href='camp-register-complete/{{ $camp->donor_id }}'>Completed</a></td> 
                                     @else
                                     <td>Completed</td>
                                     @endif --}}

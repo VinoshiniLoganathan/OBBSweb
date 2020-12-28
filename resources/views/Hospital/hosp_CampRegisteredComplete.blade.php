@@ -9,7 +9,7 @@
     <meta name="author" content="ThemeBucket">
     <link rel="shortcut icon" href="images/favicon.html">
 
-    <title>Campaign Updates</title>
+    <title>Blood Bag Detail</title>
 
     <!--Core CSS -->
     {{-- follow the code  below and change the code as followning --}}
@@ -415,7 +415,8 @@
                              </span>
                         </header>
                         <div class="panel-body">
-                            <form role="form" class="form-horizontal" action="/camp_register_complete_detail/<?php echo $cdr[0]->donor_id; ?>" method="POST">
+                            <form role="form" class="form-horizontal" action="/camp_register_complete_detail/<?php echo $cdr[0]->donor_id; ?>" method="GET">
+                                {{-- {{ url()->previous() }} --}}
                                 {{ csrf_field() }}
                                 <div class="form-group">
                                     <label class="col-lg-3 control-label">Blood Bag ID</label>
@@ -426,37 +427,48 @@
                                 <div class="form-group">
                                     <label class="col-lg-3 control-label">Donor ID</label>
                                     <div class="col-lg-6">
-                                        <input type="text" placeholder="" id="donor_id" name="donor_id" value = '<?php echo$cdr[0]->donor_id?>' class="form-control"/>
+                                        <input type="text" readonly="readonly" placeholder="" id="donor_id" name="donor_id" value = '<?php echo$cdr[0]->donor_id?>' class="form-control"/>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-lg-3 control-label">Donor Name</label>
+                                    <div class="col-lg-6">
+                                        <input type="text" readonly="readonly" placeholder="" id="donor_name" name="donor_name" value = '<?php echo$cdr[0]->donor_name?>' class="form-control"/>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label class="col-lg-3 control-label">Donor Blood Group</label>
                                     <div class="col-lg-6">
-                                        <input type="text" placeholder="" id="donor_bloodgroup" name="donor_bloodgroup" value = '<?php echo$cdr[0]->donor_bloodgroup?>' class="form-control"/>
+                                        <input type="text" readonly="readonly" placeholder="" id="donor_bloodgroup" name="donor_bloodgroup" value = '<?php echo$cdr[0]->donor_bloodgroup?>' class="form-control"/>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label class="col-lg-3 control-label">Donor Blood Rh</label>
                                     <div class="col-lg-6">
-                                        <input type="text" placeholder="" id="donor_bloodRh" name="donor_bloodRh" value = '<?php echo$cdr[0]->donor_bloodRh?>' class="form-control"/>
+                                        <input type="text" readonly="readonly" placeholder="" id="donor_bloodRh" name="donor_bloodRh" value = '<?php echo$cdr[0]->donor_bloodRh?>' class="form-control"/>
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label class="col-lg-3 control-label">Blood Volume</label>
+                                    <label class="col-lg-3 control-label">Blood Volume (mL)</label>
                                     <div class="col-lg-6">
-                                        <input type="text" placeholder="" id="bbag_vol" name="bbag_vol" class="form-control"/>
+                                        <input type="text" placeholder="" id="bbag_vol" name="bbag_vol" class="form-control" value='450'/>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label class="col-lg-3 control-label">Blood Component</label>
                                     <div class="col-lg-6">
-                                        <input type="text" placeholder="" id="bbag_comp" name="bbag_comp" class="form-control"/>
+                                        <select placeholder="" id="bbag_comp" name="bbag_comp" class="form-control">
+                                            <option value="Whole Blood">Whole Blood</option>
+                                            <option value="Double Red Blood Cell">Double Red Blood Cell</option>
+                                            <option value="Platelet">Platelet</option>
+                                            <option value="Plasma">Plasma</option>
+                                        </select>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label class="col-lg-3 control-label">Received Date</label>
                                     <div class="col-lg-6">
-                                        <input type="text" placeholder="" id="camp_date" name="camp_date" value = '<?php echo$cdr[0]->camp_date?>' class="date form-control"/>
+                                        <input type="text" readonly="readonly" placeholder="" id="camp_date" name="camp_date" value = '<?php echo$cdr[0]->camp_date?>' class="form-control"/>
                                     </div>
                                 </div>
                                 <div class="form-group">
@@ -468,13 +480,13 @@
                                 <div class="form-group">
                                     <label class="col-lg-3 control-label">Campaign ID</label>
                                     <div class="col-lg-6">
-                                        <input type="text" placeholder="" id="camp_id" name="camp_id" value = '<?php echo$cdr[0]->camp_id?>' class="form-control"/>
+                                        <input type="text" readonly="readonly" placeholder="" id="camp_id" name="camp_id" value = '<?php echo$cdr[0]->camp_id?>' class="form-control"/>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label class="col-lg-3 control-label">Hospital Name</label>
                                     <div class="col-lg-6">
-                                        <input type="text" placeholder="" id="camp_place" name="camp_place" value = '<?php echo$cdr[0]->camp_place?>' class="form-control"/>
+                                        <input type="text" readonly="readonly" placeholder="" id="camp_place" name="camp_place" value = '<?php echo$cdr[0]->camp_place?>' class="form-control"/>
                                     </div>
                                 </div>
 

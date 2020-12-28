@@ -72,6 +72,7 @@ class DonorController extends Controller
       'address' => $data['address'],
       'phone' => $data['phone'],
       'bloodgroup' => $data['bloodgroup'],
+      'bloodRh' => $data['bloodRh'],
 	    'email' => $data['email'],
 	    'password' => Hash::make($data['password'])
 	  ]);
