@@ -10,7 +10,7 @@
     <meta name="author" content="ThemeBucket">
     <link rel="shortcut icon" href="images/favicon.html">
 
-    <title>Editable Table</title>
+    <title>Campaign Registration List</title>
 
     <!--Core CSS -->
     <link rel="stylesheet" href="{{ URL::asset('bs3/css/bootstrap.min.css') }}">
@@ -41,7 +41,7 @@
 <div class="brand">
 
     <a href="index-2.html" class="logo">
-        <img src="images/blogo.jpg" width= 170px height = 50px alt="">
+        <img src="/images/blogo.jpg" width= 170px height = 50px alt="">
     </a>
     {{-- <div class="sidebar-toggle-box">
         <div class="fa fa-bars"></div>
@@ -415,23 +415,30 @@
                                     <button id="editable-sample_new" class="btn btn-primary">
                                         Add New <i class="fa fa-plus"></i>
                                     </button>
-                                </div>
-                                <div class="btn-group pull-right">
-                                    <button class="btn btn-default dropdown-toggle" data-toggle="dropdown">Tools <i class="fa fa-angle-down"></i>
-                                    </button>
-                                    <ul class="dropdown-menu pull-right">
-                                        <li><a href="#">Print</a></li>
-                                        <li><a href="#">Save as PDF</a></li>
-                                        <li><a href="#">Export to Excel</a></li>
-                                    </ul>
                                 </div> --}}
+                                <div class="btn-group pull-right">
+                                    {{-- <button class="btn btn-default dropdown-toggle" data-toggle="dropdown">Tools <i class="fa fa-angle-down"></i>
+                                    </button> --}}
+                                    <ul class="dropdown-menu pull-right">
+                                        {{-- <li><a href="#">Print</a></li>
+                                        <li><a href="#">Save as PDF</a></li>
+                                        <li><a href="#">Export to Excel</a></li> --}}
+                                    </ul>
+                                </div>
                             </div>
                             <form role="form" class="form-horizontal" action="/camp_register_detail/<?php echo $camp_detail[0]->id; ?>" method="POST">
                                 {{ csrf_field() }}
                                 <div class="form-group">
-                                    <label class="col-lg-3 control-label">Place</label>
+                                    <label class="col-lg-3 control-label">Campaign</label>
                                     <div class="col-lg-6">
-                                        <b><input type="text" readonly="readonly" placeholder="" id="place" name="camp_place" value = '<?php echo$camp_detail[0]->camp_place?>' class="form-control"/></b>
+                                        <b><input type="text" readonly="readonly" placeholder="" id="camp_name" name="camp_name" value = '<?php echo$camp_detail[0]->camp_name?>' class="form-control"/></b>
+                                        
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-lg-3 control-label">Hospital</label>
+                                    <div class="col-lg-6">
+                                        <b><input type="text" readonly="readonly" placeholder="" id="hosp_name" name="hosp_name" value = '<?php echo$camp_detail[0]->hosp_name?>' class="form-control"/></b>
                                         
                                     </div>
                                 </div>
@@ -448,7 +455,8 @@
                                         
                                     </div>
                                 </div>
-                            </form><br>
+                            </form>
+                            <br>
                             <div class="space15"></div>
                             <table class="table table-striped table-hover table-bordered" id="editable-sample">
                                 <thead>
@@ -470,6 +478,7 @@
                                     <td>{{ $camp->donor_phone }}</td>
                                     <td>{{ $camp->donor_bloodgroup }}</td>
                                     <td>{{ $camp->donor_bloodRh }}</td>
+                                    {{-- <td><a id='test' href='camp-register-complete/{{ $camp->donor_id }}' onclick="disableClick()">Completed</a></td> --}}
                                     <td><a href='camp-register-complete/{{ $camp->donor_id }}'>Completed</a></td>
                                     {{-- @if($camp->camp_date == date('Y-m-d'))
                                     <td><a href='camp-register-complete/{{ $camp->donor_id }}'>Completed</a></td> 
@@ -482,6 +491,17 @@
                                 @endforeach
                                 </tbody>
                             </table>
+                            
+                            <script>
+                                //document.getElementById("test").removeAttribute("href");
+                                // create bool status column
+                                // if else statement depend on that column
+                                
+                                
+                                function disableClick() {
+                                    document.getElementById("test").removeAttribute("href");//make sure you find the html id + the data id
+                                }
+                            </script>
                         </div>
                     </div>
                 </section>
@@ -748,14 +768,14 @@
 <!-- Placed js at the end of the document so the pages load faster -->
 
 <!--Core js-->
-<script src="js/jquery-1.10.2.min.js"></script>
-<script src="js/jquery-migrate.js"></script>
+<script src="/js/jquery-1.10.2.min.js"></script>
+<script src="/js/jquery-migrate.js"></script>
 
-<script src="bs3/js/bootstrap.min.js"></script>
-<script class="include" type="text/javascript" src="js/jquery.dcjqaccordion.2.7.js"></script>
-<script src="js/jquery.scrollTo.min.js"></script>
-<script src="js/jQuery-slimScroll-1.3.0/jquery.slimscroll.js"></script>
-<script src="js/jquery.nicescroll.js"></script>
+<script src="/bs3/js/bootstrap.min.js"></script>
+<script class="include" type="text/javascript" src="/js/jquery.dcjqaccordion.2.7.js"></script>
+<script src="/js/jquery.scrollTo.min.js"></script>
+<script src="/js/jQuery-slimScroll-1.3.0/jquery.slimscroll.js"></script>
+<script src="/js/jquery.nicescroll.js"></script>
 <!--Easy Pie Chart-->
 <script src="js/easypiechart/jquery.easypiechart.js"></script>
 <!--Sparkline Chart-->
@@ -766,14 +786,14 @@
 <script src="js/flot-chart/jquery.flot.resize.js"></script>
 <script src="js/flot-chart/jquery.flot.pie.resize.js"></script>
 
-<script type="text/javascript" src="js/data-tables/jquery.dataTables.js"></script>
-<script type="text/javascript" src="js/data-tables/DT_bootstrap.js"></script>
+<script type="text/javascript" src="/js/data-tables/jquery.dataTables.js"></script>
+<script type="text/javascript" src="/js/data-tables/DT_bootstrap.js"></script>
 
 <!--common script init for all pages-->
-<script src="js/scripts.js"></script>
+<script src="/js/scripts.js"></script>
 
 <!--script for this page only-->
-<script src="js/table-editable.js"></script>
+<script src="/js/table-editable.js"></script>
 
 <!-- END JAVASCRIPTS -->
 <script>

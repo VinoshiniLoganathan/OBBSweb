@@ -424,6 +424,23 @@
                                         
                                     </div>
                                 </div>
+                                
+                                <?php
+                                    $filename = 'hosp.txt';
+                                    $eachlines = file($filename, FILE_IGNORE_NEW_LINES);
+                                ?>
+                                <div class="form-group">
+                                    <label class="col-lg-3 control-label" for="hosp_name">Hospital</label>
+                                    <div class="col-lg-6">
+                                        <select id="hosp_name" name="hosp_name" class="form-control" placeholder="Hospital Name" autofocus>
+                                        <option selected value="base">Please Select</option>
+                                        <?php foreach($eachlines as $lines){ 
+                                                echo "<option value='".$lines."'>$lines</option>";
+                                            }?>
+                                        </select>
+                                    </div>
+                                </div>
+
                                 <div class="form-group">
                                     <label class="col-lg-3 control-label">Place</label>
                                     <div class="col-lg-6">

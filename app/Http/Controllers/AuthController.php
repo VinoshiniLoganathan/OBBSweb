@@ -125,6 +125,7 @@ class AuthController extends Controller
             $camp = Campaign::find($id);
     
             $camp->camp_name = $request->camp_name;
+            $camp->hosp_name = $request->hosp_name;
             $camp->place =  $request->place;
             $camp->date =  $request->date;
             $camp->time =  $request->time;
@@ -139,6 +140,7 @@ class AuthController extends Controller
        
         $campaign = new Campaign;
         $campaign->camp_name = $request->camp_name;
+        $camp->hosp_name = $request->hosp_name;
         $campaign->place = $request->place;
         $campaign->date = $request->date;
         $campaign->time = $request->time;
@@ -201,11 +203,12 @@ class AuthController extends Controller
         $bb->received_date = $request->camp_date;
         $bb->expiry_date = $request->expiry_date;
         $bb->camp_id = $camp_id;
-        $bb->hosp_name = $request->camp_place;
+        $bb->hosp_name = $request->hosp_name;
         $bb->save();
 
-        return response()
-                ->view('Hospital/hosp_CampRegisteredRecords', ['camp_detail'=> $camp_detail]);       
+        return redirect()->intended('camp_register_detail/'.$camp_id);
+        // return response()
+        //         ->view('Hospital/hosp_CampRegisteredRecords', ['camp_detail'=> $camp_detail]);       
         
     }
 
@@ -292,6 +295,12 @@ class AuthController extends Controller
         return Redirect::to("/hosp_Benefit");
     }
 
-     
+    public function getDetails($id = 0)
+    {
+        $data = CampDonorRegister::where('donor_id', $id)->first();
+        echo json_encode($data);
+
+        exit;
+    }
    
 }

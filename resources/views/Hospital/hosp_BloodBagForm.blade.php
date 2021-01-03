@@ -9,14 +9,16 @@
     <meta name="author" content="ThemeBucket">
     <link rel="shortcut icon" href="images/favicon.html">
 
-    <title>Campaign Updates</title>
+    <title>Blood Bag Detail</title>
 
     <!--Core CSS -->
     {{-- follow the code  below and change the code as followning --}}
     <link rel="stylesheet" href="{{ URL::asset('bs3/css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ URL::asset('css/bootstrap-reset.css') }}">
     <link rel="stylesheet" href="{{ URL::asset('font-awesome/css/font-awesome.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ URL::asset('js/bootstrap-datepicker/css/datepicker.css') }}" />
 
+    {{-- <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"> --}}
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/css/bootstrap-datepicker.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/js/bootstrap-datepicker.js"></script>
@@ -45,7 +47,7 @@
 <div class="brand">
 
     <a href="index-2.html" class="logo">
-        <img src="/images/blogo.jpg" width= 170px height = 50px alt="">
+        <img src="images/blogo.jpg" width= 170px height = 50px alt="">
     </a>
     {{-- <div class="sidebar-toggle-box">
         <div class="fa fa-bars"></div>
@@ -235,7 +237,7 @@
     <!--search & user info start-->
     <ul class="nav pull-right top-menu">
         <li>
-            <input type="text" class="form-control search" placeholder=" Search">
+            {{-- <input type="text" class="form-control search" placeholder=" Search"> --}}
         </li>
         <!-- user login dropdown start-->
         <li class="dropdown">
@@ -247,7 +249,8 @@
             <ul class="dropdown-menu extended logout">
                 <li><a href="#"><i class=" fa fa-suitcase"></i>Profile</a></li>
                 <li><a href="#"><i class="fa fa-cog"></i> Settings</a></li>
-                <li><a href="login.html"><i class="fa fa-key"></i> Log Out</a></li>
+                {{-- <li><a href="login.html"><i class="fa fa-key"></i> Log Out</a></li> --}}
+                <li><a href="{{url('logout')}}"><i class="fa fa-key"></i> Log Out</a></li>
             </ul>
         </li>
         <!-- user login dropdown end -->
@@ -324,10 +327,10 @@
                     <span>Form Components</span>
                 </a> --}}
                 {{-- <ul class="sub"> --}}
-                    <li><a href="/hosp_BloodBag">Blood Bag</a></li>
+                    <li class="active"><b href="/hosp_BloodBag">Blood Bag</a></li>
                     <li><a href="/hosp_Donors">Donor List</a></li>
                     <li><a href="/hosp_Benefit">Benefits</a></li>
-                    <li class="active"><b href="/hosp_Campaign">Campaign</a></li>
+                    <li><a href="/hosp_Campaign">Campaign</a></li>
                     {{-- <li><a href="file_upload.html">Muliple File Upload</a></li> --}}
                     
                     {{-- <li><a href="dropzone.html">Dropzone</a></li>
@@ -404,7 +407,7 @@
                 <div class="col-lg-12">
                     <section class="panel">
                         <header class="panel-heading">
-                            Campaign
+                            Blood Bag Detail
                             <span class="tools pull-right">
                                 <a class="fa fa-chevron-down" href="javascript:;"></a>
                                 <a class="fa fa-cog" href="javascript:;"></a>
@@ -412,12 +415,77 @@
                              </span>
                         </header>
                         <div class="panel-body">
-                            <form role="form" class="form-horizontal" action="/edit_camp/<?php echo $camp[0]->id; ?>" method="POST">
+                            <form role="form" class="form-horizontal" action="{{url('camp_register_complete_detail')}}" method="GET">
                                 {{ csrf_field() }}
                                 <div class="form-group">
-                                    <label class="col-lg-3 control-label">Campaign Name</label>
+                                    <label class="col-lg-3 control-label">Blood Bag ID</label>
                                     <div class="col-lg-6">
-                                        <input type="text" placeholder="" id="camp_name" name="camp_name" value = '<?php echo$camp[0]->camp_name?>' class="form-control"/>
+                                        <input type="text" placeholder="" id="bbag_id" name="bbag_id" class="form-control"/>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-lg-3 control-label">Donor ID</label>
+                                    <div class="col-lg-6">
+                                        <select type="text" placeholder="" id="donor_id" name="donor_id" class="form-control">
+                                            @foreach ($cdr as $cdrs)
+                                                <option value="{{ $cdrs->id }}">{{ $cdrs->donor_id }}</option>
+                                            @endforeach
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-lg-3 control-label">Donor Name</label>
+                                    <div class="col-lg-6">
+                                        <input type="text" placeholder="" id="donor_name" name="donor_name" class="form-control"/>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-lg-3 control-label">Donor Blood Group</label>
+                                    <div class="col-lg-6">
+                                        <input type="text" placeholder="" id="donor_bloodgroup" name="donor_bloodgroup" class="form-control"/>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-lg-3 control-label">Donor Blood Rh</label>
+                                    <div class="col-lg-6">
+                                        <select id="inputBloodR" name="bloodRh" class="form-control" placeholder="Blood Rh" autofocus>
+                                            <option value="Positive">Positive</option>
+                                            <option value="Negative">Negative</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-lg-3 control-label">Blood Volume (mL)</label>
+                                    <div class="col-lg-6">
+                                        <input type="text" placeholder="" id="bbag_vol" name="bbag_vol" class="form-control" value='450'/>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-lg-3 control-label">Blood Component</label>
+                                    <div class="col-lg-6">
+                                        <select placeholder="" id="bbag_comp" name="bbag_comp" class="form-control">
+                                            <option value="Whole Blood">Whole Blood</option>
+                                            <option value="Double Red Blood Cell">Double Red Blood Cell</option>
+                                            <option value="Platelet">Platelet</option>
+                                            <option value="Plasma">Plasma</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-lg-3 control-label">Received Date</label>
+                                    <div class="col-lg-6">
+                                        <input type="text" placeholder="" id="camp_date" name="camp_date" class="date form-control"/>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-lg-3 control-label">Expiry Date</label>
+                                    <div class="col-lg-6">
+                                        <input type="text" placeholder="" id="expiry_date" name="expiry_date" class="date form-control"/>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-lg-3 control-label">Campaign ID</label>
+                                    <div class="col-lg-6">
+                                        <input type="text" placeholder="" id="camp_id" name="camp_id" value = '-' class="form-control"/>
                                     </div>
                                 </div>
 
@@ -426,34 +494,14 @@
                                     $eachlines = file($filename, FILE_IGNORE_NEW_LINES);
                                 ?>
                                 <div class="form-group">
-                                    <label class="col-lg-3 control-label" for="hosp_name">Hospital</label>
+                                    <label class="col-lg-3 control-label" for="camp_place">Hospital Name</label>
                                     <div class="col-lg-6">
-                                        <select placeholder="Hospital Name" id="hosp_name" name="hosp_name" value = '<?php echo$camp[0]->hosp_name?>' class="form-control" >
+                                        <select id="camp_place" name="camp_place" class="form-control" placeholder="Hospital Name" autofocus>
                                         <option selected value="base">Please Select</option>
                                         <?php foreach($eachlines as $lines){ 
                                                 echo "<option value='".$lines."'>$lines</option>";
                                             }?>
                                         </select>
-                                    </div>
-                                </div>
-
-                                <div class="form-group">
-                                    <label class="col-lg-3 control-label">Place</label>
-                                    <div class="col-lg-6">
-                                        <input type="text" placeholder="" id="place" name="place" value = '<?php echo$camp[0]->place?>' class="form-control"/>
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label class="col-lg-3 control-label">Date</label>
-                                    <div class="col-lg-6">
-                                        <input type="text" placeholder="" id="date" name="date" value = '<?php echo$camp[0]->date?>' class="date form-control"/>
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label class="col-lg-3 control-label">Time</label>
-                                    <div class="col-lg-6">
-                                        <input type="text" placeholder="" id="tim" name="time" value = '<?php echo$camp[0]->time?>' class="form-control"/>
-                                        
                                     </div>
                                 </div>
 
@@ -472,6 +520,25 @@
                                 autoclose: true
                              });
                              $('.datepicker').style.top = "150px";
+                        </script>
+                        <script>
+                            $('#donor_id').change(function() {
+                                var id = $(this).val();
+                                var url = '{{ route("getDetails", ":id") }}';
+                                url = url.replace(':id', id);
+
+                                $.ajax({
+                                    url: url,
+                                    type: 'get',
+                                    dataType: 'json',
+                                    success: function(response) {
+                                        if (response != null) {
+                                            $('#donor_name').val(response.donor_name);
+                                            $('#donor_bloodgroup').val(response.donor_bloodgroup);
+                                        }
+                                    }
+                                });
+                            });
                         </script>
                     </section>
                 </div>

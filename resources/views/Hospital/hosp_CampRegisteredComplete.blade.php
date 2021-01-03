@@ -47,7 +47,7 @@
 <div class="brand">
 
     <a href="index-2.html" class="logo">
-        <img src="images/blogo.jpg" width= 170px height = 50px alt="">
+        <img src="/images/blogo.jpg" width= 170px height = 50px alt="">
     </a>
     {{-- <div class="sidebar-toggle-box">
         <div class="fa fa-bars"></div>
@@ -484,9 +484,9 @@
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label class="col-lg-3 control-label">Hospital Name</label>
+                                    <label class="col-lg-3 control-label">Hospital</label>
                                     <div class="col-lg-6">
-                                        <input type="text" readonly="readonly" placeholder="" id="camp_place" name="camp_place" value = '<?php echo$cdr[0]->camp_place?>' class="form-control"/>
+                                        <input type="text" readonly="readonly" placeholder="" id="hosp_name" name="hosp_name" value = '<?php echo$cdr[0]->hosp_name?>' class="form-control"/>
                                     </div>
                                 </div>
 

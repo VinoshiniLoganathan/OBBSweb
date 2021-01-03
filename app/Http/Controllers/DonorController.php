@@ -96,7 +96,7 @@ class DonorController extends Controller
       $camp = Campaign::find($id);
       $camp_id = $camp->id;
       $camp_name = $camp->camp_name;
-      $camp_place = $camp->place;
+      $hosp_name = $camp->hosp_name;
       $camp_date =  $camp->date;
       $camp_time =  $camp->time;
           
@@ -132,7 +132,7 @@ class DonorController extends Controller
       $cdr = new CampDonorRegister();
           $cdr->camp_id = $camp_id;
           $cdr->camp_name = $camp_name;
-          $cdr->camp_place = $camp_place;
+          $cdr->hosp_name = $hosp_name;
           $cdr->camp_date =  $camp_date;
           $cdr->camp_time =  $camp_time;
           $cdr->donor_id = $donor_user_id;

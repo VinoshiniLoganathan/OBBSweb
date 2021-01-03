@@ -10,7 +10,7 @@
     <meta name="author" content="ThemeBucket">
     <link rel="shortcut icon" href="images/favicon.html">
 
-    <title>Basic Table</title>
+    <title>Blood Bag</title>
 
     <!--Core CSS -->
     <link href="bs3/css/bootstrap.min.css" rel="stylesheet">
@@ -400,13 +400,23 @@
             <div class="col-sm-12">
                 <section class="panel">
                     <header class="panel-heading">
-                        General Table
+                        Blood Bags Table
                         <span class="tools pull-right">
                             <a href="javascript:;" class="fa fa-chevron-down"></a>
                             <a href="javascript:;" class="fa fa-cog"></a>
                             <a href="javascript:;" class="fa fa-times"></a>
                          </span>
                     </header>
+                    <div class="form">
+                        <form class="cmxform form-horizontal "  method="GET" action="{{url('hosp_BloodBagForm')}}">
+                            <div class="clearfix">
+                                {{-- <div class="col-lg-offset-3 col-lg-6"> --}}
+                                    <button class="btn btn-primary" type="submit">Add</button>
+                                    {{-- <button class="btn btn-default" type="button">Cancel</button> --}}
+                                {{-- </div> --}}
+                            </div>
+                        </form>
+                    </div>
                     <div class="panel-body">
                         <table class="table  table-hover general-table">
                             <thead>

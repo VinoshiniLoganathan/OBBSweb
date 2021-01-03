@@ -112,6 +112,12 @@ Route::get('/hosp_BloodBag', function () {
     return view('/Hospital/hosp_BloodBag');
 });
 
+Route::get('/hosp_BloodBagForm', function () {
+    return view('/Hospital/hosp_BloodBagForm');
+});
+
+Route::get('get/details/{id}', 'AuthController@getDetails')->name('getDetails');
+
 Route::get('/hosp_Campaign', function () {
     return view('/Hospital/hosp_Campaign');
 });

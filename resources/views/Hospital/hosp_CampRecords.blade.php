@@ -10,7 +10,7 @@
     <meta name="author" content="ThemeBucket">
     <link rel="shortcut icon" href="images/favicon.html">
 
-    <title>Editable Table</title>
+    <title>Campaign Records</title>
 
     <!--Core CSS -->
     <link rel="stylesheet" href="{{ URL::asset('bs3/css/bootstrap.min.css') }}">
@@ -41,7 +41,7 @@
 <div class="brand">
 
     <a href="index-2.html" class="logo">
-        <img src="images/blogo.jpg" width= 170px height = 50px alt="">
+        <img src="/images/blogo.jpg" width= 170px height = 50px alt="">
     </a>
     {{-- <div class="sidebar-toggle-box">
         <div class="fa fa-bars"></div>
@@ -443,6 +443,7 @@
                                 <tr>
                                     <th>ID</th>
                                     <th>Campaign Name</th>
+                                    <th>Hospital</th>
                                     <th>Place</th>
                                     <th>Date</th>
                                     <th>Time</th>
@@ -455,6 +456,7 @@
                                 <tr class="">
                                     <td>{{ $camp->id }}</td>
                                     <td>{{ $camp->camp_name }}</td>
+                                    <td>{{ $camp->hosp_name }}</td>
                                     <td>{{ $camp->place }}</td>
                                     <td>{{ $camp->date }}</td>
                                     <td>{{ $camp->time }}</td>                                    

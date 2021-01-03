@@ -432,6 +432,7 @@
                                 <tr>
                                     <th>ID</th>
                                     <th>Campaign Name</th>
+                                    <th>Hospital</th>
                                     <th>Place</th>
                                     <th>Date</th>
                                     <th>Time</th>
@@ -444,6 +445,7 @@
                                 <tr class="">
                                     <td>{{ $camp->id }}</td>
                                     <td>{{ $camp->camp_name }}</td>
+                                    <td>{{ $camp->hosp_name }}</td>
                                     <td>{{ $camp->place }}</td>
                                     <td>{{ $camp->date }}</td>
                                     <td>{{ $camp->time }}</td>                                    
