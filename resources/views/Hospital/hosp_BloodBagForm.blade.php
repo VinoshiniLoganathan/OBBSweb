@@ -415,7 +415,7 @@
                              </span>
                         </header>
                         <div class="panel-body">
-                            <form role="form" class="form-horizontal" action="{{url('camp_register_complete_detail')}}" method="GET">
+                            <form role="form" class="form-horizontal" action="/blood_bag_detail/<?php echo $cdr[0]->id; ?>" method="GET">
                                 {{ csrf_field() }}
                                 <div class="form-group">
                                     <label class="col-lg-3 control-label">Blood Bag ID</label>
@@ -426,31 +426,25 @@
                                 <div class="form-group">
                                     <label class="col-lg-3 control-label">Donor ID</label>
                                     <div class="col-lg-6">
-                                        <select type="text" placeholder="" id="donor_id" name="donor_id" class="form-control">
-                                            @foreach ($cdr as $cdrs)
-                                                <option value="{{ $cdrs->id }}">{{ $cdrs->donor_id }}</option>
-                                            @endforeach
+                                        <input type="text" placeholder="" id="donor_id" name="donor_id" value = '<?php echo$cdr[0]->id?>' class="form-control">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label class="col-lg-3 control-label">Donor Name</label>
                                     <div class="col-lg-6">
-                                        <input type="text" placeholder="" id="donor_name" name="donor_name" class="form-control"/>
+                                        <input type="text" placeholder="" id="donor_name" name="donor_name" value = '<?php echo$cdr[0]->name?>' class="form-control"/>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label class="col-lg-3 control-label">Donor Blood Group</label>
                                     <div class="col-lg-6">
-                                        <input type="text" placeholder="" id="donor_bloodgroup" name="donor_bloodgroup" class="form-control"/>
+                                        <input type="text" placeholder="" id="donor_bloodgroup" name="donor_bloodgroup" value = '<?php echo$cdr[0]->bloodgroup?>' class="form-control"/>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label class="col-lg-3 control-label">Donor Blood Rh</label>
                                     <div class="col-lg-6">
-                                        <select id="inputBloodR" name="bloodRh" class="form-control" placeholder="Blood Rh" autofocus>
-                                            <option value="Positive">Positive</option>
-                                            <option value="Negative">Negative</option>
-                                        </select>
+                                        <input type="text" placeholder="" id="donor_bloodRh" name="donor_bloodRh" value = '<?php echo$cdr[0]->bloodRh?>' class="form-control"/>
                                     </div>
                                 </div>
                                 <div class="form-group">
@@ -494,9 +488,9 @@
                                     $eachlines = file($filename, FILE_IGNORE_NEW_LINES);
                                 ?>
                                 <div class="form-group">
-                                    <label class="col-lg-3 control-label" for="camp_place">Hospital Name</label>
+                                    <label class="col-lg-3 control-label" for="hosp_name">Hospital Name</label>
                                     <div class="col-lg-6">
-                                        <select id="camp_place" name="camp_place" class="form-control" placeholder="Hospital Name" autofocus>
+                                        <select id="hosp_name" name="hosp_name" class="form-control" placeholder="Hospital Name" autofocus>
                                         <option selected value="base">Please Select</option>
                                         <?php foreach($eachlines as $lines){ 
                                                 echo "<option value='".$lines."'>$lines</option>";
@@ -520,25 +514,6 @@
                                 autoclose: true
                              });
                              $('.datepicker').style.top = "150px";
-                        </script>
-                        <script>
-                            $('#donor_id').change(function() {
-                                var id = $(this).val();
-                                var url = '{{ route("getDetails", ":id") }}';
-                                url = url.replace(':id', id);
-
-                                $.ajax({
-                                    url: url,
-                                    type: 'get',
-                                    dataType: 'json',
-                                    success: function(response) {
-                                        if (response != null) {
-                                            $('#donor_name').val(response.donor_name);
-                                            $('#donor_bloodgroup').val(response.donor_bloodgroup);
-                                        }
-                                    }
-                                });
-                            });
                         </script>
                     </section>
                 </div>

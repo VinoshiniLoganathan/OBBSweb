@@ -116,8 +116,6 @@ Route::get('/hosp_BloodBagForm', function () {
     return view('/Hospital/hosp_BloodBagForm');
 });
 
-Route::get('get/details/{id}', 'AuthController@getDetails')->name('getDetails');
-
 Route::get('/hosp_Campaign', function () {
     return view('/Hospital/hosp_Campaign');
 });
@@ -153,6 +151,11 @@ Route::get('/hosp_DonorsRecords', function () {
 Route::get('/hosp_Profile', function () {
     return view('/Hospital/hosp_Profile');
 });
+
+
+//code for blood bag
+Route::get('blood_bag','AuthController@blood_bag');
+Route::get('blood_bag_detail/{id}','AuthController@blood_bag_detail');
 
 //code for view campaign data
 //Route::get('index','AuthController@index');

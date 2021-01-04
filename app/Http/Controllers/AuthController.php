@@ -89,6 +89,45 @@ class AuthController extends Controller
         return Redirect('/home');
     }
 
+    //blood bag process
+    public function blood_bag(Request $request) {
+        $id = $request->input('id');
+
+        $cdr = DB::select('select * from donors where id = ?',[$id]);
+        //return view('camp_update',['camp'=>$camp]);
+        // return Response::json($test);
+        //return redirect()->route('camp_update', ['camp' => $camp]);
+        return response()
+            ->view('Hospital/hosp_BloodBagForm', ['cdr'=> $cdr]); 
+    }
+
+    public function blood_bag_detail(Request $request) {
+        
+        request()->validate([
+            'bbag_id' => 'required|unique:blood_bag',
+        ]);
+
+        $camp_id = $request->camp_id;
+
+        $bb = new BloodBag();
+        $bb->bbag_id = $request->bbag_id;
+        $bb->donor_id = $request->donor_id;
+        $bb->donor_name = $request->donor_name;
+        $bb->donor_bloodgroup = $request->donor_bloodgroup;
+        $bb->donor_bloodRh = $request->donor_bloodRh;
+        $bb->bbag_vol = $request->bbag_vol;
+        $bb->bbag_comp = $request->bbag_comp;
+        $bb->received_date = $request->camp_date;
+        $bb->expiry_date = $request->expiry_date;
+        $bb->camp_id = $camp_id;
+        $bb->hosp_name = $request->hosp_name;
+        $bb->save();
+
+        return Redirect::to("/hosp_BloodBag");       
+        
+    }
+
+
     //campaign process
     public function view_records()
     {
@@ -186,11 +225,6 @@ class AuthController extends Controller
         ]);
 
         $camp_id = $request->camp_id;
-        $camp_register = CampDonorRegister::select('*');
-
-        $camp_detail = $camp_register->where([
-            'camp_id' => $camp_id
-        ])->get();
 
         $bb = new BloodBag();
         $bb->bbag_id = $request->bbag_id;
@@ -293,14 +327,6 @@ class AuthController extends Controller
         $benefits->save();
 
         return Redirect::to("/hosp_Benefit");
-    }
-
-    public function getDetails($id = 0)
-    {
-        $data = CampDonorRegister::where('donor_id', $id)->first();
-        echo json_encode($data);
-
-        exit;
     }
    
 }

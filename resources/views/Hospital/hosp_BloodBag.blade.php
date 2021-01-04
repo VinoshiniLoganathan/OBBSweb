@@ -408,10 +408,14 @@
                          </span>
                     </header>
                     <div class="form">
-                        <form class="cmxform form-horizontal "  method="GET" action="{{url('hosp_BloodBagForm')}}">
-                            <div class="clearfix">
+                        <form class="cmxform form-horizontal "  method="GET" action="{{url ('blood_bag') }}">
+                            <div style="display:flex; flex-direction: row; justify-content: left; align-items: left" class="form-group">
                                 {{-- <div class="col-lg-offset-3 col-lg-6"> --}}
-                                    <button class="btn btn-primary" type="submit">Add</button>
+                                    <label class="col-lg-3 control-label"><b>Donor ID</b></label>
+                                    
+                                    <input style="margin:5px" class="col-lg-6" type="text" placeholder="" id="id" name="id" class="form-control">
+                                    <button style="margin:5px" class="btn btn-primary" type="submit">Add</button>
+                                    
                                     {{-- <button class="btn btn-default" type="button">Cancel</button> --}}
                                 {{-- </div> --}}
                             </div>
