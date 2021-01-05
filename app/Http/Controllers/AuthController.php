@@ -42,28 +42,6 @@ class AuthController extends Controller
       return Redirect::to("")->withSuccess('Oppes! You have entered invalid credentials');
        
     }
- 
-    public function postRegistration(Request $request)
-    {  
-            request()->validate([
-            'name' => 'required',
-            'email' => 'required|email|unique:users',
-            'password' => 'required|min:6',
-            ]);
-            
-            $data = $request->all();
-    
-            $check = $this->create($data);
-       
-        // $user = new User;
-        // $user->name = $request->name;
-        // $user->email = $request->email;
-        // $user->password = $request->password;
-        // $user->save();
-
-        return Redirect::to("/hosp_Campaign");
-        //return Redirect::to("dashboard")->withSuccess('Great! You have Successfully loggedin');
-    }
 
     public function dashboard()
     {
@@ -94,9 +72,7 @@ class AuthController extends Controller
         $id = $request->input('id');
 
         $cdr = DB::select('select * from donors where id = ?',[$id]);
-        //return view('camp_update',['camp'=>$camp]);
-        // return Response::json($test);
-        //return redirect()->route('camp_update', ['camp' => $camp]);
+
         return response()
             ->view('Hospital/hosp_BloodBagForm', ['cdr'=> $cdr]); 
     }
@@ -123,12 +99,63 @@ class AuthController extends Controller
         $bb->hosp_name = $request->hosp_name;
         $bb->save();
 
-        return Redirect::to("/hosp_BloodBag");       
+        return redirect()->intended('blood_count');       
         
+    }
+
+    public function blood_count()
+    {
+        $totals = DB::table('blood_bag')->where('expiry_date', '>', date('Y-m-d'))
+            ->selectRaw('count(*) as total')
+            ->selectRaw("count(case when donor_bloodGroup = 'A' && donor_bloodRh = 'Positive' then 1 end) as AP")
+            ->selectRaw("count(case when donor_bloodGroup = 'A' && donor_bloodRh = 'Negative' then 1 end) as ANe")
+            ->selectRaw("count(case when donor_bloodGroup = 'B' && donor_bloodRh = 'Positive' then 1 end) as BP")
+            ->selectRaw("count(case when donor_bloodGroup = 'B' && donor_bloodRh = 'Negative' then 1 end) as BNe")
+            ->selectRaw("count(case when donor_bloodGroup = 'AB' && donor_bloodRh = 'Positive' then 1 end) as ABP")
+            ->selectRaw("count(case when donor_bloodGroup = 'AB' && donor_bloodRh = 'Negative' then 1 end) as ABNe")
+            ->selectRaw("count(case when donor_bloodGroup = 'O' && donor_bloodRh = 'Positive' then 1 end) as OP")
+            ->selectRaw("count(case when donor_bloodGroup = 'O' && donor_bloodRh = 'Negative' then 1 end) as ONe")
+            ->first();
+
+            return view('Hospital/hosp_BloodBag',['totals'=>$totals]);
+    }
+
+    public function blood_count_detail(Request $request)
+    {
+        $bgrp = $request->input('bgrp');
+        $brh = $request->input('brh');
+        
+        $bbd = DB::select('select * from blood_bag where donor_bloodgroup = ?',[$bgrp]);
+        
+        return response()
+            ->view('Hospital/hosp_BloodBagRecords', ['bbd'=> $bbd]);
+
     }
 
 
     //campaign process
+    public function postRegistration(Request $request)
+    {  
+            request()->validate([
+            'name' => 'required',
+            'email' => 'required|email|unique:users',
+            'password' => 'required|min:6',
+            ]);
+            
+            $data = $request->all();
+    
+            $check = $this->create($data);
+       
+        // $user = new User;
+        // $user->name = $request->name;
+        // $user->email = $request->email;
+        // $user->password = $request->password;
+        // $user->save();
+
+        return Redirect::to("/hosp_Campaign");
+        //return Redirect::to("dashboard")->withSuccess('Great! You have Successfully loggedin');
+    }
+
     public function view_records()
     {
         $campaigns = DB::select('select * from campaigns');

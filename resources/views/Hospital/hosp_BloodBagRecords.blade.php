@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<!-- Mirrored from bucketadmin.lab.themebucket.net/basic_table.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 03 Apr 2020 13:23:54 GMT -->
+<!-- Mirrored from bucketadmin.lab.themebucket.net/editable_table.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 03 Apr 2020 13:23:58 GMT -->
 <head>
     <meta charset="utf-8">
 
@@ -10,16 +10,16 @@
     <meta name="author" content="ThemeBucket">
     <link rel="shortcut icon" href="images/favicon.html">
 
-    <title>Blood Bag</title>
+    <title>Blood Bag Records</title>
 
     <!--Core CSS -->
-    <link href="bs3/css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/bootstrap-reset.css" rel="stylesheet">
-    <link href="font-awesome/css/font-awesome.css" rel="stylesheet" />
+    <link rel="stylesheet" href="{{ URL::asset('bs3/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ URL::asset('css/bootstrap-reset.css') }}">
+    <link rel="stylesheet" href="{{ URL::asset('font-awesome/css/font-awesome.css') }}">
 
     <!-- Custom styles for this template -->
-    <link href="css/style.css" rel="stylesheet">
-    <link href="css/style-responsive.css" rel="stylesheet" />
+    <link href="{{ URL::asset('css/style.css') }}" rel="stylesheet">
+    <link href="{{ URL::asset('css/style-responsive.css') }}" rel="stylesheet" />
 
     <!-- Just for debugging purposes. Don't actually copy this line! -->
     <!--[if lt IE 9]>
@@ -41,7 +41,7 @@
 <div class="brand">
 
     <a href="index-2.html" class="logo">
-        <img src="images/blogo.jpg" width= 170px height = 50px alt="">
+        <img src="/images/blogo.jpg" width= 170px height = 50px alt="">
     </a>
     {{-- <div class="sidebar-toggle-box">
         <div class="fa fa-bars"></div>
@@ -261,13 +261,13 @@
     <div id="sidebar" class="nav-collapse">
         <!-- sidebar menu start-->            <div class="leftside-navigation">
             <ul class="sidebar-menu" id="nav-accordion">
-            <li>
-                {{-- <a href="index-2.html">
+            {{-- <li>
+                <a href="index-2.html">
                     <i class="fa fa-dashboard"></i>
                     <span>Dashboard</span>
-                </a> --}}
+                </a>
             </li>
-            {{-- <li class="sub-menu">
+            <li class="sub-menu">
                 <a href="javascript:;">
                     <i class="fa fa-laptop"></i>
                     <span>Layouts</span>
@@ -285,8 +285,7 @@
                 </a>
                 <ul class="sub">
                     <li><a href="general.html">General</a></li>
-                    <li><a href="buttons.html">Buttons</a></li>
-                    <li><a href="typography.html">Typography</a></li>
+                    <li><a href="buttons.html">Buttons</a></li><li><a href="typography.html">Typography</a></li>
                     <li><a href="widget.html">Widget</a></li>
                     <li><a href="slider.html">Slider</a></li>
                     <li><a href="tree_view.html">Tree View</a></li>
@@ -301,40 +300,40 @@
                     <i class="fa fa-bullhorn"></i>
                     <span>Fontawesome </span>
                 </a>
-            </li>
-            <li class="sub-menu">
+            </li> --}}
+            {{-- <li class="sub-menu">
                 <a href="javascript:;" class="active">
                     <i class="fa fa-th"></i>
                     <span>Data Tables</span>
                 </a>
-                <ul class="sub">
-                    <li class="active"><a href="basic_table.html">Basic Table</a></li>
-                    <li><a href="responsive_table.html">Responsive Table</a></li>
-                    <li><a href="dynamic_table.html">Dynamic Table</a></li>
-                    <li><a href="editable_table.html">Editable Table</a></li>
-                </ul>
-            </li>
-            <li class="sub-menu">
+                <ul class="sub"> --}}
+                    <li><a href="/hosp_BloodBag">Blood Bag</a></li>
+                    <li><a href="/hosp_Donors">Donor List</a></li>
+                    <li><a href="/hosp_Benefit">Benefits</a></li>
+                    <li class="active"><b href="/hosp_Campaign">Campaign</a></li>
+                {{-- </ul>
+            </li> --}}
+            {{-- <li class="sub-menu">
                 <a href="javascript:;">
                     <i class="fa fa-tasks"></i>
                     <span>Form Components</span>
                 </a>
-                <ul class="sub"> --}}
-                    <li class="active"><b href="/hosp_BloodBag">Blood Bag</a></li>
-                    <li><a href="/hosp_Donors">Donor List</a></li>
-                    <li><a href="/hosp_Benefit">Benefits</a></li>
-                    <li><a href="/hosp_Campaign">Campaign</a></li>
-                    {{-- <li><a href="file_upload.html">Muliple File Upload</a></li>
+                <ul class="sub">
+                    <li><a href="form_component.html">Form Elements</a></li>
+                    <li><a href="advanced_form.html">Advanced Components</a></li>
+                    <li><a href="form_wizard.html">Form Wizard</a></li>
+                    <li><a href="form_validation.html">Form Validation</a></li>
+                    <li><a href="file_upload.html">Muliple File Upload</a></li>
                     
                     <li><a href="dropzone.html">Dropzone</a></li>
-                    <li><a href="inline_editor.html">Inline Editor</a></li> --}}
+                    <li><a href="inline_editor.html">Inline Editor</a></li>
 
-                {{-- </ul>
+                </ul>
             </li>
             <li class="sub-menu">
                 <a href="javascript:;">
                     <i class="fa fa-envelope"></i>
-                    <span>Mail</span>
+                    <span>Mail </span>
                 </a>
                 <ul class="sub">
                     <li><a href="mail.html">Inbox</a></li>
@@ -379,8 +378,8 @@
                     <li><a href="gallery.html">Media Gallery</a></li><li><a href="404.html">404 Error</a></li>
                     <li><a href="500.html">500 Error</a></li>
                     <li><a href="registration.html">Registration</a></li>
-                </ul> --}}
-            </li>
+                </ul>
+            </li> --}}
             <li>
                 <a href="login.html">
                     <i class="fa fa-user"></i>
@@ -396,11 +395,12 @@
     <section id="main-content">
         <section class="wrapper">
         <!-- page start-->
-            <div class="row">
+
+        <div class="row">
             <div class="col-sm-12">
                 <section class="panel">
                     <header class="panel-heading">
-                        Blood Bags Table
+                        Blood Bag Detail Table
                         <span class="tools pull-right">
                             <a href="javascript:;" class="fa fa-chevron-down"></a>
                             <a href="javascript:;" class="fa fa-cog"></a>
@@ -408,309 +408,61 @@
                          </span>
                     </header>
                     <div class="panel-body">
-                        <table class="table  table-hover general-table">
-                            <thead>
-                            <tr>
-                                <th>Blood Group</th>
-                                <th>Blood Rh</th>
-                                <th>Bags Count</th>
-                                <th>Status</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                                {{-- @foreach ($totals as $total) --}}
-                            <tr>
-                                <td id="bgrp">A</td>
-                                <td id="brh">Positive</td>
-                                <td>{{ $totals->AP }}</td>
-                                @if($totals->AP > 0)
-                                    <td><span class="label label-success label-mini"><a href='{{url ('blood_count_detail')}}'>
-                                        Normal</a></span></td>
-                                @else
-                                    <td><span class="label label-danger label-mini">Low</span></td>
-                                @endif
-                            </tr>
-                            <tr>
-                                <td>A</td>
-                                <td>Negative</td>
-                                <td>{{ $totals->ANe }}</td>
-                                @if($totals->ANe > 0)
-                                    <td><span class="label label-success label-mini">Normal</span></td>
-                                @else
-                                    <td><span class="label label-danger label-mini">Low</span></td>
-                                @endif
-                            </tr>
-                            <tr>
-                                <td>B</td>
-                                <td>Positive</td>
-                                <td>{{ $totals->BP }}</td>
-                                @if($totals->BP > 0)
-                                    <td><span class="label label-success label-mini">Normal</span></td>
-                                @else
-                                    <td><span class="label label-danger label-mini">Low</span></td>
-                                @endif
-                            </tr>
-                            <tr>
-                                <td>B</td>
-                                <td>Negative</td>
-                                <td>{{ $totals->BNe }}</td>
-                                @if($totals->BNe > 0)
-                                    <td><span class="label label-success label-mini">Normal</span></td>
-                                @else
-                                    <td><span class="label label-danger label-mini">Low</span></td>
-                                @endif
-                            </tr>
-                            <tr>
-                                <td>AB</td>
-                                <td>Positive</td>
-                                <td>{{ $totals->ABP }}</td>
-                                @if($totals->ABP > 0)
-                                    <td><span class="label label-success label-mini">Normal</span></td>
-                                @else
-                                    <td><span class="label label-danger label-mini">Low</span></td>
-                                @endif
-                            </tr>
-                            <tr>
-                                <td>AB</td>
-                                <td>Negative</td>
-                                <td>{{ $totals->ABNe }}</td>
-                                @if($totals->ABNe > 0)
-                                    <td><span class="label label-success label-mini">Normal</span></td>
-                                @else
-                                    <td><span class="label label-danger label-mini">Low</span></td>
-                                @endif
-                            </tr>
-                            <tr>
-                                <td>O</td>
-                                <td>Positive</td>
-                                <td>{{ $totals->OP }}</td>
-                                @if($totals->OP > 0)
-                                    <td><span class="label label-success label-mini">Normal</span></td>
-                                @else
-                                    <td><span class="label label-danger label-mini">Low</span></td>
-                                @endif
-                            </tr>
-                            <tr id="bgrp">
-                                <td>O</td>
-                                <td>Negative</td>
-                                <td>{{ $totals->ONe }}</td>
-                                @if($totals->ONe > 0)
-                                    <td><span class="label label-success label-mini">Normal</span></td>
-                                @else
-                                    <td><span class="label label-danger label-mini">Low</span></td>
-                                @endif
-                            </tr>
-                            {{-- @endforeach --}}
-                            </tbody>
-                        </table>
+                        <div class="adv-table editable-table ">
+                            <div class="clearfix">
+                                {{-- <div class="btn-group">
+                                    <button id="editable-sample_new" class="btn btn-primary">
+                                        Add New <i class="fa fa-plus"></i>
+                                    </button>
+                                </div> --}}
+                                <div class="btn-group pull-right">
+                                    {{-- <button class="btn btn-default dropdown-toggle" data-toggle="dropdown">Tools <i class="fa fa-angle-down"></i>
+                                    </button> --}}
+                                    <br>
+                                    <ul class="dropdown-menu pull-right">
+                                        {{-- <li><a href="#">Print</a></li>
+                                        <li><a href="#">Save as PDF</a></li>
+                                        <li><a href="#">Export to Excel</a></li> --}}
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="space15"></div>
+                            <table class="table table-striped table-hover table-bordered" id="editable-sample">
+                                @include('flash::message')
+                                <thead>
+                                <tr>
+                                    <th>Blood Bag ID</th>
+                                    <th>Donor ID</th>
+                                    <th>Blood Group</th>
+                                    <th>Blood Rh</th>
+                                    <th>Volume</th>
+                                    <th>Blood Component</th>
+                                    <th>Received Date</th>
+                                    <th>Expired Date</th>
+                                    <th>Hospital</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach ($bbd as $bbds)
+                                <tr class="">
+                                    <td>{{ $bbds->bbag_id }}</td>
+                                    <td>{{ $bbds->donor_id }}</td>
+                                    <td>{{ $bbds->donor_bloodgroup }}</td>
+                                    <td>{{ $bbds->donor_bloodgroup }}</td>
+                                    <td>{{ $bbds->bbag_vol }}</td>
+                                    <td>{{ $bbds->bbag_comp }}</td>                                    
+                                    <td>{{ $bbds->received_date }}</td>
+                                    <td>{{ $bbds->expiry_date }}</td>
+                                    <td>{{ $bbds->hosp_name }}</td>
+                                </tr>
+                                @endforeach
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                 </section>
             </div>
         </div>
-        <div class="form">
-            <form class="cmxform form-horizontal "  method="GET" action="{{url ('blood_bag') }}">
-                <div style="display:flex; flex-direction: row; justify-content: left; align-items: left" class="form-group">
-                    {{-- <div class="col-lg-offset-3 col-lg-6"> --}}
-                        <label class="col-lg-3 control-label"><b>Donor ID</b></label>
-                        
-                        <input style="margin:5px" class="col-lg-6" type="text" placeholder="" id="id" name="id" class="form-control">
-                        <button style="margin:5px" class="btn btn-primary" type="submit">Add</button>
-                        
-                        {{-- <button class="btn btn-default" type="button">Cancel</button> --}}
-                    {{-- </div> --}}
-                </div>
-            </form>
-        </div>
-            <div class="row">
-                <div class="col-sm-6">
-                    <section class="panel">
-                        <header class="panel-heading">
-                            Basic Table
-                            <span class="tools pull-right">
-                                <a href="javascript:;" class="fa fa-chevron-down"></a>
-                                <a href="javascript:;" class="fa fa-cog"></a>
-                                <a href="javascript:;" class="fa fa-times"></a>
-                             </span>
-                        </header>
-                        <div class="panel-body">
-                            <table class="table">
-                                <thead>
-                                <tr>
-                                    <th>#</th>
-                                    <th>First Name</th>
-                                    <th>Last Name</th>
-                                    <th>Username</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                <tr>
-                                    <td>1</td>
-                                    <td>Mark</td>
-                                    <td>Otto</td>
-                                    <td>@mdo</td>
-                                </tr>
-                                <tr>
-                                    <td>2</td>
-                                    <td>Jacob</td>
-                                    <td>Thornton</td>
-                                    <td>@fat</td>
-                                </tr>
-                                <tr>
-                                    <td>3</td>
-                                    <td>Larry</td>
-                                    <td>the Bird</td>
-                                    <td>@twitter</td>
-                                </tr>
-                                </tbody>
-                            </table>
-                        </div>
-
-                    </section>
-                </div>
-                <div class="col-sm-6">
-                    <section class="panel">
-                        <header class="panel-heading">
-                            Striped Table
-                            <span class="tools pull-right">
-                                <a href="javascript:;" class="fa fa-chevron-down"></a>
-                                <a href="javascript:;" class="fa fa-cog"></a>
-                                <a href="javascript:;" class="fa fa-times"></a>
-                             </span>
-                        </header>
-                        <div class="panel-body">
-                            <table class="table table-striped">
-                                <thead>
-                                <tr>
-                                    <th>#</th>
-                                    <th>First Name</th>
-                                    <th>Last Name</th>
-                                    <th>Username</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                <tr>
-                                    <td>1</td>
-                                    <td>Mark</td>
-                                    <td>Otto</td>
-                                    <td>@mdo</td>
-                                </tr>
-                                <tr>
-                                    <td>2</td>
-                                    <td>Jacob</td>
-                                    <td>Thornton</td>
-                                    <td>@fat</td>
-                                </tr>
-                                <tr>
-                                    <td>3</td>
-                                    <td>Larry</td>
-                                    <td>the Bird</td>
-                                    <td>@twitter</td>
-                                </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </section>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-6">
-                    <section class="panel">
-                        <header class="panel-heading no-border">
-                            Border Table
-                            <span class="tools pull-right">
-                                <a href="javascript:;" class="fa fa-chevron-down"></a>
-                                <a href="javascript:;" class="fa fa-cog"></a>
-                                <a href="javascript:;" class="fa fa-times"></a>
-                             </span>
-                        </header>
-                        <div class="panel-body">
-                            <table class="table table-bordered">
-                                <thead>
-                                <tr>
-                                    <th>#</th>
-                                    <th>First Name</th>
-                                    <th>Last Name</th>
-                                    <th>Username</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                <tr>
-                                    <td rowspan="2">1</td>
-                                    <td>Mark</td>
-                                    <td>Otto</td>
-                                    <td>@mdo</td>
-                                </tr>
-                                <tr>
-                                    <td>Mark</td>
-                                    <td>Otto</td>
-                                    <td>@TwBootstrap</td>
-                                </tr>
-                                <tr>
-                                    <td>2</td>
-                                    <td>Jacob</td>
-                                    <td>Thornton</td>
-                                    <td>@fat</td>
-                                </tr>
-                                <tr>
-                                    <td>3</td>
-                                    <td colspan="2">Larry the Bird</td>
-                                    <td>@twitter</td>
-                                </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </section>
-                </div>
-                <div class="col-sm-6">
-                    <section class="panel">
-                        <header class="panel-heading">
-                            Hover Table
-                            <span class="tools pull-right">
-                                <a href="javascript:;" class="fa fa-chevron-down"></a>
-                                <a href="javascript:;" class="fa fa-cog"></a>
-                                <a href="javascript:;" class="fa fa-times"></a>
-                             </span>
-                        </header>
-                        <div class="panel-body">
-                            <table class="table table-hover">
-                                <thead>
-                                <tr>
-                                    <th>#</th>
-                                    <th>First Name</th>
-                                    <th>Last Name</th>
-                                    <th>Username</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                <tr>
-                                    <td>1</td>
-                                    <td>Mark</td>
-                                    <td>Otto</td>
-                                    <td>@mdo</td>
-                                </tr>
-                                <tr>
-                                    <td>2</td>
-                                    <td>Jacob</td>
-                                    <td>Thornton</td>
-                                    <td>@fat</td>
-                                </tr>
-                                <tr>
-                                    <td>3</td>
-                                    <td colspan="2">Larry the Bird</td>
-                                    <td>@twitter</td>
-                                </tr>
-                                <tr>
-                                    <td>3</td>
-                                    <td>Jane Doe</td>
-                                    <td>Mosa</td>
-                                    <td>@twitter</td>
-                                </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </section>
-                </div>
-            </div>
         <!-- page end-->
         </section>
     </section>
@@ -972,7 +724,9 @@
 <!-- Placed js at the end of the document so the pages load faster -->
 
 <!--Core js-->
-<script src="js/jquery.js"></script>
+<script src="js/jquery-1.10.2.min.js"></script>
+<script src="js/jquery-migrate.js"></script>
+
 <script src="bs3/js/bootstrap.min.js"></script>
 <script class="include" type="text/javascript" src="js/jquery.dcjqaccordion.2.7.js"></script>
 <script src="js/jquery.scrollTo.min.js"></script>
@@ -988,11 +742,23 @@
 <script src="js/flot-chart/jquery.flot.resize.js"></script>
 <script src="js/flot-chart/jquery.flot.pie.resize.js"></script>
 
+<script type="text/javascript" src="js/data-tables/jquery.dataTables.js"></script>
+<script type="text/javascript" src="js/data-tables/DT_bootstrap.js"></script>
 
 <!--common script init for all pages-->
 <script src="js/scripts.js"></script>
 
+<!--script for this page only-->
+<script src="js/table-editable.js"></script>
+
+<!-- END JAVASCRIPTS -->
+<script>
+    jQuery(document).ready(function() {
+        EditableTable.init();
+    });
+</script>
+
 </body>
 
-<!-- Mirrored from bucketadmin.lab.themebucket.net/basic_table.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 03 Apr 2020 13:23:54 GMT -->
+<!-- Mirrored from bucketadmin.lab.themebucket.net/editable_table.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 03 Apr 2020 13:23:59 GMT -->
 </html>

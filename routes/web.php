@@ -154,6 +154,8 @@ Route::get('/hosp_Profile', function () {
 
 
 //code for blood bag
+Route::get('blood_count','AuthController@blood_count');
+Route::get('blood_count_detail','AuthController@blood_count_detail');
 Route::get('blood_bag','AuthController@blood_bag');
 Route::get('blood_bag_detail/{id}','AuthController@blood_bag_detail');
 
