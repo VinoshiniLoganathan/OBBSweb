@@ -440,6 +440,7 @@
                                     <th>Received Date</th>
                                     <th>Expired Date</th>
                                     <th>Hospital</th>
+                                    <th>Status</th>
                                 </tr>
                                 </thead>
                                 <tbody>
@@ -454,6 +455,7 @@
                                     <td>{{ $bbds->received_date }}</td>
                                     <td>{{ $bbds->expiry_date }}</td>
                                     <td>{{ $bbds->hosp_name }}</td>
+                                    <td><a href='blood_bag_status/{{ $bbds->bbag_id }}'>Active</a></td>
                                 </tr>
                                 @endforeach
                                 </tbody>

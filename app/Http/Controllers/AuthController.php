@@ -105,7 +105,9 @@ class AuthController extends Controller
 
     public function blood_count()
     {
-        $totals = DB::table('blood_bag')->where('expiry_date', '>', date('Y-m-d'))
+        $totals = DB::table('blood_bag')
+            ->where('bbag_status', '0')
+            ->where('expiry_date', '>', date('Y-m-d'))
             ->selectRaw('count(*) as total')
             ->selectRaw("count(case when donor_bloodGroup = 'A' && donor_bloodRh = 'Positive' then 1 end) as AP")
             ->selectRaw("count(case when donor_bloodGroup = 'A' && donor_bloodRh = 'Negative' then 1 end) as ANe")
@@ -125,10 +127,25 @@ class AuthController extends Controller
         $bgrp = $request->input('bgrp');
         $brh = $request->input('brh');
         
-        $bbd = DB::select('select * from blood_bag where donor_bloodgroup = ?',[$bgrp]);
+        $bbd = DB::table('blood_bag')
+            ->select('*')
+            ->where('bbag_status', '0')
+            ->where('expiry_date', '>', date('Y-m-d'))
+            ->where('donor_bloodgroup', $bgrp)
+            ->where('donor_bloodRh', $brh)->get();
         
         return response()
             ->view('Hospital/hosp_BloodBagRecords', ['bbd'=> $bbd]);
+
+    }
+
+    public function blood_bag_status($id)
+    {
+        DB::table('blood_bag')
+            ->where('bbag_id', $id)
+            ->update(['bbag_status' => 1]);
+
+        return redirect()->intended('blood_count');
 
     }
 

@@ -418,89 +418,102 @@
                             </tr>
                             </thead>
                             <tbody>
-                                {{-- @foreach ($totals as $total) --}}
                             <tr>
-                                <td id="bgrp">A</td>
-                                <td id="brh">Positive</td>
+                                <form class="cmxform form-horizontal "  method="GET" action="{{url ('blood_count_detail') }}">
+                                <td><input type=text readonly='readonly' name='bgrp' value='A' class="form-control"/></td>
+                                <td><input type=text readonly='readonly' name='brh' value='Positive' class="form-control"/></td>
                                 <td>{{ $totals->AP }}</td>
                                 @if($totals->AP > 0)
-                                    <td><span class="label label-success label-mini"><a href='{{url ('blood_count_detail')}}'>
-                                        Normal</a></span></td>
+                                    <td><button class="label label-success label-mini" type="submit">Normal</button></td>
                                 @else
-                                    <td><span class="label label-danger label-mini">Low</span></td>
+                                    <td><button class="label label-danger label-mini" type="submit">Low</button></td>
                                 @endif
+                                </form>
                             </tr>
                             <tr>
-                                <td>A</td>
-                                <td>Negative</td>
+                                <form class="cmxform form-horizontal "  method="GET" action="{{url ('blood_count_detail') }}">
+                                <td><input id='cus' type=text readonly='readonly' name='bgrp' value='A' class="form-control"/></td>
+                                <td><input id='cus' type=text readonly='readonly' name='brh' value='Negative' class="form-control"/></td>
                                 <td>{{ $totals->ANe }}</td>
                                 @if($totals->ANe > 0)
-                                    <td><span class="label label-success label-mini">Normal</span></td>
+                                    <td><button class="label label-success label-mini" type="submit">Normal</button></td>
                                 @else
-                                    <td><span class="label label-danger label-mini">Low</span></td>
+                                    <td><button class="label label-danger label-mini" type="submit">Low</button></td>
                                 @endif
+                                </form>
                             </tr>
                             <tr>
-                                <td>B</td>
-                                <td>Positive</td>
+                                <form class="cmxform form-horizontal "  method="GET" action="{{url ('blood_count_detail') }}">
+                                <td><input id='cus' type=text readonly='readonly' name='bgrp' value='B' class="form-control"/></td>
+                                <td><input id='cus' type=text readonly='readonly' name='brh' value='Positive' class="form-control"/></td>
                                 <td>{{ $totals->BP }}</td>
                                 @if($totals->BP > 0)
-                                    <td><span class="label label-success label-mini">Normal</span></td>
+                                    <td><button class="label label-success label-mini" type="submit">Normal</button></td>
                                 @else
-                                    <td><span class="label label-danger label-mini">Low</span></td>
+                                    <td><button class="label label-danger label-mini" type="submit">Low</button></td>
                                 @endif
+                                </form>
                             </tr>
                             <tr>
-                                <td>B</td>
-                                <td>Negative</td>
+                                <form class="cmxform form-horizontal "  method="GET" action="{{url ('blood_count_detail') }}">
+                                <td><input id='cus' type=text readonly='readonly' name='bgrp' value='B' class="form-control"/></td>
+                                <td><input id='cus' type=text readonly='readonly' name='brh' value='Negative' class="form-control"/></td>
                                 <td>{{ $totals->BNe }}</td>
                                 @if($totals->BNe > 0)
-                                    <td><span class="label label-success label-mini">Normal</span></td>
+                                    <td><button class="label label-success label-mini" type="submit">Normal</button></td>
                                 @else
-                                    <td><span class="label label-danger label-mini">Low</span></td>
+                                    <td><button class="label label-danger label-mini" type="submit">Low</button></td>
                                 @endif
+                                </form>
                             </tr>
                             <tr>
-                                <td>AB</td>
-                                <td>Positive</td>
+                                <form class="cmxform form-horizontal "  method="GET" action="{{url ('blood_count_detail') }}">
+                                <td><input id='cus' type=text readonly='readonly' name='bgrp' value='AB' class="form-control"/></td>
+                                <td><input id='cus' type=text readonly='readonly' name='brh' value='Positive' class="form-control"/></td>
                                 <td>{{ $totals->ABP }}</td>
                                 @if($totals->ABP > 0)
-                                    <td><span class="label label-success label-mini">Normal</span></td>
+                                    <td><button class="label label-success label-mini" type="submit">Normal</button></td>
                                 @else
-                                    <td><span class="label label-danger label-mini">Low</span></td>
+                                    <td><button class="label label-danger label-mini" type="submit">Low</button></td>
                                 @endif
+                                </form>
                             </tr>
                             <tr>
-                                <td>AB</td>
-                                <td>Negative</td>
+                                <form class="cmxform form-horizontal "  method="GET" action="{{url ('blood_count_detail') }}">
+                                <td><input id='cus' type=text readonly='readonly' name='bgrp' value='AB' class="form-control"/></td>
+                                <td><input id='cus' type=text readonly='readonly' name='brh' value='Negative' class="form-control"/></td>
                                 <td>{{ $totals->ABNe }}</td>
                                 @if($totals->ABNe > 0)
-                                    <td><span class="label label-success label-mini">Normal</span></td>
+                                    <td><button class="label label-success label-mini" type="submit">Normal</button></td>
                                 @else
-                                    <td><span class="label label-danger label-mini">Low</span></td>
+                                    <td><button class="label label-danger label-mini" type="submit">Low</button></td>
                                 @endif
+                                </form>
                             </tr>
                             <tr>
-                                <td>O</td>
-                                <td>Positive</td>
+                                <form class="cmxform form-horizontal "  method="GET" action="{{url ('blood_count_detail') }}">
+                                <td><input id='cus' type=text readonly='readonly' name='bgrp' value='O' class="form-control"/></td>
+                                <td><input id='cus' type=text readonly='readonly' name='brh' value='Positive' class="form-control"/></td>
                                 <td>{{ $totals->OP }}</td>
                                 @if($totals->OP > 0)
-                                    <td><span class="label label-success label-mini">Normal</span></td>
+                                    <td><button class="label label-success label-mini" type="submit">Normal</button></td>
                                 @else
-                                    <td><span class="label label-danger label-mini">Low</span></td>
+                                    <td><button class="label label-danger label-mini" type="submit">Low</button></td>
                                 @endif
+                                </form>
                             </tr>
-                            <tr id="bgrp">
-                                <td>O</td>
-                                <td>Negative</td>
+                            <tr>
+                                <form class="cmxform form-horizontal "  method="GET" action="{{url ('blood_count_detail') }}">
+                                <td><input id='cus' type=text readonly='readonly' name='bgrp' value='O' class="form-control"/></td>
+                                <td><input id='cus' type=text readonly='readonly' name='brh' value='Negative' class="form-control"/></td>
                                 <td>{{ $totals->ONe }}</td>
                                 @if($totals->ONe > 0)
-                                    <td><span class="label label-success label-mini">Normal</span></td>
+                                    <td><button class="label label-success label-mini" type="submit">Normal</button></td>
                                 @else
-                                    <td><span class="label label-danger label-mini">Low</span></td>
+                                    <td><button class="label label-danger label-mini" type="submit">Low</button></td>
                                 @endif
+                                </form>
                             </tr>
-                            {{-- @endforeach --}}
                             </tbody>
                         </table>
                     </div>
@@ -511,7 +524,7 @@
             <form class="cmxform form-horizontal "  method="GET" action="{{url ('blood_bag') }}">
                 <div style="display:flex; flex-direction: row; justify-content: left; align-items: left" class="form-group">
                     {{-- <div class="col-lg-offset-3 col-lg-6"> --}}
-                        <label class="col-lg-3 control-label"><b>Donor ID</b></label>
+                        <label class="col-lg-3 control-label"><b>Blood Bag - Donor ID</b></label>
                         
                         <input style="margin:5px" class="col-lg-6" type="text" placeholder="" id="id" name="id" class="form-control">
                         <button style="margin:5px" class="btn btn-primary" type="submit">Add</button>
@@ -524,7 +537,7 @@
             <div class="row">
                 <div class="col-sm-6">
                     <section class="panel">
-                        <header class="panel-heading">
+                        {{-- <header class="panel-heading">
                             Basic Table
                             <span class="tools pull-right">
                                 <a href="javascript:;" class="fa fa-chevron-down"></a>
@@ -563,13 +576,13 @@
                                 </tr>
                                 </tbody>
                             </table>
-                        </div>
+                        </div> --}}
 
                     </section>
                 </div>
                 <div class="col-sm-6">
                     <section class="panel">
-                        <header class="panel-heading">
+                        {{-- <header class="panel-heading">
                             Striped Table
                             <span class="tools pull-right">
                                 <a href="javascript:;" class="fa fa-chevron-down"></a>
@@ -608,14 +621,14 @@
                                 </tr>
                                 </tbody>
                             </table>
-                        </div>
+                        </div> --}}
                     </section>
                 </div>
             </div>
             <div class="row">
                 <div class="col-sm-6">
                     <section class="panel">
-                        <header class="panel-heading no-border">
+                        {{-- <header class="panel-heading no-border">
                             Border Table
                             <span class="tools pull-right">
                                 <a href="javascript:;" class="fa fa-chevron-down"></a>
@@ -658,12 +671,12 @@
                                 </tr>
                                 </tbody>
                             </table>
-                        </div>
+                        </div> --}}
                     </section>
                 </div>
                 <div class="col-sm-6">
                     <section class="panel">
-                        <header class="panel-heading">
+                        {{-- <header class="panel-heading">
                             Hover Table
                             <span class="tools pull-right">
                                 <a href="javascript:;" class="fa fa-chevron-down"></a>
@@ -707,7 +720,7 @@
                                 </tr>
                                 </tbody>
                             </table>
-                        </div>
+                        </div> --}}
                     </section>
                 </div>
             </div>
