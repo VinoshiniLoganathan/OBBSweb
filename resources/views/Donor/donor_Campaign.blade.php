@@ -382,7 +382,7 @@
             <li>
                 <a href="{{url('donor_Profile')}}">
                     <i class="fa fa-user"></i>
-                    <span>Login Page</span>
+                    <span>Profile</span>
                 </a>
             </li>
         </ul></div>        

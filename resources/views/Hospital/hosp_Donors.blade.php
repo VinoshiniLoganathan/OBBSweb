@@ -230,17 +230,17 @@
 <div class="top-nav clearfix">
     <!--search & user info start-->
     <ul class="nav pull-right top-menu">
-        <li>
+        <li><a href="{{url('logout')}}"><i class="fa fa-key"></i> Log Out</a></li>
+        {{-- <li>
             <input type="text" class="form-control search" placeholder=" Search">
         </li>
         <!-- user login dropdown start-->
-        <li><a href="{{url('logout')}}"><i class="fa fa-key"></i> Log Out</a></li>
         <li class="dropdown">
-            {{-- <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+            <a data-toggle="dropdown" class="dropdown-toggle" href="#">
                 <img alt="" src="images/avatar1_small.jpg">
                 <span class="username">John Doe</span>
                 <b class="caret"></b>
-            </a> --}}
+            </a>
             <ul class="dropdown-menu extended logout">
                 <li><a href="#"><i class=" fa fa-suitcase"></i>Profile</a></li>
                 <li><a href="#"><i class="fa fa-cog"></i> Settings</a></li>
@@ -252,7 +252,7 @@
             <div class="toggle-right-box">
                 <div class="fa fa-bars"></div>
             </div>
-        </li>
+        </li> --}}
     </ul>
     <!--search & user info end-->
 </div>
@@ -321,7 +321,7 @@
                     <span>Form Components</span>
                 </a> --}}
                 {{-- <ul class="sub"> --}}
-                    <li><a href="/hosp_BloodBag">Blood Bag</a></li>
+                    <li><a href="blood_count">Blood Bag</a></li>
                     <li class="active"><b href="/hosp_Donors">Donor List</a></li>
                     <li><a href="/hosp_Benefit">Benefits</a></li>
                     <li><a href="/hosp_Campaign">Campaign</a></li>
@@ -401,12 +401,12 @@
                 <div class="col-lg-12">
                     <section class="panel">
                         <header class="panel-heading">
-                            Donor List
-                            <span class="tools pull-right">
+                            Donors
+                            {{-- <span class="tools pull-right">
                                 <a class="fa fa-chevron-down" href="javascript:;"></a>
                                 <a class="fa fa-cog" href="javascript:;"></a>
                                 <a class="fa fa-times" href="javascript:;"></a>
-                             </span>
+                             </span> --}}
                         </header>
                         <div class="panel-body">
                             <form role="form" class="form-horizontal" action="{{url('donors-registration')}}" method="POST">

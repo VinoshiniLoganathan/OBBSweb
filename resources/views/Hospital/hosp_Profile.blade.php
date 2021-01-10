@@ -226,11 +226,12 @@
         <!-- notification dropdown end -->
     </ul>
     <!--  notification end -->
-</div>
+</div> --}}
 <div class="top-nav clearfix">
     <!--search & user info start-->
     <ul class="nav pull-right top-menu">
-        <li>
+        <li><a href="{{url('logout')}}"><i class="fa fa-key"></i> Log Out</a></li>
+        {{-- <li>
             <input type="text" class="form-control search" placeholder=" Search">
         </li>
         <!-- user login dropdown start-->
@@ -251,10 +252,10 @@
             <div class="toggle-right-box">
                 <div class="fa fa-bars"></div>
             </div>
-        </li>
+        </li> --}}
     </ul>
     <!--search & user info end-->
-</div> --}}
+</div>
 </header>
 <!--header end-->
 <aside>
@@ -262,13 +263,13 @@
         <!-- sidebar menu start-->
         <div class="leftside-navigation">
             <ul class="sidebar-menu" id="nav-accordion">
-            {{-- <li>
-                <a href="index-2.html">
+            <li>
+                {{-- <a href="index-2.html">
                     <i class="fa fa-dashboard"></i>
                     <span>Dashboard</span>
-                </a>
+                </a> --}}
             </li>
-            <li class="sub-menu">
+            {{-- <li class="sub-menu">
                 <a href="javascript:;">
                     <i class="fa fa-laptop"></i>
                     <span>Layouts</span>
@@ -286,8 +287,7 @@
                 </a>
                 <ul class="sub">
                     <li><a href="general.html">General</a></li>
-                    <li><a href="buttons.html">Buttons</a></li>
-<li><a href="typography.html">Typography</a></li>
+                    <li><a href="buttons.html">Buttons</a></li><li><a href="typography.html">Typography</a></li>
                     <li><a href="widget.html">Widget</a></li>
                     <li><a href="slider.html">Slider</a></li>
                     <li><a href="tree_view.html">Tree View</a></li>
@@ -309,7 +309,7 @@
                     <span>Data Tables</span>
                 </a>
                 <ul class="sub"> --}}
-                    <li><a href="/hosp_BloodBag">Blood Bag</a></li>
+                    <li><a href="blood_count">Blood Bag</a></li>
                     <li><a href="/hosp_Donors">Donor List</a></li>
                     <li><a href="/hosp_Benefit">Benefits</a></li>
                     <li><a href="/hosp_Campaign">Campaign</a></li>
@@ -376,19 +376,18 @@
                     <li class="active"><a href="profile.html">Profile</a></li>
                     <li><a href="invoice.html">Invoice</a></li>
                     <li><a href="pricing_table.html">Pricing Table</a></li>
-                    <li><a href="timeline.html">Timeline</a></li>                    
-<li><a href="gallery.html">Media Gallery</a></li><li><a href="404.html">404 Error</a></li>
+                    <li><a href="timeline.html">Timeline</a></li>                    <li><a href="gallery.html">Media Gallery</a></li><li><a href="404.html">404 Error</a></li>
                     <li><a href="500.html">500 Error</a></li>
                     <li><a href="registration.html">Registration</a></li>
                 </ul>
-            </li>
-            <li>
-                <a href="login.html">
+            </li> --}}
+            <li class='active'>
+                <b href="/hosp_Profile">
                     <i class="fa fa-user"></i>
-                    <span>Login Page</span>
+                    <span>Profile</span>
                 </a>
             </li>
-        </ul></div>         --}}
+        </ul></div>        
 <!-- sidebar menu end-->
     </div>
 </aside>

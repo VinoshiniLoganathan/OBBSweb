@@ -230,16 +230,17 @@
 <div class="top-nav clearfix">
     <!--search & user info start-->
     <ul class="nav pull-right top-menu">
-        <li>
+        <li><a href="{{url('logout')}}"><i class="fa fa-key"></i> Log Out</a></li>
+        {{-- <li>
             <input type="text" class="form-control search" placeholder=" Search">
         </li>
         <!-- user login dropdown start-->
         <li class="dropdown">
-            {{-- <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+            <a data-toggle="dropdown" class="dropdown-toggle" href="#">
                 <img alt="" src="images/avatar1_small.jpg">
                 <span class="username">John Doe</span>
                 <b class="caret"></b>
-            </a> --}}
+            </a>
             <ul class="dropdown-menu extended logout">
                 <li><a href="#"><i class=" fa fa-suitcase"></i>Profile</a></li>
                 <li><a href="#"><i class="fa fa-cog"></i> Settings</a></li>
@@ -251,7 +252,7 @@
             <div class="toggle-right-box">
                 <div class="fa fa-bars"></div>
             </div>
-        </li>
+        </li> --}}
     </ul>
     <!--search & user info end-->
 </div>
@@ -261,13 +262,13 @@
     <div id="sidebar" class="nav-collapse">
         <!-- sidebar menu start-->            <div class="leftside-navigation">
             <ul class="sidebar-menu" id="nav-accordion">
-            {{-- <li>
-                <a href="index-2.html">
+            <li>
+                {{-- <a href="index-2.html">
                     <i class="fa fa-dashboard"></i>
                     <span>Dashboard</span>
-                </a>
+                </a> --}}
             </li>
-            <li class="sub-menu">
+            {{-- <li class="sub-menu">
                 <a href="javascript:;">
                     <i class="fa fa-laptop"></i>
                     <span>Layouts</span>
@@ -308,7 +309,7 @@
                     <span>Data Tables</span>
                 </a>
                 <ul class="sub"> --}}
-                    <li><a href="/hosp_BloodBag">Blood Bag</a></li>
+                    <li><a href="blood_count">Blood Bag</a></li>
                     <li><a href="/hosp_Donors">Donor List</a></li>
                     <li><a href="/hosp_Benefit">Benefits</a></li>
                     <li class="active"><b href="/hosp_Campaign">Campaign</a></li>
@@ -382,9 +383,9 @@
                 </ul>
             </li> --}}
             <li>
-                <a href="login.html">
+                <a href="/hosp_Profile">
                     <i class="fa fa-user"></i>
-                    <span>Login Page</span>
+                    <span>Profile</span>
                 </a>
             </li>
         </ul></div>        
@@ -402,11 +403,11 @@
                 <section class="panel">
                     <header class="panel-heading">
                         Campaign
-                        <span class="tools pull-right">
+                        {{-- <span class="tools pull-right">
                             <a href="javascript:;" class="fa fa-chevron-down"></a>
                             <a href="javascript:;" class="fa fa-cog"></a>
                             <a href="javascript:;" class="fa fa-times"></a>
-                         </span>
+                         </span> --}}
                     </header>
                     <div class="panel-body">
                         <div class="adv-table editable-table ">

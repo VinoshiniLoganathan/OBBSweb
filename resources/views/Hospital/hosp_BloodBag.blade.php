@@ -230,12 +230,12 @@
 <div class="top-nav clearfix">
     <!--search & user info start-->
     <ul class="nav pull-right top-menu">
+        <li><a href="{{url('logout')}}"><i class="fa fa-key"></i> Log Out</a></li>
         {{-- <li>
             <input type="text" class="form-control search" placeholder=" Search">
-        </li> --}}
+        </li>
         <!-- user login dropdown start-->
-        <li><a href="{{url('logout')}}"><i class="fa fa-key"></i> Log Out</a></li>
-        {{-- <li class="dropdown">
+        <li class="dropdown">
             <a data-toggle="dropdown" class="dropdown-toggle" href="#">
                 <img alt="" src="images/avatar1_small.jpg">
                 <span class="username">John Doe</span>
@@ -322,7 +322,7 @@
                     <span>Form Components</span>
                 </a>
                 <ul class="sub"> --}}
-                    <li class="active"><b href="/hosp_BloodBag">Blood Bag</a></li>
+                    <li class="active"><b href="blood_count">Blood Bag</a></li>
                     <li><a href="/hosp_Donors">Donor List</a></li>
                     <li><a href="/hosp_Benefit">Benefits</a></li>
                     <li><a href="/hosp_Campaign">Campaign</a></li>
@@ -384,9 +384,9 @@
                 </ul> --}}
             </li>
             <li>
-                <a href="login.html">
+                <a href="/hosp_Profile">
                     <i class="fa fa-user"></i>
-                    <span>Login Page</span>
+                    <span>Profile</span>
                 </a>
             </li>
         </ul>
@@ -404,11 +404,11 @@
                 <section class="panel">
                     <header class="panel-heading">
                         Blood Bags Table
-                        <span class="tools pull-right">
+                        {{-- <span class="tools pull-right">
                             <a href="javascript:;" class="fa fa-chevron-down"></a>
                             <a href="javascript:;" class="fa fa-cog"></a>
                             <a href="javascript:;" class="fa fa-times"></a>
-                         </span>
+                         </span> --}}
                     </header>
                     <div class="panel-body">
                         <table class="table  table-hover general-table">
