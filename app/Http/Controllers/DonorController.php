@@ -8,6 +8,8 @@ Use App\Donor;
 Use DB;
 Use App\Campaign;
 Use App\CampDonorRegister;
+Use App\BloodBag;
+Use App\Benefits;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Session;
@@ -30,7 +32,7 @@ class DonorController extends Controller
         $credentials = $request->only('email', 'password');
         if (auth('donor')->attempt($credentials)) {
             // Authentication passed...
-            return redirect()->intended('/donor_Campaign');
+            return redirect()->intended('/donation_record');
         }
         flash('Oppes! You have entered invalid credentials');
         return Redirect::to("donor_login");
@@ -53,7 +55,7 @@ class DonorController extends Controller
         $check = $this->Donorcreate($data);
           
         flash('Great! You have Successfully logged in');
-        return Redirect::to("/donor_Donation");
+        return Redirect::to("/donor_login");
     }
     
     public function Donordashboard()
@@ -82,6 +84,20 @@ class DonorController extends Controller
         Session::flush();
         Auth::logout();
         return Redirect('/home');
+    }
+
+    //donation
+    public function donation_record()
+    {
+      $donor_id = Auth::guard('donor')->user()->id;
+
+      $donation = DB::table('blood_bag')
+        ->select('*')
+        ->where('donor_id', '=', $donor_id)
+        ->get();
+
+      return response()
+        ->view('Donor/donor_Donation', ['donation'=> $donation]);
     }
 
     //campaign process
@@ -122,14 +138,14 @@ class DonorController extends Controller
 
      //$result_donor_id = {{ $result_camp_data -> donor_id }}; 
 
-    //  foreach($result_camp_data as $test)
-    //  {
-    //     {{$test[0] -> donor_id;}};
-    //  } 
+      //  foreach($result_camp_data as $test)
+      //  {
+      //     {{$test[0] -> donor_id;}};
+      //  } 
 
-    if($result_camp_data->isEmpty()){
-      $test='enter data';
-      $cdr = new CampDonorRegister();
+      if($result_camp_data->isEmpty()){
+        $test='enter data';
+        $cdr = new CampDonorRegister();
           $cdr->camp_id = $camp_id;
           $cdr->camp_name = $camp_name;
           $cdr->hosp_name = $hosp_name;
@@ -141,15 +157,31 @@ class DonorController extends Controller
           $cdr->donor_bloodgroup = $donor_bloodgroup;
           $cdr->donor_bloodRh = $donor_bloodRh;
           $cdr->save();
-    }elseif(!is_null($result_camp_data)){
-      $test='dnt enter data';
-    }  
+      }
+      elseif(!is_null($result_camp_data))
+      {
+        $test='dnt enter data';
+      }  
          
       // return Response::json(array($result_camp_data, $test));
       flash('Successfully Registered');
       return redirect()->intended('/donor_Campaign');
      
-     
-  }
+    }
+
+    //benefit records
+    public function benefit_record()
+    {
+
+      $benefits = DB::table('benefits')
+        ->select ('*')
+        ->get();
+
+      return response()
+        ->view('Donor/donor_Benefits',['benefits' => $benefits]);
+
+    } 
 
 }
+
+

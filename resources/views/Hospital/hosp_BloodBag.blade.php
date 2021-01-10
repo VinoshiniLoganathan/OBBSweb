@@ -230,16 +230,17 @@
 <div class="top-nav clearfix">
     <!--search & user info start-->
     <ul class="nav pull-right top-menu">
-        <li>
+        {{-- <li>
             <input type="text" class="form-control search" placeholder=" Search">
-        </li>
+        </li> --}}
         <!-- user login dropdown start-->
-        <li class="dropdown">
-            {{-- <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+        <li><a href="{{url('logout')}}"><i class="fa fa-key"></i> Log Out</a></li>
+        {{-- <li class="dropdown">
+            <a data-toggle="dropdown" class="dropdown-toggle" href="#">
                 <img alt="" src="images/avatar1_small.jpg">
                 <span class="username">John Doe</span>
                 <b class="caret"></b>
-            </a> --}}
+            </a>
             <ul class="dropdown-menu extended logout">
                 <li><a href="#"><i class=" fa fa-suitcase"></i>Profile</a></li>
                 <li><a href="#"><i class="fa fa-cog"></i> Settings</a></li>
@@ -251,7 +252,7 @@
             <div class="toggle-right-box">
                 <div class="fa fa-bars"></div>
             </div>
-        </li>
+        </li> --}}
     </ul>
     <!--search & user info end-->
 </div>
@@ -259,7 +260,8 @@
 <!--header end-->
 <aside>
     <div id="sidebar" class="nav-collapse">
-        <!-- sidebar menu start-->            <div class="leftside-navigation">
+        <!-- sidebar menu start-->            
+        <div class="leftside-navigation">
             <ul class="sidebar-menu" id="nav-accordion">
             <li>
                 {{-- <a href="index-2.html">
@@ -387,7 +389,8 @@
                     <span>Login Page</span>
                 </a>
             </li>
-        </ul></div>        
+        </ul>
+    </div>        
 <!-- sidebar menu end-->
     </div>
 </aside>

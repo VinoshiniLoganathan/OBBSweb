@@ -119,7 +119,8 @@ class AuthController extends Controller
             ->selectRaw("count(case when donor_bloodGroup = 'O' && donor_bloodRh = 'Negative' then 1 end) as ONe")
             ->first();
 
-            return view('Hospital/hosp_BloodBag',['totals'=>$totals]);
+            return response()
+                ->view('Hospital/hosp_BloodBag',['totals'=>$totals]);
     }
 
     public function blood_count_detail(Request $request)
@@ -132,7 +133,8 @@ class AuthController extends Controller
             ->where('bbag_status', '0')
             ->where('expiry_date', '>', date('Y-m-d'))
             ->where('donor_bloodgroup', $bgrp)
-            ->where('donor_bloodRh', $brh)->get();
+            ->where('donor_bloodRh', $brh)
+            ->get();
         
         return response()
             ->view('Hospital/hosp_BloodBagRecords', ['bbd'=> $bbd]);

@@ -41,9 +41,9 @@
 <div class="brand">
 
     <a href="index-2.html" class="logo">
-        {{-- <img src="images/logo.png" alt="">
+        <img src="/images/blogo.jpg" width= 170px height = 50px alt="">
     </a>
-    <div class="sidebar-toggle-box">
+    {{-- <div class="sidebar-toggle-box">
         <div class="fa fa-bars"></div>
     </div> --}}
 </div>

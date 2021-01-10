@@ -92,6 +92,8 @@ Route::get('/donor_Profile', function () {
 });
 // Route::get('view-donor-records','DonorController@view_donor_records');
 Route::get('donor_camp_register/{id}','DonorController@donor_camp_register');
+Route::get('donation_record','DonorController@donation_record');
+Route::get('benefit_record','DonorController@benefit_record');
 // Route::post('register_camp/{id}','DonorController@register_camp');
 
 

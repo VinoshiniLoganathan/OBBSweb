@@ -10,7 +10,7 @@
     <meta name="author" content="ThemeBucket">
     <link rel="shortcut icon" href="images/favicon.html">
 
-    <title>Basic Table</title>
+    <title>Donation</title>
 
     <!--Core CSS -->
     <link rel="stylesheet" href="{{ URL::asset('bs3/css/bootstrap.min.css') }}">
@@ -40,10 +40,10 @@
 <!--logo start-->
 <div class="brand">
 
-    {{-- <a href="index-2.html" class="logo">
-        <img src="images/logo.png" alt="">
+    <a href="index-2.html" class="logo">
+        <img src="images/blogo.jpg" width= 170px height = 50px alt="">
     </a>
-    <div class="sidebar-toggle-box">
+    {{-- <div class="sidebar-toggle-box">
         <div class="fa fa-bars"></div>
     </div> --}}
 </div>
@@ -227,14 +227,15 @@
     </ul> --}}
     <!--  notification end -->
 </div>
-{{-- <div class="top-nav clearfix">
+<div class="top-nav clearfix">
     <!--search & user info start-->
     <ul class="nav pull-right top-menu">
-        <li>
+        {{-- <li>
             <input type="text" class="form-control search" placeholder=" Search">
-        </li>
+        </li> --}}
         <!-- user login dropdown start-->
-        <li class="dropdown">
+        <li><a href="{{url('logout')}}"><i class="fa fa-key"></i> Log Out</a></li>
+        {{-- <li class="dropdown">
             <a data-toggle="dropdown" class="dropdown-toggle" href="#">
                 <img alt="" src="images/avatar1_small.jpg">
                 <span class="username">John Doe</span>
@@ -251,10 +252,10 @@
             <div class="toggle-right-box">
                 <div class="fa fa-bars"></div>
             </div>
-        </li>
+        </li> --}}
     </ul>
     <!--search & user info end-->
-</div> --}}
+</div>
 </header>
 <!--header end-->
 <aside>
@@ -262,13 +263,13 @@
         <!-- sidebar menu start-->            
         <div class="leftside-navigation">
             <ul class="sidebar-menu" id="nav-accordion">
-            {{-- <li>
-                <a href="index-2.html">
+            <li>
+                {{-- <a href="index-2.html">
                     <i class="fa fa-dashboard"></i>
                     <span>Dashboard</span>
-                </a>
+                </a> --}}
             </li>
-            <li class="sub-menu">
+            {{-- <li class="sub-menu">
                 <a href="javascript:;">
                     <i class="fa fa-laptop"></i>
                     <span>Layouts</span>
@@ -287,7 +288,7 @@
                 <ul class="sub">
                     <li><a href="general.html">General</a></li>
                     <li><a href="buttons.html">Buttons</a></li>
-<li><a href="typography.html">Typography</a></li>
+                    <li><a href="typography.html">Typography</a></li>
                     <li><a href="widget.html">Widget</a></li>
                     <li><a href="slider.html">Slider</a></li>
                     <li><a href="tree_view.html">Tree View</a></li>
@@ -309,9 +310,9 @@
                     <span>Data Tables</span>
                 </a>
                 <ul class="sub"> --}}
-                    <li class="active"><b href="{{url('donor_Donation')}}">Donation Activity</a></li>
+                    <li class="active"><b href="{{url('donation-record')}}">Donation Activity</a></li>
                     <li><a href="{{url('donor_Campaign')}}">Campaign</a></li>
-                    <li><a href="{{url('donor_Benefits')}}">Benefits</a></li>
+                    <li><a href="{{url('benefit_record')}}">Benefits</a></li>
                     <li><a href="editable_table.html">Profile</a></li>
                 {{-- </ul>
             </li>
@@ -377,18 +378,19 @@
                     <li><a href="invoice.html">Invoice</a></li>
                     <li><a href="pricing_table.html">Pricing Table</a></li>
                     <li><a href="timeline.html">Timeline</a></li>                    
-<li><a href="gallery.html">Media Gallery</a></li><li><a href="404.html">404 Error</a></li>
+                    <li><a href="gallery.html">Media Gallery</a></li><li><a href="404.html">404 Error</a></li>
                     <li><a href="500.html">500 Error</a></li>
                     <li><a href="registration.html">Registration</a></li>
                 </ul>
-            </li>
+            </li> --}}
             <li>
-                <a href="login.html">
+                <a href="{{url('donor_Profile')}}">
                     <i class="fa fa-user"></i>
                     <span>Login Page</span>
                 </a>
             </li>
-        </ul></div>         --}}
+        </ul>
+    </div>        
 <!-- sidebar menu end-->
     </div>
 </aside>
@@ -401,119 +403,34 @@
             <div class="col-sm-12">
                 <section class="panel">
                     <header class="panel-heading">
-                        General Table
+                        Donation Table
                         <span class="tools pull-right">
-                            <a href="javascript:;" class="fa fa-chevron-down"></a>
+                            {{-- <a href="javascript:;" class="fa fa-chevron-down"></a>
                             <a href="javascript:;" class="fa fa-cog"></a>
-                            <a href="javascript:;" class="fa fa-times"></a>
+                            <a href="javascript:;" class="fa fa-times"></a> --}}
                          </span>
                     </header>
                     <div class="panel-body">
                         <table class="table  table-hover general-table">
                             <thead>
                             <tr>
-                                <th> Company</th>
-                                <th class="hidden-phone">Descrition</th>
-                                <th>Profit</th>
-                                <th>Status</th>
-                                <th>Progress</th>
+                                <th>Donation Date</th>
+                                <th>Donation Type</th>
+                                <th>Donated Volume</th>
+                                <th>Campaign</th>
+                                <th>Hospital Name</th>
                             </tr>
                             </thead>
                             <tbody>
+                                @foreach ($donation as $dona)
                             <tr>
-                                <td><a href="#">Graphics</a></td>
-                                <td class="hidden-phone">Lorem Ipsum dorolo imit</td>
-                                <td>1320.00$ </td>
-                                <td><span class="label label-info label-mini">Due</span></td>
-                                <td>
-                                    <div class="progress progress-striped progress-xs">
-                                        <div style="width: 40%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="40" role="progressbar" class="progress-bar progress-bar-success">
-                                            <span class="sr-only">40% Complete (success)</span>
-                                        </div>
-                                    </div>
-                                </td>
+                                <td>{{ $dona->received_date }}</td>
+                                <td>{{ $dona->bbag_comp }}</td>
+                                <td>{{ $dona->bbag_vol }}</td>
+                                <td>{{ $dona->camp_id }}</td>
+                                <td>{{ $dona->hosp_name }}</td>
                             </tr>
-                            <tr>
-                                <td>
-                                    <a href="#">
-                                        ThemeBucket
-                                    </a>
-                                </td>
-                                <td class="hidden-phone">Lorem Ipsum dorolo</td>
-                                <td>556.00$ </td>
-                                <td><span class="label label-warning label-mini">Due</span></td>
-                                <td>
-                                    <div class="progress progress-striped progress-xs">
-                                        <div style="width: 70%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="40" role="progressbar" class="progress-bar progress-bar-danger">
-                                            <span class="sr-only">70% Complete (success)</span>
-                                        </div>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <a href="#">
-                                        XYZ
-                                    </a>
-                                </td>
-                                <td class="hidden-phone">Lorem Ipsum dorolo</td>
-                                <td>13240.00$ </td>
-                                <td><span class="label label-success label-mini">Paid</span></td>
-                                <td>
-                                    <div class="progress progress-striped progress-xs">
-                                        <div style="width: 55%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="40" role="progressbar" class="progress-bar progress-bar-warning">
-                                            <span class="sr-only">55% Complete (success)</span>
-                                        </div>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <a href="#">
-                                        BCSE
-                                    </a>
-                                </td>
-                                <td class="hidden-phone">Lorem Ipsum dorolo</td>
-                                <td>3455.50$ </td>
-                                <td><span class="label label-danger label-mini">Paid</span></td>
-                                <td>
-                                    <div class="progress progress-striped progress-xs">
-                                        <div style="width: 90%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="40" role="progressbar" class="progress-bar progress-bar-info">
-                                            <span class="sr-only">90% Complete (success)</span>
-                                        </div>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td><a href="#">AVC Ltd</a></td>
-                                <td class="hidden-phone">Lorem Ipsum dorolo imit</td>
-                                <td>110.00$ </td>
-                                <td><span class="label label-primary label-mini">Due</span></td>
-                                <td>
-                                    <div class="progress progress-striped progress-xs">
-                                        <div style="width: 60%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="40" role="progressbar" class="progress-bar progress-bar-success">
-                                            <span class="sr-only">60% Complete (success)</span>
-                                        </div>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <a href="#">
-                                        Themeforest
-                                    </a>
-                                </td>
-                                <td class="hidden-phone">Lorem Ipsum dorolo</td>
-                                <td>456.00$ </td>
-                                <td><span class="label label-warning label-mini">Due</span></td>
-                                <td>
-                                    <div class="progress progress-striped progress-xs">
-                                        <div style="width: 40%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="40" role="progressbar" class="progress-bar progress-bar-danger">
-                                            <span class="sr-only">40% Complete (success)</span>
-                                        </div>
-                                    </div>
-                                </td>
-                            </tr>
+                                @endforeach
 
                             </tbody>
                         </table>
@@ -521,196 +438,7 @@
                 </section>
             </div>
         </div>
-            <div class="row">
-                <div class="col-sm-6">
-                    <section class="panel">
-                        <header class="panel-heading">
-                            Basic Table
-                            <span class="tools pull-right">
-                                <a href="javascript:;" class="fa fa-chevron-down"></a>
-                                <a href="javascript:;" class="fa fa-cog"></a>
-                                <a href="javascript:;" class="fa fa-times"></a>
-                             </span>
-                        </header>
-                        <div class="panel-body">
-                            <table class="table">
-                                <thead>
-                                <tr>
-                                    <th>#</th>
-                                    <th>First Name</th>
-                                    <th>Last Name</th>
-                                    <th>Username</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                <tr>
-                                    <td>1</td>
-                                    <td>Mark</td>
-                                    <td>Otto</td>
-                                    <td>@mdo</td>
-                                </tr>
-                                <tr>
-                                    <td>2</td>
-                                    <td>Jacob</td>
-                                    <td>Thornton</td>
-                                    <td>@fat</td>
-                                </tr>
-                                <tr>
-                                    <td>3</td>
-                                    <td>Larry</td>
-                                    <td>the Bird</td>
-                                    <td>@twitter</td>
-                                </tr>
-                                </tbody>
-                            </table>
-                        </div>
-
-                    </section>
-                </div>
-                <div class="col-sm-6">
-                    <section class="panel">
-                        <header class="panel-heading">
-                            Striped Table
-                            <span class="tools pull-right">
-                                <a href="javascript:;" class="fa fa-chevron-down"></a>
-                                <a href="javascript:;" class="fa fa-cog"></a>
-                                <a href="javascript:;" class="fa fa-times"></a>
-                             </span>
-                        </header>
-                        <div class="panel-body">
-                            <table class="table table-striped">
-                                <thead>
-                                <tr>
-                                    <th>#</th>
-                                    <th>First Name</th>
-                                    <th>Last Name</th>
-                                    <th>Username</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                <tr>
-                                    <td>1</td>
-                                    <td>Mark</td>
-                                    <td>Otto</td>
-                                    <td>@mdo</td>
-                                </tr>
-                                <tr>
-                                    <td>2</td>
-                                    <td>Jacob</td>
-                                    <td>Thornton</td>
-                                    <td>@fat</td>
-                                </tr>
-                                <tr>
-                                    <td>3</td>
-                                    <td>Larry</td>
-                                    <td>the Bird</td>
-                                    <td>@twitter</td>
-                                </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </section>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-6">
-                    <section class="panel">
-                        <header class="panel-heading no-border">
-                            Border Table
-                            <span class="tools pull-right">
-                                <a href="javascript:;" class="fa fa-chevron-down"></a>
-                                <a href="javascript:;" class="fa fa-cog"></a>
-                                <a href="javascript:;" class="fa fa-times"></a>
-                             </span>
-                        </header>
-                        <div class="panel-body">
-                            <table class="table table-bordered">
-                                <thead>
-                                <tr>
-                                    <th>#</th>
-                                    <th>First Name</th>
-                                    <th>Last Name</th>
-                                    <th>Username</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                <tr>
-                                    <td rowspan="2">1</td>
-                                    <td>Mark</td>
-                                    <td>Otto</td>
-                                    <td>@mdo</td>
-                                </tr>
-                                <tr>
-                                    <td>Mark</td>
-                                    <td>Otto</td>
-                                    <td>@TwBootstrap</td>
-                                </tr>
-                                <tr>
-                                    <td>2</td>
-                                    <td>Jacob</td>
-                                    <td>Thornton</td>
-                                    <td>@fat</td>
-                                </tr>
-                                <tr>
-                                    <td>3</td>
-                                    <td colspan="2">Larry the Bird</td>
-                                    <td>@twitter</td>
-                                </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </section>
-                </div>
-                <div class="col-sm-6">
-                    <section class="panel">
-                        <header class="panel-heading">
-                            Hover Table
-                            <span class="tools pull-right">
-                                <a href="javascript:;" class="fa fa-chevron-down"></a>
-                                <a href="javascript:;" class="fa fa-cog"></a>
-                                <a href="javascript:;" class="fa fa-times"></a>
-                             </span>
-                        </header>
-                        <div class="panel-body">
-                            <table class="table table-hover">
-                                <thead>
-                                <tr>
-                                    <th>#</th>
-                                    <th>First Name</th>
-                                    <th>Last Name</th>
-                                    <th>Username</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                <tr>
-                                    <td>1</td>
-                                    <td>Mark</td>
-                                    <td>Otto</td>
-                                    <td>@mdo</td>
-                                </tr>
-                                <tr>
-                                    <td>2</td>
-                                    <td>Jacob</td>
-                                    <td>Thornton</td>
-                                    <td>@fat</td>
-                                </tr>
-                                <tr>
-                                    <td>3</td>
-                                    <td colspan="2">Larry the Bird</td>
-                                    <td>@twitter</td>
-                                </tr>
-                                <tr>
-                                    <td>3</td>
-                                    <td>Jane Doe</td>
-                                    <td>Mosa</td>
-                                    <td>@twitter</td>
-                                </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </section>
-                </div>
-            </div>
+            
         <!-- page end-->
         </section>
     </section>

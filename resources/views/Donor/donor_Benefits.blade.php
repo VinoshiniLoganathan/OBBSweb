@@ -10,7 +10,7 @@
     <meta name="author" content="ThemeBucket">
     <link rel="shortcut icon" href="images/favicon.html">
 
-    <title>Basic Table</title>
+    <title>Benefits Table</title>
 
     <!--Core CSS -->
     <link rel="stylesheet" href="{{ URL::asset('bs3/css/bootstrap.min.css') }}">
@@ -40,18 +40,18 @@
 <!--logo start-->
 <div class="brand">
 
-    {{-- <a href="index-2.html" class="logo">
-        <img src="images/logo.png" alt="">
+    <a href="index-2.html" class="logo">
+        <img src="images/blogo.jpg" width= 170px height = 50px alt="">
     </a>
-    <div class="sidebar-toggle-box">
+    {{-- <div class="sidebar-toggle-box">
         <div class="fa fa-bars"></div>
-    </div> --}}
+    </div>  --}}
 </div>
 <!--logo end-->
 
-{{-- <div class="nav notify-row" id="top_menu">
+<div class="nav notify-row" id="top_menu">
     <!--  notification start -->
-    <ul class="nav top-menu">
+    {{-- <ul class="nav top-menu">
         <!-- settings start -->
         <li class="dropdown">
             <a data-toggle="dropdown" class="dropdown-toggle" href="#">
@@ -224,17 +224,17 @@
             </ul>
         </li>
         <!-- notification dropdown end -->
-    </ul>
+    </ul> --}}
     <!--  notification end -->
 </div>
 <div class="top-nav clearfix">
     <!--search & user info start-->
     <ul class="nav pull-right top-menu">
         <li>
-            <input type="text" class="form-control search" placeholder=" Search">
+            <li><a href="{{url('logout')}}"><i class="fa fa-key"></i> Log Out</a></li>
         </li>
         <!-- user login dropdown start-->
-        <li class="dropdown">
+        {{-- <li class="dropdown">
             <a data-toggle="dropdown" class="dropdown-toggle" href="#">
                 <img alt="" src="images/avatar1_small.jpg">
                 <span class="username">John Doe</span>
@@ -251,23 +251,23 @@
             <div class="toggle-right-box">
                 <div class="fa fa-bars"></div>
             </div>
-        </li>
+        </li> --}}
     </ul>
     <!--search & user info end-->
-</div> --}}
+</div>
 </header>
 <!--header end-->
 <aside>
     <div id="sidebar" class="nav-collapse">
         <!-- sidebar menu start-->            <div class="leftside-navigation">
             <ul class="sidebar-menu" id="nav-accordion">
-            {{-- <li>
-                <a href="index-2.html">
+            <li>
+                {{-- <a href="index-2.html">
                     <i class="fa fa-dashboard"></i>
                     <span>Dashboard</span>
-                </a>
+                </a> --}}
             </li>
-            <li class="sub-menu">
+            {{-- <li class="sub-menu">
                 <a href="javascript:;">
                     <i class="fa fa-laptop"></i>
                     <span>Layouts</span>
@@ -285,8 +285,7 @@
                 </a>
                 <ul class="sub">
                     <li><a href="general.html">General</a></li>
-                    <li><a href="buttons.html">Buttons</a></li>
-<li><a href="typography.html">Typography</a></li>
+                    <li><a href="buttons.html">Buttons</a></li><li><a href="typography.html">Typography</a></li>
                     <li><a href="widget.html">Widget</a></li>
                     <li><a href="slider.html">Slider</a></li>
                     <li><a href="tree_view.html">Tree View</a></li>
@@ -308,10 +307,9 @@
                     <span>Data Tables</span>
                 </a>
                 <ul class="sub"> --}}
-                    <li><a href="{{url('donor_Donation')}}">Donation Activity</a></li>
+                    <li><a href="{{url('donation_record')}}">Donation Activity</a></li>
                     <li><a href="{{url('donor_Campaign')}}">Campaign</a></li>
-                    <li class="active"><b href="{{url('donor_Benefits')}}">Benefits</a></li>
-                    <li><a href="editable_table.html">Profile</a></li>
+                    <li class="active"><b href="{{url('benefit_record')}}">Benefits</a></li>
                 {{-- </ul>
             </li>
             <li class="sub-menu">
@@ -375,19 +373,18 @@
                     <li><a href="profile.html">Profile</a></li>
                     <li><a href="invoice.html">Invoice</a></li>
                     <li><a href="pricing_table.html">Pricing Table</a></li>
-                    <li><a href="timeline.html">Timeline</a></li>                    
-<li><a href="gallery.html">Media Gallery</a></li><li><a href="404.html">404 Error</a></li>
+                    <li><a href="timeline.html">Timeline</a></li>                    <li><a href="gallery.html">Media Gallery</a></li><li><a href="404.html">404 Error</a></li>
                     <li><a href="500.html">500 Error</a></li>
                     <li><a href="registration.html">Registration</a></li>
                 </ul>
-            </li>
+            </li> --}}
             <li>
-                <a href="login.html">
+                <a href="{{url('donor_Profile')}}">
                     <i class="fa fa-user"></i>
                     <span>Login Page</span>
                 </a>
             </li>
-        </ul></div>         --}}
+        </ul></div>        
 <!-- sidebar menu end-->
     </div>
 </aside>
@@ -400,39 +397,33 @@
             <div class="col-sm-12">
                 <section class="panel">
                     <header class="panel-heading">
-                        General Table
+                        Benefit
                         <span class="tools pull-right">
-                            <a href="javascript:;" class="fa fa-chevron-down"></a>
+                            {{-- <a href="javascript:;" class="fa fa-chevron-down"></a>
                             <a href="javascript:;" class="fa fa-cog"></a>
-                            <a href="javascript:;" class="fa fa-times"></a>
+                            <a href="javascript:;" class="fa fa-times"></a> --}}
                          </span>
                     </header>
                     <div class="panel-body">
                         <table class="table  table-hover general-table">
                             <thead>
                             <tr>
-                                <th> Company</th>
-                                <th class="hidden-phone">Descrition</th>
-                                <th>Profit</th>
-                                <th>Status</th>
-                                <th>Progress</th>
+                                <th>ID</th>
+                                <th>Frequency</th>
+                                <th>Description</th>
+                                    
                             </tr>
                             </thead>
                             <tbody>
+                                @foreach ($benefits as $benefit)
                             <tr>
-                                <td><a href="#">Graphics</a></td>
-                                <td class="hidden-phone">Lorem Ipsum dorolo imit</td>
-                                <td>1320.00$ </td>
-                                <td><span class="label label-info label-mini">Due</span></td>
-                                <td>
-                                    <div class="progress progress-striped progress-xs">
-                                        <div style="width: 40%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="40" role="progressbar" class="progress-bar progress-bar-success">
-                                            <span class="sr-only">40% Complete (success)</span>
-                                        </div>
-                                    </div>
-                                </td>
+                                <td>{{ $benefit->id }}</td>
+                                <td>{{ $benefit->frequency }}</td>
+                                <td>{{ $benefit->description }}</td>
+                                
                             </tr>
-                            <tr>
+                                @endforeach
+                            {{-- <tr>
                                 <td>
                                     <a href="#">
                                         ThemeBucket
@@ -512,7 +503,7 @@
                                         </div>
                                     </div>
                                 </td>
-                            </tr>
+                            </tr> --}}
 
                             </tbody>
                         </table>
@@ -520,7 +511,7 @@
                 </section>
             </div>
         </div>
-        basic and stripped table
+        
             {{-- <div class="row">
                 <div class="col-sm-6">
                     <section class="panel">
@@ -612,7 +603,7 @@
                     </section>
                 </div>
             </div> --}}
-            border and hover table
+            
             {{-- <div class="row">
                 <div class="col-sm-6">
                     <section class="panel">
