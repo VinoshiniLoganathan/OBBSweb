@@ -380,7 +380,7 @@
                 </ul>
             </li> --}}
             <li>
-                <a href="{{url('donor_Profile')}}">
+                <a href="{{url('dnr_profile')}}">
                     <i class="fa fa-user"></i>
                     <span>Profile</span>
                 </a>

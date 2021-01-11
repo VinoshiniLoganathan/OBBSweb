@@ -79,7 +79,46 @@ class DonorController extends Controller
 	    'password' => Hash::make($data['password'])
 	  ]);
 	}
-	
+  
+  public function dnr_profile()
+  {
+      $donor_id = Auth::guard('donor')->user()->id;
+
+      $view = DB::table('donors')
+          ->select('*')
+          ->where('id', '=', $donor_id)
+          ->get();
+
+      return response()
+        ->view('Donor/donor_Profile', ['view'=> $view]);
+  }
+
+  public function dnr_update($id)
+  {
+    $upd = DB::select('select * from donors where id = ?',[$id]);
+    return response()
+        ->view('Donor/donor_ProfileUpd', ['upd'=> $upd]);
+  }
+
+  public function dnr_newprof(Request $request, $id)
+  {
+    $user = Auth::guard('donor')->user();
+    
+    $user->name = $request->name;
+    $user->address = $request->address;
+    $user->phone = $request->phone;
+    $user->email = $request->email;
+
+    if ( !empty($request->password) )
+    {
+        $user->password = bcrypt($request->password);
+    }
+
+    $user->save();
+
+    return Redirect::to('dnr_profile');
+  }
+  
 	public function Donorlogout() {
         Session::flush();
         Auth::logout();

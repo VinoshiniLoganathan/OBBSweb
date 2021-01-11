@@ -41,7 +41,7 @@
 <div class="brand">
 
     <a href="index-2.html" class="logo">
-        <img src="images/blogo.jpg" width= 170px height = 50px alt="">
+        <img src="/images/blogo.jpg" width= 170px height = 50px alt="">
     </a>
     {{-- <div class="sidebar-toggle-box">
         <div class="fa fa-bars"></div>
@@ -246,13 +246,13 @@
                 <li><a href="#"><i class="fa fa-cog"></i> Settings</a></li>
                 <li><a href="login.html"><i class="fa fa-key"></i> Log Out</a></li>
             </ul>
-        </li> --}}
+        </li>
         <!-- user login dropdown end -->
         <li>
             <div class="toggle-right-box">
                 <div class="fa fa-bars"></div>
             </div>
-        </li>
+        </li> --}}
     </ul>
     <!--search & user info end-->
 </div>
@@ -381,12 +381,13 @@
                 </ul>
             </li> --}}
             <li class='active'>
-                <b href="{{url('donor_Profile')}}">
+                <b href="dnr_profile">
                     <i class="fa fa-user"></i>
                     <span>Profile</span>
                 </a>
             </li>
-        </ul></div>        
+            </ul>
+        </div>        
 <!-- sidebar menu end-->
     </div>
 </aside>
@@ -400,7 +401,7 @@
             <div class="col-md-12">
                 <section class="panel">
                     <div class="panel-body profile-information">
-                       <div class="col-md-3">
+                       {{-- <div class="col-md-3">
                            <div class="profile-pic text-center">
                                <img src="images/lock_thumb.jpg" alt=""/>
                            </div>
@@ -439,13 +440,13 @@
                                    </li>
                                </ul>
                            </div>
-                       </div>
+                       </div> --}}
                     </div>
                 </section>
             </div>
             <div class="col-md-12">
                 <section class="panel">
-                    <header class="panel-heading tab-bg-dark-navy-blue">
+                    {{-- <header class="panel-heading tab-bg-dark-navy-blue">
                         <ul class="nav nav-tabs nav-justified ">
                             <li class="active">
                                 <a data-toggle="tab" href="#overview">
@@ -468,69 +469,61 @@
                                 </a>
                             </li>
                         </ul>
-                    </header>
+                    </header> --}}
                     <div class="panel-body">
                         <div class="tab-content tasi-tab">
                             <div id="overview" class="tab-pane active">
                                 <div class="row">
-                                    <div class="col-md-8">
+                                    <div class="col-md-12">
                                         <div class="recent-act">
-                                            <h1>Recent Activity</h1>
-                                            <div class="activity-icon terques">
-                                                <i class="fa fa-check"></i>
-                                            </div>
+                                            <h1>Your Profile</h1>
+                                            
+                                            @foreach ($view as $views)
                                             <div class="activity-desk">
-                                                <h2>1 Hour Ago</h2>
-                                                <p>Purchased new stationary items for head office</p>
+                                                <h2 class="purple">Name</h2>
+                                                <p>{{ $views->name }}</p>
                                             </div>
-                                            <div class="activity-icon red">
-                                                <i class="fa fa-beer"></i>
-                                            </div>
+                                            
                                             <div class="activity-desk">
-                                                <h2 class="red">2 Hour Ago</h2>
-                                                <p>Completed Coffee meeting with <a href="#" class="terques">Stive Martin</a> regarding the Product Promotion</p>
+                                                <h2 class="purple">Address</h2>
+                                                <p>{{ $views->address }}</p>
                                             </div>
-                                            <div class="activity-icon purple">
-                                                <i class="fa fa-tags"></i>
-                                            </div>
+                                            
                                             <div class="activity-desk">
-                                                <h2 class="purple">today evening</h2>
-                                                <p>3 photo Uploaded on facebook product page</p>
-                                                <div class="photo-gl">
-                                                    <a href="#">
-                                                        <img src="images/sm-img-1.jpg" alt=""/>
-                                                    </a>
-                                                    <a href="#">
-                                                        <img src="images/sm-img-2.jpg" alt=""/>
-                                                    </a>
-                                                    <a href="#">
-                                                        <img src="images/sm-img-3.jpg" alt=""/>
-                                                    </a>
+                                                <h2 class="purple">Phone Number</h2>
+                                                <p>{{ $views->phone }}</p>
+                                            </div>
+                                            
+                                            <div class="activity-desk">
+                                                <h2 class="purple">Blood Group</h2>
+                                                <p>{{ $views->bloodgroup }}</p>
+                                            </div>
+
+                                            <div class="activity-desk">
+                                                <h2 class="purple">Blood Rh</h2>
+                                                <p>{{ $views->bloodRh }}</p>
+                                            </div>
+                                            
+                                            <div class="activity-desk">
+                                                <h2 class="purple">Email Address</h2>
+                                                <p>{{ $views->email }}</p>
+                                            </div>
+                                            @endforeach  
+                                            
+                                        </div>
+                                        
+                                        <div class="form">
+                                            <form class="cmxform form-horizontal"  method="GET" action="dnr_update/{{ $views->id }}">
+                                                <div class="clearfix">
+                                                    {{-- <div class="col-lg-offset-3 col-lg-6"> --}}
+                                                        <button class="btn btn-primary" style='margin:auto; display:block' type="submit">Update</button>
+                                                        {{-- <button class="btn btn-default" type="button">Cancel</button> --}}
+                                                    {{-- </div> --}}
                                                 </div>
-                                            </div>
-
-                                            <div class="activity-icon green">
-                                                <i class="fa fa-map-marker"></i>
-                                            </div>
-                                            <div class="activity-desk">
-                                                <h2 class="green">yesterday</h2>
-                                                <p>Outdoor visit at <a href="#" class="blue">California State Route</a> 85 with <a href="#" class="terques">John Boltana</a> & <a href="#" class="terques">Harry Piterson</a> regarding to setup a new show room.</p>
-                                                <div class="loc-map">
-                                                    location map goes here
-                                                </div>
-                                            </div>
-
-                                            <div class="activity-icon yellow">
-                                                <i class="fa fa-user-md"></i>
-                                            </div>
-                                            <div class="activity-desk">
-                                                <h2 class="yellow">12 december 2013</h2>
-                                                <p>Montly Regular Medical check up at Greenland Hospital.</p>
-                                            </div>
-
+                                            </form>
                                         </div>
                                     </div>
-                                    <div class="col-md-4">
+                                    {{-- <div class="col-md-4">
                                         <div class="prf-box">
                                             <h3 class="prf-border-head">work in progress</h3>
                                             <div class=" wk-progress">
@@ -654,10 +647,10 @@
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
+                                    </div> --}}
                                 </div>
                             </div>
-                            <div id="job-history" class="tab-pane ">
+                            {{-- <div id="job-history" class="tab-pane ">
                                 <div class="row">
                                     <div class="col-md-12">
                                         <div class="timeline-messages">
@@ -945,7 +938,7 @@
                                     </form>
                                 </div>
 
-                            </div>
+                            </div> --}}
                         </div>
                     </div>
                 </section>

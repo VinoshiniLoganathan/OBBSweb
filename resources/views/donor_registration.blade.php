@@ -116,7 +116,7 @@
       </div> 
 
        <div class="login-wrap">
-        <label for="inputEmail">Email address</label> 
+        <label for="inputEmail">Email Address</label> 
         <input type="email" name="email" id="inputEmail" class="form-control" placeholder="Email Address" >
          
          @if ($errors->has('email'))

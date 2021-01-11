@@ -90,6 +90,10 @@ Route::get('/donor_Donation', function () {
 Route::get('/donor_Profile', function () {
     return view('/Donor/donor_Profile');
 });
+Route::get('dnr_profile', 'DonorController@dnr_profile');
+Route::get('dnr_update/{id}', 'DonorController@dnr_update');
+Route::get('dnr_newprof/{id}', 'DonorController@dnr_newprof');
+
 // Route::get('view-donor-records','DonorController@view_donor_records');
 Route::get('donor_camp_register/{id}','DonorController@donor_camp_register');
 Route::get('donation_record','DonorController@donation_record');
@@ -153,7 +157,10 @@ Route::get('/hosp_DonorsRecords', function () {
 Route::get('/hosp_Profile', function () {
     return view('/Hospital/hosp_Profile');
 });
-
+//profile upd
+Route::get('hosp_profile', 'HospitalController@hosp_profile');
+Route::get('hosp_update/{id}', 'HospitalController@hosp_update');
+Route::get('hosp_newprof/{id}', 'HospitalController@hosp_newprof');
 
 //code for blood bag
 Route::get('blood_count','AuthController@blood_count');

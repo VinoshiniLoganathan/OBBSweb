@@ -313,7 +313,6 @@
                     <li class="active"><b href="{{url('donation-record')}}">Donation Activity</a></li>
                     <li><a href="{{url('donor_Campaign')}}">Campaign</a></li>
                     <li><a href="{{url('benefit_record')}}">Benefits</a></li>
-                    <li><a href="editable_table.html">Profile</a></li>
                 {{-- </ul>
             </li>
             <li class="sub-menu">
@@ -384,7 +383,7 @@
                 </ul>
             </li> --}}
             <li>
-                <a href="{{url('donor_Profile')}}">
+                <a href="{{url('dnr_profile')}}">
                     <i class="fa fa-user"></i>
                     <span>Profile</span>
                 </a>

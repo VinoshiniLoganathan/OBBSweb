@@ -384,7 +384,7 @@
                 </ul> --}}
             </li>
             <li>
-                <a href="/hosp_Profile">
+                <a href="hosp_profile">
                     <i class="fa fa-user"></i>
                     <span>Profile</span>
                 </a>

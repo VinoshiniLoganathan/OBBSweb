@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<!-- Mirrored from bucketadmin.lab.themebucket.net/editable_table.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 03 Apr 2020 13:23:58 GMT -->
 <head>
     <meta charset="utf-8">
 
@@ -10,12 +9,14 @@
     <meta name="author" content="ThemeBucket">
     <link rel="shortcut icon" href="images/favicon.html">
 
-    <title>Campaign Records</title>
+    <title>Profile Update</title>
 
     <!--Core CSS -->
+    {{-- follow the code  below and change the code as followning --}}
     <link rel="stylesheet" href="{{ URL::asset('bs3/css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ URL::asset('css/bootstrap-reset.css') }}">
     <link rel="stylesheet" href="{{ URL::asset('font-awesome/css/font-awesome.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ URL::asset('js/bootstrap-datepicker/css/datepicker.css') }}" />
 
     <!-- Custom styles for this template -->
     <link href="{{ URL::asset('css/style.css') }}" rel="stylesheet">
@@ -50,8 +51,8 @@
 <!--logo end-->
 
 <div class="nav notify-row" id="top_menu">
-    <!--  notification start -->
-    {{-- <ul class="nav top-menu">
+    {{-- <!--  notification start -->
+    <ul class="nav top-menu">
         <!-- settings start -->
         <li class="dropdown">
             <a data-toggle="dropdown" class="dropdown-toggle" href="#">
@@ -121,7 +122,7 @@
             </ul>
         </li>
         <!-- settings end -->
-        <!-- inbox dropdown start-->
+        {{-- <!-- inbox dropdown start-->
         <li id="header_inbox_bar" class="dropdown">
             <a data-toggle="dropdown" class="dropdown-toggle" href="#">
                 <i class="fa fa-envelope-o"></i>
@@ -225,7 +226,7 @@
         </li>
         <!-- notification dropdown end -->
     </ul> --}}
-    <!--  notification end -->
+    <!--  notification end --> 
 </div>
 <div class="top-nav clearfix">
     <!--search & user info start-->
@@ -245,6 +246,7 @@
                 <li><a href="#"><i class=" fa fa-suitcase"></i>Profile</a></li>
                 <li><a href="#"><i class="fa fa-cog"></i> Settings</a></li>
                 <li><a href="login.html"><i class="fa fa-key"></i> Log Out</a></li>
+                <li><a href="{{url('logout')}}"><i class="fa fa-key"></i> Log Out</a></li>
             </ul>
         </li>
         <!-- user login dropdown end -->
@@ -286,7 +288,8 @@
                 </a>
                 <ul class="sub">
                     <li><a href="general.html">General</a></li>
-                    <li><a href="buttons.html">Buttons</a></li><li><a href="typography.html">Typography</a></li>
+                    <li><a href="buttons.html">Buttons</a></li>
+                    <li><a href="typography.html">Typography</a></li>
                     <li><a href="widget.html">Widget</a></li>
                     <li><a href="slider.html">Slider</a></li>
                     <li><a href="tree_view.html">Tree View</a></li>
@@ -301,32 +304,32 @@
                     <i class="fa fa-bullhorn"></i>
                     <span>Fontawesome </span>
                 </a>
-            </li> --}}
-            {{-- <li class="sub-menu">
-                <a href="javascript:;" class="active">
+            </li>
+            <li class="sub-menu">
+                <a href="javascript:;">
                     <i class="fa fa-th"></i>
                     <span>Data Tables</span>
                 </a>
-                <ul class="sub"> --}}
+                <ul class="sub">
+                    <li><a href="basic_table.html">Basic Table</a></li>
+                    <li><a href="responsive_table.html">Responsive Table</a></li>
+                    <li><a href="dynamic_table.html">Dynamic Table</a></li>
+                    <li><a href="editable_table.html">Editable Table</a></li>
+                </ul>
+            </li>
+            <li class="sub-menu">
+                <a href="javascript:;" class="active">
+                    <i class="fa fa-tasks"></i>
+                    <span>Form Components</span>
+                </a> --}}
+                {{-- <ul class="sub"> --}}
                     <li><a href="blood_count">Blood Bag</a></li>
                     <li><a href="/hosp_Donors">Donor List</a></li>
                     <li><a href="/hosp_Benefit">Benefits</a></li>
                     <li class="active"><b href="/hosp_Campaign">Campaign</a></li>
-                {{-- </ul>
-            </li> --}}
-            {{-- <li class="sub-menu">
-                <a href="javascript:;">
-                    <i class="fa fa-tasks"></i>
-                    <span>Form Components</span>
-                </a>
-                <ul class="sub">
-                    <li><a href="form_component.html">Form Elements</a></li>
-                    <li><a href="advanced_form.html">Advanced Components</a></li>
-                    <li><a href="form_wizard.html">Form Wizard</a></li>
-                    <li><a href="form_validation.html">Form Validation</a></li>
-                    <li><a href="file_upload.html">Muliple File Upload</a></li>
+                    {{-- <li><a href="file_upload.html">Muliple File Upload</a></li> --}}
                     
-                    <li><a href="dropzone.html">Dropzone</a></li>
+                    {{-- <li><a href="dropzone.html">Dropzone</a></li>
                     <li><a href="inline_editor.html">Inline Editor</a></li>
 
                 </ul>
@@ -379,12 +382,12 @@
                     <li><a href="gallery.html">Media Gallery</a></li><li><a href="404.html">404 Error</a></li>
                     <li><a href="500.html">500 Error</a></li>
                     <li><a href="registration.html">Registration</a></li>
-                </ul>
-            </li> --}}
+                </ul> --}}
+            </li>
             <li>
                 <a href="hosp_profile">
                     <i class="fa fa-user"></i>
-                    <span>Profile</span>
+                    <span></span>
                 </a>
             </li>
         </ul></div>        
@@ -395,88 +398,171 @@
     <!--main content start-->
     <section id="main-content">
         <section class="wrapper">
-        <!-- page start-->
+            <!-- page start-->
+            <div class="row">
+                <div class="col-lg-12">
+                    <section class="panel">
+                        <header class="panel-heading">
+                            Profile Update
+                            {{-- <span class="tools pull-right">
+                                <a class="fa fa-chevron-down" href="javascript:;"></a>
+                                <a class="fa fa-cog" href="javascript:;"></a>
+                                <a class="fa fa-times" href="javascript:;"></a>
+                             </span> --}}
+                        </header>
+                        <div class="panel-body">
+                            <form role="form" class="form-horizontal" action="/hosp_newprof/<?php echo $upd[0]->id; ?>" method="GET">
+                                {{-- {{ url()->previous() }} --}}
+                                <div class="form-group">
+                                    <label class="col-lg-3 control-label">Name</label>
+                                    <div class="col-lg-6">
+                                        <input type="text" placeholder="" id="name" name="name" value = '<?php echo$upd[0]->name?>' class="form-control"/>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-lg-3 control-label">Staff ID</label>
+                                    <div class="col-lg-6">
+                                        <input type="text" readonly="readonly" placeholder="" id="staffID" name="staffID" value = '<?php echo$upd[0]->staffID?>' class="form-control"/>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-lg-3 control-label">Phone Number</label>
+                                    <div class="col-lg-6">
+                                        <input type="text" placeholder="" id="phone" name="phone" value = '<?php echo$upd[0]->phone?>' class="form-control"/>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-lg-3 control-label">Hospital Name</label>
+                                    <div class="col-lg-6">
+                                        <input type="text" readonly="readonly" placeholder="" id="hospName" name="hospName" value = '<?php echo$upd[0]->hospName?>' class="form-control"/>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-lg-3 control-label">Email Address</label>
+                                    <div class="col-lg-6">
+                                        <input type="text" readonly="readonly" placeholder="" id="email" name="email" class="form-control" value='<?php echo$upd[0]->email?>'/>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-lg-3 control-label">New Password</label>
+                                    <div class="col-lg-6">
+                                        <input type="password" placeholder="" id="password" name="password" class="form-control"/>
+                                    </div>
+                                </div>
 
-        <div class="row">
-            <div class="col-sm-12">
-                <section class="panel">
-                    <header class="panel-heading">
-                        Campaign Table
-                        {{-- <span class="tools pull-right">
-                            <a href="javascript:;" class="fa fa-chevron-down"></a>
-                            <a href="javascript:;" class="fa fa-cog"></a>
-                            <a href="javascript:;" class="fa fa-times"></a>
-                         </span> --}}
-                    </header>
-                    <div class="panel-body">
-                        <div class="adv-table editable-table ">
-                            <div class="clearfix">
-                                {{-- <div class="btn-group">
-                                    <button id="editable-sample_new" class="btn btn-primary">
-                                        Add New <i class="fa fa-plus"></i>
-                                    </button>
-                                </div> --}}
-                                <div class="form">
-                                    <form class="cmxform form-horizontal "  method="GET" action="{{url('hosp_Campaign')}}">
-                                        <div class="clearfix">
-                                            {{-- <div class="col-lg-offset-3 col-lg-6"> --}}
-                                                <button class="btn btn-primary" type="submit">Add</button>
-                                                {{-- <button class="btn btn-default" type="button">Cancel</button> --}}
-                                            {{-- </div> --}}
-                                        </div>
-                                    </form>
+                                <div class="form-group">
+                                    <div class="col-lg-offset-3 col-lg-6">
+                                        <button class="btn btn-primary" type="submit">Submit</button>
+                                    </div>
                                 </div>
-                                <div class="btn-group pull-right">
-                                    {{-- <button class="btn btn-default dropdown-toggle" data-toggle="dropdown">Tools <i class="fa fa-angle-down"></i>
-                                    </button> --}}
-                                    <br>
-                                    <ul class="dropdown-menu pull-right">
-                                        {{-- <li><a href="#">Print</a></li>
-                                        <li><a href="#">Save as PDF</a></li>
-                                        <li><a href="#">Export to Excel</a></li> --}}
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="space15"></div>
-                            <table class="table table-striped table-hover table-bordered" id="editable-sample">
-                                @include('flash::message')
-                                <thead>
-                                <tr>
-                                    <th>ID</th>
-                                    <th>Campaign Name</th>
-                                    <th>Hospital</th>
-                                    <th>Place</th>
-                                    <th>Date</th>
-                                    <th>Time</th>
-                                    <th>Edit</th>
-                                    <th>Registered List</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                    @foreach ($campaigns as $camp)
-                                <tr class="">
-                                    <td>{{ $camp->id }}</td>
-                                    <td>{{ $camp->camp_name }}</td>
-                                    <td>{{ $camp->hosp_name }}</td>
-                                    <td>{{ $camp->place }}</td>
-                                    <td>{{ $camp->date }}</td>
-                                    <td>{{ $camp->time }}</td>                                    
-                                    <td><a href='camp_update/{{ $camp->id }}'>Edit</a></td>
-                                    <td><a href="camp_register_detail/{{ $camp->id }}">View</a></td>
-                                </tr>
-                                @endforeach
-                                </tbody>
-                            </table>
+                            </form>
                         </div>
-                    </div>
-                </section>
+                    </section>
+                </div>
             </div>
-        </div>
-        <!-- page end-->
+            <div class="row">
+                <div class="col-lg-12">
+                    <section class="panel">
+                       
+                        <div class="panel-body">
+                            <div class=" form">
+                                <form class="cmxform form-horizontal "  method="GET" action="{{url('view-records')}}">
+                                   
+                                    <div class="form-group">
+                                        {{-- <div class="col-lg-offset-3 col-lg-6">
+                                            <button class="btn btn-primary" type="submit">Save</button>
+                                            <button class="btn btn-default" type="button">Cancel</button>
+                                        </div> --}}
+                                    </div>
+                                </form>
+                            </div>
+
+                        </div>
+                    </section>
+                </div>
+            </div>
+
+
+            {{-- <div class="row">
+                <div class="col-lg-12">
+                    <section class="panel">
+                        <header class="panel-heading">
+                            Advanced Form validations
+                            <span class="tools pull-right">
+                                <a class="fa fa-chevron-down" href="javascript:;"></a>
+                                <a class="fa fa-cog" href="javascript:;"></a>
+                                <a class="fa fa-times" href="javascript:;"></a>
+                             </span>
+                        </header>
+                        <div class="panel-body">
+                            <div class="form">
+                                <form class="cmxform form-horizontal " id="signupForm" method="get" action="#">
+                                    <div class="form-group ">
+                                        <label for="firstname" class="control-label col-lg-3">Firstname</label>
+                                        <div class="col-lg-6">
+                                            <input class=" form-control" id="firstname" name="firstname" type="text" />
+                                        </div>
+                                    </div>
+                                    <div class="form-group ">
+                                        <label for="lastname" class="control-label col-lg-3">Lastname</label>
+                                        <div class="col-lg-6">
+                                            <input class=" form-control" id="lastname" name="lastname" type="text" />
+                                        </div>
+                                    </div>
+                                    <div class="form-group ">
+                                        <label for="username" class="control-label col-lg-3">Username</label>
+                                        <div class="col-lg-6">
+                                            <input class="form-control " id="username" name="username" type="text" />
+                                        </div>
+                                    </div>
+                                    <div class="form-group ">
+                                        <label for="password" class="control-label col-lg-3">Password</label>
+                                        <div class="col-lg-6">
+                                            <input class="form-control " id="password" name="password" type="password" />
+                                        </div>
+                                    </div>
+                                    <div class="form-group ">
+                                        <label for="confirm_password" class="control-label col-lg-3">Confirm Password</label>
+                                        <div class="col-lg-6">
+                                            <input class="form-control " id="confirm_password" name="confirm_password" type="password" />
+                                        </div>
+                                    </div>
+                                    <div class="form-group ">
+                                        <label for="email" class="control-label col-lg-3">Email</label>
+                                        <div class="col-lg-6">
+                                            <input class="form-control " id="email" name="email" type="email" />
+                                        </div>
+                                    </div>
+                                    <div class="form-group ">
+                                        <label for="agree" class="control-label col-lg-3 col-sm-3">Agree to Our Policy</label>
+                                        <div class="col-lg-6 col-sm-9">
+                                            <input  type="checkbox" style="width: 20px" class="checkbox form-control" id="agree" name="agree" />
+                                        </div>
+                                    </div>
+                                    <div class="form-group ">
+                                        <label for="newsletter" class="control-label col-lg-3 col-sm-3">Receive the Newsletter</label>
+                                        <div class="col-lg-6 col-sm-9">
+                                            <input  type="checkbox" style="width: 20px" class="checkbox form-control" id="newsletter" name="newsletter" />
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <div class="col-lg-offset-3 col-lg-6">
+                                            <button class="btn btn-primary" type="submit">Save</button>
+                                            <button class="btn btn-default" type="button">Cancel</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div> --}}
+            <!-- page end-->
         </section>
     </section>
     <!--main content end-->
-<!--right sidebar start-->
+{{-- <!--right sidebar start-->
 <div class="right-sidebar">
 <div class="search-row">
     <input type="text" placeholder="Search" class="form-control">
@@ -726,16 +812,14 @@
 </ul>
 </div>
 </div>
-<!--right sidebar end-->
+<!--right sidebar end--> --}}
 
 </section>
 
 <!-- Placed js at the end of the document so the pages load faster -->
 
 <!--Core js-->
-<script src="js/jquery-1.10.2.min.js"></script>
-<script src="js/jquery-migrate.js"></script>
-
+<script src="js/jquery.js"></script>
 <script src="bs3/js/bootstrap.min.js"></script>
 <script class="include" type="text/javascript" src="js/jquery.dcjqaccordion.2.7.js"></script>
 <script src="js/jquery.scrollTo.min.js"></script>
@@ -751,23 +835,15 @@
 <script src="js/flot-chart/jquery.flot.resize.js"></script>
 <script src="js/flot-chart/jquery.flot.pie.resize.js"></script>
 
-<script type="text/javascript" src="js/data-tables/jquery.dataTables.js"></script>
-<script type="text/javascript" src="js/data-tables/DT_bootstrap.js"></script>
+
+<script type="text/javascript" src="js/jquery.validate.min.js"></script>
 
 <!--common script init for all pages-->
 <script src="js/scripts.js"></script>
-
-<!--script for this page only-->
-<script src="js/table-editable.js"></script>
-
-<!-- END JAVASCRIPTS -->
-<script>
-    jQuery(document).ready(function() {
-        EditableTable.init();
-    });
-</script>
+<!--this page script-->
+<script src="js/validation-init.js"></script>
 
 </body>
 
-<!-- Mirrored from bucketadmin.lab.themebucket.net/editable_table.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 03 Apr 2020 13:23:59 GMT -->
+
 </html>
