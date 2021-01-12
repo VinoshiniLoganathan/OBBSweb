@@ -434,15 +434,20 @@
                                 <div class="form-group">
                                     <label class="col-lg-3 control-label">Blood Group</label>
                                     <div class="col-lg-6">
-                                        <input type="text" id="inputBlood" name="bloodgroup" value = '<?php echo$donor[0]->bloodgroup?>' class="form-control"/>
-                                        
+                                        <select id="inputBlood" value = '<?php echo$donor[0]->bloodgroup?>' name="bloodgroup" class="form-control" placeholder="Blood Group" autofocus>
+                                            <option selected value='<?php echo$donor[0]->bloodgroup?>'><?php echo$donor[0]->bloodgroup?></option>
+                                            <option value="A">A</option>
+                                            <option value="B">B</option>
+                                            <option value="AB">AB</option>
+                                            <option value="O">O</option> 
+                                        </select>
                                     </div>
                                 </div>
 
                                 <div class="form-group">
                                     <label class="col-lg-3 control-label">Blood Rh</label>
                                     <div class="col-lg-6">
-                                        <select id="inputBloodR" name="bloodRh" class="form-control" placeholder="Blood Rh" autofocus>
+                                        <select id="inputBloodR" value = '<?php echo$donor[0]->bloodRh?>' name="bloodRh" class="form-control" placeholder="Blood Rh" autofocus>
                                             <option value="Positive">Positive</option>
                                             <option value="Negative">Negative</option>
                                         </select>

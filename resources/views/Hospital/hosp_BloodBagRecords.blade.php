@@ -411,6 +411,9 @@
                     <div class="panel-body">
                         <div class="adv-table editable-table ">
                             <div class="clearfix">
+                                <form class="cmxform form-horizontal "  method="GET" action="{{url('blood_count')}}">
+                                    <button class="btn btn-primary" type="submit">Back</button>
+                                </form>
                                 {{-- <div class="btn-group">
                                     <button id="editable-sample_new" class="btn btn-primary">
                                         Add New <i class="fa fa-plus"></i>

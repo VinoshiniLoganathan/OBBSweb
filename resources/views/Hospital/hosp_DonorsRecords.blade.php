@@ -424,7 +424,7 @@
                                     <form class="cmxform form-horizontal "  method="GET" action="{{url('hosp_Donors')}}">
                                         <div class="clearfix">
                                             {{-- <div class="col-lg-offset-3 col-lg-6"> --}}
-                                                <button class="btn btn-primary" type="submit">Add</button>
+                                                <button class="btn btn-primary" type="submit">Add / Back</button>
                                                 {{-- <button class="btn btn-default" type="button">Cancel</button> --}}
                                             {{-- </div> --}}
                                         </div>

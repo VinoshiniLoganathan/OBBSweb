@@ -434,7 +434,13 @@
                                 <div class="form-group">
                                     <label class="col-lg-3 control-label">Blood Group</label>
                                     <div class="col-lg-6">
-                                        <input type="text" id="inputBlood" name="bloodgroup" class="form-control">
+                                        <select id="inputBlood" name="bloodgroup" class="form-control" placeholder="Blood Group" autofocus>
+                                            <option selected value="base">Please Select</option>
+                                            <option value="A">A</option>
+                                            <option value="B">B</option>
+                                            <option value="AB">AB</option>
+                                            <option value="O">O</option> 
+                                        </select> 
                                         
                                     </div>
                                 </div>
