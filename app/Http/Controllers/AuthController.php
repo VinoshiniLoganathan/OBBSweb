@@ -147,7 +147,8 @@ class AuthController extends Controller
             ->where('bbag_id', $id)
             ->update(['bbag_status' => 1]);
 
-        return redirect()->intended('blood_count');
+        flash('Status updated to Inactive');
+        return redirect()->back(); 
 
     }
 
@@ -239,7 +240,8 @@ class AuthController extends Controller
         // $camp = DB::select('select id from campaigns where id = ?',[$id]);
         $camp = Campaign::find($id);
         $camp_id = $camp->id;
-        $camp_register = CampDonorRegister::select('*');
+        $camp_register = CampDonorRegister::select('*')
+                        ->where('donor_status', '0');
 
         $camp_detail = $camp_register->where([
             'camp_id' => $camp_id
@@ -271,10 +273,11 @@ class AuthController extends Controller
         ]);
 
         $camp_id = $request->camp_id;
+        $donor_id = $request->donor_id;
 
         $bb = new BloodBag();
         $bb->bbag_id = $request->bbag_id;
-        $bb->donor_id = $request->donor_id;
+        $bb->donor_id = $donor_id;
         $bb->donor_name = $request->donor_name;
         $bb->donor_bloodgroup = $request->donor_bloodgroup;
         $bb->donor_bloodRh = $request->donor_bloodRh;
@@ -285,6 +288,10 @@ class AuthController extends Controller
         $bb->camp_id = $camp_id;
         $bb->hosp_name = $request->hosp_name;
         $bb->save();
+
+        DB::table('camp_donor_register')
+            ->where('donor_id', $donor_id)
+            ->update(['donor_status' => 1]);
 
         return redirect()->intended('camp_register_detail/'.$camp_id);
         // return response()

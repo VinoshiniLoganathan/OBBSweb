@@ -447,8 +447,13 @@
                                         <td>{{ $camp->hosp_name }}</td>
                                         <td>{{ $camp->place }}</td>
                                         <td>{{ $camp->date }}</td>
-                                        <td>{{ $camp->time }}</td>                                    
+                                        <td>{{ $camp->time }}</td>
+                                        @if($camp->camp_date == date('Y-m-d'))
                                         <td><a href='donor_camp_register/{{ $camp->id }}'>Register</a></td>
+                                        @else
+                                        <td>Register</td>
+                                        @endif                                    
+                                        {{-- <td><a href='donor_camp_register/{{ $camp->id }}'>Register</a></td> --}}
                                         @endforeach
                                         {{-- <td><a class="delete" href="javascript:;">Delete</a></td> --}}
                                     </tr>                                                                                                                              

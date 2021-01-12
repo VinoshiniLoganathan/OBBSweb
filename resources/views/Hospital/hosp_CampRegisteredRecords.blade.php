@@ -457,6 +457,11 @@
                                     </div>
                                 </div>
                             </form>
+                            <div class="form">
+                                <form class="cmxform form-horizontal"  method="GET" action="{{url('view-records')}}">
+                                    <button class="btn btn-primary" style='margin:auto; display:block' type="submit">Back</button>
+                                </form>
+                            </div>
                             <br>
                             <div class="space15"></div>
                             <table class="table table-striped table-hover table-bordered" id="editable-sample">
@@ -480,12 +485,12 @@
                                     <td>{{ $camp->donor_bloodgroup }}</td>
                                     <td>{{ $camp->donor_bloodRh }}</td>
                                     {{-- <td><a id='test' href='camp-register-complete/{{ $camp->donor_id }}' onclick="disableClick()">Completed</a></td> --}}
-                                    <td><a href='camp-register-complete/{{ $camp->donor_id }}'>Completed</a></td>
-                                    {{-- @if($camp->camp_date == date('Y-m-d'))
+                                    {{-- <td><a href='camp-register-complete/{{ $camp->donor_id }}'>Completed</a></td> --}}
+                                    @if($camp->camp_date == date('Y-m-d'))
                                     <td><a href='camp-register-complete/{{ $camp->donor_id }}'>Completed</a></td> 
                                     @else
                                     <td>Completed</td>
-                                    @endif --}}
+                                    @endif
                                     {{-- <td><a href='camp_update/{{ $camp->id }}'>Edit</a></td> --}}
                                     {{-- <td><a class="delete" href="javascript:;">Delete</a></td> --}}
                                 </tr>
