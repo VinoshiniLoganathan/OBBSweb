@@ -421,6 +421,7 @@
                             </tr>
                             </thead>
                             <tbody>
+                                {{-- if($totals->name > 0) change 0 to respective blood bag amount to show normal --}}
                             <tr>
                                 <form class="cmxform form-horizontal "  method="GET" action="{{url ('blood_count_detail') }}">
                                 <td><input type=text readonly='readonly' name='bgrp' value='A' class="form-control"/></td>

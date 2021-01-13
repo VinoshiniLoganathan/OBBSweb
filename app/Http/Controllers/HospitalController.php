@@ -48,7 +48,7 @@ class HospitalController extends Controller
 
         $check = $this->Hospcreate($data);
       
-        flash('Great! You have Successfully loggedin');
+        flash('Great! You have Successfully Registered');
         return Redirect::to("hosp_login");
     }
     
@@ -104,9 +104,9 @@ class HospitalController extends Controller
     {
         $user->password = bcrypt($request->password);
     }
-
     $user->save();
 
+    flash('Profile Updated!');
     return Redirect::to('hosp_profile');
   }
 	

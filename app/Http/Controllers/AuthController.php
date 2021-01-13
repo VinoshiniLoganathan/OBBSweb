@@ -43,6 +43,28 @@ class AuthController extends Controller
        
     }
 
+    public function postRegistration(Request $request)
+    {  
+            request()->validate([
+            'name' => 'required',
+            'email' => 'required|email|unique:users',
+            'password' => 'required|min:6',
+            ]);
+            
+            $data = $request->all();
+    
+            $check = $this->create($data);
+       
+        // $user = new User;
+        // $user->name = $request->name;
+        // $user->email = $request->email;
+        // $user->password = $request->password;
+        // $user->save();
+
+        return Redirect::to("/hosp_Campaign");
+        //return Redirect::to("dashboard")->withSuccess('Great! You have Successfully loggedin');
+    }
+
     public function dashboard()
     {
  
@@ -152,30 +174,8 @@ class AuthController extends Controller
 
     }
 
-
-    //campaign process
-    public function postRegistration(Request $request)
-    {  
-            request()->validate([
-            'name' => 'required',
-            'email' => 'required|email|unique:users',
-            'password' => 'required|min:6',
-            ]);
-            
-            $data = $request->all();
     
-            $check = $this->create($data);
-       
-        // $user = new User;
-        // $user->name = $request->name;
-        // $user->email = $request->email;
-        // $user->password = $request->password;
-        // $user->save();
-
-        return Redirect::to("/hosp_Campaign");
-        //return Redirect::to("dashboard")->withSuccess('Great! You have Successfully loggedin');
-    }
-
+    //campaign process
     public function view_records()
     {
         $campaigns = DB::select('select * from campaigns');
@@ -183,7 +183,6 @@ class AuthController extends Controller
         //return view('login');
     }  
 
-    //camp edit 
     public function camp_update($id) {
         $camp = DB::select('select * from campaigns where id = ?',[$id]);
         //return view('camp_update',['camp'=>$camp]);
@@ -194,19 +193,6 @@ class AuthController extends Controller
     }
 
     public function edit_camp(Request $request,$id) {
-        // $place = $request->input('place');
-        // $date = $request->input('date');
-        // $time = $request->input('time');
-        // //$data=array('first_name'=>$first_name,"last_name"=>$last_name,"city_name"=>$city_name,"email"=>$email);
-        // //DB::table('student')->update($data);
-        // // DB::table('student')->whereIn('id', $id)->update($request->all());
-        // DB::update('update campaigns set place = ?, date=?, time=?, where id = ?',[$place,$date,$time,$id]);
-        // echo "Record updated successfully.
-        // ";
-        // echo 'Click Here to go back.';
-
-        // if (campaigns::where('id', $id)->exists()) {
-            //$camp = campaigns::find($id);
             $camp = new Campaign;
             $camp = Campaign::find($id);
     
@@ -223,14 +209,17 @@ class AuthController extends Controller
 
     public function postCampRegistration(Request $request)
     {  
-       
-        $campaign = new Campaign;
-        $campaign->camp_name = $request->camp_name;
-        $camp->hosp_name = $request->hosp_name;
-        $campaign->place = $request->place;
-        $campaign->date = $request->date;
-        $campaign->time = $request->time;
-        $campaign->save();
+        if(!empty($request->campaign))
+        {
+            $campaign = new Campaign;
+            $campaign->camp_name = $request->camp_name;
+            $campaign->hosp_name = $request->hosp_name;
+            $campaign->place = $request->place;
+            $campaign->date = $request->date;
+            $campaign->time = $request->time;
+            $campaign->save();
+        }
+        flash('All Fields Require Values');
 
         return Redirect::to("/hosp_Campaign");
         //return Redirect::to("dashboard")->withSuccess('Great! You have Successfully loggedin');
@@ -259,9 +248,6 @@ class AuthController extends Controller
 
     public function camp_register_complete($id) {
         $cdr = DB::select('select * from camp_donor_register where donor_id = ?',[$id]);
-        //return view('camp_update',['camp'=>$camp]);
-        // return Response::json($test);
-        //return redirect()->route('camp_update', ['camp' => $camp]);
         return response()
             ->view('Hospital/hosp_CampRegisteredComplete', ['cdr'=> $cdr]); 
     }
@@ -294,8 +280,6 @@ class AuthController extends Controller
             ->update(['donor_status' => 1]);
 
         return redirect()->intended('camp_register_detail/'.$camp_id);
-        // return response()
-        //         ->view('Hospital/hosp_CampRegisteredRecords', ['camp_detail'=> $camp_detail]);       
         
     }
 
@@ -374,11 +358,15 @@ class AuthController extends Controller
 
     public function postBenefitRegistration(Request $request)
     {  
-        $benefits = new Benefits;
-        $benefits->frequency = $request->frequency;
-        $benefits->description = $request->description;
-        $benefits->save();
-
+        if(!empty($request->campaign))
+        {
+            $benefits = new Benefits;
+            $benefits->frequency = $request->frequency;
+            $benefits->description = $request->description;
+            $benefits->save();
+        }
+        flash('All Fields Require Values');
+        
         return Redirect::to("/hosp_Benefit");
     }
    

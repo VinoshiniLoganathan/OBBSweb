@@ -453,7 +453,7 @@
                                     <td>{{ $bbds->bbag_id }}</td>
                                     <td>{{ $bbds->donor_id }}</td>
                                     <td>{{ $bbds->donor_bloodgroup }}</td>
-                                    <td>{{ $bbds->donor_bloodgroup }}</td>
+                                    <td>{{ $bbds->donor_bloodRh }}</td>
                                     <td>{{ $bbds->bbag_vol }}</td>
                                     <td>{{ $bbds->bbag_comp }}</td>                                    
                                     <td>{{ $bbds->received_date }}</td>

@@ -3117,6 +3117,10 @@ input:focus:invalid:focus,textarea:focus:invalid:focus,select:focus:invalid:focu
     width:auto;
     color:#B94A48;
 }
+
+span.error{
+    color: red;
+}
 .checkbox,.checkbox:hover,.checkbox:focus {
     border: none;
 }

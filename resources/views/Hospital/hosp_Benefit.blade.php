@@ -409,7 +409,9 @@
                                 <a class="fa fa-times" href="javascript:;"></a>
                              </span> --}}
                         </header>
+                        @include('flash::message')
                         <div class="panel-body">
+                            @include('flash::message')
                             <form role="form" class="form-horizontal" action="{{url('post-benefit-registration')}}" method="POST">
                                 {{ csrf_field() }}
                                 <div class="form-group">

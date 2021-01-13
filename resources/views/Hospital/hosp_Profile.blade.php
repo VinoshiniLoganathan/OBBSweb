@@ -471,6 +471,7 @@
                             </li>
                         </ul>
                     </header> --}}
+                    @include('flash::message')
                     <div class="panel-body">
                         <div class="tab-content tasi-tab">
                             <div id="overview" class="tab-pane active">

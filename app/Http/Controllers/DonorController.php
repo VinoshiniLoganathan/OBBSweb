@@ -54,7 +54,7 @@ class DonorController extends Controller
 
         $check = $this->Donorcreate($data);
           
-        flash('Great! You have Successfully logged in');
+        flash('Great! You have Successfully Registered');
         return Redirect::to("/donor_login");
     }
     
@@ -113,9 +113,9 @@ class DonorController extends Controller
     {
         $user->password = bcrypt($request->password);
     }
-
     $user->save();
 
+    flash('Profile Updated!');
     return Redirect::to('dnr_profile');
   }
   

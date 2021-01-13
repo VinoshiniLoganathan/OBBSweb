@@ -430,7 +430,7 @@
                                     <label class="col-lg-3 control-label" for="hosp_name">Hospital</label>
                                     <div class="col-lg-6">
                                         <select placeholder="Hospital Name" id="hosp_name" name="hosp_name" value = '<?php echo$camp[0]->hosp_name?>' class="form-control" >
-                                        <option selected value="base">Please Select</option>
+                                        <option selected value='<?php echo$camp[0]->hosp_name?>'><?php echo$camp[0]->hosp_name?></option>
                                         <?php foreach($eachlines as $lines){ 
                                                 echo "<option value='".$lines."'>$lines</option>";
                                             }?>
@@ -453,7 +453,7 @@
                                 <div class="form-group">
                                     <label class="col-lg-3 control-label">Time</label>
                                     <div class="col-lg-6">
-                                        <input type="text" placeholder="" id="tim" name="time" value = '<?php echo$camp[0]->time?>' class="form-control"/>
+                                        <input type="time" placeholder="" id="tim" name="time" value = '<?php echo$camp[0]->time?>' class="form-control"/>
                                         
                                     </div>
                                 </div>
