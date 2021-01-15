@@ -435,6 +435,7 @@
                                 @include('flash::message')
                                 <thead>
                                 <tr>
+                                    <th>No</th>
                                     <th>Blood Bag ID</th>
                                     <th>Donor ID</th>
                                     <th>Blood Group</th>
@@ -450,6 +451,7 @@
                                 <tbody>
                                     @foreach ($bbd as $bbds)
                                 <tr class="">
+                                    <td>{{$loop->iteration}}</td>
                                     <td>{{ $bbds->bbag_id }}</td>
                                     <td>{{ $bbds->donor_id }}</td>
                                     <td>{{ $bbds->donor_bloodgroup }}</td>

@@ -448,7 +448,7 @@
                                         <td>{{ $camp->place }}</td>
                                         <td>{{ $camp->date }}</td>
                                         <td>{{ $camp->time }}</td>
-                                        @if($camp->date == date('Y-m-d'))
+                                        @if($camp->date > date('Y-m-d'))
                                         <td><a href='donor_camp_register/{{ $camp->id }}'>Register</a></td>
                                         @else
                                         <td>Register</td>

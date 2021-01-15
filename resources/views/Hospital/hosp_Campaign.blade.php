@@ -417,12 +417,12 @@
                         @include('flash::message')
                         <div class="panel-body">
                             <form role="form" class="form-horizontal" action="{{url('post-camp-registration')}}" method="POST">
+                                {{-- <form role="form" class="form-horizontal"> --}}
                                 {{ csrf_field() }}
                                 <div class="form-group">
                                     <label class="col-lg-3 control-label">Campaign Name</label>
                                     <div class="col-lg-6">
                                         <input type="text" placeholder="" id="camp_name" name="camp_name" class="form-control">
-                                        
                                     </div>
                                 </div>
                                 
@@ -471,7 +471,7 @@
 
                                 <div class="form-group">
                                     <div class="col-lg-offset-3 col-lg-6">
-                                        <button class="btn btn-primary" type="submit">Submit</button>
+                                        <button class="btn btn-primary" type="submit" id="submitCamp">Submit</button>
                                     </div>
                                 </div>
                             </form>

@@ -209,7 +209,19 @@ class AuthController extends Controller
 
     public function postCampRegistration(Request $request)
     {  
-        if(!empty($request->campaign))
+        $validator=Validator::make($request->all(),[
+            'camp_name'=> 'required',
+            'hosp_name'=> 'required',
+            'place'=> 'required',
+            'date'=>'required',
+            'time'=> 'required'
+        ]);
+       
+        if($validator->fails()){ 
+            flash('All fields are required.');
+            return redirect()->back();
+        }
+        if(!empty($request->all()))
         {
             $campaign = new Campaign;
             $campaign->camp_name = $request->camp_name;
@@ -218,9 +230,9 @@ class AuthController extends Controller
             $campaign->date = $request->date;
             $campaign->time = $request->time;
             $campaign->save();
+            flash('Record is Added');
+            // return Redirect::to("/hosp_Campaign");            
         }
-        flash('All Fields Require Values');
-
         return Redirect::to("/hosp_Campaign");
         //return Redirect::to("dashboard")->withSuccess('Great! You have Successfully loggedin');
     }
@@ -246,8 +258,13 @@ class AuthController extends Controller
     }
 
 
-    public function camp_register_complete($id) {
-        $cdr = DB::select('select * from camp_donor_register where donor_id = ?',[$id]);
+    public function camp_register_complete($donor_id, $camp_id) {
+        $cdr = DB::table('camp_donor_register')
+                ->select('*')
+                ->where('donor_id',$donor_id)
+                ->where('camp_id',$camp_id)
+                ->get();
+
         return response()
             ->view('Hospital/hosp_CampRegisteredComplete', ['cdr'=> $cdr]); 
     }
@@ -318,16 +335,33 @@ class AuthController extends Controller
 
     public function postDonorsRegistration(Request $request)
     {  
-       
-        $donors = new Donor;
-        $donors->name =  $request->name;
-        $donors->address =  $request->address;
-        $donors->phone =  $request->phone;
-        $donors->bloodgroup =  $request->bloodgroup;
-        $donors->bloodRh =  $request->bloodRh;
-        $donors->email =  $request->email;
-        $donors->password = Hash::make($request->password);
-        $donors->save();
+        $validator = Validator::make($request->all(),[
+            'name' => 'required',
+            'address' => 'required',
+            'phone' => 'required|numeric',
+            'bloodgroup' => 'required',
+            'bloodRh' => 'required',
+            'email' => 'required|email|unique:donors',
+            'password' => 'required|min:6',
+        ]);
+
+        if($validator->fails()){ 
+            flash('All fields are required. Only unique Email Address!');
+            return redirect()->back();
+        }
+        if(!empty($request->all()))
+        {   
+            $donors = new Donor;
+            $donors->name =  $request->name;
+            $donors->address =  $request->address;
+            $donors->phone =  $request->phone;
+            $donors->bloodgroup =  $request->bloodgroup;
+            $donors->bloodRh =  $request->bloodRh;
+            $donors->email =  $request->email;
+            $donors->password = Hash::make($request->password);
+            $donors->save();
+            flash('Record is Added');
+        }
 
         return Redirect::to("/hosp_Donors");
         //return Redirect::to("dashboard")->withSuccess('Great! You have Successfully loggedin');
@@ -358,15 +392,23 @@ class AuthController extends Controller
 
     public function postBenefitRegistration(Request $request)
     {  
-        if(!empty($request->campaign))
+        $validator=Validator::make($request->all(),[
+            'frequency'=> 'required',
+            'description'=> 'required',
+        ]);
+
+        if($validator->fails()){ 
+            flash('All fields are required.');
+            return redirect()->back();
+        }
+        if(!empty($request->all()))
         {
             $benefits = new Benefits;
             $benefits->frequency = $request->frequency;
             $benefits->description = $request->description;
             $benefits->save();
+            flash('Record is Added');
         }
-        flash('All Fields Require Values');
-        
         return Redirect::to("/hosp_Benefit");
     }
    

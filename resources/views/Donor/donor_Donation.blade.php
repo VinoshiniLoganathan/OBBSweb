@@ -413,6 +413,7 @@
                         <table class="table  table-hover general-table">
                             <thead>
                             <tr>
+                                <th>No</th>
                                 <th>Donation Date</th>
                                 <th>Donation Type</th>
                                 <th>Donated Volume</th>
@@ -423,6 +424,7 @@
                             <tbody>
                                 @foreach ($donation as $dona)
                             <tr>
+                                <td>{{$loop->iteration}}</td>
                                 <td>{{ $dona->received_date }}</td>
                                 <td>{{ $dona->bbag_comp }}</td>
                                 <td>{{ $dona->bbag_vol }}</td>

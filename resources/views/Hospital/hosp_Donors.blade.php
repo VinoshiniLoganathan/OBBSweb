@@ -408,6 +408,7 @@
                                 <a class="fa fa-times" href="javascript:;"></a>
                              </span> --}}
                         </header>
+                        @include('flash::message')
                         <div class="panel-body">
                             <form role="form" class="form-horizontal" action="{{url('donors-registration')}}" method="POST">
                                 {{ csrf_field() }}

@@ -392,7 +392,7 @@
             <li>
                 <a href="hosp_profile">
                     <i class="fa fa-user"></i>
-                    <span></span>
+                    <span>Profile</span>
                 </a>
             </li>
         </ul></div>        
@@ -418,6 +418,7 @@
                         <div class="panel-body">
                             <form role="form" class="form-horizontal" action="/blood_bag_detail/<?php echo $cdr[0]->id; ?>" method="GET">
                                 {{ csrf_field() }}
+                                @include('flash::message')
                                 <div class="form-group">
                                     <label class="col-lg-3 control-label">Blood Bag ID</label>
                                     <div class="col-lg-6">
@@ -427,25 +428,25 @@
                                 <div class="form-group">
                                     <label class="col-lg-3 control-label">Donor ID</label>
                                     <div class="col-lg-6">
-                                        <input type="text" placeholder="" id="donor_id" name="donor_id" value = '<?php echo$cdr[0]->id?>' class="form-control">
+                                        <input type="text" readonly='readonly' placeholder="" id="donor_id" name="donor_id" value = '<?php echo$cdr[0]->id?>' class="form-control">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label class="col-lg-3 control-label">Donor Name</label>
                                     <div class="col-lg-6">
-                                        <input type="text" placeholder="" id="donor_name" name="donor_name" value = '<?php echo$cdr[0]->name?>' class="form-control"/>
+                                        <input type="text" readonly='readonly' placeholder="" id="donor_name" name="donor_name" value = '<?php echo$cdr[0]->name?>' class="form-control"/>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label class="col-lg-3 control-label">Donor Blood Group</label>
                                     <div class="col-lg-6">
-                                        <input type="text" placeholder="" id="donor_bloodgroup" name="donor_bloodgroup" value = '<?php echo$cdr[0]->bloodgroup?>' class="form-control"/>
+                                        <input type="text" readonly='readonly' placeholder="" id="donor_bloodgroup" name="donor_bloodgroup" value = '<?php echo$cdr[0]->bloodgroup?>' class="form-control"/>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label class="col-lg-3 control-label">Donor Blood Rh</label>
                                     <div class="col-lg-6">
-                                        <input type="text" placeholder="" id="donor_bloodRh" name="donor_bloodRh" value = '<?php echo$cdr[0]->bloodRh?>' class="form-control"/>
+                                        <input type="text" readonly='readonly' placeholder="" id="donor_bloodRh" name="donor_bloodRh" value = '<?php echo$cdr[0]->bloodRh?>' class="form-control"/>
                                     </div>
                                 </div>
                                 <div class="form-group">

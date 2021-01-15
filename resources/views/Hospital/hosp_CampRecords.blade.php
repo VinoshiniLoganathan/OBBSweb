@@ -460,8 +460,12 @@
                                     <td>{{ $camp->hosp_name }}</td>
                                     <td>{{ $camp->place }}</td>
                                     <td>{{ $camp->date }}</td>
-                                    <td>{{ $camp->time }}</td>                                    
-                                    <td><a href='camp_update/{{ $camp->id }}'>Edit</a></td>
+                                    <td>{{ $camp->time }}</td>
+                                    @if($camp->date > date('Y-m-d'))
+                                    <td><a href='camp_update/{{ $camp->id }}'>Edit</a></td> 
+                                    @else
+                                    <td>Edit</td>
+                                    @endif
                                     <td><a href="camp_register_detail/{{ $camp->id }}">View</a></td>
                                 </tr>
                                 @endforeach

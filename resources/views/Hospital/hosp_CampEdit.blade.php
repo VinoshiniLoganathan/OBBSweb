@@ -389,7 +389,7 @@
             <li>
                 <a href="hosp_profile">
                     <i class="fa fa-user"></i>
-                    <span></span>
+                    <span>Profile</span>
                 </a>
             </li>
         </ul></div>        

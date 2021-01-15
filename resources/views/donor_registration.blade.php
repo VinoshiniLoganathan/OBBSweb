@@ -79,7 +79,7 @@
         @if ($errors->has('address'))
         <span class="error">{{ $errors->first('address') }}</span>
         @endif       
-      </div> 
+        </div> 
 
       <div class="login-wrap">
         <label for="inputPhone">Phone Number</label>

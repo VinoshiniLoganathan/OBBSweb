@@ -487,7 +487,7 @@
                                     {{-- <td><a id='test' href='camp-register-complete/{{ $camp->donor_id }}' onclick="disableClick()">Completed</a></td> --}}
                                     {{-- <td><a href='camp-register-complete/{{ $camp->donor_id }}'>Completed</a></td> --}}
                                     @if($camp->camp_date == date('Y-m-d'))
-                                    <td><a href='camp-register-complete/{{ $camp->donor_id }}'>Completed</a></td> 
+                                    <td><a href='camp-register-complete/{{ $camp->donor_id }}/{{ $camp->camp_id}}'>Completed</a></td> 
                                     @else
                                     <td>Completed</td>
                                     @endif
