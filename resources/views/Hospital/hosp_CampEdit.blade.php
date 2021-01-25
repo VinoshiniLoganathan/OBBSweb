@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="{{ URL::asset('bs3/css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ URL::asset('css/bootstrap-reset.css') }}">
     <link rel="stylesheet" href="{{ URL::asset('font-awesome/css/font-awesome.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ URL::asset('js/bootstrap-datepicker/css/datepicker.css') }}" />
 
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/css/bootstrap-datepicker.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
@@ -472,7 +473,7 @@
                                 todayHighlight:'TRUE',
                                 autoclose: true
                              });
-                             $('.datepicker').style.top = "150px";
+                             $('.datepicker').style.display = "150px";
                         </script>
                     </section>
                 </div>
@@ -836,29 +837,30 @@
 <!-- Placed js at the end of the document so the pages load faster -->
 
 <!--Core js-->
-<script src="js/jquery.js"></script>
-<script src="bs3/js/bootstrap.min.js"></script>
-<script class="include" type="text/javascript" src="js/jquery.dcjqaccordion.2.7.js"></script>
-<script src="js/jquery.scrollTo.min.js"></script>
-<script src="js/jQuery-slimScroll-1.3.0/jquery.slimscroll.js"></script>
-<script src="js/jquery.nicescroll.js"></script>
+<script src="/js/jquery.js"></script>
+<script src="/bs3/js/bootstrap.min.js"></script>
+<script class="include" type="text/javascript" src="/js/jquery.dcjqaccordion.2.7.js"></script>
+<script src="/js/jquery.scrollTo.min.js"></script>
+<script src="/js/jQuery-slimScroll-1.3.0/jquery.slimscroll.js"></script>
+<script src="/js/jquery.nicescroll.js"></script>
+<script type="text/javascript" src="/js/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
 <!--Easy Pie Chart-->
-<script src="js/easypiechart/jquery.easypiechart.js"></script>
+<script src="/js/easypiechart/jquery.easypiechart.js"></script>
 <!--Sparkline Chart-->
-<script src="js/sparkline/jquery.sparkline.js"></script>
+<script src="/js/sparkline/jquery.sparkline.js"></script>
 <!--jQuery Flot Chart-->
-<script src="js/flot-chart/jquery.flot.js"></script>
-<script src="js/flot-chart/jquery.flot.tooltip.min.js"></script>
-<script src="js/flot-chart/jquery.flot.resize.js"></script>
-<script src="js/flot-chart/jquery.flot.pie.resize.js"></script>
+<script src="/js/flot-chart/jquery.flot.js"></script>
+<script src="/js/flot-chart/jquery.flot.tooltip.min.js"></script>
+<script src="/js/flot-chart/jquery.flot.resize.js"></script>
+<script src="/js/flot-chart/jquery.flot.pie.resize.js"></script>
 
 
-<script type="text/javascript" src="js/jquery.validate.min.js"></script>
+<script type="text/javascript" src="/js/jquery.validate.min.js"></script>
 
 <!--common script init for all pages-->
-<script src="js/scripts.js"></script>
+<script src="/js/scripts.js"></script>
 <!--this page script-->
-<script src="js/validation-init.js"></script>
+<script src="/js/validation-init.js"></script>
 
 </body>
 

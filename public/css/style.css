@@ -4006,6 +4006,7 @@ td.details table tr td,.dataTable tr:last-child {
     float:right;
     margin-left:10px;
     width:78%;
+    border-color: rgb(184, 182, 182);
 }
 .adv-table .dataTables_filter label {
     line-height:33px;

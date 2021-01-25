@@ -401,9 +401,9 @@
                     <header class="panel-heading">
                         Campaign
                         <span class="tools pull-right">
-                            <a href="javascript:;" class="fa fa-chevron-down"></a>
+                            {{-- <a href="javascript:;" class="fa fa-chevron-down"></a>
                             <a href="javascript:;" class="fa fa-cog"></a>
-                            <a href="javascript:;" class="fa fa-times"></a>
+                            <a href="javascript:;" class="fa fa-times"></a> --}}
                          </span>
                     </header>
                     <div class="panel-body">
